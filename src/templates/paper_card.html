@@ -1,0 +1,35 @@
+<div class="paper-row"
+     data-id="$id"
+     data-title="$title"
+     data-authors="$authors"
+     data-year="$year"
+     data-primary-category="${primary_category}"
+     data-tags='$tags_json'>
+  <div class="paper-card">
+    <!-- Corner number bubble (left) -->
+    <div class="paper-number" aria-label="Paper index"></div>
+
+    <!-- Corner selection checkbox (right, floats outside, no reflow) -->
+    <div class="corner-select">
+      <input type="checkbox"
+             aria-label="Select paper"
+             class="selection-checkbox"
+             onclick="handleCheckboxClick(event, '$id', this)">
+    </div>
+
+    <div class="paper-thumbnail">
+      <img data-src="$thumbnail"
+           data-fallback="$fallback_url"
+           alt="Paper thumbnail for $title"
+           class="lazy"
+           loading="lazy"/>
+    </div>
+
+    <div class="paper-content">
+      <h2 class="paper-title">$title <span class="paper-year">($year)</span></h2>
+      <p class="paper-authors">$authors</p>
+      <div class="paper-tags">$tags_html</div>
+      <div class="paper-links">$links_html</div>
+    </div>
+  </div>
+</div>

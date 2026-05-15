@@ -1,0 +1,723 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Awesome XRAI for Architecture Papers List (XRAI4AEC)</title>
+    <meta name="description" content="Curated database of XR and AI research papers for architecture">
+
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://raw.githubusercontent.com">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Site CSS -->
+    <style>
+        ${styles}
+        
+        /* ===================================
+        CSS VARIABLES & THEME SYSTEM
+        =================================== */
+
+        /* Default Light Theme */
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --bg-tertiary: #e9ecef;
+            --text-primary: #212529;
+            --text-secondary: #6c757d;
+            --text-muted: #adb5bd;
+            --border-color: #dee2e6;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --accent-color: #007bff;
+            --accent-hover: #0056b3;
+            --success-color: #28a745;
+            --success-hover: #1e7e34;
+            --warning-color: #ffc107;
+            --danger-color: #dc3545;
+            --card-bg: #ffffff;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+            --fab-size: 50px;
+            --fab-icon-size: 18px;
+        }
+
+        /* Dark Theme */
+        [data-theme="dark"] {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --text-primary: #f0f6fc;
+            --text-secondary: #8b949e;
+            --text-muted: #6e7681;
+            --border-color: #30363d;
+            --shadow-color: rgba(0, 0, 0, 0.6);
+            --accent-color: #58a6ff;
+            --accent-hover: #388bfd;
+            --success-color: #3fb950;
+            --success-hover: #2ea043;
+            --warning-color: #d29922;
+            --danger-color: #f85149;
+            --card-bg: #161b22;
+            --card-shadow: rgba(0, 0, 0, 0.6);
+        }
+
+        /* Auto Theme - System Preference */
+        [data-theme="auto"] {
+            color-scheme: light dark;
+        }
+
+        /* Auto Theme - Light Mode */
+        @media (prefers-color-scheme: light) {
+            [data-theme="auto"] {
+                --bg-primary: #ffffff;
+                --bg-secondary: #f8f9fa;
+                --bg-tertiary: #e9ecef;
+                --text-primary: #212529;
+                --text-secondary: #6c757d;
+                --text-muted: #adb5bd;
+                --border-color: #dee2e6;
+                --shadow-color: rgba(0, 0, 0, 0.1);
+                --accent-color: #007bff;
+                --accent-hover: #0056b3;
+                --success-color: #28a745;
+                --success-hover: #1e7e34;
+                --warning-color: #ffc107;
+                --danger-color: #dc3545;
+                --card-bg: #ffffff;
+                --card-shadow: rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        /* Auto Theme - Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            [data-theme="auto"] {
+                --bg-primary: #0d1117;
+                --bg-secondary: #161b22;
+                --bg-tertiary: #21262d;
+                --text-primary: #f0f6fc;
+                --text-secondary: #8b949e;
+                --text-muted: #6e7681;
+                --border-color: #30363d;
+                --shadow-color: rgba(0, 0, 0, 0.6);
+                --accent-color: #58a6ff;
+                --accent-hover: #388bfd;
+                --success-color: #3fb950;
+                --success-hover: #2ea043;
+                --warning-color: #d29922;
+                --danger-color: #f85149;
+                --card-bg: #161b22;
+                --card-shadow: rgba(0, 0, 0, 0.6);
+            }
+
+        /* ===================================
+        CORE LAYOUT THEMING
+        =================================== */
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        /* All text elements should use theme colors */
+        h1, h2, h3, h4, h5, h6,
+        p, span, div, 
+        .paper-title, .authors, .publication-info {
+            color: var(--text-primary);
+            transition: color 0.3s ease;
+        }
+
+        /* ===================================
+        PAPER CARDS & CONTENT
+        =================================== */
+
+        .paper-card, 
+        .paper-row {
+            background-color: var(--card-bg);
+            color: var(--text-primary);
+            border-color: var(--border-color);
+            box-shadow: 0 2px 8px var(--card-shadow);
+        }
+
+        /* Ensure all text in cards uses theme colors */
+        .paper-row * {
+            color: inherit;
+        }
+
+        /* Links in papers */
+        a {
+            color: var(--accent-color);
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-hover);
+        }
+
+        /* ===================================
+        INFO BOXES & CONTAINERS
+        =================================== */
+
+        .donate-box, 
+        .filter-info {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            border-color: var(--border-color);
+        }
+
+        .selection-preview, 
+        .filter-status {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            border-color: var(--border-color);
+        }
+
+        /* ===================================
+        FORM ELEMENTS
+        =================================== */
+
+        .filter-select, 
+        .search-box,
+        input,
+        select {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            border-color: var(--border-color);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .filter-select:focus, 
+        .search-box:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px var(--accent-color)33;
+        }
+
+        /* Dropdown options */
+        option {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+
+        
+        /* ===================================
+        BUTTONS
+        =================================== */
+
+        /* THEME TOGGLE BUTTON  */
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        .theme-toggle-btn {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: none;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px var(--shadow-color);
+        }
+
+        /* Theme Icons */
+        .theme-icon {
+            position: absolute;
+            transition: opacity 0.1s ease, transform 0.1s ease;
+        }
+
+        /* Show active theme icon */
+        [data-theme="light"] .light-icon,
+        [data-theme="dark"] .dark-icon,
+        [data-theme="auto"] .auto-icon {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Hide inactive theme icons */
+        [data-theme="light"] .dark-icon,
+        [data-theme="light"] .auto-icon,
+        [data-theme="dark"] .light-icon,
+        [data-theme="dark"] .auto-icon,
+        [data-theme="auto"] .light-icon,
+        [data-theme="auto"] .dark-icon {
+            opacity: 0;
+            transform: scale(0.85);
+        }
+
+        /* Control Buttons */
+        .control-button.primary {
+            background-color: var(--accent-color);
+            color: white;
+            transition: background-color 0.3s ease;
+            
+        }
+
+        .control-button.primary:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .control-button.secondary {
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+            border-color: var(--border-color);
+            transition: background-color 0.3s ease;
+        }
+
+        .control-button.secondary:hover {
+            background-color: var(--border-color);
+        }
+
+        /* Floating Navigation Buttons */
+        .floating-nav button {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            box-shadow: 0 4px 12px var(--shadow-color);
+            transition: all 0.3s ease;
+        }
+
+        .floating-nav button:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .nav-link-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 12px var(--shadow-color);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link-btn:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .selection-buttons button {
+            box-shadow: 0 4px 12px var(--shadow-color);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        /* ===================================
+        MODAL
+        =================================== */
+
+        .share-modal-content {
+            background-color: var(--card-bg);
+            color: var(--text-primary);
+            box-shadow: 0 4px 12px var(--shadow-color);
+        }
+        
+
+        /* Donation Box Buttons */
+        .copy-button, 
+        .sponsor-button, 
+        .website-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom, var(--success-color), var(--success-hover));
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px var(--shadow-color);
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .copy-button:hover, 
+        .sponsor-button:hover, 
+        .website-button:hover {
+            background: linear-gradient(to bottom, var(--success-hover), var(--success-color));
+            box-shadow: 0 4px 8px var(--shadow-color);
+            transform: translateY(-1px);
+        }
+
+        .copy-button i, 
+        .sponsor-button i, 
+        .website-button i {
+            margin-right: 5px;
+        }
+
+        /* Button Group Layout */
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+            justify-content: flex-start;
+        }
+
+        .button-group > * {
+            margin: 0;
+        }
+        
+
+        /* ===================================
+        BITCOIN ADDRESS STYLING
+        =================================== */
+
+        .bitcoin-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .bitcoin-address-container {
+            display: flex;
+            align-items: center;
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 8px 16px;
+            box-shadow: 0 2px 4px var(--shadow-color);
+        }
+
+        .bitcoin-label {
+            font-weight: 600;
+            margin-right: 10px;
+            white-space: nowrap;
+            color: var(--text-primary);
+        }
+
+        .address-field {
+            flex: 1;
+            overflow: hidden;
+        }
+        
+        .bitcoin-address {
+            font-family: monospace;
+            background: transparent;
+            border: none;
+            padding: 0;
+            font-size: 14px;
+            color: var(--text-primary);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: block;
+            width: 100%;
+        }
+
+        
+
+        /* ===================================
+        RESPONSIVE ADJUSTMENTS
+        =================================== */
+
+        @media (max-width: 768px) {
+            .theme-toggle {
+                top: 15px;
+                left: 15px;
+            }
+            
+            .theme-toggle-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 16px;
+            }
+            
+            .button-group {
+                justify-content: center;
+            }
+        }
+
+        /* ===================================
+        DARK THEME TEXT AND COMPONENT OVERRIDES
+        =================================== */
+
+        /* Force proper text colors for all elements */
+        [data-theme="dark"] *,
+        [data-theme="dark"] h1,
+        [data-theme="dark"] h2,
+        [data-theme="dark"] h3,
+        [data-theme="dark"] h4,
+        [data-theme="dark"] h5,
+        [data-theme="dark"] h6,
+        [data-theme="dark"] p,
+        [data-theme="dark"] span,
+        [data-theme="dark"] div {
+            color: var(--text-primary);
+        }
+
+        /* Specific overrides for problematic elements */
+        [data-theme="dark"] .preview-header-left,
+        [data-theme="dark"] .preview-header-right,
+        [data-theme="dark"] .filter-counter,
+        [data-theme="dark"] .selection-counter,
+        [data-theme="dark"] #visibleCount,
+        [data-theme="dark"] #totalCount {
+            color: var(--text-primary) !important;
+        }
+
+        /* Auto theme dark mode - same overrides */
+        @media (prefers-color-scheme: dark) {
+            [data-theme="auto"] *,
+            [data-theme="auto"] h1,
+            [data-theme="auto"] h2,
+            [data-theme="auto"] h3,
+            [data-theme="auto"] h4,
+            [data-theme="auto"] h5,
+            [data-theme="auto"] h6,
+            [data-theme="auto"] p,
+            [data-theme="auto"] span,
+            [data-theme="auto"] div {
+                color: var(--text-primary);
+            }
+
+            [data-theme="auto"] .preview-header-left,
+            [data-theme="auto"] .preview-header-right,
+            [data-theme="auto"] .filter-counter,
+            [data-theme="auto"] .selection-counter,
+            [data-theme="auto"] #visibleCount,
+            [data-theme="auto"] #totalCount {
+                color: var(--text-primary) !important;
+            }
+        }
+
+        /* Remove any individual button styling that might be in the original styles */
+        /* Website button styling - keeping this for reference but it will be overridden by the common styling above */
+        .website-button {
+            /* All styling now handled by the common button class above */
+        }
+        
+    </style>
+    <script>
+        // Expose highlighted tags list for potential client-side use (optional)
+        window.HIGHLIGHTED_TAGS = new Set(${highlighted_tags_json});
+        window.CATEGORY_TAGS = ${category_tags_json};
+    </script>
+
+    <!-- Lazy load -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/17.8.3/lazyload.min.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T049G22NP9"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-T049G22NP9');
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <!-- Floating Navigation -->
+        <div class="floating-nav">
+            <button onclick="focusSearchBox()" aria-label="Focus search">
+                <i class="fas fa-magnifying-glass"></i>
+            </button>
+            <button onclick="scrollToTop()" aria-label="Scroll to top">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            <button onclick="scrollToBottom()" aria-label="Scroll to bottom">
+                <i class="fas fa-arrow-down"></i>
+            </button>
+            <div class="scroll-progress">0%</div>
+
+            <!-- Analytics Button -->
+            <a class="nav-link-btn" href="./analytics.html" aria-label="Open analytics" data-tooltip="Analytics">
+                <i class="fas fa-chart-column"></i>
+            </a>
+        </div>
+
+        <!-- Theme Toggle Button -->
+        <div class="theme-toggle">
+            <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+                <i class="fas fa-sun theme-icon light-icon"></i>
+                <i class="fas fa-moon theme-icon dark-icon"></i>
+                <i class="fas fa-circle-half-stroke theme-icon auto-icon"></i>
+                <span class="tooltip">Toggle Theme</span>
+            </button>
+        </div>
+
+        <!-- Selection Mode Toggle Button -->
+        <div class="selection-buttons">
+            <!-- Show Selected Only -->
+            <button class="selected-only-mode-toggle" onclick="toggleSelectedOnly()">
+                <i class="fas fa-filter"></i>
+                <span class="tooltip">Show Selected Only</span>
+            </button>
+
+            <!-- Enter Selection Mode -->
+            <button class="selection-mode-toggle" onclick="toggleSelectionMode()">
+                <i class="fas fa-list-check"></i>
+                <span class="tooltip">Enter Selection Mode</span>
+            </button>
+        </div>
+
+        <!-- Selection Preview Bar -->
+        <div class="selection-preview">
+            <div class="preview-header">
+                <div class="preview-header-left">
+                    <span>Selected Papers</span>
+                    <span class="selection-counter">0 papers selected</span>
+                </div>
+                <div class="preview-header-right">
+                    <button class="control-button secondary" onclick="clearSelection()">
+                        <i class="fas fa-trash"></i> Clear
+                    </button>
+                    <button class="control-button primary" onclick="showShareModal()">
+                        <i class="fas fa-share"></i> Share
+                    </button>
+                </div>
+            </div>
+            <div class="preview-container" id="selectionPreview"></div>
+        </div>
+
+        <!-- Filter Status Bar -->
+        <div class="filter-status">
+            <div class="preview-header">
+                <div class="preview-header-left">
+                    <span>Active Filters</span>
+                    <span class="filter-counter">Showing <span id="visibleCount">0</span> of <span id="totalCount">0</span> papers</span>
+                </div>
+                <div class="preview-header-right">
+                    <button class="control-button secondary" onclick="clearAllFilters()" data-action="clear-all">
+                        <i class="fas fa-trash"></i> Clear All
+                    </button>
+                </div>
+            </div>
+            <div class="preview-container" id="activeFilters">
+                <!-- Active filters will be inserted here -->
+            </div>
+        </div>
+
+        <div>
+            <h1>XRAI4AEC: Awesome-XRAI-for-AEC-Papers</h1>
+            <p>A curated collection of papers focused on XR+AI for AEC <i>(XRAI4AEC)</i> and related technologies 
+                such as BIM, (2D/3D) computer vision, computer graphics, LLMs, VLMS, GenAI, deep/machine learning and data science.</p>
+        </div>
+
+        <!-- Info Box -->
+        <div class="donate-box">
+            <h3>Support This Project</h3>
+            <p>If you find this resource helpful, consider supporting its development and maintenance.</p>
+            <div class="bitcoin-info">
+                <div class="button-group">
+                    <a href="https://github.com/sponsors/prakashknaikade" class="sponsor-button" target="_blank" rel="noopener">
+                        <i class="fas fa-heart"></i> Sponsor
+                    </a>
+                    <a href="https://prakashknaikade.github.io/" class="website-button" target="_blank" rel="noopener">
+                        <i class="fas fa-globe"></i> prakashknaikade.github.io
+                    </a>
+                    <a href="https://github.com/prakashknaikade/Awesome-XRAI-for-Architecture" class="website-button" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-github"></i> Survey Paper Repo
+                    </a>
+                    <a href="" class="website-button" target="_blank" rel="noopener">
+                        <i class="fas fa-file-lines"></i> Our Survey Paper
+                    </a>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/MrNeRF/awesome-3D-gaussian-splatting" target="_blank" rel="noopener" title="Inspired by Awesome 3D Gaussian Splatting">
+                        <small>Adopted from MrNeRF's Awesome 3D Gaussian Splatting website</small>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Filter Info -->
+        <div class="filter-info">
+            <h3>Filter Options</h3>
+            <p> <i class="fa-solid fa-circle-info"></i> <strong>Paper Card:</strong> Each paper belongs to only one primary category (green) as well as one or more sub-category (amber) tags and other additional theme tags</p>
+            <p><strong>Search:</strong> Enter paper title or author names, then click <i class="fas fa-times"></i> to clear</p>
+            <p><strong>Category:</strong> Filter by primary category (publication theme)</p>
+            <p><strong>Year:</strong> Filter by publication year</p>
+            <p><strong>Tags:</strong> Click once to include (blue), twice to exclude (red), third time to remove filter</p>
+            <p>Tags filter list is arranged to show each sub-category (amber) together with its associated tags, 
+                followed by additional sub-categories (amber) and their associated tags, 
+                all grouped under a primary category (green). The list then continues in the same way for the next primary category, 
+                and so on. You can also filter tags by selecting a specific primary category (green) from the dropdown list, which narrows the options to only that category,
+                and shows only associated sub-category tags, additional tags, and years for further filtering.</p>
+            <p><strong>Selection:</strong> Use selection mode to pick and share specific papers</p>
+            <p> <i class="fa-solid fa-circle-info"></i> <strong>Analytics:</strong> Use Analytics to view statistics and insights about the papers in the collection.</p>
+        </div>
+
+        <!-- Share Modal -->
+        <div class="share-modal" id="shareModal">
+            <div class="share-modal-content">
+                <button class="share-modal-close" onclick="hideShareModal()">&times;</button>
+                <div class="share-modal-header">
+                    <h2>Share Selected Papers</h2>
+                </div>
+                <div class="share-url-container">
+                    <input type="text" class="share-url-input" id="shareUrl" readonly>
+                    <button class="control-button primary" onclick="copyShareLink()">
+                        <i class="fas fa-copy"></i> Copy Link
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filters Bar -->
+        <div class="filters">
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" class="search-box" placeholder="Search papers by title or authors...">
+                <button type="button" class="clear-search-btn" onclick="clearSearch()" title="Clear search">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <select id="yearFilter" class="filter-select">
+                <option value="all">All Years</option>
+                ${year_options}
+            </select>
+            <!-- CATEGORY FILTER -->
+            <select id="categoryFilter" class="filter-select">
+                <option value="all">All Categories</option>
+                ${category_options}
+            </select>
+        </div>
+
+        <!-- Tag Filters -->
+        <div class="tag-filters" id="tagFilters">
+            ${tag_filters}
+        </div>
+
+        <!-- Paper Cards -->
+        <div class="papers-grid">
+            ${paper_cards}
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script>
+        ${scripts}
+    </script>
+</body>
+</html>

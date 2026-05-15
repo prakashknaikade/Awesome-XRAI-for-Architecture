@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XRAI4AEC Analytics</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background:#0f1115; color:#e6edf3; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .top { display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; }
+    .back { color:#e6edf3; text-decoration:none; border:1px solid #30363d; padding:8px 12px; border-radius:8px; }
+    .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; margin-bottom:12px; }
+    .kpi { background:#161b22; border:1px solid #30363d; border-radius:10px; padding:12px; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .card { background:#161b22; border:1px solid #30363d; border-radius:10px; padding:12px; }
+    .error { margin: 0 0 12px; padding: 10px; border: 1px solid #e5534b; border-radius: 8px; color: #ffb4ad; display: none; }
+    @media (max-width: 900px){ .grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <h1>Analytics</h1>
+      <a class="back" href="./index.html">Back to Papers</a>
+    </div>
+
+    <div id="errorBox" class="error"></div>
+
+    <div class="kpis">
+      <div class="kpi">Total Papers: <strong id="kTotal">0</strong></div>
+      <div class="kpi">Primary Categories: <strong id="kCats">0</strong></div>
+      <div class="kpi">Unique Tags: <strong id="kTags">0</strong></div>
+      <div class="kpi">Years Covered: <strong id="kYears">-</strong></div>
+    </div>
+
+    <div class="grid">
+      <div class="card"><h3>Primary Category Share</h3><canvas id="cPie"></canvas></div>
+      <div class="card"><h3>Year-wise (2020–2025)</h3><canvas id="cYearBar"></canvas></div>
+      <div class="card"><h3>Top Tags (Top 20)</h3><canvas id="cTagBar"></canvas></div>
+      <div class="card"><h3>All Years Trend</h3><canvas id="cYearLine"></canvas></div>
+    </div>
+  </div>
+
+  <script>
+    
+    window.__PAPERS_DATA__ = ${analytics_data_json};
+
+    const charts = [];
+    const toInt = (v) => {
+      const n = Number.parseInt(String(v ?? '').trim(), 10);
+      return Number.isFinite(n) ? n : null;
+    };
+    const norm = (s, fb='Unknown') => {
+      const v = String(s ?? '').trim();
+      return v || fb;
+    };
+    const countMap = (arr) => arr.reduce((m, x) => (m.set(x, (m.get(x) || 0) + 1), m), new Map());
+    const sortedDesc = (m) => [...m.entries()].sort((a,b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0])));
+
+    function showError(msg) {
+      const el = document.getElementById('errorBox');
+      if (!el) return;
+      el.textContent = msg;
+      el.style.display = 'block';
+    }
+
+    function renderCharts(rows) {
+      if (typeof Chart === 'undefined') {
+        showError('Chart.js failed to load.');
+        return;
+      }
+
+      const clean = rows.map(r => ({
+        id: norm(r?.id, ''),
+        title: norm(r?.title, ''),
+        year: toInt(r?.year),
+        primary_category: norm(r?.primary_category, 'Uncategorized'),
+        tags: Array.isArray(r?.tags) ? r.tags.map(t => norm(t, '')).filter(Boolean) : []
+      }));
+
+      const total = clean.length;
+      const years = clean.map(x => x.year).filter(y => y !== null);
+      const categories = clean.map(x => x.primary_category);
+      const tags = clean.flatMap(x => x.tags);
+
+      const catMap = countMap(categories);
+      const tagMap = countMap(tags);
+      const yearMap = countMap(years);
+
+      document.getElementById('kTotal').textContent = String(total);
+      document.getElementById('kCats').textContent = String(catMap.size);
+      document.getElementById('kTags').textContent = String(tagMap.size);
+      document.getElementById('kYears').textContent = years.length ? `${Math.min(...years)}–${Math.max(...years)}` : '-';
+
+      const catE = sortedDesc(catMap);
+      charts.push(new Chart(document.getElementById('cPie'), {
+        type: 'pie',
+        data: {
+          labels: catE.map(x => x[0]),
+          datasets: [{ data: catE.map(x => x[1]) }]
+        }
+      }));
+
+      const yRange = [2020, 2021, 2022, 2023, 2024, 2025];
+      const barColors = ['#4e79a7', '#f28e2b', '#e15759', '#76b7b2', '#59a14f', '#edc948'];
+      charts.push(new Chart(document.getElementById('cYearBar'), {
+        type: 'bar',
+        data: {
+          labels: yRange,
+          datasets: [{ label: 'Papers', data: yRange.map(y => yearMap.get(y) || 0), 
+                        backgroundColor: barColors,
+                        borderColor: barColors,
+                        borderWidth: 1 }]
+        },
+        options: {
+          plugins: { legend: { display: false } },
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: { precision: 0 },
+              title: { display: true, text: 'Papers' }
+            }
+          }
+        }
+      }));
+
+      // top 20 tags by count, with bar color intensity based on count (more papers with that tag => stronger color)
+      const tagE = sortedDesc(tagMap).slice(0, 20);
+
+      // Higher count => stronger green, lower count => lighter green
+      const maxTagCount = Math.max(...tagE.map(([, count]) => count), 1);
+      const tagBarBg = tagE.map(([, count]) => {
+        const t = count / maxTagCount; // 0..1
+        const alpha = 0.25 + (0.75 * t); // low count faint, high count strong
+        return `rgba(34, 197, 94, ${alpha.toFixed(3)})`; // green
+      });
+      const tagBarBorder = tagE.map(() => 'rgba(22, 163, 74, 1)');
+
+      charts.push(new Chart(document.getElementById('cTagBar'), {
+        type: 'bar',
+        data: {
+          labels: tagE.map(x => x[0]),
+          datasets: [{
+            label: 'Count',
+            data: tagE.map(x => x[1]),
+            backgroundColor: tagBarBg,
+            borderColor: tagBarBorder,
+            borderWidth: 1
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          scales: {
+            x: { beginAtZero: true, ticks: { precision: 0 } },
+            y: {
+              ticks: {
+                autoSkip: false,
+                maxTicksLimit: 20
+              }
+            }
+          }
+        }
+      }));
+
+      const yearE = [...yearMap.entries()].sort((a,b) => a[0] - b[0]);
+      charts.push(new Chart(document.getElementById('cYearLine'), {
+        type: 'line',
+        data: {
+          labels: yearE.map(x => x[0]),
+          datasets: [{ label: 'Papers', data: yearE.map(x => x[1]), tension: 0.25 }]
+        },
+        options: { scales: { y: { beginAtZero: true, ticks: { precision: 0 } } } }
+      }));
+    }
+
+    (function init() {
+      try {
+        const data = window.__PAPERS_DATA__;
+        if (!Array.isArray(data)) throw new Error('Embedded analytics data not found.');
+        renderCharts(data);
+      } catch (e) {
+        showError(e?.message || 'Analytics failed to initialize.');
+      }
+    })();
+  </script>
+</body>
+</html>

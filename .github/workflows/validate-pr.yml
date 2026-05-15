@@ -1,0 +1,389 @@
+name: Validate PR Changes
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'awesome_xrai_architecture_papers.yaml'
+      - 'src/**'
+      - 'generate_readme.py'
+      - 'requirements.txt'
+    types: [opened, synchronize, reopened, ready_for_review]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+      checks: write
+    
+    steps:
+    - name: Checkout PR
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        ref: ${{ github.event.pull_request.head.sha }}
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then
+          pip install -r requirements.txt
+        else
+          echo "⚠️ requirements.txt not found, installing basic packages"
+          pip install pyyaml jinja2
+        fi
+
+    - name: Get changed files
+      id: changed_files
+      run: |
+        # Get list of changed files
+        git fetch origin main
+        CHANGED_FILES=$(git diff --name-only origin/main..HEAD)
+        echo "📁 Changed files:"
+        echo "$CHANGED_FILES"
+        echo "changed_files<<EOF" >> $GITHUB_OUTPUT
+        echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
+        echo "EOF" >> $GITHUB_OUTPUT
+        
+        # Check if YAML file was changed
+        if echo "$CHANGED_FILES" | grep -q "awesome_xrai_architecture_papers.yaml"; then
+          echo "yaml_changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "yaml_changed=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Validate YAML syntax
+      id: yaml_validation
+      run: |
+        echo "🔍 Validating YAML syntax..."
+        python -c "
+        import yaml
+        import sys
+        
+        try:
+            with open('awesome_xrai_architecture_papers.yaml', 'r', encoding='utf-8') as f:
+                data = yaml.safe_load(f)
+            
+            if not isinstance(data, list):
+                print('❌ YAML should contain a list of papers')
+                sys.exit(1)
+                
+            print('✅ YAML syntax is valid')
+            print(f'📊 Total entries: {len(data)}')
+            
+            # Basic structure validation
+            required_fields = ['title', 'authors', 'year']
+            for i, paper in enumerate(data):
+                if not isinstance(paper, dict):
+                    print(f'❌ Entry {i+1} is not a valid paper object')
+                    sys.exit(1)
+                
+                missing_fields = [field for field in required_fields if not paper.get(field)]
+                if missing_fields:
+                    print(f'⚠️ Entry {i+1} missing required fields: {missing_fields}')
+            
+            print('✅ Basic structure validation passed')
+            
+        except Exception as e:
+            print(f'❌ YAML syntax error: {e}')
+            sys.exit(1)
+        " 2>&1 | tee yaml_validation.log
+        
+        if [ $? -eq 0 ]; then
+          echo "status=success" >> $GITHUB_OUTPUT
+        else
+          echo "status=failure" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Check for required paper fields
+      id: field_validation
+      if: steps.yaml_validation.outputs.status == 'success' && steps.changed_files.outputs.yaml_changed == 'true'
+      run: |
+        echo "🔍 Validating paper entries..."
+        python -c "
+        import yaml
+        
+        with open('awesome_xrai_architecture_papers.yaml', 'r', encoding='utf-8') as f:
+            papers = yaml.safe_load(f)
+        
+        issues = []
+        warnings = []
+        
+        for i, paper in enumerate(papers):
+            entry_num = i + 1
+            
+            # Check required fields
+            if not paper.get('title') or not paper.get('title').strip():
+                issues.append(f'Entry {entry_num}: Missing or empty title')
+            
+            if not paper.get('authors'):
+                issues.append(f'Entry {entry_num}: Missing authors')
+            elif isinstance(paper['authors'], list) and len(paper['authors']) == 0:
+                issues.append(f'Entry {entry_num}: Empty authors list')
+            
+            if not paper.get('year'):
+                issues.append(f'Entry {entry_num}: Missing year')
+            elif not isinstance(paper['year'], int) or paper['year'] < 1900 or paper['year'] > 2030:
+                issues.append(f'Entry {entry_num}: Invalid year: {paper.get(\"year\")}')
+            
+            # Check recommended fields
+            if not paper.get('abstract'):
+                warnings.append(f'Entry {entry_num}: Missing abstract (recommended)')
+            
+            if not paper.get('primary_category'):
+                warnings.append(f'Entry {entry_num}: Missing primary_category (recommended)')
+        
+        if issues:
+            print('❌ Validation issues found:')
+            for issue in issues:
+                print(f'  - {issue}')
+            exit(1)
+        
+        if warnings:
+            print('⚠️ Recommendations:')
+            for warning in warnings:
+                print(f'  - {warning}')
+        
+        print('✅ All required fields validation passed')
+        " 2>&1 | tee field_validation.log
+        
+        if [ $? -eq 0 ]; then
+          echo "status=success" >> $GITHUB_OUTPUT
+        else
+          echo "status=failure" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Test HTML generation
+      id: html_test
+      if: steps.yaml_validation.outputs.status == 'success'
+      run: |
+        echo "🔍 Testing HTML generation..."
+        
+        if [ -f "src/generate.py" ]; then
+          echo "📝 Using src/generate.py"
+          python src/generate.py awesome_xrai_architecture_papers.yaml test_index.html 2>&1 | tee html_test.log
+        else
+          echo "❌ HTML generator src/generate.py not found!"
+          echo "📁 Available files in src/:"
+          ls -la src/ 2>/dev/null || echo "src/ directory does not exist"
+          echo "status=failure" >> $GITHUB_OUTPUT
+          exit 1
+        fi
+        
+        if [ $? -eq 0 ] && [ -f "test_index.html" ]; then
+          echo "✅ HTML generation test passed"
+          echo "📏 Generated HTML size: $(wc -c < test_index.html) bytes"
+          echo "🧹 Cleaning up test file..."
+          rm test_index.html
+          echo "status=success" >> $GITHUB_OUTPUT
+        else
+          echo "❌ HTML generation test failed"
+          echo "status=failure" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Test README generation
+      id: readme_test
+      if: steps.yaml_validation.outputs.status == 'success'
+      run: |
+        echo "🔍 Testing README generation..."
+        
+        if [ -f "generate_readme.py" ]; then
+          # Backup original README
+          cp README.md README.md.backup 2>/dev/null || echo "No existing README to backup"
+          
+          python generate_readme.py 2>&1 | tee readme_test.log
+          
+          if [ $? -eq 0 ] && [ -f "README.md" ]; then
+            echo "✅ README generation test passed"
+            echo "📏 Generated README size: $(wc -c < README.md) bytes"
+            echo "status=success" >> $GITHUB_OUTPUT
+          else
+            echo "❌ README generation test failed" 
+            echo "status=failure" >> $GITHUB_OUTPUT
+          fi
+          
+          # Restore original README
+          mv README.md.backup README.md 2>/dev/null || echo "No README backup to restore"
+        else
+          echo "⚠️ generate_readme.py not found, skipping README test"
+          echo "status=skipped" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Security and quality checks
+      id: security_check
+      run: |
+        echo "🔒 Running security and quality checks..."
+        
+        # Check for potentially malicious URLs
+        if grep -r -i "javascript:" awesome_xrai_architecture_papers.yaml 2>/dev/null; then
+          echo "❌ Found potentially unsafe javascript: URLs"
+          echo "status=failure" >> $GITHUB_OUTPUT
+          exit 1
+        fi
+        
+        # Check for very long URLs that might be suspicious
+        if grep -r "http" awesome_xrai_architecture_papers.yaml | grep -E ".{300,}" 2>/dev/null; then
+          echo "⚠️ Found unusually long URLs (>300 chars)"
+        fi
+        
+        # Check for common URL patterns
+        if grep -r "http://" awesome_xrai_architecture_papers.yaml 2>/dev/null; then
+          echo "⚠️ Found HTTP URLs (consider using HTTPS)"
+        fi
+        
+        echo "✅ Security checks completed"
+        echo "status=success" >> $GITHUB_OUTPUT
+
+    - name: Generate validation summary
+      id: summary
+      if: always()
+      run: |
+        echo "## 📋 PR Validation Results" > validation_summary.md
+        echo "" >> validation_summary.md
+        echo "**Pull Request:** #${{ github.event.pull_request.number }}" >> validation_summary.md
+        echo "**Author:** @${{ github.event.pull_request.user.login }}" >> validation_summary.md
+        echo "**Branch:** \`${{ github.event.pull_request.head.ref }}\`" >> validation_summary.md
+        echo "" >> validation_summary.md
+        
+        # YAML Validation
+        if [ "${{ steps.yaml_validation.outputs.status }}" = "success" ]; then
+          echo "✅ **YAML Syntax:** Valid" >> validation_summary.md
+        else
+          echo "❌ **YAML Syntax:** Failed" >> validation_summary.md
+        fi
+        
+        # Field Validation
+        if [ "${{ steps.field_validation.outputs.status }}" = "success" ]; then
+          echo "✅ **Paper Fields:** Valid" >> validation_summary.md
+        elif [ "${{ steps.field_validation.outputs.status }}" = "failure" ]; then
+          echo "❌ **Paper Fields:** Issues found" >> validation_summary.md
+        else
+          echo "⏭️ **Paper Fields:** Skipped (no YAML changes)" >> validation_summary.md
+        fi
+        
+        # HTML Test
+        if [ "${{ steps.html_test.outputs.status }}" = "success" ]; then
+          echo "✅ **HTML Generation:** Passed" >> validation_summary.md
+        else
+          echo "❌ **HTML Generation:** Failed" >> validation_summary.md
+        fi
+        
+        # README Test
+        if [ "${{ steps.readme_test.outputs.status }}" = "success" ]; then
+          echo "✅ **README Generation:** Passed" >> validation_summary.md
+        elif [ "${{ steps.readme_test.outputs.status }}" = "failure" ]; then
+          echo "❌ **README Generation:** Failed" >> validation_summary.md
+        else
+          echo "⚠️ **README Generation:** Skipped" >> validation_summary.md
+        fi
+        
+        # Security Check
+        if [ "${{ steps.security_check.outputs.status }}" = "success" ]; then
+          echo "✅ **Security Check:** Passed" >> validation_summary.md
+        else
+          echo "❌ **Security Check:** Issues found" >> validation_summary.md
+        fi
+        
+        echo "" >> validation_summary.md
+        echo "### 📁 Changed Files:" >> validation_summary.md
+        echo '```' >> validation_summary.md
+        echo "${{ steps.changed_files.outputs.changed_files }}" >> validation_summary.md
+        echo '```' >> validation_summary.md
+        echo "" >> validation_summary.md
+        
+        # Overall status
+        if [ "${{ steps.yaml_validation.outputs.status }}" = "success" ] && \
+           [ "${{ steps.html_test.outputs.status }}" = "success" ] && \
+           [ "${{ steps.security_check.outputs.status }}" = "success" ] && \
+           ([ "${{ steps.field_validation.outputs.status }}" = "success" ] || [ "${{ steps.field_validation.outputs.status }}" = "" ]); then
+          echo "🎉 **Overall Status:** ✅ Ready for review!" >> validation_summary.md
+          echo "overall_status=success" >> $GITHUB_OUTPUT
+        else
+          echo "🚫 **Overall Status:** ❌ Issues need to be fixed" >> validation_summary.md
+          echo "overall_status=failure" >> $GITHUB_OUTPUT
+        fi
+        
+        echo "" >> validation_summary.md
+        echo "### 📝 Next Steps:" >> validation_summary.md
+        echo "" >> validation_summary.md
+        
+        if [ "$OVERALL_STATUS" = "success" ]; then
+          echo "- ✅ All automated checks passed" >> validation_summary.md
+          echo "- 👀 Waiting for maintainer review and approval" >> validation_summary.md
+          echo "- 🚀 Will be merged after approval" >> validation_summary.md
+        else
+          echo "- ❌ Please fix the issues identified above" >> validation_summary.md
+          echo "- 🔄 Push changes to update this PR" >> validation_summary.md
+          echo "- 🤖 Validation will run automatically" >> validation_summary.md
+        fi
+        
+        echo "" >> validation_summary.md
+        echo "---" >> validation_summary.md
+        echo "*This validation was automatically run by GitHub Actions*" >> validation_summary.md
+
+    - name: Add/Update PR comment
+      uses: actions/github-script@v7
+      if: always()
+      with:
+        script: |
+          const fs = require('fs');
+          const summary = fs.readFileSync('validation_summary.md', 'utf8');
+          
+          const { data: comments } = await github.rest.issues.listComments({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.issue.number,
+          });
+          
+          const botComment = comments.find(comment => 
+            comment.user.login === 'github-actions[bot]' && 
+            comment.body.includes('📋 PR Validation Results')
+          );
+          
+          if (botComment) {
+            await github.rest.issues.updateComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              comment_id: botComment.id,
+              body: summary
+            });
+          } else {
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: summary
+            });
+          }
+
+    - name: Set PR status check
+      if: always()
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const status = '${{ steps.summary.outputs.overall_status }}';
+          const state = status === 'success' ? 'success' : 'failure';
+          const description = status === 'success' ? 
+            'All validations passed - ready for review' : 
+            'Some validations failed - check details';
+          
+          try {
+            await github.rest.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: context.payload.pull_request.head.sha,
+              state: state,
+              target_url: `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              description: description,
+              context: 'PR Validation'
+            });
+          } catch (error) {
+            console.log('Error setting commit status:', error.message);
+          }

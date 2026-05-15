@@ -1,0 +1,4891 @@
+[
+  {
+    "id": "mai2025radiance",
+    "title": "Radiance Meshes for Volumetric Reconstruction",
+    "year": "2025",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "3DGS",
+      "indoor scene reconstruction",
+      "outdoor scene reconstruction",
+      "scene editing",
+      "scene interaction"
+    ],
+    "authors": "Alexander Mai, Trevor Hedstrom, George Kopanas, Janne Kontkanen, Falko Kuester, Jonathan T. Barron"
+  },
+  {
+    "id": "nithyanantham2025mcp4ifc",
+    "title": "MCP4IFC: IFC-Based Building Design Using Large Language Models",
+    "year": "2025",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "LLMs for AEC",
+      "Multimodal Design Assistance",
+      "Vision-Language Models for AEC",
+      "XRAI for AEC",
+      "XRAI inclusive design"
+    ],
+    "authors": "Bharathi Kannan Nithyanantham, Tobias Sesterhenn, Ashwin Nedungadi, Sergio Peral Garijo, Janis Zenkner, Christian Bartelt, Stefan Lüdtke"
+  },
+  {
+    "id": "liu2025cage",
+    "title": "CAGE: Continuity-Aware edGE Network Unlocks Robust Floorplan Reconstruction",
+    "year": "2025",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "BIM",
+      "Floor Plan Reconstruction and Parametrization",
+      "digital twins",
+      "image-to-plan",
+      "layout recovery",
+      "parametric BIM",
+      "point-cloud-to-plan",
+      "room segmentation",
+      "scan-to-BIM"
+    ],
+    "authors": "Yiyi Liu, Chunyang Liu, Bohan Wang, Weiqin Jiao, Bojian Wu, Lubin Fan, Yuwei Chen, Fashuai Li, Biao Xiong"
+  },
+  {
+    "id": "abouagour2025resplan",
+    "title": "ResPlan: A Large-Scale Vector-Graph Dataset of 17,000 Residential Floor Plans",
+    "year": "2025",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "3D floor plan",
+      "BIM",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "Dataset",
+      "Floor Plan Reconstruction and Parametrization",
+      "digital twins",
+      "layout recovery",
+      "object detection",
+      "point clouds",
+      "point-cloud-to-plan",
+      "room segmentation",
+      "scan-to-BIM",
+      "semantic segmentation",
+      "structural element detection"
+    ],
+    "authors": "Mohamed Abouagour, Eleftherios Garyfallidis"
+  },
+  {
+    "id": "yin2025floorplanmaea",
+    "title": "FloorplanMAE:A self-supervised framework for complete floorplan generation from partial inputs",
+    "year": "2025",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "BIM",
+      "Floor Plan Reconstruction and Parametrization",
+      "digital twins",
+      "room segmentation",
+      "scan-to-BIM"
+    ],
+    "authors": "Jun Yin, Jing Zhong, Pengyu Zeng, Peilin Li, Miao Zhang, Ran Luo, Shuai Lu"
+  },
+  {
+    "id": "bucher2025respace",
+    "title": "ReSpace: Text-Driven 3D Scene Synthesis and Editing with Preference Alignment",
+    "year": "2025",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "Generative Design and Design Space Exploration",
+      "LLMs for AEC",
+      "Multimodal Design Assistance",
+      "Vision-Language Models for AEC",
+      "conditional generation",
+      "design automation",
+      "diffusion models",
+      "geometry generation",
+      "procedural modeling",
+      "scene editing",
+      "text-to-3D"
+    ],
+    "authors": "Martin JJ. Bucher, Iro Armeni"
+  },
+  {
+    "id": "liu2025quicksplat",
+    "title": "QuickSplat: Fast 3D Surface Reconstruction via Learned Gaussian Initialization",
+    "year": "2025",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "3DGS",
+      "LiDAR",
+      "indoor scene reconstruction",
+      "outdoor scene reconstruction",
+      "point clouds",
+      "scene interaction",
+      "scene understanding"
+    ],
+    "authors": "Yueh-Cheng Liu, Lukas Höllein, Matthias Nießner, Angela Dai"
+  },
+  {
+    "id": "das2025realtime",
+    "title": "Real-Time Assistive Navigation for the Visually Impaired: A Scalable Approach for Indoor and Outdoor Mobility",
+    "year": "2025",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "Case Study",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "HCI-HBI",
+      "XRAI automated accessibility",
+      "XRAI for AEC",
+      "XRAI inclusive design"
+    ],
+    "authors": "Dabbrata Das, Argho Deb Das, Farhan Sadaf, Azhar Uddin, Tirtho Mondal"
+  },
+  {
+    "id": "boudjoghra2025scanedit",
+    "title": "ScanEdit: Hierarchically-Guided Functional 3D Scan Editing",
+    "year": "2025",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "LiDAR",
+      "SLAM",
+      "SfM",
+      "indoor scene reconstruction",
+      "photogrammetry",
+      "point clouds",
+      "scene editing",
+      "scene interaction",
+      "scene understanding"
+    ],
+    "authors": "Mohamed el amine Boudjoghra, Ivan Laptev, Angela Dai"
+  },
+  {
+    "id": "pastukh2025using",
+    "title": "Using ensemble methods of machine learning to predict real estate prices",
+    "year": "2025",
+    "primary_category": "Sustainable Real Estate Valuation and Economics",
+    "tags": [
+      "AI in asset management",
+      "AI-Powered Real Estate Valuation",
+      "predictive pricing",
+      "real estate analytics"
+    ],
+    "authors": "Oleh Pastukh, Viktor Khomyshyn"
+  },
+  {
+    "id": "zheng2025wildgsslam",
+    "title": "WildGS-SLAM: Monocular Gaussian Splatting SLAM in Dynamic Environments",
+    "year": "2025",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "3DGS",
+      "SfM",
+      "indoor scene reconstruction",
+      "photogrammetry",
+      "point clouds",
+      "scene interaction",
+      "scene understanding"
+    ],
+    "authors": "Jianhao Zheng, Zihan Zhu, Valentin Bieri, Marc Pollefeys, Songyou Peng, Iro Armeni"
+  },
+  {
+    "id": "li2025archseek",
+    "title": "ArchSeek: Retrieving Architectural Case Studies Using Vision-Language Models",
+    "year": "2025",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "Form Finding",
+      "Generative Design and Design Space Exploration",
+      "Parametric, Computational and Algorithmic Design",
+      "Performance-Driven Design"
+    ],
+    "authors": "Danrui Li, Yichao Shi, Yaluo Wang, Ziying Shi, Mubbasir Kapadia"
+  },
+  {
+    "id": "zhang2025nerfprior",
+    "title": "NeRFPrior: Learning Neural Radiance Field as a Prior for Indoor Scene Reconstruction",
+    "year": "2025",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "Interactive Visualization",
+      "NeRF",
+      "SfM",
+      "indoor scene reconstruction",
+      "photogrammetry"
+    ],
+    "authors": "Wenyuan Zhang, Emily Yue-ting Jia, Junsheng Zhou, Baorui Ma, Kanle Shi, Yu-Shen Liu, Zhizhong Han"
+  },
+  {
+    "id": "yeshwanth2025excap3d",
+    "title": "ExCap3D: Expressive 3D Scene Understanding via Object Captioning with Varying Detail",
+    "year": "2025",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "Dataset",
+      "point clouds",
+      "scene editing",
+      "scene interaction",
+      "scene understanding"
+    ],
+    "authors": "Chandan Yeshwanth, David Rozenberszki, Angela Dai"
+  },
+  {
+    "id": "ni2025decompositional",
+    "title": "Decompositional Neural Scene Reconstruction with Generative Diffusion Prior",
+    "year": "2025",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "LiDAR",
+      "SLAM",
+      "diffusion models",
+      "indoor scene reconstruction",
+      "outdoor scene reconstruction",
+      "photogrammetry",
+      "point clouds",
+      "scene editing",
+      "scene interaction",
+      "scene understanding"
+    ],
+    "authors": "Junfeng Ni, Yu Liu, Ruijie Lu, Zirui Zhou, Song-Chun Zhu, Yixin Chen, Siyuan Huang"
+  },
+  {
+    "id": "xie2025humanintheloop",
+    "title": "Human-in-the-Loop Local Corrections of 3D Scene Layouts via Infilling",
+    "year": "2025",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "3D floor plan",
+      "BIM",
+      "Dataset",
+      "Floor Plan Reconstruction and Parametrization",
+      "Tool/Library",
+      "digital twins",
+      "image-to-plan",
+      "layout recovery",
+      "mesh-to-BIM",
+      "object detection",
+      "parametric BIM",
+      "point-cloud-to-plan",
+      "room segmentation",
+      "scan-to-BIM",
+      "semantic segmentation",
+      "structural element detection"
+    ],
+    "authors": "Christopher Xie, Armen Avetisyan, Henry Howard-Jenkins, Yawar Siddiqui, Julian Straub, Richard Newcombe, Vasileios Balntas, Jakob Engel"
+  },
+  {
+    "id": "cabon2025must3r",
+    "title": "MUSt3R: Multi-view Network for Stereo 3D Reconstruction",
+    "year": "2025",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "SfM",
+      "indoor scene reconstruction",
+      "outdoor scene reconstruction",
+      "photogrammetry",
+      "point clouds",
+      "scene interaction"
+    ],
+    "authors": "Yohann Cabon, Lucas Stoffl, Leonid Antsfeld, Gabriela Csurka, Boris Chidlovskii, Jerome Revaud, Vincent Leroy"
+  },
+  {
+    "id": "wang2025floorplanslam",
+    "title": "Floorplan-SLAM: A Real-Time, High-Accuracy, and Long-Term Multi-Session Point-Plane SLAM for Efficient Floorplan Reconstruction",
+    "year": "2025",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "3D floor plan",
+      "Floor Plan Reconstruction and Parametrization",
+      "LiDAR",
+      "SLAM",
+      "digital twins",
+      "layout recovery",
+      "point clouds",
+      "point-cloud-to-plan",
+      "room segmentation",
+      "scan-to-BIM",
+      "scene understanding"
+    ],
+    "authors": "Haolin Wang, Zeren Lv, Hao Wei, Haijiang Zhu, Yihong Wu"
+  },
+  {
+    "id": "zhu2025restyle3d",
+    "title": "ReStyle3D: Scene-Level Appearance Transfer with Semantic Correspondences",
+    "year": "2025",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "3D Reconstruction",
+      "Generative Design and Design Space Exploration",
+      "conditional generation",
+      "design automation",
+      "digital twins",
+      "geometry generation",
+      "image-to-3D",
+      "procedural modeling",
+      "scene editing",
+      "scene interaction",
+      "text-to-3D"
+    ],
+    "authors": "Liyuan Zhu, Shengqu Cai, Shengyu Huang, Gordon Wetzstein, Naji Khosravan, Iro Armeni"
+  },
+  {
+    "id": "yang2025fast3r",
+    "title": "Fast3R: Towards 3D Reconstruction of 1000+ Images in One Forward Pass",
+    "year": "2025",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "SLAM",
+      "SfM",
+      "indoor scene reconstruction",
+      "outdoor scene reconstruction",
+      "photogrammetry",
+      "point clouds"
+    ],
+    "authors": "Jianing Yang, Alexander Sax, Kevin J. Liang, Mikael Henaff, Hao Tang, Ang Cao, Joyce Chai, Franziska Meier, Matt Feiszli"
+  },
+  {
+    "id": "bokhovkin2024scenefactor",
+    "title": "SceneFactor: Factored Latent 3D Diffusion for Controllable 3D Scene Generation",
+    "year": "2024",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "Generative Design and Design Space Exploration",
+      "conditional generation",
+      "design automation",
+      "diffusion models",
+      "geometry generation",
+      "text-to-3D"
+    ],
+    "authors": "Alexey Bokhovkin, Quan Meng, Shubham Tulsiani, Angela Dai"
+  },
+  {
+    "id": "ganon2024waffle",
+    "title": "WAFFLE: Multimodal Floorplan Understanding in the Wild",
+    "year": "2024",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "BIM",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "Dataset",
+      "Floor Plan Reconstruction and Parametrization",
+      "Vision-Language Models for AEC",
+      "digital twins",
+      "layout recovery"
+    ],
+    "authors": "Keren Ganon, Morris Alper, Rachel Mikulinsky, Hadar Averbuch-Elor"
+  },
+  {
+    "id": "qin2024chathousediffusion",
+    "title": "ChatHouseDiffusion: Prompt-Guided Generation and Editing of Floor Plans",
+    "year": "2024",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "2D floor plan",
+      "AR/VR/XR visualization",
+      "AR/VR interfaces",
+      "Generative Design and Design Space Exploration",
+      "Interactive Visualization",
+      "LLMs for AEC",
+      "design automation",
+      "diffusion models",
+      "geometry generation",
+      "immersive design"
+    ],
+    "authors": "Sizhong Qin, Chengyu He, Qiaoyun Chen, Sen Yang, Wenjie Liao, Yi Gu, Xinzheng Lu"
+  },
+  {
+    "id": "lee2024a",
+    "title": "A Generalized LLM-Augmented BIM Framework: Application to a Speech-to-BIM system",
+    "year": "2024",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "BIM",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "LLMs for AEC",
+      "digital twins"
+    ],
+    "authors": "Ghang Lee, Suhyung Jang, Seokho Hyun"
+  },
+  {
+    "id": "zhu2024loopsplat",
+    "title": "LoopSplat: Loop Closure by Registering 3D Gaussian Splats",
+    "year": "2024",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "3DGS",
+      "LiDAR",
+      "SLAM",
+      "SfM",
+      "indoor scene reconstruction",
+      "photogrammetry",
+      "point clouds",
+      "scene understanding"
+    ],
+    "authors": "Liyuan Zhu, Yue Li, Erik Sandström, Shengyu Huang, Konrad Schindler, Iro Armeni"
+  },
+  {
+    "id": "xu2024frinet",
+    "title": "FRI-Net: Floorplan Reconstruction via Room-wise Implicit Representation",
+    "year": "2024",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "BIM",
+      "Floor Plan Reconstruction and Parametrization",
+      "digital twins",
+      "layout recovery",
+      "point clouds",
+      "point-cloud-to-plan",
+      "room segmentation"
+    ],
+    "authors": "Honghao Xu, Juzhan Xu, Zeyu Huang, Pengfei Xu, Hui Huang, Ruizhen Hu"
+  },
+  {
+    "id": "liu2024polyroom",
+    "title": "PolyRoom: Room-aware Transformer for Floorplan Reconstruction",
+    "year": "2024",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "BIM",
+      "Floor Plan Reconstruction and Parametrization",
+      "LiDAR",
+      "digital twins",
+      "layout recovery",
+      "point clouds",
+      "point-cloud-to-plan",
+      "room segmentation"
+    ],
+    "authors": "Yuzhou Liu, Lingjie Zhu, Xiaodong Ma, Hanqiao Ye, Xiang Gao, Xianwei Zheng, Shuhan Shen"
+  },
+  {
+    "id": "nguyen2024housecrafter",
+    "title": "HouseCrafter: Lifting Floorplans to 3D Scenes with 2D Diffusion Model",
+    "year": "2024",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "2D floor plan",
+      "3D floor plan",
+      "Generative Design and Design Space Exploration",
+      "conditional generation",
+      "design automation",
+      "diffusion models",
+      "geometry generation",
+      "image-to-plan"
+    ],
+    "authors": "Hieu T. Nguyen, Yiwen Chen, Vikram Voleti, Varun Jampani, Huaizu Jiang"
+  },
+  {
+    "id": "chen2024ncsdf",
+    "title": "NC-SDF: Enhancing Indoor Scene Reconstruction Using Neural SDFs with View-Dependent Normal Compensation",
+    "year": "2024",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "Interactive Visualization",
+      "NeRF",
+      "SfM",
+      "indoor scene reconstruction",
+      "photogrammetry"
+    ],
+    "authors": "Ziyi Chen, Xiaolong Wu, Yu Zhang"
+  },
+  {
+    "id": "bauchet2024simplicity",
+    "title": "SimpliCity: Reconstructing Buildings with Simple Regularized 3D Models",
+    "year": "2024",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "Floor Plan Reconstruction and Parametrization",
+      "Form Finding",
+      "Generative Design and Design Space Exploration",
+      "Parametric, Computational and Algorithmic Design",
+      "conditional generation",
+      "design automation",
+      "design space optimization",
+      "diffusion models",
+      "geometry generation",
+      "point-cloud-to-plan"
+    ],
+    "authors": "Jean-Philippe Bauchet, Raphael Sulzer, Florent Lafarge, Yuliya Tarabalka"
+  },
+  {
+    "id": "çelen2024idesign",
+    "title": "I-Design: Personalized LLM Interior Designer",
+    "year": "2024",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "Context-Aware Spatial Intelligence",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "Generative Design and Design Space Exploration",
+      "LLMs for AEC",
+      "Multimodal Design Assistance",
+      "Vision-Language Models for AEC",
+      "conditional generation",
+      "design automation",
+      "geometry generation",
+      "image-to-3D",
+      "procedural modeling",
+      "text-to-3D"
+    ],
+    "authors": "Ata Çelen, Guo Han, Konrad Schindler, Luc Van Gool, Iro Armeni, Anton Obukhov, Xi Wang"
+  },
+  {
+    "id": "li2024generative",
+    "title": "Generative AI for Architectural Design: A Literature Review",
+    "year": "2024",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "GANs",
+      "Generative Design and Design Space Exploration",
+      "Parametric, Computational and Algorithmic Design",
+      "Performance-Driven Design",
+      "Review Paper",
+      "XRAI for AEC",
+      "design automation",
+      "diffusion models",
+      "geometry generation",
+      "image-to-plan",
+      "metaverse for AEC"
+    ],
+    "authors": "Chengyuan Li, Tianyu Zhang, Xusheng Du, Ye Zhang, Haoran Xie"
+  },
+  {
+    "id": "li2024sketchtoarchitecture",
+    "title": "Sketch-to-Architecture: Generative AI-aided Architectural Design",
+    "year": "2024",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "2D floor plan",
+      "3D floor plan",
+      "Generative Design and Design Space Exploration",
+      "conditional generation",
+      "design automation",
+      "geometry generation",
+      "image-to-plan",
+      "text-to-3D"
+    ],
+    "authors": "Pengzhi Li, Baijuan Li, Zhiheng Li"
+  },
+  {
+    "id": "avetisyan2024scenescript",
+    "title": "SceneScript: Reconstructing Scenes With An Autoregressive Structured Language Model",
+    "year": "2024",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "3D Reconstruction",
+      "3D floor plan",
+      "BIM",
+      "Context-Aware Spatial Intelligence",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "Dataset",
+      "Floor Plan Reconstruction and Parametrization",
+      "LLMs for AEC",
+      "LiDAR",
+      "SLAM",
+      "Vision-Language Models for AEC",
+      "digital twins",
+      "image-to-plan",
+      "indoor scene reconstruction",
+      "layout recovery",
+      "object detection",
+      "parametric BIM",
+      "photogrammetry",
+      "point clouds",
+      "point-cloud-to-plan",
+      "room segmentation",
+      "scan-to-BIM",
+      "scene interaction",
+      "scene understanding",
+      "semantic segmentation",
+      "structural element detection"
+    ],
+    "authors": "Armen Avetisyan, Christopher Xie, Henry Howard-Jenkins, Tsun-Yi Yang, Samir Aroudj, Suvam Patra, Fuyang Zhang, Duncan Frost, Luke Holland, Campbell Orme, Jakob Engel, Edward Miller, Richard Newcombe, Vasileios Balntas"
+  },
+  {
+    "id": "ploennigs2023generative",
+    "title": "Generative AI and the History of Architecture",
+    "year": "2023",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "Form Finding",
+      "Generative Design and Design Space Exploration",
+      "Parametric, Computational and Algorithmic Design",
+      "Review Paper"
+    ],
+    "authors": "Joern Ploennigs, Markus Berger"
+  },
+  {
+    "id": "wang2023dust3r",
+    "title": "DUSt3R: Geometric 3D Vision Made Easy",
+    "year": "2023",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "SfM",
+      "indoor scene reconstruction",
+      "outdoor scene reconstruction",
+      "photogrammetry",
+      "point clouds",
+      "scene interaction"
+    ],
+    "authors": "Shuzhe Wang, Vincent Leroy, Yohann Cabon, Boris Chidlovskii, Jerome Revaud"
+  },
+  {
+    "id": "song2023ascan2bim",
+    "title": "A-Scan2BIM: Assistive Scan to Building Information Modeling",
+    "year": "2023",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "3D Reconstruction",
+      "3D floor plan",
+      "BIM",
+      "Dataset",
+      "Floor Plan Reconstruction and Parametrization",
+      "Revit automation",
+      "digital twins",
+      "layout recovery",
+      "point clouds",
+      "scan-to-BIM",
+      "scene understanding"
+    ],
+    "authors": "Weilian Song, Jieliang Luo, Dale Zhao, Yan Fu, Chin-Yi Cheng, Yasutaka Furukawa"
+  },
+  {
+    "id": "wei2023buildiff",
+    "title": "BuilDiff: 3D Building Shape Generation using Single-Image Conditional Point Cloud Diffusion Models",
+    "year": "2023",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "Form Finding",
+      "Generative Design and Design Space Exploration",
+      "conditional generation",
+      "design automation",
+      "diffusion models",
+      "image-to-3D"
+    ],
+    "authors": "Yao Wei, George Vosselman, Michael Ying Yang"
+  },
+  {
+    "id": "engel2023project",
+    "title": "Project Aria: A New Tool for Egocentric Multi-Modal AI Research",
+    "year": "2023",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "AI building automation",
+      "BIM",
+      "Context-Aware Spatial Intelligence",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "Dataset",
+      "Floor Plan Reconstruction and Parametrization",
+      "LLMs for AEC",
+      "Multimodal Design Assistance",
+      "Sustainable Buildings",
+      "Tool/Library",
+      "Vision-Language Models for AEC",
+      "digital twins"
+    ],
+    "authors": "Jakob Engel, Kiran Somasundaram, Michael Goesele, Albert Sun, Alexander Gamino, Andrew Turner, Arjang Talattof, Arnie Yuan, Bilal Souti, Brighid Meredith, Cheng Peng, Chris Sweeney, Cole Wilson, Dan Barnes, Daniel DeTone, David Caruso, Derek Valleroy, Dinesh Ginjupalli, Duncan Frost, Edward Miller, Elias Mueggler, Evgeniy Oleinik, Fan Zhang, Guruprasad Somasundaram, Gustavo Solaira, Harry Lanaras, Henry Howard-Jenkins, Huixuan Tang, Hyo Jin Kim, Jaime Rivera, Ji Luo, Jing Dong, Julian Straub, Kevin Bailey, Kevin Eckenhoff, Lingni Ma, Luis Pesqueira, Mark Schwesinger, Maurizio Monge, Nan Yang, Nick Charron, Nikhil Raina, Omkar Parkhi, Peter Borschowa, Pierre Moulon, Prince Gupta, Raul Mur-Artal, Robbie Pennington, Sachin Kulkarni, Sagar Miglani, Santosh Gondi, Saransh Solanki, Sean Diener, Shangyi Cheng, Simon Green, Steve Saarinen, Suvam Patra, Tassos Mourikis, Thomas Whelan, Tripti Singh, Vasileios Balntas, Vijay Baiyya, Wilson Dreewes, Xiaqing Pan, Yang Lou, Yipu Zhao, Yusuf Mansour, Yuyang Zou, Zhaoyang Lv, Zijian Wang, Mingfei Yan, Carl Ren, Renzo De Nardi, Richard Newcombe"
+  },
+  {
+    "id": "yeshwanth2023scannet",
+    "title": "ScanNet++: A High-Fidelity Dataset of 3D Indoor Scenes",
+    "year": "2023",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "3D Reconstruction",
+      "3D floor plan",
+      "3DGS",
+      "BIM",
+      "Dataset",
+      "Floor Plan Reconstruction and Parametrization",
+      "LiDAR",
+      "NeRF",
+      "Review Paper",
+      "SLAM",
+      "SfM",
+      "digital twins",
+      "image-to-plan",
+      "indoor scene reconstruction",
+      "layout recovery",
+      "mesh-to-BIM",
+      "object detection",
+      "parametric BIM",
+      "photogrammetry",
+      "point clouds",
+      "point-cloud-to-plan",
+      "room segmentation",
+      "scan-to-BIM",
+      "scene editing",
+      "scene interaction",
+      "scene understanding",
+      "semantic segmentation",
+      "structural element detection"
+    ],
+    "authors": "Chandan Yeshwanth, Yueh-Cheng Liu, Matthias Nießner, Angela Dai"
+  },
+  {
+    "id": "kerbl20233d",
+    "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+    "year": "2023",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "3DGS",
+      "BIM",
+      "SfM",
+      "digital twins",
+      "indoor scene reconstruction",
+      "outdoor scene reconstruction",
+      "photogrammetry",
+      "point clouds",
+      "scene interaction"
+    ],
+    "authors": "Bernhard Kerbl, Georgios Kopanas, Thomas Leimkühler, George Drettakis"
+  },
+  {
+    "id": "dong2023panocontextformer",
+    "title": "PanoContext-Former: Panoramic Total Scene Understanding with a Transformer",
+    "year": "2023",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "3D floor plan",
+      "BIM",
+      "Dataset",
+      "Floor Plan Reconstruction and Parametrization",
+      "digital twins",
+      "image-to-plan",
+      "layout recovery",
+      "object detection",
+      "room segmentation",
+      "scan-to-BIM",
+      "semantic segmentation"
+    ],
+    "authors": "Yuan Dong, Chuan Fang, Liefeng Bo, Zilong Dong, Ping Tan"
+  },
+  {
+    "id": "wang2023towards",
+    "title": "Towards AI-Architecture Liberty: A Comprehensive Survey on Design and Generation of Virtual Architecture by Deep Learning",
+    "year": "2023",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "Form Finding",
+      "GANs",
+      "Generative Design and Design Space Exploration",
+      "LLMs for AEC",
+      "Multimodal Design Assistance",
+      "Parametric, Computational and Algorithmic Design",
+      "Performance-Driven Design",
+      "Review Paper",
+      "VAE",
+      "Vision-Language Models for AEC",
+      "XR design review",
+      "XRAI inclusive design",
+      "collaborative VR co-design",
+      "conditional generation",
+      "design automation",
+      "diffusion models",
+      "geometry generation",
+      "image-to-3D",
+      "immersive design",
+      "text-to-3D"
+    ],
+    "authors": "Anqi Wang, Jiahua Dong, Lik-Hang Lee, Jiachuan Shen, Pan Hui"
+  },
+  {
+    "id": "gao2023surfelnerf",
+    "title": "SurfelNeRF: Neural Surfel Radiance Fields for Online Photorealistic Reconstruction of Indoor Scenes",
+    "year": "2023",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "Interactive Visualization",
+      "NeRF",
+      "SfM",
+      "digital twins",
+      "indoor scene reconstruction",
+      "photogrammetry"
+    ],
+    "authors": "Yiming Gao, Yan-Pei Cao, Ying Shan"
+  },
+  {
+    "id": "zhu2023i2sdf",
+    "title": "I2-SDF: Intrinsic Indoor Scene Reconstruction and Editing via Raytracing in Neural SDFs",
+    "year": "2023",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "Interactive Visualization",
+      "NeRF",
+      "SfM",
+      "indoor scene reconstruction",
+      "photogrammetry",
+      "scene editing",
+      "scene understanding"
+    ],
+    "authors": "Jingsen Zhu, Yuchi Huo, Qi Ye, Fujun Luan, Jifan Li, Dianbing Xi, Lisha Wang, Rui Tang, Wei Hua, Hujun Bao, Rui Wang"
+  },
+  {
+    "id": "alawadhi2023deep",
+    "title": "Deep Learning from Parametrically Generated Virtual Buildings for Real-World Object Recognition",
+    "year": "2023",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "3D floor plan",
+      "BIM",
+      "Dataset",
+      "Floor Plan Reconstruction and Parametrization",
+      "digital twins",
+      "image-to-plan",
+      "layout recovery",
+      "object detection",
+      "room segmentation",
+      "semantic segmentation",
+      "structural element detection"
+    ],
+    "authors": "Mohammad Alawadhi, Wei Yan"
+  },
+  {
+    "id": "yue2022connecting",
+    "title": "Connecting the Dots: Floorplan Reconstruction Using Two-Level Queries",
+    "year": "2022",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "BIM",
+      "Dataset",
+      "Floor Plan Reconstruction and Parametrization",
+      "LiDAR",
+      "digital twins",
+      "layout recovery",
+      "point clouds",
+      "point-cloud-to-plan",
+      "room segmentation",
+      "scan-to-BIM",
+      "scene understanding"
+    ],
+    "authors": "Yuanwen Yue, Theodora Kontogianni, Konrad Schindler, Francis Engelmann"
+  },
+  {
+    "id": "luo2022controlling",
+    "title": "Controlling Commercial Cooling Systems Using Reinforcement Learning",
+    "year": "2022",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI HVAC optimization",
+      "AI for Energy Performance Optimization",
+      "Case Study",
+      "Predictive Analytics and Performance Optimization",
+      "building energy forecasting",
+      "building energy simulation",
+      "predictive analytics"
+    ],
+    "authors": "Jerry Luo, Cosmin Paduraru, Octavian Voicu, Yuri Chervonyi, Scott Munns, Jerry Li, Crystal Qian, Praneet Dutta, Jared Quincy Davis, Ningjia Wu, Xingwei Yang, Chu-Ming Chang, Ted Li, Rob Rose, Mingyan Fan, Hootan Nakhost, Tinglin Liu, Brian Kirkman, Frank Altamura, Lee Cline, Patrick Tonker, Joel Gouker, Dave Uden, Warren Buddy Bryan, Jason Law, Deeni Fatiha, Neil Satra, Juliet Rothenberg, Mandeep Waraich, Molly Carlin, Satish Tallapaka, Sims Witherspoon, David Parish, Peter Dolan, Chenyu Zhao, Daniel J. Mankowitz"
+  },
+  {
+    "id": "müller2022instant",
+    "title": "Instant Neural Graphics Primitives with a Multiresolution Hash Encoding",
+    "year": "2022",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "3D Reconstruction",
+      "NeRF",
+      "SLAM",
+      "SfM",
+      "digital twins",
+      "indoor scene reconstruction",
+      "outdoor scene reconstruction",
+      "photogrammetry",
+      "point clouds",
+      "scene interaction"
+    ],
+    "authors": "Thomas Müller, Alex Evans, Christoph Schied, Alexander Keller"
+  },
+  {
+    "id": "chen2021heat",
+    "title": "HEAT: Holistic Edge Attention Transformer for Structured Reconstruction",
+    "year": "2021",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "BIM",
+      "Floor Plan Reconstruction and Parametrization",
+      "digital twins",
+      "image-to-plan",
+      "layout recovery",
+      "parametric BIM",
+      "point-cloud-to-plan",
+      "room segmentation",
+      "scan-to-BIM"
+    ],
+    "authors": "Jiacheng Chen, Yiming Qian, Yasutaka Furukawa"
+  },
+  {
+    "id": "zhang2021deeppanocontext",
+    "title": "DeepPanoContext: Panoramic 3D Scene Understanding with Holistic Scene Context Graph and Relation-based Optimization",
+    "year": "2021",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "3D floor plan",
+      "BIM",
+      "Dataset",
+      "Floor Plan Reconstruction and Parametrization",
+      "digital twins",
+      "image-to-plan",
+      "layout recovery"
+    ],
+    "authors": "Cheng Zhang, Zhaopeng Cui, Cai Chen, Shuaicheng Liu, Bing Zeng, Hujun Bao, Yinda Zhang"
+  },
+  {
+    "id": "ampanavos2021earlyphase",
+    "title": "Early-Phase Performance-Driven Design using Generative Models",
+    "year": "2021",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "Form Finding",
+      "GANs",
+      "Generative Design and Design Space Exploration",
+      "Parametric, Computational and Algorithmic Design",
+      "Performance-Driven Design",
+      "VAE",
+      "daylight optimization",
+      "design automation",
+      "design space optimization",
+      "diffusion models",
+      "energy optimization",
+      "geometry generation",
+      "image-to-plan",
+      "rule-based modeling",
+      "structural efficiency",
+      "structural optimization"
+    ],
+    "authors": "Spyridon Ampanavos, Ali Malkawi"
+  },
+  {
+    "id": "stekovic2021montefloor",
+    "title": "MonteFloor: Extending MCTS for Reconstructing Accurate Large-Scale Floor Plans",
+    "year": "2021",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "3D floor plan",
+      "BIM",
+      "Floor Plan Reconstruction and Parametrization",
+      "digital twins",
+      "image-to-plan",
+      "layout recovery",
+      "point-cloud-to-plan",
+      "room segmentation",
+      "scan-to-BIM"
+    ],
+    "authors": "Sinisa Stekovic, Mahdi Rad, Friedrich Fraundorfer, Vincent Lepetit"
+  },
+  {
+    "id": "keshavarzi2020sketchopt",
+    "title": "SketchOpt: Sketch-based Parametric Model Retrieval for Generative Design",
+    "year": "2020",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "2D floor plan",
+      "3D floor plan",
+      "Form Finding",
+      "Generative Design and Design Space Exploration",
+      "Parametric, Computational and Algorithmic Design",
+      "Performance-Driven Design",
+      "design automation",
+      "design space optimization",
+      "geometry generation",
+      "image-to-plan",
+      "multi-objective optimization",
+      "rule-based modeling"
+    ],
+    "authors": "Mohammad Keshavarzi, Clayton Hutson, Chin-Yi Cheng, Mehdi Nourbakhsh, Michael Bergin, Mohammad Rahmani Asl"
+  },
+  {
+    "id": "mildenhall2020nerf",
+    "title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis",
+    "year": "2020",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "NeRF",
+      "SfM",
+      "indoor scene reconstruction",
+      "outdoor scene reconstruction",
+      "photogrammetry",
+      "scene interaction"
+    ],
+    "authors": "Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, Ren Ng"
+  },
+  {
+    "id": "armeni20193d",
+    "title": "3D Scene Graph: A Structure for Unified Semantics, 3D Space, and Camera",
+    "year": "2019",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "Dataset",
+      "SfM",
+      "indoor scene reconstruction",
+      "outdoor scene reconstruction",
+      "photogrammetry",
+      "point clouds",
+      "scene editing",
+      "scene interaction",
+      "scene understanding"
+    ],
+    "authors": "Iro Armeni, Zhi-Yang He, JunYoung Gwak, Amir R. Zamir, Martin Fischer, Jitendra Malik, Silvio Savarese"
+  },
+  {
+    "id": "zheng2019structured3d",
+    "title": "Structured3D: A Large Photo-realistic Dataset for Structured 3D Modeling",
+    "year": "2019",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "3D Reconstruction",
+      "3D floor plan",
+      "BIM",
+      "Dataset",
+      "Floor Plan Reconstruction and Parametrization",
+      "SfM",
+      "digital twins",
+      "image-to-plan",
+      "indoor scene reconstruction",
+      "layout recovery",
+      "mesh-to-BIM",
+      "object detection",
+      "outdoor scene reconstruction",
+      "parametric BIM",
+      "photogrammetry",
+      "point-cloud-to-plan",
+      "room segmentation",
+      "scan-to-BIM",
+      "scene editing",
+      "scene interaction",
+      "scene understanding",
+      "semantic segmentation",
+      "structural element detection"
+    ],
+    "authors": "Jia Zheng, Junfei Zhang, Jing Li, Rui Tang, Shenghua Gao, Zihan Zhou"
+  },
+  {
+    "id": "park2019deepsdf",
+    "title": "DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation",
+    "year": "2019",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "NeRF",
+      "SfM",
+      "digital twins",
+      "indoor scene reconstruction",
+      "outdoor scene reconstruction",
+      "photogrammetry",
+      "scene interaction"
+    ],
+    "authors": "Jeong Joon Park, Peter Florence, Julian Straub, Richard Newcombe, Steven Lovegrove"
+  },
+  {
+    "id": "liu2018floornet",
+    "title": "FloorNet: A Unified Framework for Floorplan Reconstruction from 3D Scans",
+    "year": "2018",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "BIM",
+      "Floor Plan Reconstruction and Parametrization",
+      "digital twins",
+      "image-to-plan",
+      "layout recovery",
+      "mesh-to-BIM",
+      "parametric BIM",
+      "point-cloud-to-plan",
+      "room segmentation",
+      "scan-to-BIM"
+    ],
+    "authors": "Chen Liu, Jiaye Wu, Yasutaka Furukawa"
+  },
+  {
+    "id": "armeni2017joint",
+    "title": "Joint 2D-3D-Semantic Data for Indoor Scene Understanding",
+    "year": "2017",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "Dataset",
+      "SfM",
+      "indoor scene reconstruction",
+      "photogrammetry",
+      "point clouds",
+      "scene editing",
+      "scene interaction",
+      "scene understanding"
+    ],
+    "authors": "Iro Armeni, Sasha Sax, Amir R. Zamir, Silvio Savarese"
+  },
+  {
+    "id": "ozyesil2017a",
+    "title": "A Survey of Structure from Motion",
+    "year": "2017",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "Review Paper",
+      "SfM",
+      "indoor scene reconstruction",
+      "outdoor scene reconstruction",
+      "photogrammetry",
+      "point clouds"
+    ],
+    "authors": "Onur Ozyesil, Vladislav Voroninski, Ronen Basri, Amit Singer"
+  },
+  {
+    "id": "063811f2",
+    "title": "Digital Twins in Construction: Architecture, Applications, Trends and Challenges",
+    "year": "2024",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI building automation",
+      "BIM",
+      "Predictive Analytics and Performance Optimization",
+      "Review Paper",
+      "Smart Building Systems and IoT Integration",
+      "XRAI for AEC",
+      "big data in buildings",
+      "intelligent environments",
+      "real-time monitoring",
+      "sensor data integration"
+    ],
+    "authors": "Yang Zhou, Tang Chao, Zhang Tongrui, Zhang Zhongjian, Doan Dat"
+  },
+  {
+    "id": "eda3bd86",
+    "title": "Blockchain-driven integration technology for the AEC industry",
+    "year": "2021",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "BIM",
+      "Predictive Analytics and Performance Optimization",
+      "Quality Control and Validation",
+      "Review Paper",
+      "Smart Building Systems and IoT Integration",
+      "big data in buildings",
+      "blockchain for AEC",
+      "data templates for circularity",
+      "human-centric IoT"
+    ],
+    "authors": "Botao Zhong,\nXing Pan, Lieyun Ding, \nQiang Chen,\nXiaowei Hu"
+  },
+  {
+    "id": "c16a3583",
+    "title": "AI-Enhanced Performative Building Design Optimization and Exploration: A Design Framework Combining Computational Design Optimization and Generative AI",
+    "year": "2024",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "Form Finding",
+      "GANs",
+      "Generative Design and Design Space Exploration",
+      "Parametric, Computational and Algorithmic Design",
+      "Performance-Driven Design",
+      "VAE",
+      "design automation",
+      "design space optimization",
+      "diffusion models",
+      "image-to-plan",
+      "multi-objective optimization"
+    ],
+    "authors": "CHUWEN ZHONG, YI'AN SHI, LOK HANG CHEUNG, LIKAI WANG"
+  },
+  {
+    "id": "6f068d1a",
+    "title": "Temporal-online hybrid machine learning for occupancy forecasting: Enhancing energy efficiency in smart building management systems",
+    "year": "2025",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI building automation",
+      "AI for Energy Performance Optimization",
+      "AI occupancy modeling",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Predictive Analytics and Performance Optimization",
+      "Smart Building Systems and IoT Integration",
+      "adaptive control",
+      "building energy forecasting",
+      "building energy simulation",
+      "movement analysis",
+      "occupant behavior",
+      "predictive analytics",
+      "real-time monitoring",
+      "space utilization"
+    ],
+    "authors": "Ruosi Zhang, Oleksiy V. Klymenko, Michael Short"
+  },
+  {
+    "id": "46b2accf",
+    "title": "Integrating Extended Reality (XR) in Architectural Design Education: A Systematic Review and Case Study at Southeast University (China)",
+    "year": "2024",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AR/VR/XR visualization",
+      "HCI-HBI",
+      "Interactive Visualization",
+      "Review Paper",
+      "XR design review",
+      "XRAI for AEC",
+      "XRAI inclusive design",
+      "collaborative VR co-design",
+      "immersive design",
+      "metaverse for AEC"
+    ],
+    "authors": "Yueying Zhang, Xiaoran Huang"
+  },
+  {
+    "id": "000f41ae",
+    "title": "The Effect of Virtual Tours on House Price and Time on Market",
+    "year": "2020",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI in asset management",
+      "AI-Powered Real Estate Valuation",
+      "ML for sustainable real estate",
+      "Virtual Property Tours and Marketing",
+      "XR immersive walkthroughs",
+      "predictive pricing",
+      "real estate analytics",
+      "real estate visualization",
+      "virtual staging"
+    ],
+    "authors": ""
+  },
+  {
+    "id": "7c1cd7fc",
+    "title": "Space–use analysis through computer vision",
+    "year": "2015",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI occupancy modeling",
+      "Case Study",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "behavior modeling",
+      "movement analysis",
+      "occupant behavior",
+      "sensor-driven design",
+      "space utilization",
+      "spatial analytics"
+    ],
+    "authors": ""
+  },
+  {
+    "id": "01d58894",
+    "title": "A Haptic-Audio Simulator Indoor Navigation: To Assist Visually Impaired Environment Exploration",
+    "year": "2016",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "Case Study",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "HCI-HBI",
+      "XRAI automated accessibility",
+      "XRAI for AEC",
+      "XRAI inclusive design"
+    ],
+    "authors": ""
+  },
+  {
+    "id": "5b3f01a3",
+    "title": "Energy-efficient personalized thermal comfort control in office buildings based on multi-agent deep reinforcement learning",
+    "year": "2022",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI HVAC optimization",
+      "AI occupancy modeling",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "behavior modeling",
+      "building energy simulation",
+      "sensor-driven design"
+    ],
+    "authors": "Liang Yu, Zhanbo Xu, Tengfei Zhang, Xiaohong Guan, Dong Yue"
+  },
+  {
+    "id": "00b4a83b",
+    "title": "A framework of BIM-IoT application in construction projects through multiple case study approach",
+    "year": "2025",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AI for Energy Performance Optimization",
+      "BIM",
+      "Case Study",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "adaptive control",
+      "big data in buildings",
+      "building performance dashboard",
+      "circular economy",
+      "digital twins",
+      "human-centric IoT",
+      "intelligent environments",
+      "real-time monitoring",
+      "sensor data integration",
+      "sustainable construction"
+    ],
+    "authors": "Hong Yixin, Guo Fangyu"
+  },
+  {
+    "id": "6c7382ac",
+    "title": "Filtering of Irrelevant Clashes Detected by BIM Software Using a Hybrid Method of Rule-Based Reasoning and Supervised Machine Learning",
+    "year": "2019",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "BIM",
+      "BIM validation",
+      "QA/QC in BIM",
+      "Quality Control and Validation",
+      "automated compliance checking",
+      "clash detection",
+      "data quality",
+      "geometric validation",
+      "model checking"
+    ],
+    "authors": "Lin Will and Huang Ying-Hua"
+  },
+  {
+    "id": "007f3d3d",
+    "title": "Toward 3D Property Valuation—A Review of Urban 3D Modelling Methods for Digital Twin Creation",
+    "year": "2023",
+    "primary_category": "Sustainable Real Estate Valuation and Economics",
+    "tags": [
+      "2D floor plan",
+      "3D floor plan",
+      "AI-Powered Real Estate Valuation",
+      "BIM",
+      "ML for sustainable real estate",
+      "digital twins",
+      "predictive pricing"
+    ],
+    "authors": "Yue Ying, Mila Koeva, Monika Kuffer, Jaap Zevenbergen"
+  },
+  {
+    "id": "d8d4a66c",
+    "title": "Developing campus digital twin using interactive visual analytics approach",
+    "year": "2024",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "BIM",
+      "Case Study",
+      "Predictive Analytics and Performance Optimization",
+      "Quality Control and Validation",
+      "data quality",
+      "digital twins",
+      "model checking"
+    ],
+    "authors": "Xinyue Ye, Suphanut Jamonnak, Shannon Van Zandt, Galen Newman, Patrick Suermann"
+  },
+  {
+    "id": "87d78b4a",
+    "title": "Developing campus digital twin using interactive visual analytics approach",
+    "year": "2025",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI occupancy modeling",
+      "BIM",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Predictive Analytics and Performance Optimization",
+      "anomaly detection",
+      "behavior modeling",
+      "big data in buildings",
+      "building energy forecasting",
+      "design automation",
+      "digital twins",
+      "movement analysis",
+      "occupant behavior",
+      "predictive analytics",
+      "sensor-driven design",
+      "space utilization",
+      "spatial analytics",
+      "time-series analysis"
+    ],
+    "authors": "Xinyue Ye, Suphanut Jamonnak, Shannon Van Zandt, Galen Newman, Patrick Suermann"
+  },
+  {
+    "id": "97fc48f3",
+    "title": "Documentation of cultural heritage using digital photogrammetry and laser scanning",
+    "year": "2007",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "3D Reconstruction",
+      "3D scanning",
+      "Digital Documentation and Archiving",
+      "Heritage BIM",
+      "conservation AI",
+      "digital archives",
+      "documentation workflows",
+      "heritage digitization",
+      "point clouds"
+    ],
+    "authors": "Naci Yastikli"
+  },
+  {
+    "id": "98b45789",
+    "title": "Virtual Reality, Real Profits: How VR Reshapes Price, Bidding Competition, and Strategic Reactions in Online House Auctions",
+    "year": "2025",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI in asset management",
+      "AI-Powered Real Estate Valuation",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Virtual Property Tours and Marketing",
+      "XR immersive walkthroughs",
+      "XRAI for AEC",
+      "predictive pricing",
+      "real estate visualization",
+      "virtual staging"
+    ],
+    "authors": "Zhenbin Yan, Zibo Liu, Zhongyun Zhou, Yong Tan"
+  },
+  {
+    "id": "1a44d04f",
+    "title": "Occupant behavior impact in buildings and the artificial intelligence-based techniques and data-driven approach solutions",
+    "year": "2023",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI building automation",
+      "AI occupancy modeling",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Smart Building Systems and IoT Integration",
+      "behavior modeling",
+      "intelligent environments",
+      "movement analysis",
+      "occupant behavior",
+      "sensor-driven design",
+      "space utilization",
+      "spatial analytics"
+    ],
+    "authors": "Biao Yan,\nWansheng Yang, Fuquan He, Wenhao Zeng"
+  },
+  {
+    "id": "8a7f51c8",
+    "title": "Does Virtual Reality Help Property Sales? Empirical Evidence from a Real Estate Platform",
+    "year": "2024",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI-Powered Real Estate Valuation",
+      "Case Study",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Virtual Property Tours and Marketing",
+      "XR immersive walkthroughs",
+      "XRAI for AEC",
+      "real estate visualization",
+      "virtual staging"
+    ],
+    "authors": "Zhenbin Yan, Zixuan Meng, Yong Tan"
+  },
+  {
+    "id": "f5093a45",
+    "title": "Developing a digital twin model for monitoring building structural health by combining a building information model and a real-scene 3D model",
+    "year": "2023",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "3D floor plan",
+      "BIM",
+      "Case Study",
+      "Predictive Analytics and Performance Optimization",
+      "Predictive Conservation and Risk Assessment",
+      "anomaly detection",
+      "damage detection",
+      "digital twins",
+      "predictive analytics",
+      "predictive maintenance",
+      "scan-to-BIM",
+      "structural health monitoring"
+    ],
+    "authors": "Jinghai Xu, Xin Shu,\nPeng Qiao,\nShanshan Li, Jigang Xu"
+  },
+  {
+    "id": "07524568",
+    "title": "Augmented reality applications in construction productivity: A systematic literature review",
+    "year": "2024",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AR/VR/XR visualization",
+      "AR/VR interfaces",
+      "Interactive Visualization",
+      "Review Paper",
+      "Sustainable Buildings",
+      "VR dashboards",
+      "XR design review",
+      "XRAI automated accessibility",
+      "XRAI for AEC",
+      "XRAI inclusive design",
+      "adaptive environments",
+      "immersive design",
+      "metaverse for AEC"
+    ],
+    "authors": "Zhidong Xu,\nZhenan Feng,\nMostafa Babaeian Jelodar, Brian H.W. Guo"
+  },
+  {
+    "id": "b3f39cd0",
+    "title": "Digital twin-driven prognostics and health management for industrial assets",
+    "year": "2024",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "BIM",
+      "Predictive Analytics and Performance Optimization",
+      "Review Paper",
+      "anomaly detection",
+      "damage detection",
+      "digital twins",
+      "material degradation prediction",
+      "predictive analytics",
+      "predictive maintenance",
+      "structural health monitoring"
+    ],
+    "authors": "Bin Xiao, Jingshu Zhong, Xiangyu Bao, Liang Chen, Jinsong Bao, Yu Zheng"
+  },
+  {
+    "id": "659c5bf0",
+    "title": "A review on occupancy prediction through machine learning for enhancing energy efficiency, air quality and thermal comfort in the built environment",
+    "year": "2022",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI HVAC optimization",
+      "AI building automation",
+      "AI for Energy Performance Optimization",
+      "AI occupancy modeling",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Predictive Analytics and Performance Optimization",
+      "Review Paper",
+      "Smart Building Systems and IoT Integration",
+      "adaptive control",
+      "behavior modeling",
+      "building energy forecasting",
+      "building energy simulation",
+      "energy-efficient design",
+      "human-centric IoT",
+      "intelligent environments",
+      "movement analysis",
+      "occupant behavior",
+      "predictive analytics",
+      "real-time monitoring",
+      "sensor data integration",
+      "space utilization",
+      "spatial analytics"
+    ],
+    "authors": "Zhang Wuxia, Wu Yupeng, Calautit John Kaiser"
+  },
+  {
+    "id": "4549c59f",
+    "title": "D5 digital circular workflow: five digital steps towards matchmaking for material reuse in construction",
+    "year": "2024",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AI material selection",
+      "Review Paper",
+      "Sustainable Buildings",
+      "circular economy",
+      "embodied carbon",
+      "lifecycle assessment",
+      "material passports",
+      "material simulation",
+      "sustainable construction",
+      "sustainable disassembly",
+      "sustainable materials"
+    ],
+    "authors": "Catherine De Wolf, Brandon S. Byers, Deepika Raghu, Matthew Gordon, Vanessa Schwarzkopf, Eleftherios Triantafyllidis"
+  },
+  {
+    "id": "765a2da3",
+    "title": "Can Digital Matchmaking Boost Circular Construction? Lessons from Reusing the Glass of Centre Pompidou",
+    "year": "2024",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AI building automation",
+      "Case Study",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "big data in buildings",
+      "circular economy",
+      "data templates for circularity",
+      "sustainable construction",
+      "sustainable disassembly",
+      "sustainable materials"
+    ],
+    "authors": "Catherine De Wolf,\nSultan Çetin,\nNancy Bocken"
+  },
+  {
+    "id": "4d61d7ad",
+    "title": "Object verification based on deep learning point feature comparison for scan-to-BIM",
+    "year": "2022",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "3D Reconstruction",
+      "3D floor plan",
+      "BIM",
+      "Floor Plan Reconstruction and Parametrization",
+      "LiDAR",
+      "SLAM",
+      "digital twins",
+      "indoor scene reconstruction",
+      "layout recovery",
+      "object detection",
+      "outdoor scene reconstruction",
+      "photogrammetry",
+      "point clouds",
+      "point-cloud-to-plan",
+      "room segmentation",
+      "scan-to-BIM",
+      "scene understanding"
+    ],
+    "authors": "Boyu Wang, Qian Wang, Jack C.P. Cheng, Chao Yin"
+  },
+  {
+    "id": "3ff6e183",
+    "title": "In Jingdezhen, China, historic preservation shapes a modern architectural marvel",
+    "year": "2024",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "Case Study",
+      "Digital Documentation and Archiving",
+      "Predictive Conservation and Risk Assessment",
+      "conservation AI"
+    ],
+    "authors": "Betty Wang"
+  },
+  {
+    "id": "c13e3af6",
+    "title": "Future Cities Advisory Outlook 2023: Digital Innovations Empower Urban Net-Zero Carbon Transition",
+    "year": "2023",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "Case Study",
+      "HCI-HBI",
+      "Review Paper",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "circular economy",
+      "embodied carbon",
+      "sustainable construction",
+      "sustainable disassembly"
+    ],
+    "authors": "UN-Habitat"
+  },
+  {
+    "id": "06247f2c",
+    "title": "Development of a personalized thermal comfort driven controller for HVAC systems",
+    "year": "2021",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI HVAC optimization",
+      "AI occupancy modeling",
+      "Case Study",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Smart Building Systems and IoT Integration",
+      "human-centric IoT",
+      "occupant behavior"
+    ],
+    "authors": "Cihan Turhan, Silvio Simani, Gulden Gokcen Akkurt"
+  },
+  {
+    "id": "d40750a8",
+    "title": "Demand response optimization for smart grid integrated buildings: Review of technology enablers landscape and innovation challenges",
+    "year": "2025",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AI building automation",
+      "AI for Energy Performance Optimization",
+      "Review Paper",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "smart grids"
+    ],
+    "authors": "Liana Toderean, Tudor Cioara, Ionut Anghel, \nElissaios Sarmas,\nVasilis Michalakopoulos, Vangelis Marinakis"
+  },
+  {
+    "id": "0b28648c",
+    "title": "ASHRAE global database of thermal comfort field measurements",
+    "year": "2022",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI HVAC optimization",
+      "AI for Energy Performance Optimization",
+      "AI occupancy modeling",
+      "Dataset",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Review Paper",
+      "Smart Building Systems and IoT Integration",
+      "behavior modeling",
+      "building energy simulation",
+      "building performance dashboard",
+      "human-centric IoT",
+      "intelligent environments",
+      "real-time monitoring",
+      "sensor data integration",
+      "thermal simulation"
+    ],
+    "authors": "Parkinson Thomas, Tartarini Federico, Földváry Ličina Veronika, Cheung Toby, Zhang Hui, de Dear Richard, Li Peixian, Arens Edward, Chun Chungyoon, Schiavon Stefano, Luo Maohui, Brager Gail"
+  },
+  {
+    "id": "58b21833",
+    "title": "Structural Health Monitoring of Engineering Structures Using Digital Twins: A Digital Twin Platform Approach",
+    "year": "2025",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "BIM",
+      "Predictive Analytics and Performance Optimization",
+      "anomaly detection",
+      "damage detection",
+      "digital twins",
+      "predictive analytics",
+      "predictive maintenance",
+      "structural health monitoring"
+    ],
+    "authors": "P. Talasila, D. Tcherniak, A.M.D. Jensen, S. Mahato, A. Schörghofer-Queiroz, M.D. Ulriksen, G. Abbiati, P.G. Larsen, L. Damkilde"
+  },
+  {
+    "id": "f86151db",
+    "title": "PolyGraph: A Graph-Based Method for Floorplan Reconstruction From 3D Scans",
+    "year": "2025",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "BIM",
+      "Floor Plan Reconstruction and Parametrization",
+      "digital twins",
+      "image-to-plan",
+      "layout recovery",
+      "parametric BIM",
+      "point-cloud-to-plan",
+      "room segmentation",
+      "scan-to-BIM"
+    ],
+    "authors": "Q. Sun, C. Fang, S. Liu, Y. Sun, Y. Shang, Y. He"
+  },
+  {
+    "id": "385d9eef",
+    "title": "Approach Towards the Development of Digital Twin for Structural Health Monitoring of Civil Infrastructure: A Comprehensive Review",
+    "year": "2025",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "BIM",
+      "Predictive Analytics and Performance Optimization",
+      "Review Paper",
+      "anomaly detection",
+      "damage detection",
+      "digital twins",
+      "predictive analytics",
+      "predictive maintenance",
+      "structural health monitoring"
+    ],
+    "authors": "Zhiyan Sun,\nSanduni Jayasinghe, Amir Sidiq, Farham Shahrivar,\nMojtaba Mahmoodian, Sujeeva Setunge"
+  },
+  {
+    "id": "436f8fd6",
+    "title": "Human-building interaction towards a sustainable built environment: A review",
+    "year": "2022",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI for Energy Performance Optimization",
+      "AI occupancy modeling",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Review Paper",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "behavior modeling",
+      "occupant behavior"
+    ],
+    "authors": "Devmane Suhas, Rana Omer, Perera Charith"
+  },
+  {
+    "id": "a4a6ade7",
+    "title": "Virtual Reality applications for visualization of 6000-year-old Neolithic graves from Lenzburg (Switzerland)",
+    "year": "2025",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "3D Reconstruction",
+      "AR cultural experiences",
+      "Case Study",
+      "SfM",
+      "Virtual Reality Experiences and Education",
+      "XR storytelling",
+      "cultural heritage VR",
+      "digital twins",
+      "heritage XR visualization",
+      "immersive education",
+      "indoor scene reconstruction",
+      "museum VR",
+      "outdoor scene reconstruction",
+      "photogrammetry"
+    ],
+    "authors": "Noah Steuri, Oliver Sahli\n, Johannes Reich, Marco Milella, Jonas Nyffeler, Thomas Doppler, Sandra Lösch, Albert Hafner"
+  },
+  {
+    "id": "03197715",
+    "title": "From Novelty to Norm: Uncovering the Drivers of Virtual Tour Effectiveness in Real Estate Sales",
+    "year": "2024",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI-Powered Real Estate Valuation",
+      "Case Study",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Virtual Property Tours and Marketing",
+      "XR immersive walkthroughs",
+      "XRAI for AEC",
+      "metaverse for AEC",
+      "real estate analytics",
+      "real estate visualization",
+      "virtual staging"
+    ],
+    "authors": "Miremad Soleymanian, Yi Qian"
+  },
+  {
+    "id": "36b43448",
+    "title": "Cyber-Physical Systems Improving Building Energy Management: Digital Twin and Artificial Intelligence",
+    "year": "2021",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI building automation",
+      "AI for Energy Performance Optimization",
+      "BIM",
+      "Predictive Analytics and Performance Optimization",
+      "Smart Building Systems and IoT Integration",
+      "building energy forecasting",
+      "building energy simulation",
+      "building performance dashboard",
+      "digital twins",
+      "human-centric IoT",
+      "predictive analytics",
+      "sensor data integration"
+    ],
+    "authors": "Agostinelli Sofia, Cumo Fabrizio, Guidi Giambattista, Tomazzoli Claudio"
+  },
+  {
+    "id": "a9254980",
+    "title": "Enhanced clash detection in building information modeling: Leveraging modified extreme gradient boosting for predictive analytics",
+    "year": "2024",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "BIM",
+      "BIM validation",
+      "Predictive Analytics and Performance Optimization",
+      "QA/QC in BIM",
+      "Quality Control and Validation",
+      "clash detection",
+      "digital twins"
+    ],
+    "authors": "Ali Shehadeh, Odey Alshboul,\nMadhar M. Taamneh,\nAiman Q. Jaradat,\nAhmad H. Alomari"
+  },
+  {
+    "id": "29133b2a",
+    "title": "Advanced integration of BIM and VR in the built environment: Enhancing sustainability and resilience in urban development",
+    "year": "2025",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "BIM",
+      "Interactive Visualization",
+      "Sustainable Buildings",
+      "XR design review",
+      "XRAI automated accessibility",
+      "XRAI for AEC",
+      "circular economy",
+      "embodied carbon",
+      "immersive design",
+      "lifecycle assessment",
+      "sustainable construction"
+    ],
+    "authors": "Ali Shehadeh, Odey Alshboul, Madhar M Taamneh, Aiman Q Jaradat, Ahmad H Alomari, Mai Arar"
+  },
+  {
+    "id": "25970837",
+    "title": "HeXA: Haptic-enhanced eXtended reality framework for material-informed Architectural design",
+    "year": "2025",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AR/VR interfaces",
+      "AR/VR/XR visualization",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "HCI-HBI",
+      "Interactive Visualization",
+      "XR design review",
+      "XRAI automated accessibility",
+      "XRAI for AEC",
+      "XRAI inclusive design",
+      "collaborative VR co-design",
+      "immersive design",
+      "metaverse for AEC"
+    ],
+    "authors": "Valentin Senk, Mohammad Ghazanfari, Shervin Rasoulzadeh, Khrystyna Vasylevska, Balint Istvan Kovacs, Soroosh Mortezapoor, Emanuel Vonach, Iva Kovacic, Josef Füssl, Hannes Kaufmann, Markus Königsberger"
+  },
+  {
+    "id": "a660af06",
+    "title": "AI-Infused Design - Merging parametric models for architectural design",
+    "year": "2025",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "Form Finding",
+      "GANs",
+      "Generative Design and Design Space Exploration",
+      "LLMs for AEC",
+      "Parametric, Computational and Algorithmic Design",
+      "VAE",
+      "design automation",
+      "design space optimization",
+      "diffusion models",
+      "geometry generation",
+      "text-to-3D"
+    ],
+    "authors": "Adam Sebestyen, Ozan Özdenizci, Robert Legenstein, Urs Hirschberg"
+  },
+  {
+    "id": "40cec3e1",
+    "title": "A review of building digital twins to improve energy efficiency in the building operational stage",
+    "year": "2024",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI building automation",
+      "AI for Energy Performance Optimization",
+      "BIM",
+      "Predictive Analytics and Performance Optimization",
+      "Review Paper",
+      "Smart Building Systems and IoT Integration",
+      "building energy forecasting",
+      "digital twins",
+      "energy-efficient design",
+      "predictive analytics"
+    ],
+    "authors": "Andres Sebastian, Cespedes-Cubides, Muhyiddine Jradi"
+  },
+  {
+    "id": "d6a58434",
+    "title": "Automating the retrospective generation of As-is BIM models using machine learning",
+    "year": "2023",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "3D Reconstruction",
+      "3D floor plan",
+      "BIM",
+      "Floor Plan Reconstruction and Parametrization",
+      "Review Paper",
+      "digital twins",
+      "layout recovery",
+      "room segmentation"
+    ],
+    "authors": "Phillip Schönfelder, \nAngelina Aziz, \nBenedikt Faltin, Markus König"
+  },
+  {
+    "id": "a44e9c69",
+    "title": "A selective disassembly multi-objective optimization approach for adaptive reuse of building components",
+    "year": "2020",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "2D floor plan",
+      "3D Reconstruction",
+      "3D floor plan",
+      "BIM",
+      "Sustainable Buildings",
+      "circular economy",
+      "digital twins",
+      "lifecycle assessment",
+      "object detection",
+      "semantic segmentation",
+      "structural element detection",
+      "sustainable construction",
+      "sustainable disassembly",
+      "sustainable materials"
+    ],
+    "authors": "Benjamin Sanchez,\nChristopher Rausch, Carl Haas, Rebecca Saari"
+  },
+  {
+    "id": "fc001d5a",
+    "title": "Conversational artificial intelligence in the AEC industry: A review of present status, challenges and opportunities",
+    "year": "2023",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "LLMs for AEC",
+      "Multimodal Design Assistance",
+      "Vision-Language Models for AEC",
+      "XRAI for AEC",
+      "XRAI inclusive design"
+    ],
+    "authors": "Abdullahi B. Saka, Lukumon O. Oyedele, \nLukman A. Akanbi,\nSikiru A. Ganiyu, Daniel W.M. Chan,\nSururah A. Bello"
+  },
+  {
+    "id": "5d9883f3",
+    "title": "Building Information Modelling, Artificial Intelligence and Construction Tech",
+    "year": "2020",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "BIM",
+      "BIM validation",
+      "Quality Control and Validation",
+      "Review Paper",
+      "data quality",
+      "digital twins"
+    ],
+    "authors": "Rafael Sacks, Mark Girolami, Ioannis Brilakis"
+  },
+  {
+    "id": "8de2c59e",
+    "title": "A Review of Machine Learning Approaches for\nReal Estate Valuation",
+    "year": "2023",
+    "primary_category": "Sustainable Real Estate Valuation and Economics",
+    "tags": [
+      "AI in asset management",
+      "AI-Powered Real Estate Valuation",
+      "ML for sustainable real estate",
+      "Review Paper",
+      "predictive investment",
+      "predictive pricing",
+      "real estate analytics"
+    ],
+    "authors": "Thomas H. Root, Troy J. Strader, Yu-Hsiang (John) Huang"
+  },
+  {
+    "id": "0b68f600",
+    "title": "A conceptual framework for designing human-centered building-occupant interactions to enhance user experience in specific-purpose buildings",
+    "year": "2025",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI occupancy modeling",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Review Paper",
+      "XRAI for AEC",
+      "behavior modeling",
+      "movement analysis",
+      "occupant behavior",
+      "sensor-driven design",
+      "space utilization",
+      "spatial analytics"
+    ],
+    "authors": "Nazila Roofigari-Esfahan, Elham Morshedzadeh"
+  },
+  {
+    "id": "e4057074",
+    "title": "Viewpoints on AR and VR in heritage tourism",
+    "year": "2024",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "AR cultural experiences",
+      "Review Paper",
+      "Virtual Reality Experiences and Education",
+      "XR storytelling",
+      "cultural heritage VR",
+      "heritage XR visualization",
+      "immersive education",
+      "museum VR"
+    ],
+    "authors": "Maysam Shafiee Roodposhti,\nFaezeh Esmaeelbeigi"
+  },
+  {
+    "id": "2ef4c1da",
+    "title": "Viewpoints on AR and VR in heritage tourism",
+    "year": "2024",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "AR cultural experiences",
+      "Virtual Reality Experiences and Education",
+      "XR storytelling",
+      "cultural heritage VR",
+      "heritage XR visualization",
+      "immersive education",
+      "museum VR"
+    ],
+    "authors": "Maysam Shafiee Roodposhti,\nFaezeh Esmaeelbeigi"
+  },
+  {
+    "id": "59dbbeab",
+    "title": "An assistive haptic interface for appearance-based indoor navigation",
+    "year": "2016",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "Case Study",
+      "Context-Aware Spatial Intelligence",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "HCI-HBI",
+      "Multimodal Design Assistance",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Vision-Language Models for AEC",
+      "XRAI automated accessibility",
+      "XRAI for AEC",
+      "XRAI inclusive design"
+    ],
+    "authors": "Jose Rivera-Rubio, Kai Arulkumaran, Hemang Rishi, Ioannis Alexiou, Anil A. Bharath"
+  },
+  {
+    "id": "07da3786",
+    "title": "What Do We Design for When We Design \"Smart Buildings\"? - A Scoping Review of Human Experience Design Research in Buildings",
+    "year": "2025",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AR/VR interfaces",
+      "AR/VR/XR visualization",
+      "HCI-HBI",
+      "Interactive Visualization",
+      "Review Paper",
+      "Sustainable Buildings",
+      "XR design review",
+      "XRAI automated accessibility",
+      "XRAI for AEC",
+      "XRAI inclusive design",
+      "collaborative VR co-design",
+      "immersive design",
+      "metaverse for AEC"
+    ],
+    "authors": "Shruti Rao, Katja Rogers, Judith Good, Hamed Alavi"
+  },
+  {
+    "id": "7240a790",
+    "title": "Agile digitization for historic architecture using 360° capture, deep learning, and virtual reality",
+    "year": "2025",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "2D floor plan",
+      "3D Reconstruction",
+      "3D floor plan",
+      "3D scanning",
+      "AR cultural experiences",
+      "Case Study",
+      "Digital Documentation and Archiving",
+      "Heritage BIM",
+      "Predictive Conservation and Risk Assessment",
+      "Virtual Reality Experiences and Education",
+      "conservation AI",
+      "cultural heritage VR",
+      "digital archives",
+      "digital twins",
+      "heritage digitization",
+      "museum VR",
+      "photogrammetry",
+      "point clouds",
+      "scene interaction"
+    ],
+    "authors": "Farzan Baradaran Rahimi, Claude M.H. Demers,\nMohammad Reza Karimi Dastjerdi, Jean-François Lalonde"
+  },
+  {
+    "id": "59a4984c",
+    "title": "Towards human-centered artificial intelligence (AI) in architecture, engineering, and construction (AEC) industry",
+    "year": "2023",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "Context-Aware Spatial Intelligence",
+      "HCI-HBI",
+      "LLMs for AEC",
+      "Review Paper",
+      "Vision-Language Models for AEC",
+      "XRAI for AEC"
+    ],
+    "authors": "Hamed Nabizadeh Rafsanjani, Amir Hossein Nabizadeh"
+  },
+  {
+    "id": "2bbc6d69",
+    "title": "Building Materials and the Climate: Constructing a New Future",
+    "year": "2023",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AI material selection",
+      "Review Paper",
+      "Sustainable Buildings",
+      "circular economy",
+      "embodied carbon",
+      "lifecycle assessment",
+      "material passports",
+      "material simulation",
+      "sustainable construction",
+      "sustainable disassembly",
+      "sustainable materials"
+    ],
+    "authors": "United Nations Environment Programme"
+  },
+  {
+    "id": "68cfb676",
+    "title": "Digital twin-based resilience evaluation of district-scale archetypes: A COVID-19 scenario case study using a university campus pilot",
+    "year": "2022",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI for Energy Performance Optimization",
+      "Case Study",
+      "Predictive Analytics and Performance Optimization",
+      "QA/QC in BIM",
+      "Quality Control and Validation",
+      "Smart Building Systems and IoT Integration",
+      "building energy forecasting",
+      "building energy simulation",
+      "building performance dashboard",
+      "predictive analytics",
+      "real-time monitoring",
+      "sensor data integration"
+    ],
+    "authors": "Alva Pradeep, Mosteiro Romero Martín, Miller Clayton, Stouffs Rudi"
+  },
+  {
+    "id": "83c43b24",
+    "title": "Exploring Creative AI Thinking in the Design Process: The Design Intelligence Strategy",
+    "year": "2023",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "Form Finding",
+      "GANs",
+      "Generative Design and Design Space Exploration",
+      "Parametric, Computational and Algorithmic Design",
+      "Performance-Driven Design",
+      "Sustainable Buildings",
+      "circular economy",
+      "diffusion models",
+      "image-to-plan",
+      "multi-objective optimization",
+      "sustainable construction"
+    ],
+    "authors": "ANGELICA PAIVA PONZIO, SARA REGIANE CHORNOBAI,\nCRISTIAN VINICIUS MACHADO FAGUNDES, RICARDO\nCESAR RODRIGUES, GUSTAVO CUNHA HAFEZ JOSÉ"
+  },
+  {
+    "id": "8bd83d37",
+    "title": "Artificial Intelligence for Heritage Conservation: A Case Study of Automatic Visual Inspection System",
+    "year": "2022",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "3D Reconstruction",
+      "BIM",
+      "Digital Documentation and Archiving",
+      "Predictive Conservation and Risk Assessment",
+      "Review Paper",
+      "Virtual Reality Experiences and Education",
+      "conservation AI",
+      "damage detection",
+      "digital twins",
+      "heritage XR visualization",
+      "heritage digitization",
+      "material degradation prediction",
+      "predictive maintenance",
+      "risk modeling",
+      "structural health monitoring"
+    ],
+    "authors": "Lukman E. Mansuri\nD. A. Patel"
+  },
+  {
+    "id": "6958589d",
+    "title": "Heritage ++, a Spatial Computing approach to Heritage Conservation",
+    "year": "2024",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "3D Reconstruction",
+      "3D scanning",
+      "BIM",
+      "Digital Documentation and Archiving",
+      "Heritage BIM",
+      "Predictive Conservation and Risk Assessment",
+      "Review Paper",
+      "conservation AI",
+      "cultural heritage VR",
+      "damage detection",
+      "digital archives",
+      "digital twins",
+      "heritage XR visualization",
+      "heritage digitization",
+      "indoor scene reconstruction",
+      "material degradation prediction",
+      "outdoor scene reconstruction",
+      "predictive maintenance",
+      "risk modeling",
+      "scene editing",
+      "scene interaction",
+      "scene understanding",
+      "structural health monitoring"
+    ],
+    "authors": "Yamini  Patankar,  Camilla  Tennenini,  Rafael  Bischof,  Ishita  Khatri,  Ricardo  MaiaAvelino,  Wenqian Yang, Nijat Mahamaliyev, Fabio Scotto, Daniela Mitterberger, Bernd Bickel, Fred Girardet, Christophe Amsler, Brahimsamba Bomou, Robert J. Flatt"
+  },
+  {
+    "id": "ebbfb869",
+    "title": "Virtual reality for the enhancement of cultural tangible and intangible heritage: The case study of the Castle of Corsano",
+    "year": "2022",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "3D Reconstruction",
+      "AR cultural experiences",
+      "Case Study",
+      "Virtual Reality Experiences and Education",
+      "XR storytelling",
+      "cultural heritage VR",
+      "heritage XR visualization",
+      "immersive education",
+      "indoor scene reconstruction",
+      "museum VR",
+      "outdoor scene reconstruction"
+    ],
+    "authors": "Lucio Tommaso De Paolis, Sofia Chiarello, Carola Gatto, Silvia Liaci, Valerio De Luca"
+  },
+  {
+    "id": "d2f20dad",
+    "title": "Data Reliability in BIM and Performance Analytics: A Survey of Contemporary AECO Practice",
+    "year": "2023",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "BIM validation",
+      "QA/QC in BIM",
+      "Quality Control and Validation",
+      "Review Paper",
+      "data quality"
+    ],
+    "authors": "Eleanna Panagoulia, Tarek Rakha"
+  },
+  {
+    "id": "91b68a0a",
+    "title": "Development of a 3D Digital Model of End-of-Service-Life Buildings for Improved Demolition Waste Management through Automated Demolition Waste Audit",
+    "year": "2024",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "2D floor plan",
+      "3D Reconstruction",
+      "3D floor plan",
+      "BIM",
+      "Context-Aware Spatial Intelligence",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "Sustainable Buildings",
+      "Vision-Language Models for AEC",
+      "circular economy",
+      "digital twins",
+      "embodied carbon",
+      "indoor scene reconstruction",
+      "material passports",
+      "outdoor scene reconstruction",
+      "sustainable disassembly",
+      "sustainable materials"
+    ],
+    "authors": "Muhammad Omer, Yong C. Wang, Mikel Quintana Roma, Stanislav Bedrich, V´aclav Neˇzerka, Juan\nFerriz-Papi, Jesus J. Moros Montanes, Ines Diez Ortiz"
+  },
+  {
+    "id": "5593a977",
+    "title": "Sustainability scoring tool for real estate according to German and European valuation principles in the purchasing process",
+    "year": "2024",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "ML for sustainable real estate",
+      "Sustainable Buildings",
+      "circular economy",
+      "lifecycle assessment",
+      "sustainable construction",
+      "sustainable disassembly"
+    ],
+    "authors": "Katharina Oktabec, Nadine Wills"
+  },
+  {
+    "id": "8a59321d",
+    "title": "Impact of space utilization and work time flexibility on energy performance of office buildings",
+    "year": "2024",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI for Energy Performance Optimization",
+      "AI occupancy modeling",
+      "Case Study",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "behavior modeling",
+      "movement analysis",
+      "occupant behavior",
+      "sensor-driven design",
+      "space utilization",
+      "spatial analytics"
+    ],
+    "authors": "Alireza Norouziasas, Shady Attia b,\nMohamed Hamdy"
+  },
+  {
+    "id": "20b51934",
+    "title": "Applicability of deep learning algorithms for predicting indoor temperatures: Towards the development of digital twin HVAC systems",
+    "year": "2023",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI HVAC optimization",
+      "AI building automation",
+      "AI for Energy Performance Optimization",
+      "Predictive Analytics and Performance Optimization",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "building energy forecasting",
+      "building energy simulation",
+      "digital twins",
+      "human-centric IoT",
+      "predictive analytics",
+      "sensor data integration"
+    ],
+    "authors": "Pooria Norouzi, Sirine Maalej,\nRodrigo Mora"
+  },
+  {
+    "id": "9a0f1354",
+    "title": "Smarter Buildings, Cleaner Grid: The Case for Automated Demand Management",
+    "year": "2024",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AI for Energy Performance Optimization",
+      "Case Study",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "smart grids"
+    ],
+    "authors": "noda.ai"
+  },
+  {
+    "id": "98925fe3",
+    "title": "Integrating ESG with Digital Twins and the Metaverse: A Data-Driven Framework for Smart Building Sustainability",
+    "year": "2025",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI for Energy Performance Optimization",
+      "AR/VR/XR visualization",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "HCI-HBI",
+      "Interactive Visualization",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "XRAI for AEC",
+      "building performance dashboard"
+    ],
+    "authors": "Magaletti Nicola, Chiara Tognon, Mauro Di Molfetta, Angelo Zerega, Valeria Notarnicola, Ettore Zini, Angelo Leogrande"
+  },
+  {
+    "id": "0d66eda4",
+    "title": "Improving energy efficiency while preserving historic buildings with digital twins and artificial intelligence",
+    "year": "2021",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "AI for Energy Performance Optimization",
+      "Predictive Conservation and Risk Assessment",
+      "conservation AI",
+      "damage detection",
+      "digital twins",
+      "human-centric IoT",
+      "material degradation prediction",
+      "predictive maintenance",
+      "risk modeling",
+      "sensor data integration",
+      "structural health monitoring"
+    ],
+    "authors": "Zhongjun Ni, Petra Eriksson, Yu Liu, Magnus Karlsson and Shaofang Gong"
+  },
+  {
+    "id": "653d8ada",
+    "title": "Enabling Preventive Conservation of Historic Buildings Through Cloud-Based Digital Twins: A Case Study in the City Theatre, Norrköping",
+    "year": "2022",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "Case Study",
+      "Predictive Conservation and Risk Assessment",
+      "conservation AI",
+      "damage detection",
+      "digital twins",
+      "human-centric IoT",
+      "material degradation prediction",
+      "predictive maintenance",
+      "risk modeling",
+      "structural health monitoring"
+    ],
+    "authors": "Zhongjun Ni, Yu Liu, M. Karlsson, Shaofang Gong"
+  },
+  {
+    "id": "87479d3d",
+    "title": "Human-Building Interaction: When the Machine Becomes a Building",
+    "year": "2017",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI occupancy modeling",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Review Paper",
+      "XRAI for AEC",
+      "behavior modeling",
+      "movement analysis",
+      "occupant behavior",
+      "sensor-driven design",
+      "space utilization",
+      "spatial analytics"
+    ],
+    "authors": "Julien Nembrini, Denis Lalanne"
+  },
+  {
+    "id": "8563403f",
+    "title": "Presenting Architectural Research in VR",
+    "year": "2022",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AR/VR interfaces",
+      "AR/VR/XR visualization",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "HCI-HBI",
+      "Interactive Visualization",
+      "ML for sustainable real estate",
+      "VR dashboards",
+      "XR design review",
+      "XRAI for AEC",
+      "XRAI inclusive design",
+      "collaborative VR co-design",
+      "immersive design",
+      "metaverse for AEC"
+    ],
+    "authors": "Taro Narahara"
+  },
+  {
+    "id": "76a6e29c",
+    "title": "Novel View Synthesis of Structural Color Objects Created by Laser Markings",
+    "year": "2024",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "3DGS",
+      "Case Study",
+      "Dataset",
+      "NeRF",
+      "Review Paper",
+      "SfM",
+      "Tool/Library",
+      "digital twins",
+      "indoor scene reconstruction",
+      "outdoor scene reconstruction",
+      "photogrammetry",
+      "point clouds",
+      "scene editing",
+      "scene interaction"
+    ],
+    "authors": "Prakash Naikade"
+  },
+  {
+    "id": "8c0c5464",
+    "title": "Project Discover: An application of generative design for architectural space planning",
+    "year": "2017",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "Form Finding",
+      "Generative Design and Design Space Exploration",
+      "Parametric, Computational and Algorithmic Design",
+      "conditional generation",
+      "design automation",
+      "design space optimization",
+      "geometry generation",
+      "multi-objective optimization"
+    ],
+    "authors": "Danil Nagy, Damon Lau, John Locke, James Stoddart, Lorenzo Villaggi, Ray Wang, Dale Zhao, David Benjamin"
+  },
+  {
+    "id": "18547341",
+    "title": "Generative Urban Design: Integrating Financial and Energy Goals for Automated Neighborhood Layout",
+    "year": "2018",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "Form Finding",
+      "Generative Design and Design Space Exploration",
+      "Parametric, Computational and Algorithmic Design",
+      "Performance-Driven Design",
+      "daylight optimization",
+      "design automation",
+      "design space optimization",
+      "energy modeling",
+      "energy optimization",
+      "multi-objective optimization"
+    ],
+    "authors": "Danil Nagy, Lorenzo Villaggi, and David Benjamin"
+  },
+  {
+    "id": "29b7c326",
+    "title": "3D DOCUMENTATION OF CULTURAL HERITAGE SITES\nUSING DRONE AND PHOTOGRAMMETRY: A CASE STUDY OF\nPHILIPPINE UNESCO-RECOGNIZED BAROQUE CHURCHES",
+    "year": "2020",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "3D Reconstruction",
+      "3D scanning",
+      "Case Study",
+      "Digital Documentation and Archiving",
+      "Heritage BIM",
+      "conservation AI",
+      "digital archives",
+      "digital twins",
+      "documentation workflows",
+      "heritage digitization",
+      "photogrammetry"
+    ],
+    "authors": "January Febro Naga"
+  },
+  {
+    "id": "4f578970",
+    "title": "Digital real estate: a review of the technologies and tools transforming the industry and society",
+    "year": "2023",
+    "primary_category": "Sustainable Real Estate Valuation and Economics",
+    "tags": [
+      "AI in asset management",
+      "AI-Powered Real Estate Valuation",
+      "ML for sustainable real estate",
+      "Review Paper",
+      "predictive pricing",
+      "real estate analytics"
+    ],
+    "authors": "Nida Naeem, Irfan Rana, Abdur Nasir"
+  },
+  {
+    "id": "7311c1ae",
+    "title": "Towards a holistic assessment of circular economy strategies: The 9R circularity index",
+    "year": "2024",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "Sustainable Buildings",
+      "circular economy",
+      "embodied carbon",
+      "lifecycle assessment",
+      "sustainable construction",
+      "sustainable disassembly",
+      "sustainable materials"
+    ],
+    "authors": "Santiago Muñoz, M. Reza Hosseini, Robert H. Crawford"
+  },
+  {
+    "id": "f412ac0e",
+    "title": "Inclusive design in architectural practice: Experiential learning of disability in architectural education",
+    "year": "2018",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "Case Study",
+      "HCI-HBI",
+      "XRAI automated accessibility",
+      "XRAI for AEC",
+      "XRAI inclusive design"
+    ],
+    "authors": "Kerry Mulligan, Allyson Calder, Hilda Mulligan"
+  },
+  {
+    "id": "c64cd2f3",
+    "title": "Integrating IoT and BIM for Sustainable Construction Management: A Data-Driven Civil Engineering Model",
+    "year": "2025",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AI building automation",
+      "AR/VR/XR visualization",
+      "BIM",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "XRAI for AEC",
+      "big data in buildings",
+      "circular economy",
+      "data templates for circularity",
+      "digital twins",
+      "human-centric IoT",
+      "sensor data integration",
+      "sustainable construction"
+    ],
+    "authors": "Pankaj Mudholkar, Megha Mudholkar, Muneshwara M S, Shiyam V, Surrya Prakash Dillibabu, T. Mamatha"
+  },
+  {
+    "id": "ae6bce36",
+    "title": "Infrastructure digital twin technology: A new paradigm for future construction industry",
+    "year": "2024",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "AI building automation",
+      "BIM",
+      "Review Paper",
+      "big data in buildings",
+      "blockchain for AEC",
+      "digital twins"
+    ],
+    "authors": "Taofeeq D. Moshood, James OB. Rotimi, Wajiha Shahzad, J.A. Bamgbade"
+  },
+  {
+    "id": "91d01982",
+    "title": "Artificial intelligence-assisted visual inspection for cultural heritage: State-of-the-art review",
+    "year": "2024",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "3D scanning",
+      "Digital Documentation and Archiving",
+      "Predictive Conservation and Risk Assessment",
+      "Review Paper",
+      "conservation AI",
+      "damage detection",
+      "material degradation prediction",
+      "predictive maintenance",
+      "risk modeling",
+      "structural health monitoring"
+    ],
+    "authors": "Mayank Mishra, Paulo B. Lourenço"
+  },
+  {
+    "id": "12af6b81",
+    "title": "Virtual and Augmented Reality in Architectural Design\nand Education\nAn Immersive Multimodal Platform to Support\nArchitectural Pedagogy",
+    "year": "2017",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "XRAI for AEC",
+      "XRAI inclusive design"
+    ],
+    "authors": "Julie Milovanovic, Guillaume Moreau, Daniel Siret, Francis Miguet"
+  },
+  {
+    "id": "858f09f3",
+    "title": "Circular economy adoption barriers in built environment- a case of emerging economy",
+    "year": "2023",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "Review Paper",
+      "Sustainable Buildings",
+      "circular economy",
+      "lifecycle assessment",
+      "sustainable construction"
+    ],
+    "authors": "Purva Mhatre, Vidyadhar V. Gedam, Seema Unnikrishnan, Rakesh D. Raut"
+  },
+  {
+    "id": "96d71273",
+    "title": "Surface Damage Identification for Heritage Site Protection: A Mobile Crowd-sensing Solution Based on Deep Learning",
+    "year": "2023",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "Case Study",
+      "Predictive Conservation and Risk Assessment",
+      "conservation AI",
+      "damage detection",
+      "material degradation prediction",
+      "predictive maintenance",
+      "risk modeling",
+      "structural health monitoring"
+    ],
+    "authors": "Safia Meklati, Kenza Boussora, Mohamed El Hafedh Abdi, Sid-Ahmed Berrani"
+  },
+  {
+    "id": "309f47e1",
+    "title": "Integrating Emerging Technologies with Digital Twins for Heritage Building Conservation: An Interdisciplinary Approach with Expert Insights and Bibliometric Analysis",
+    "year": "2024",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "3D scanning",
+      "AR cultural experiences",
+      "BIM",
+      "Digital Documentation and Archiving",
+      "Heritage BIM",
+      "Predictive Conservation and Risk Assessment",
+      "Review Paper",
+      "Virtual Reality Experiences and Education",
+      "XR storytelling",
+      "conservation AI",
+      "cultural heritage VR",
+      "damage detection",
+      "digital twins",
+      "heritage XR visualization",
+      "human-centric IoT",
+      "immersive education",
+      "material degradation prediction",
+      "museum VR",
+      "predictive maintenance",
+      "risk modeling",
+      "sensor data integration",
+      "structural health monitoring"
+    ],
+    "authors": "Silvia Mazzetto"
+  },
+  {
+    "id": "dd46eadb",
+    "title": "BUILDING DAMAGE ASSESSMENT WITH DEEP LEARNING",
+    "year": "2022",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "Predictive Conservation and Risk Assessment",
+      "conservation AI",
+      "damage detection",
+      "material degradation prediction",
+      "predictive maintenance",
+      "risk modeling",
+      "semantic segmentation",
+      "structural health monitoring"
+    ],
+    "authors": "S. May, A. Dupuis, A. Lagrange, F. De Vieilleville, C. Fernandez-Martin"
+  },
+  {
+    "id": "edbb05de",
+    "title": "Digital Twin Enabled Construction Progress Monitoring",
+    "year": "2024",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "BIM",
+      "Sustainable Buildings",
+      "circular economy",
+      "digital twins",
+      "point clouds",
+      "sustainable construction"
+    ],
+    "authors": "Alwyn Mathew, Shuyan Li, Kacper Pluta, Rahima Djahel, Ioannis Brilakis"
+  },
+  {
+    "id": "51a03b7f",
+    "title": "Building Information Modeling and Internet of Things integration for smart and sustainable environments: A review",
+    "year": "2021",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AI building automation",
+      "BIM",
+      "Review Paper",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "adaptive control",
+      "big data in buildings",
+      "data templates for circularity",
+      "digital twins",
+      "human-centric IoT",
+      "intelligent environments",
+      "real-time monitoring",
+      "sensor data integration"
+    ],
+    "authors": "Ada Malagnino\n, \nTeodoro Montanaro\n, Mariangela Lazoi\n, \nIlaria Sergi\n, Angelo Corallo\n, Luigi Patrono"
+  },
+  {
+    "id": "9f1138e0",
+    "title": "Automated Scan-to-BIM: A Deep Learning-Based Framework for Indoor Environments with Complex Furniture Elements",
+    "year": "2025",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "3D floor plan",
+      "BIM",
+      "Floor Plan Reconstruction and Parametrization",
+      "Revit automation",
+      "digital twins",
+      "indoor scene reconstruction",
+      "layout recovery",
+      "object detection",
+      "point clouds",
+      "scan-to-BIM",
+      "semantic segmentation"
+    ],
+    "authors": "Mostafa Mahmoud, Zhebin Zhao, Wu Chen,\nMahmoud Adham, Yaxin Li"
+  },
+  {
+    "id": "6bae0809",
+    "title": "Automated BIM generation for large-scale indoor complex environments based on deep learning",
+    "year": "2024",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "3D Reconstruction",
+      "3D floor plan",
+      "BIM",
+      "Floor Plan Reconstruction and Parametrization",
+      "SfM",
+      "digital twins",
+      "indoor scene reconstruction",
+      "layout recovery",
+      "object detection",
+      "photogrammetry",
+      "point clouds",
+      "room segmentation",
+      "scan-to-BIM",
+      "scene understanding",
+      "semantic segmentation",
+      "structural element detection"
+    ],
+    "authors": "Mostafa Mahmoud, Wu Chen, Yang Yang, Yaxin Li"
+  },
+  {
+    "id": "e219e627",
+    "title": "Extended reality (XR) impacts on real estate market and economic-financial project management of residential built environments: systematic review and analysis",
+    "year": "2024",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI in asset management",
+      "AI-Powered Real Estate Valuation",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Review Paper",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "Virtual Property Tours and Marketing",
+      "XRAI for AEC"
+    ],
+    "authors": "Maria Macchiaroli, Luigi Dolores, G. De Mare"
+  },
+  {
+    "id": "005e47bf",
+    "title": "Smart City Construction and Management by Digital Twins and BIM Big Data in COVID-19 Scenario",
+    "year": "2022",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI building automation",
+      "BIM",
+      "BIM validation",
+      "Case Study",
+      "QA/QC in BIM",
+      "Quality Control and Validation",
+      "Smart Building Systems and IoT Integration",
+      "building performance dashboard",
+      "digital twins",
+      "intelligent environments",
+      "sensor data integration"
+    ],
+    "authors": "Zhihan Lv,\nDongliang Chen,\nHaibin Lv"
+  },
+  {
+    "id": "30e63753",
+    "title": "Smart City Construction and Management by Digital Twins and BIM Big Data in COVID-19 Scenario",
+    "year": "2022",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "BIM",
+      "BIM validation",
+      "QA/QC in BIM",
+      "Quality Control and Validation",
+      "automated compliance checking",
+      "clash detection",
+      "data quality",
+      "digital twins",
+      "geometric validation",
+      "model checking"
+    ],
+    "authors": "Zhihan Lv, Dongliang Chen, Haibin Lv"
+  },
+  {
+    "id": "d78d729a",
+    "title": "Residential floor plan recognition and reconstruction",
+    "year": "2021",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "3D floor plan",
+      "BIM",
+      "Floor Plan Reconstruction and Parametrization",
+      "digital twins",
+      "image-to-plan",
+      "layout recovery",
+      "scan-to-BIM"
+    ],
+    "authors": "Xiaolei Lv, Shengchu Zhao, Xinyang Yu, Binqiang Zhao"
+  },
+  {
+    "id": "35264de9",
+    "title": "Structure-from-Motion Revisited",
+    "year": "2016",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "SfM",
+      "Tool/Library",
+      "indoor scene reconstruction",
+      "outdoor scene reconstruction",
+      "photogrammetry",
+      "point clouds"
+    ],
+    "authors": "Schonberger Johannes Lutz, Frahm Jan-Michael"
+  },
+  {
+    "id": "42f4f4c7",
+    "title": "Upcycling of regular wood trunks and logs using wave function collapse (WFC), augmented reality (AR), and mixed reality (MR) technologies for circular design",
+    "year": "2025",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AI material selection",
+      "AR/VR/XR visualization",
+      "AR/VR interfaces",
+      "Sustainable Buildings",
+      "XRAI automated accessibility",
+      "XRAI for AEC",
+      "XRAI inclusive design",
+      "circular economy",
+      "embodied carbon",
+      "immersive design",
+      "material passports",
+      "sustainable construction",
+      "sustainable disassembly",
+      "sustainable materials"
+    ],
+    "authors": "Jianing Luo, Boyuan Yu, Yuan Jiang, Adam Fingrut, Adam Holloway"
+  },
+  {
+    "id": "cc2e527c",
+    "title": "Digital twin-enabled anomaly detection for built asset monitoring in operation and maintenance",
+    "year": "2020",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI HVAC optimization",
+      "BIM",
+      "Predictive Analytics and Performance Optimization",
+      "anomaly detection",
+      "big data in buildings",
+      "damage detection",
+      "digital twins",
+      "predictive analytics",
+      "predictive maintenance",
+      "time-series analysis"
+    ],
+    "authors": "Qiuchen Lu, Xiang Xie, Ajith Kumar Parlikad, Jennifer Mary Schooling"
+  },
+  {
+    "id": "e63a5287",
+    "title": "Living Building Challenge",
+    "year": "2024",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "AI building automation",
+      "Case Study",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "circular economy",
+      "sustainable construction"
+    ],
+    "authors": "Living-Future"
+  },
+  {
+    "id": "b46f6f01",
+    "title": "MCP-Driven Parametric Modeling: Integrating LLM Agents into Architectural and Landscape Design Workflows",
+    "year": "2025",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "LLMs for AEC",
+      "Multimodal Design Assistance",
+      "Vision-Language Models for AEC",
+      "XRAI for AEC",
+      "XRAI inclusive design"
+    ],
+    "authors": "Xun Liu, Runjia Tian"
+  },
+  {
+    "id": "2739f8fc",
+    "title": "Applications and Trends of Machine Learning in Building Energy Optimization: A Bibliometric Analysis",
+    "year": "2025",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AI HVAC optimization",
+      "AI building automation",
+      "AI for Energy Performance Optimization",
+      "Predictive Analytics and Performance Optimization",
+      "RL",
+      "Review Paper",
+      "Smart Building Systems and IoT Integration",
+      "adaptive control",
+      "big data in buildings",
+      "building energy simulation",
+      "building performance dashboard",
+      "circular economy",
+      "embodied carbon",
+      "energy-efficient design",
+      "human-centric IoT",
+      "real-time monitoring",
+      "smart grids"
+    ],
+    "authors": "Jingyi Liu,\nJianfei Chen"
+  },
+  {
+    "id": "b6b863a2",
+    "title": "Applications and Trends of Machine Learning in Building Energy Optimization: A Bibliometric Analysis",
+    "year": "2025",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "Predictive Analytics and Performance Optimization",
+      "Review Paper",
+      "big data in buildings",
+      "building energy forecasting",
+      "predictive analytics",
+      "time-series analysis"
+    ],
+    "authors": "Jingyi Liu, Jianfei Chen"
+  },
+  {
+    "id": "a5679725",
+    "title": "Hybrid Approach for Digital Twins in the Built Environment",
+    "year": "2021",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI building automation",
+      "AI for Energy Performance Optimization",
+      "Predictive Analytics and Performance Optimization",
+      "Quality Control and Validation",
+      "Smart Building Systems and IoT Integration",
+      "big data in buildings",
+      "building energy forecasting",
+      "building energy simulation",
+      "building performance dashboard",
+      "digital twins",
+      "predictive analytics",
+      "sensor data integration"
+    ],
+    "authors": "Yu-Wen Lin, Tsz Ling Elaine Tang, Costas J. Spanos"
+  },
+  {
+    "id": "0caf18e5",
+    "title": "Vision-Based Mobile Indoor Assistive Navigation Aid for Blind People",
+    "year": "2019",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "HCI-HBI",
+      "XRAI automated accessibility",
+      "XRAI for AEC",
+      "XRAI inclusive design"
+    ],
+    "authors": "Bing Li, Juan Pablo Munoz, Xuejian Rong, Qingtian Chen, Jizhong Xiao, Yingli Tian, Aries Arditi, Mohammed Yousuf"
+  },
+  {
+    "id": "8b67fb45",
+    "title": "Parametric design strategies for the generation of creative designs",
+    "year": "2014",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "Generative Design and Design Space Exploration",
+      "Parametric, Computational and Algorithmic Design",
+      "design automation",
+      "geometry generation"
+    ],
+    "authors": "JuHyun Lee, Ning Gu and Anthony P.Williams"
+  },
+  {
+    "id": "ef17db17",
+    "title": "Web-Based Material Database for Circular Design",
+    "year": "2024",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AI material selection",
+      "Case Study",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "big data in buildings",
+      "circular economy",
+      "data templates for circularity",
+      "material passports"
+    ],
+    "authors": "Ian Law, Keng Chia Chang, Beril Önalan, Dominik Reisach, Simon Griffioen, Arabelle de Saussure, Benjamin Dillenburger, Catherine De Wolf"
+  },
+  {
+    "id": "494064f6",
+    "title": "Modelling Virtual Space in Architecture",
+    "year": "1996",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AR/VR interfaces",
+      "AR/VR/XR visualization",
+      "HCI-HBI",
+      "Interactive Visualization",
+      "VR dashboards",
+      "XR design review",
+      "XRAI for AEC",
+      "XRAI inclusive design",
+      "collaborative VR co-design",
+      "immersive design",
+      "metaverse for AEC"
+    ],
+    "authors": "David Kurmann,\nMaia Engeli"
+  },
+  {
+    "id": "9d314e4c",
+    "title": "Reflecting Sustainability in Property Valuation - Defining the Problem",
+    "year": "2018",
+    "primary_category": "Sustainable Real Estate Valuation and Economics",
+    "tags": [
+      "AI-Powered Real Estate Valuation",
+      "Case Study",
+      "ML for sustainable real estate",
+      "Sustainable Buildings",
+      "circular economy",
+      "sustainable construction",
+      "sustainable disassembly"
+    ],
+    "authors": "Ewa Kucharska-Stasiak, Katarzyna Olbińska"
+  },
+  {
+    "id": "c62b4870",
+    "title": "On How Technology-Powered Storytelling Can Contribute to Cultural Heritage Sustainability across Multiple Venues - Evidence from the CrossCult H2020 Project",
+    "year": "2020",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "AR cultural experiences",
+      "Virtual Reality Experiences and Education",
+      "XR storytelling",
+      "cultural heritage VR",
+      "heritage XR visualization",
+      "immersive education",
+      "museum VR"
+    ],
+    "authors": "Kalliopi Kontiza, Angeliki Antoniou,\nAbdullah Daif,\nSusana Reboreda-Morillo4\n, \n\nMaddalena Bassani5,‡\n, \n\nSilvia González-Soutelo4,§\n, \n\nIoanna Lykourentzou, Catherine Emma Jones, Joseph Padfield, \nMartín López-Nores"
+  },
+  {
+    "id": "6f478e87",
+    "title": "Research challenges for digital archives of 3D cultural heritage models",
+    "year": "2010",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "3D scanning",
+      "Digital Documentation and Archiving",
+      "Heritage BIM",
+      "Predictive Conservation and Risk Assessment",
+      "Review Paper",
+      "conservation AI",
+      "digital archives",
+      "documentation workflows",
+      "heritage digitization"
+    ],
+    "authors": "David Koller, Bernard Frischer, Greg Humphreys"
+  },
+  {
+    "id": "31cc1c5f",
+    "title": "The Net Zero journey: Why digital twins are a powerful ally",
+    "year": "2023",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI HVAC optimization",
+      "AI building automation",
+      "AI for Energy Performance Optimization",
+      "Case Study",
+      "Predictive Analytics and Performance Optimization",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "anomaly detection",
+      "building energy forecasting",
+      "building energy simulation",
+      "energy-efficient design",
+      "predictive analytics",
+      "smart grids",
+      "time-series analysis"
+    ],
+    "authors": "Sujesh Kodoth, Microsoft"
+  },
+  {
+    "id": "8d1590d4",
+    "title": "Human-building interaction for indoor environmental control: Evolution of technology and future prospects",
+    "year": "2023",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI occupancy modeling",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Review Paper",
+      "XRAI for AEC",
+      "space utilization"
+    ],
+    "authors": "Hakpyeong Kim,\nHyuna Kang,\nHeeju Choi,\nDahyun Jung, Taehoon Hong"
+  },
+  {
+    "id": "f433be92",
+    "title": "Towards the Use of AI for Assessing Construction Sustainability: A State-of-the-Art Review on BREEAM Assessment",
+    "year": "2025",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AI for Energy Performance Optimization",
+      "Case Study",
+      "Review Paper",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "circular economy"
+    ],
+    "authors": "Tala Kasim, Maxwell Antwi-Afari"
+  },
+  {
+    "id": "bea820e8",
+    "title": "BIM-driven digital twin for demolition waste management of existing residential buildings",
+    "year": "2025",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "BIM",
+      "Case Study",
+      "Sustainable Buildings",
+      "circular economy",
+      "embodied carbon",
+      "material passports",
+      "material simulation",
+      "sustainable construction",
+      "sustainable disassembly",
+      "sustainable materials"
+    ],
+    "authors": "Sakdirat Kaewunruen, Yi-Hsuan Lin, Yuxin Guo"
+  },
+  {
+    "id": "7fe7f424",
+    "title": "Energy saving potentials of integrating personal thermal comfort models for control of building systems: Comprehensive quantification through combinatorial consideration of influential parameters",
+    "year": "2020",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI HVAC optimization",
+      "AI occupancy modeling",
+      "Agent-based Modeling",
+      "Context-Aware Spatial Intelligence",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "HCI-HBI",
+      "Multimodal Design Assistance",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "behavior modeling",
+      "occupant behavior",
+      "sensor-driven design",
+      "space utilization",
+      "spatial analytics"
+    ],
+    "authors": "Wooyoung Jung, Farrokh Jazizadeh"
+  },
+  {
+    "id": "a174e5c1",
+    "title": "Advances in artificial intelligence for structural health monitoring: A comprehensive review",
+    "year": "2025",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "Predictive Analytics and Performance Optimization",
+      "Review Paper",
+      "XRAI for AEC",
+      "anomaly detection",
+      "damage detection",
+      "material degradation prediction",
+      "predictive analytics",
+      "predictive maintenance",
+      "structural health monitoring"
+    ],
+    "authors": "Billie F. Spencer Jr., Sung-Han Sim,\nRobin E. Kim,\nHyungchul Yoon"
+  },
+  {
+    "id": "92548d08",
+    "title": "Virtual Reality as a Catalyst in Advancing Inclusive Design for Social and Cultural Sustainability in Architecture",
+    "year": "2023",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "HCI-HBI",
+      "Sustainable Buildings",
+      "XRAI for AEC",
+      "XRAI inclusive design"
+    ],
+    "authors": "Athanasius Johnson"
+  },
+  {
+    "id": "d034bc3a",
+    "title": "Modeling of 3D geometry uncertainty in Scan-to-BIM automatic indoor reconstruction",
+    "year": "2023",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "3D floor plan",
+      "BIM",
+      "Floor Plan Reconstruction and Parametrization",
+      "digital twins",
+      "layout recovery",
+      "point clouds",
+      "point-cloud-to-plan",
+      "scan-to-BIM"
+    ],
+    "authors": "M. Jarząbek-Rychard, H.-G. Maas"
+  },
+  {
+    "id": "3076a0f8",
+    "title": "Virtual reality-based site layout planning for building design",
+    "year": "2024",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AR/VR/XR visualization",
+      "HCI-HBI",
+      "Interactive Visualization",
+      "Sustainable Buildings",
+      "XR design review",
+      "XRAI for AEC",
+      "XRAI inclusive design",
+      "collaborative VR co-design",
+      "immersive design",
+      "metaverse for AEC",
+      "rule-based modeling"
+    ],
+    "authors": "Fabian Jarrin, Yasuko Koga, Diego Thomas, Hiroshi Kawasaki"
+  },
+  {
+    "id": "d79ff0c8",
+    "title": "A Digital Twin Platform for Energy Efficient and Smart Buildings Applications",
+    "year": "2023",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI HVAC optimization",
+      "AI building automation",
+      "AI for Energy Performance Optimization",
+      "Predictive Analytics and Performance Optimization",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "adaptive control",
+      "building energy forecasting",
+      "building energy simulation",
+      "digital twins",
+      "predictive analytics",
+      "smart grids"
+    ],
+    "authors": "Jradi Muhyiddine and Bjørnskov Jakob"
+  },
+  {
+    "id": "4c7afe38",
+    "title": "Mobile Assistive Application for Blind People in Indoor Navigation",
+    "year": "2020",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "Context-Aware Spatial Intelligence",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "XRAI automated accessibility",
+      "XRAI for AEC",
+      "XRAI inclusive design"
+    ],
+    "authors": "Hanen Jabnoun, Mohammad Abu Hashish, Faouzi Benzarti"
+  },
+  {
+    "id": "682484aa",
+    "title": "Cultural preservation and digital heritage: challenges and opportunities",
+    "year": "2024",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "Digital Documentation and Archiving",
+      "Review Paper",
+      "conservation AI",
+      "digital archives",
+      "documentation workflows",
+      "heritage digitization"
+    ],
+    "authors": "Siliutina Iryna, Tytar Olena, Barbash Marina, Petrenko Nataliia, Yepyk Larysa"
+  },
+  {
+    "id": "bf4557bf",
+    "title": "BIM, machine learning and computer vision techniques in underground construction: Current status and future perspectives",
+    "year": "2021",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "3D scanning",
+      "BIM",
+      "Digital Documentation and Archiving",
+      "Heritage BIM",
+      "Predictive Conservation and Risk Assessment",
+      "Review Paper",
+      "conservation AI",
+      "damage detection",
+      "digital archives",
+      "digital twins",
+      "documentation workflows",
+      "heritage digitization",
+      "material degradation prediction",
+      "predictive maintenance",
+      "risk modeling",
+      "structural health monitoring"
+    ],
+    "authors": "M.Q. Huang, J. Ninić, Q.B. Zhang"
+  },
+  {
+    "id": "032accd4",
+    "title": "Integrating digital twin technologies for maintenance 4.0 in the building industry: A review and conceptual framework",
+    "year": "2025",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "BIM",
+      "Case Study",
+      "Predictive Analytics and Performance Optimization",
+      "Quality Control and Validation",
+      "Review Paper",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "anomaly detection",
+      "digital twins",
+      "predictive analytics",
+      "predictive maintenance",
+      "structural health monitoring"
+    ],
+    "authors": "Wei Hu, Yifu Ou, Haiyi Liu, Peizhou Ni, Cheng Chang"
+  },
+  {
+    "id": "57ada6a6",
+    "title": "Automated BIM-to-scan point cloud semantic segmentation using a domain adaptation network with hybrid attention and whitening (DawNet)",
+    "year": "2025",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "3D Reconstruction",
+      "3D floor plan",
+      "BIM",
+      "Floor Plan Reconstruction and Parametrization",
+      "LiDAR",
+      "SfM",
+      "digital twins",
+      "indoor scene reconstruction",
+      "layout recovery",
+      "object detection",
+      "photogrammetry",
+      "point clouds",
+      "point-cloud-to-plan",
+      "room segmentation",
+      "scan-to-BIM",
+      "scene understanding",
+      "semantic segmentation"
+    ],
+    "authors": "Difeng Hu,Vincent J.L. Gan,\nRuoming Zhai"
+  },
+  {
+    "id": "05928e86",
+    "title": "A Digital Twin predictive maintenance framework of air handling units based on automatic fault detection and diagnostics",
+    "year": "2022",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI HVAC optimization",
+      "AI building automation",
+      "AI for Energy Performance Optimization",
+      "BIM",
+      "Predictive Analytics and Performance Optimization",
+      "Smart Building Systems and IoT Integration",
+      "adaptive control",
+      "anomaly detection",
+      "big data in buildings",
+      "building energy forecasting",
+      "digital twins",
+      "human-centric IoT",
+      "intelligent environments",
+      "predictive analytics",
+      "real-time monitoring",
+      "sensor data integration",
+      "time-series analysis"
+    ],
+    "authors": "Haidar Hosamo Hosamo, Paul Ragnar Svennevig, Kjeld Svidt, Daguang Han, Henrik Kofoed Nielsen"
+  },
+  {
+    "id": "1d00e5a3",
+    "title": "Metadata schema and ontology for capturing and processing of 3D cultural heritage objects",
+    "year": "2021",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "3D scanning",
+      "Dataset",
+      "Digital Documentation and Archiving",
+      "Heritage BIM",
+      "Tool/Library",
+      "conservation AI",
+      "digital archives",
+      "documentation workflows",
+      "heritage digitization"
+    ],
+    "authors": "Timo Homburg, Anja Cramer, Laura Raddatz, Hubert Mara"
+  },
+  {
+    "id": "9979ac3f",
+    "title": "Geometric features interpretation of photogrammetric point cloud from Unmanned Aerial Vehicle",
+    "year": "2022",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "3D scanning",
+      "Case Study",
+      "Digital Documentation and Archiving",
+      "Heritage BIM",
+      "Predictive Conservation and Risk Assessment",
+      "conservation AI",
+      "damage detection",
+      "digital archives",
+      "documentation workflows",
+      "heritage digitization",
+      "predictive maintenance",
+      "risk modeling",
+      "structural health monitoring"
+    ],
+    "authors": "H. Harshit, S.K.P. Kushwaha, K. Jain"
+  },
+  {
+    "id": "3ac786a3",
+    "title": "An Analysis of Research Trends for Using Artificial Intelligence in Cultural Heritage",
+    "year": "2024",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "Digital Documentation and Archiving",
+      "Review Paper",
+      "conservation AI",
+      "digital archives",
+      "documentation workflows",
+      "heritage digitization"
+    ],
+    "authors": "Florin Gîrbacia"
+  },
+  {
+    "id": "df05f8c9",
+    "title": "Visual comfort generative design framework based on parametric network in underground space",
+    "year": "2022",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "GANs",
+      "Generative Design and Design Space Exploration",
+      "Parametric, Computational and Algorithmic Design",
+      "RL",
+      "design automation",
+      "procedural modeling"
+    ],
+    "authors": "Yingbin Gui, Biao Zhou, Xiongyao Xie"
+  },
+  {
+    "id": "baf90fba",
+    "title": "Combining Building Information Model and Life Cycle Assessment for Defining Circular Economy Strategies",
+    "year": "2024",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AI material selection",
+      "ML for sustainable real estate",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "circular economy",
+      "embodied carbon",
+      "energy-efficient design",
+      "lifecycle assessment",
+      "material passports",
+      "material simulation",
+      "sustainable construction",
+      "sustainable disassembly",
+      "sustainable materials"
+    ],
+    "authors": "Annie Guerriero, Federico Busio, Michael Saidani, Calin Boje, Nico Mack"
+  },
+  {
+    "id": "9d60a023",
+    "title": "The review of AI and cultural heritage protection - Taking the whole process of cultural heritage protection as an example",
+    "year": "2024",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "Digital Documentation and Archiving",
+      "Review Paper",
+      "conservation AI",
+      "digital archives",
+      "documentation workflows",
+      "heritage digitization"
+    ],
+    "authors": "Chenxi Ge"
+  },
+  {
+    "id": "94ba9a6a",
+    "title": "Designing affective workplace environments: The impact of typology, contour, ceiling and partition height on cognitive and aesthetic appraisal",
+    "year": "2024",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI occupancy modeling",
+      "AR/VR/XR visualization",
+      "Case Study",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "XRAI for AEC",
+      "behavior modeling",
+      "immersive design",
+      "occupant behavior",
+      "space utilization",
+      "spatial analytics"
+    ],
+    "authors": "Michal Gath-Morad, Salome Egli, Jascha Grübel, Koen Steemers, Christoph Hölscher, Leonel Aguilar"
+  },
+  {
+    "id": "1d2c07a8",
+    "title": "Understanding occupants’ behaviour, engagement, emotion, and comfort indoors with heterogeneous sensors and wearables",
+    "year": "2022",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI occupancy modeling",
+      "Case Study",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "Dataset",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "behavior modeling",
+      "movement analysis",
+      "occupant behavior",
+      "sensor-driven design",
+      "space utilization",
+      "spatial analytics"
+    ],
+    "authors": "Nan Gao, Max Marschall, Jane Burry, Simon Watkins, Flora D. Salim"
+  },
+  {
+    "id": "dc1a733b",
+    "title": "State of the art in building modelling and energy performances prediction: A review",
+    "year": "2013",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI for Energy Performance Optimization",
+      "Predictive Analytics and Performance Optimization",
+      "Quality Control and Validation",
+      "Review Paper",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "building energy forecasting",
+      "predictive analytics"
+    ],
+    "authors": "Aurélie Foucquier, Sylvain Robert, Frédéric Suard,\nLouis Stéphan,\nArnaud Jay"
+  },
+  {
+    "id": "bc48af62",
+    "title": "Formalizing Information for Disassembly Potenttial of Buildings Using BIM and Labeled Property Graphs",
+    "year": "2025",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "Sustainable Buildings",
+      "circular economy",
+      "sustainable construction",
+      "sustainable disassembly",
+      "sustainable materials"
+    ],
+    "authors": "Kasimir Forth, Catherine De Wolf"
+  },
+  {
+    "id": "840b4dc4",
+    "title": "Space Use Efficiency through Occupancy Monitoring Technologies: A Case Study at KTH Royal Institute of Technology",
+    "year": "2025",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI occupancy modeling",
+      "Context-Aware Spatial Intelligence",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "behavior modeling",
+      "human-centric IoT",
+      "movement analysis",
+      "occupant behavior",
+      "sensor-driven design",
+      "space utilization",
+      "spatial analytics"
+    ],
+    "authors": "CHRISTOFFER FORSBERG"
+  },
+  {
+    "id": "5f3109bf",
+    "title": "From point cloud to material passport: automated creation of material passports of existing steel structures based on point clouds",
+    "year": "2025",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "Dataset",
+      "Sustainable Buildings",
+      "embodied carbon",
+      "lifecycle assessment",
+      "material passports",
+      "material simulation",
+      "sustainable construction",
+      "sustainable materials"
+    ],
+    "authors": "Noichl Florian, Forth Kasimir, de Wolf Catherine, Borrmann André, Moreno-Rangel Alejandro, Kumar Bimal"
+  },
+  {
+    "id": "b593cbac",
+    "title": "A Comprehensive Overview of Heritage BIM Frameworks: Platforms and Technologies Integrating Multi-Scale Analyses, Data Repositories, and Sensor Systems",
+    "year": "2025",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "3D scanning",
+      "BIM",
+      "Digital Documentation and Archiving",
+      "Heritage BIM",
+      "Predictive Conservation and Risk Assessment",
+      "Review Paper",
+      "Virtual Reality Experiences and Education",
+      "conservation AI",
+      "cultural heritage VR",
+      "digital archives",
+      "digital twins",
+      "documentation workflows",
+      "heritage digitization",
+      "human-centric IoT",
+      "museum VR",
+      "sensor data integration"
+    ],
+    "authors": "Carmen Fattore, Michele Buldo, Arcangelo Priore, Sara Porcari, Vito Domenico Porcari, Mariella De Fino"
+  },
+  {
+    "id": "b4cb3038",
+    "title": "Scan-to-BIM-to-Sim: Automated reconstruction of digital and simulation models from point clouds with applications on bridges",
+    "year": "2025",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "3D Reconstruction",
+      "BIM",
+      "LiDAR",
+      "SfM",
+      "digital twins",
+      "object detection",
+      "photogrammetry",
+      "point clouds",
+      "scan-to-BIM",
+      "scene understanding",
+      "semantic segmentation",
+      "structural element detection"
+    ],
+    "authors": "Yunping Fang\n, Stergios-Aristoteles Mitoulis, Daniel Boddice\n,\nJialiang Yu\n, Jelena Ninic"
+  },
+  {
+    "id": "371cda53",
+    "title": "DeepMind AI Reduces Google Data Centre Cooling Bill — deepmind.googl",
+    "year": "2016",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI HVAC optimization",
+      "AI for Energy Performance Optimization",
+      "Case Study",
+      "Predictive Analytics and Performance Optimization",
+      "Sustainable Buildings",
+      "anomaly detection",
+      "building energy forecasting",
+      "building energy simulation",
+      "energy-efficient design",
+      "predictive analytics",
+      "smart grids",
+      "time-series analysis"
+    ],
+    "authors": "Richard Evans, Jim Gao,\nDeepMind"
+  },
+  {
+    "id": "81d14a9b",
+    "title": "Using augmented reality models to engage stakeholders on retrofitting buildings",
+    "year": "2024",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AR/VR/XR visualization",
+      "Case Study",
+      "Interactive Visualization",
+      "Sustainable Buildings",
+      "XRAI for AEC",
+      "circular economy",
+      "sustainable construction",
+      "sustainable disassembly"
+    ],
+    "authors": "EU-RnD"
+  },
+  {
+    "id": "67532c12",
+    "title": "Circular TwAIn --- circular-twain-project.eu",
+    "year": "2022",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "Case Study",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "circular economy",
+      "sustainable construction"
+    ],
+    "authors": "EU"
+  },
+  {
+    "id": "8c574bc7",
+    "title": "More than just a big idea – how extended reality tech can enable a circular economy",
+    "year": "2022",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "Review Paper",
+      "Sustainable Buildings",
+      "XRAI for AEC"
+    ],
+    "authors": "Emma Elobeid, Claire Murphy, Laura Collacott,\nEllen MacArthur Foundation"
+  },
+  {
+    "id": "842fdfcc",
+    "title": "BIM Handbook: A Guide to Building Information Modeling for Owners, Managers, Designers, Engineers and Contractors",
+    "year": "2011",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "3D Reconstruction",
+      "BIM",
+      "BIM validation",
+      "QA/QC in BIM",
+      "Quality Control and Validation",
+      "Review Paper",
+      "digital twins",
+      "parametric BIM"
+    ],
+    "authors": "Charles M. Eastman"
+  },
+  {
+    "id": "7e6fd469",
+    "title": "Leveraging Digital Twin Technology to Optimize Operations and Sustainability: Insights from an Office Building Case Study",
+    "year": "2024",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI HVAC optimization",
+      "AI building automation",
+      "AI for Energy Performance Optimization",
+      "Case Study",
+      "Predictive Analytics and Performance Optimization",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "anomaly detection",
+      "building energy forecasting",
+      "building energy simulation",
+      "energy-efficient design",
+      "lifecycle assessment",
+      "predictive analytics",
+      "smart grids",
+      "time-series analysis"
+    ],
+    "authors": "dthub"
+  },
+  {
+    "id": "c55c913f",
+    "title": "Hey Building! Novel Interfaces for Parametric Design Manipulations in Virtual Reality",
+    "year": "2025",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AR/VR interfaces",
+      "AR/VR/XR visualization",
+      "HCI-HBI",
+      "Interactive Visualization",
+      "Parametric, Computational and Algorithmic Design",
+      "XR design review",
+      "XRAI for AEC",
+      "XRAI inclusive design",
+      "immersive design"
+    ],
+    "authors": "Adam Drogemuller, Brandon J. Matthews, Andrew Cunningham, Rongrong Yu, Ning Gu, Bruce H. Thomas"
+  },
+  {
+    "id": "a9834fcf",
+    "title": "A long-term evidence-based study of circadian rhythm-oriented control strategies for office luminous environments",
+    "year": "2025",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI occupancy modeling",
+      "Case Study",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Smart Building Systems and IoT Integration",
+      "XRAI for AEC",
+      "behavior modeling",
+      "building energy simulation",
+      "human-centric IoT",
+      "movement analysis",
+      "occupant behavior",
+      "sensor-driven design",
+      "space utilization",
+      "spatial analytics"
+    ],
+    "authors": "Yukun Dong, Jiaxin Shi, Tao Luo, Qi Dai, Peng Xue"
+  },
+  {
+    "id": "92749001",
+    "title": "The Role of Digital Twins in Predictive Building Maintenance → Scenario",
+    "year": "2025",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "Case Study",
+      "Predictive Analytics and Performance Optimization",
+      "anomaly detection",
+      "damage detection",
+      "predictive analytics",
+      "predictive maintenance"
+    ],
+    "authors": "Sustainability Directory"
+  },
+  {
+    "id": "6374c68d",
+    "title": "BIM and IoT Sensors Integration: A Framework for Consumption and Indoor Conditions Data Monitoring of Existing Buildings",
+    "year": "2021",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AI building automation",
+      "AI for Energy Performance Optimization",
+      "BIM",
+      "Case Study",
+      "HCI-HBI",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "adaptive control",
+      "building energy simulation",
+      "digital twins",
+      "human-centric IoT",
+      "intelligent environments",
+      "real-time monitoring",
+      "sensor data integration"
+    ],
+    "authors": "Giuseppe Desogus,\nEmanuela Quaquero, Giulia Rubiu, Gianluca Gatto,\nCristian Perra"
+  },
+  {
+    "id": "95027d6b",
+    "title": "Real estate valuation with multi-source image fusion and enhanced machine learning pipeline",
+    "year": "2025",
+    "primary_category": "Sustainable Real Estate Valuation and Economics",
+    "tags": [
+      "AI-Powered Real Estate Valuation",
+      "Review Paper",
+      "predictive pricing",
+      "real estate analytics"
+    ],
+    "authors": "Lin Deng"
+  },
+  {
+    "id": "51bd1339",
+    "title": "Streamlining LEED Submittals: How AI Agents Automate Documentation for Green Building Consultants",
+    "year": "2025",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AI for Energy Performance Optimization",
+      "Case Study",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings"
+    ],
+    "authors": "Datagrid"
+  },
+  {
+    "id": "7c01b3e1",
+    "title": "Circular Twin --- cundall.com",
+    "year": "2020",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "Case Study",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "circular economy",
+      "sustainable construction"
+    ],
+    "authors": "Cundall"
+  },
+  {
+    "id": "4b160b7d",
+    "title": "Regenarative Twin - Morgan Sindall Construction",
+    "year": "2025",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "Case Study",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings"
+    ],
+    "authors": "Morgan Sindall Construction"
+  },
+  {
+    "id": "7bf92ada",
+    "title": "Proposal for a Regulation of the European Parliament and the Council establishing a framework for setting ecodesign requirements for sustainable products and repealing Directive 2009/125/EC",
+    "year": "2022",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "Review Paper",
+      "Sustainable Buildings",
+      "circular economy",
+      "sustainable construction"
+    ],
+    "authors": "European Commission"
+  },
+  {
+    "id": "7eafb9a1",
+    "title": "City Loops",
+    "year": "2023",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AI material selection",
+      "Case Study",
+      "Sustainable Buildings",
+      "circular economy",
+      "embodied carbon",
+      "lifecycle assessment",
+      "material passports",
+      "material simulation",
+      "sustainable construction",
+      "sustainable disassembly",
+      "sustainable materials"
+    ],
+    "authors": "CityLoops"
+  },
+  {
+    "id": "b77641e5",
+    "title": "Tracking Indoor Location, Movement and Desk Occupancy in the Workplace",
+    "year": "2024",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI occupancy modeling",
+      "Case Study",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "behavior modeling",
+      "human-centric IoT",
+      "movement analysis",
+      "occupant behavior",
+      "sensor-driven design",
+      "space utilization",
+      "spatial analytics"
+    ],
+    "authors": "Wolfie Christl"
+  },
+  {
+    "id": "572f13ac",
+    "title": "Human–Building Interaction (HBI): An Investigation of Immersive Virtual Environment (IVE) as Intelligent Observation Methods",
+    "year": "2025",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AR/VR interfaces",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Review Paper",
+      "VR dashboards",
+      "XRAI for AEC",
+      "metaverse for AEC",
+      "occupant behavior",
+      "spatial analytics"
+    ],
+    "authors": "Chanachok Chokwitthaya, Kailun Feng, Weizhuo Lu"
+  },
+  {
+    "id": "10f7d044",
+    "title": "Human-Building Interaction (HBI): An Investigation of Immersive Virtual Environment (IVE) as Intelligent Observation Methods",
+    "year": "2025",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI occupancy modeling",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Review Paper",
+      "XRAI for AEC",
+      "behavior modeling",
+      "movement analysis",
+      "occupant behavior",
+      "sensor-driven design",
+      "space utilization",
+      "spatial analytics"
+    ],
+    "authors": "Chanachok Chokwitthaya, Kailun Feng & Weizhuo Lu"
+  },
+  {
+    "id": "05e73b90",
+    "title": "Exploring Building Information Modeling (BIM) and Internet of Things (IoT) Integration for Sustainable Building",
+    "year": "2023",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AI building automation",
+      "BIM",
+      "Review Paper",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "big data in buildings",
+      "blockchain for AEC",
+      "circular economy",
+      "digital twins",
+      "human-centric IoT",
+      "lifecycle assessment",
+      "sensor data integration",
+      "sustainable construction",
+      "sustainable disassembly",
+      "sustainable materials"
+    ],
+    "authors": "Yali Chen, Xiaozi Wang, Zhen Liu, Jia Cui, Mohamed Osmani, Peter Demian"
+  },
+  {
+    "id": "e0373f25",
+    "title": "Development of an occupancy measurement system for micro-zones within open office spaces based on multi-view multi-person 3D pose estimation",
+    "year": "2025",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI occupancy modeling",
+      "Case Study",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "XRAI for AEC",
+      "behavior modeling",
+      "movement analysis",
+      "occupant behavior",
+      "sensor-driven design",
+      "space utilization",
+      "spatial analytics"
+    ],
+    "authors": "Sihua Chen, Tomohiro Fukuda, Nobuyoshi Yabuki"
+  },
+  {
+    "id": "fd681986",
+    "title": "Dive into Heritage",
+    "year": "2025",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "3D scanning",
+      "AR cultural experiences",
+      "Case Study",
+      "Dataset",
+      "Digital Documentation and Archiving",
+      "Heritage BIM",
+      "Predictive Conservation and Risk Assessment",
+      "Virtual Reality Experiences and Education",
+      "conservation AI",
+      "cultural heritage VR",
+      "digital archives",
+      "documentation workflows",
+      "heritage XR visualization",
+      "heritage digitization",
+      "immersive education",
+      "museum VR"
+    ],
+    "authors": "UNESCO World Heritage Centre"
+  },
+  {
+    "id": "4c5769c8",
+    "title": "From research to practice: A review on technologies for addressing the information gap for building material reuse in circular construction",
+    "year": "2024",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AI material selection",
+      "Case Study",
+      "Review Paper",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "big data in buildings",
+      "blockchain for AEC",
+      "circular economy",
+      "data templates for circularity",
+      "lifecycle assessment",
+      "material passports",
+      "sustainable construction",
+      "sustainable disassembly"
+    ],
+    "authors": "Brandon S. Byers, Deepika Raghu, Adama Olumo, Catherine De Wolf, Carl Haas"
+  },
+  {
+    "id": "1c7878c1",
+    "title": "Semantic Enrichment of Architectural Heritage Point Clouds Using Artificial Intelligence: The Palacio de Sástago in Zaragoza, Spain",
+    "year": "2024",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "3D Reconstruction",
+      "3D scanning",
+      "Case Study",
+      "Digital Documentation and Archiving",
+      "Heritage BIM",
+      "Predictive Conservation and Risk Assessment",
+      "conservation AI",
+      "damage detection",
+      "digital archives",
+      "documentation workflows",
+      "heritage digitization",
+      "material degradation prediction",
+      "photogrammetry",
+      "point clouds",
+      "predictive maintenance",
+      "risk modeling",
+      "structural health monitoring"
+    ],
+    "authors": "Michele Buldo, Luis Agustín-Hernández, Cesare Verdoscia"
+  },
+  {
+    "id": "b95cdd79",
+    "title": "Beyond Location: Value drivers of office space",
+    "year": "2022",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI occupancy modeling",
+      "Case Study",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "behavior modeling"
+    ],
+    "authors": "Fabian Braesemann, Francesco Carollo, Thomas Payer,\nLuke Graham, Sara Tabone, Andrew Baum"
+  },
+  {
+    "id": "5c6d0425",
+    "title": "A Comprehensive Review of Digital Twin Technology in Building Energy Consumption Forecasting",
+    "year": "2024",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI HVAC optimization",
+      "AI building automation",
+      "AI for Energy Performance Optimization",
+      "Predictive Analytics and Performance Optimization",
+      "Review Paper",
+      "Smart Building Systems and IoT Integration",
+      "building energy forecasting",
+      "building energy simulation",
+      "building performance dashboard",
+      "digital twins",
+      "energy-efficient design",
+      "intelligent environments",
+      "predictive analytics",
+      "sensor data integration",
+      "smart grids"
+    ],
+    "authors": "Maissa Boukaf, Fodil Fadli, Nader Meskin"
+  },
+  {
+    "id": "f056d32c",
+    "title": "Towards Tracking Circular Construction Supply Chains: Data Carrier Performance in Realistic Experiments",
+    "year": "2025",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AI building automation",
+      "Case Study",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "big data in buildings",
+      "circular economy",
+      "data templates for circularity",
+      "human-centric IoT",
+      "sensor data integration"
+    ],
+    "authors": "Clara P Blum, Brandon S Byers, Jens J Hunhevicz, Catherine De Wolf"
+  },
+  {
+    "id": "b042bc24",
+    "title": "Integrating Data from Terrestrial Laser Scanning and Unmanned Aerial Vehicle with LiDAR for BIM Developing",
+    "year": "2024",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "3D Reconstruction",
+      "3D floor plan",
+      "BIM",
+      "Floor Plan Reconstruction and Parametrization",
+      "LiDAR",
+      "SfM",
+      "digital twins",
+      "indoor scene reconstruction",
+      "layout recovery",
+      "mesh-to-BIM",
+      "outdoor scene reconstruction",
+      "photogrammetry",
+      "point clouds",
+      "point-cloud-to-plan",
+      "room segmentation",
+      "scan-to-BIM",
+      "scene understanding",
+      "semantic segmentation"
+    ],
+    "authors": "Wioleta Blaszczak-Bak, Andrea Masiero, Paweł Bąk, Kamil Kuderko"
+  },
+  {
+    "id": "051147d2",
+    "title": "Development and demonstration of a digital twin platform leveraging ontologies and data-driven simulation models",
+    "year": "2025",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI building automation",
+      "Case Study",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Predictive Analytics and Performance Optimization",
+      "Smart Building Systems and IoT Integration",
+      "adaptive control",
+      "big data in buildings",
+      "building energy forecasting",
+      "building energy simulation",
+      "building performance dashboard",
+      "digital twins",
+      "human-centric IoT",
+      "intelligent environments",
+      "predictive analytics",
+      "real-time monitoring",
+      "sensor data integration"
+    ],
+    "authors": "Jakob Bjørnskov, Avneet Badhwar, De Shikhar Singh, Mohit Sehgal, Rasmus Åkesson, Muhyiddine Jradi"
+  },
+  {
+    "id": "383ea358",
+    "title": "The application of web of data technologies in building materials information modelling for construction waste analytics",
+    "year": "2017",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AI material selection",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "big data in buildings",
+      "circular economy",
+      "data templates for circularity",
+      "embodied carbon",
+      "lifecycle assessment",
+      "material passports",
+      "material simulation",
+      "sustainable construction",
+      "sustainable disassembly",
+      "sustainable materials"
+    ],
+    "authors": "Muhammad Bilal, Lukumon O. Oyedele, Kamran Munir, Saheed O. Ajayi, Olugbenga O. Akinade, Hakeem A. Owolabi, Hafiz A. Alaka"
+  },
+  {
+    "id": "a3af024a",
+    "title": "HouseLayout3D: A Benchmark and Training-free Baseline for 3D Layout Estimation in the Wild",
+    "year": "2025",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "2D floor plan",
+      "3D Reconstruction",
+      "3D floor plan",
+      "BIM",
+      "Dataset",
+      "Floor Plan Reconstruction and Parametrization",
+      "digital twins",
+      "layout recovery",
+      "room segmentation"
+    ],
+    "authors": "Valentin Bieri, Marie-Julie Rakotosaona, Keisuke Tateno, Francis Engelmann, Leonidas Guibas"
+  },
+  {
+    "id": "649dcae1",
+    "title": "Construction Progress Monitoring with Drone + BIM Integration",
+    "year": "2025",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "Case Study",
+      "Sustainable Buildings",
+      "circular economy",
+      "lifecycle assessment",
+      "sustainable construction",
+      "sustainable materials"
+    ],
+    "authors": "Santosh Kumar Bhoda, BSMA Enterprises"
+  },
+  {
+    "id": "b47b4dea",
+    "title": "Level-adaptive sound masking in the open-plan office: How does it influence noise distraction, coping, and mental health?",
+    "year": "2024",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI occupancy modeling",
+      "Case Study",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "behavior modeling",
+      "movement analysis",
+      "occupant behavior",
+      "sensor-driven design",
+      "space utilization",
+      "spatial analytics"
+    ],
+    "authors": "Lisanne Bergefurt, Rianne Appel-Meulenbroek, Theo Arentze"
+  },
+  {
+    "id": "f7ba8252",
+    "title": "The field of human building interaction for convergent research and innovation for intelligent built environments",
+    "year": "2022",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI occupancy modeling",
+      "Case Study",
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Review Paper",
+      "behavior modeling",
+      "movement analysis",
+      "occupant behavior",
+      "sensor-driven design",
+      "space utilization",
+      "spatial analytics"
+    ],
+    "authors": "Burcin Becerik-Gerber, Gale Lucas, Ashrant Aryal, Mohamad Awada, Mario Bergés, Sarah Billington, Olga Boric-Lubecke, Ali Ghahramani, Arsalan Heydarian, Christoph Höelscher, Farrokh Jazizadeh, Azam Khan, Jared Langevin, Ruying Liu, Frederick Marks, Matthew Louis Mauriello, Elizabeth Murnane, Haeyoung Noh, Marco Pritoni, Shawn Roll, Davide Schaumann, Mirmahdi Seyedrezaei, John E. Taylor, Jie Zhao, Runhe Zhu"
+  },
+  {
+    "id": "25318c40",
+    "title": "Automatic generation of synthetic heritage point clouds: Analysis and segmentation based on shape grammar for historical vaults",
+    "year": "2023",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "3D Reconstruction",
+      "3D scanning",
+      "Digital Documentation and Archiving",
+      "conservation AI",
+      "digital archives",
+      "documentation workflows",
+      "heritage digitization",
+      "point clouds"
+    ],
+    "authors": "Carlo Battini, Umberto Ferretti, Giorgia De Angelis, Roberto Pierdicca, Marina Paolanti,\nRamona Quattrini"
+  },
+  {
+    "id": "9457f199",
+    "title": "Photogrammetry and laser scanning for archaeological site 3D modeling - Some critical issues",
+    "year": "2012",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "3D scanning",
+      "Digital Documentation and Archiving",
+      "Heritage BIM",
+      "conservation AI",
+      "digital archives",
+      "documentation workflows",
+      "heritage digitization"
+    ],
+    "authors": "Sara Gonizzi Barsanti, Fabio Remondino, Domenico Visintini"
+  },
+  {
+    "id": "783515f9",
+    "title": "Intuitive and Experiential Approaches to Enhance Conceptual Design in Architecture Using Building Information Modeling and Virtual Reality",
+    "year": "2025",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AI occupancy modeling",
+      "AR/VR interfaces",
+      "AR/VR/XR visualization",
+      "BIM",
+      "Case Study",
+      "Context-Aware Spatial Intelligence",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "HCI-HBI",
+      "Interactive Visualization",
+      "Multimodal Design Assistance",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "XR design review",
+      "XRAI automated accessibility",
+      "XRAI for AEC",
+      "XRAI inclusive design",
+      "behavior modeling",
+      "collaborative VR co-design",
+      "immersive design"
+    ],
+    "authors": "Renganathan Balamaheshwaran, Radhakrishnan Shanthi Priya, Geetha Ramesh Kumar, Jayanthi Thiruvengadam, Ramalingam Senthil"
+  },
+  {
+    "id": "aabd7fbe",
+    "title": "Metadata for 3D Digital Heritage Models. In the Search of a Common Ground",
+    "year": "2023",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "3D scanning",
+      "Dataset",
+      "Digital Documentation and Archiving",
+      "Heritage BIM",
+      "digital archives",
+      "documentation workflows",
+      "heritage digitization"
+    ],
+    "authors": "Igor Bajena, Piotr Kuroczyński"
+  },
+  {
+    "id": "ed45e9ec",
+    "title": "Advancing circular economy transition in the Nigeria construction industry through digital twin technology adoption",
+    "year": "2025",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "BIM",
+      "Case Study",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "circular economy",
+      "digital twins",
+      "sustainable construction",
+      "sustainable materials"
+    ],
+    "authors": "Imoleayo A. Awodele,\nEmmanuel C. Eze,\nAngel M. Gento Municio,\nMolusiwa S. Ramabodu, Nathaniel A. Olatunde"
+  },
+  {
+    "id": "e29b6bfa",
+    "title": "Augmented Reality for Structural Inspection of Historic Monuments: The Case of Lausanne Cathedral",
+    "year": "2025",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "Case Study",
+      "Digital Documentation and Archiving",
+      "Predictive Conservation and Risk Assessment",
+      "Virtual Reality Experiences and Education",
+      "XRAI for AEC",
+      "conservation AI",
+      "damage detection",
+      "heritage XR visualization",
+      "heritage digitization",
+      "material degradation prediction",
+      "predictive maintenance",
+      "risk modeling",
+      "structural health monitoring"
+    ],
+    "authors": "Ricardo Maia Avelino, Wenqian Yang, Anjo Weichbrodt, John Ochsendorf, Robert J. Flatt"
+  },
+  {
+    "id": "1ad355d4",
+    "title": "Autodesk customer stories",
+    "year": "2024",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "Case Study",
+      "Generative Design and Design Space Exploration",
+      "Parametric, Computational and Algorithmic Design",
+      "Performance-Driven Design"
+    ],
+    "authors": "Autodesk"
+  },
+  {
+    "id": "12e7d85a",
+    "title": "Artificial Intelligence, Virtual Reality, and Augmented Reality to Enhance Visual Quality and Accessibility in Sustainable Built Environments",
+    "year": "2024",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "Context-Aware Spatial Intelligence",
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "HCI-HBI",
+      "LLMs for AEC",
+      "Multimodal Design Assistance",
+      "Review Paper",
+      "Sustainable Buildings",
+      "Vision-Language Models for AEC",
+      "XRAI automated accessibility",
+      "XRAI for AEC",
+      "XRAI inclusive design",
+      "heritage digitization"
+    ],
+    "authors": "Sandra Arranz-Paraíso, Daniel Arranz-Paraíso"
+  },
+  {
+    "id": "f91ef5e6",
+    "title": "3D documentation of cultural heritage using terrestrial laser scanning",
+    "year": "2024",
+    "primary_category": "Heritage Conservation and Cultural Preservation",
+    "tags": [
+      "3D scanning",
+      "Case Study",
+      "Digital Documentation and Archiving",
+      "Predictive Conservation and Risk Assessment",
+      "Virtual Reality Experiences and Education",
+      "conservation AI",
+      "cultural heritage VR",
+      "digital archives",
+      "documentation workflows",
+      "heritage digitization",
+      "museum VR",
+      "risk modeling"
+    ],
+    "authors": "Llabani Arli, Abazaj Freskida"
+  },
+  {
+    "id": "296aacce",
+    "title": "Rethinking Architectural Design Process using Integrated Parametric Design and Machine Learning Principles",
+    "year": "2025",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "Form Finding",
+      "Generative Design and Design Space Exploration",
+      "Parametric, Computational and Algorithmic Design",
+      "Performance-Driven Design",
+      "design automation",
+      "design space optimization",
+      "multi-objective optimization"
+    ],
+    "authors": "Alexis Andreou, Odysseas Kontovourkis, Solon Solomou, Andreas Savvides"
+  },
+  {
+    "id": "853776a3",
+    "title": "A digital twin framework for improving energy efficiency and occupant comfort in public and commercial buildings",
+    "year": "2021",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI for Energy Performance Optimization",
+      "AI occupancy modeling",
+      "Case Study",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Predictive Analytics and Performance Optimization",
+      "behavior modeling",
+      "building energy forecasting",
+      "occupant behavior",
+      "predictive analytics"
+    ],
+    "authors": "Clausen Anders, Arendt Krzysztof, Johansen Aslak, Sangogboye Fisayo Caleb, Kjærgaard Mikkel Baun, Veje Christian T., Jørgensen Bo Nørregaard"
+  },
+  {
+    "id": "9b2f6ab9",
+    "title": "Digital twin based deep learning framework for personalized thermal comfort prediction and energy efficient operation in smart buildings",
+    "year": "2025",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "AI HVAC optimization",
+      "AI building automation",
+      "AI for Energy Performance Optimization",
+      "BIM",
+      "Predictive Analytics and Performance Optimization",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "adaptive control",
+      "building energy forecasting",
+      "building energy simulation",
+      "digital twins",
+      "human-centric IoT",
+      "predictive analytics",
+      "real-time monitoring",
+      "sensor data integration"
+    ],
+    "authors": "Ahmad Almadhor, Nejib Ghazouani, Belgacem Bouallegue, Natalia Kryvinska, Shtwai Alsubai, Moez Krichen, Abdullah Al Hejaili, Gabriel Avelino Sampedro"
+  },
+  {
+    "id": "1f7c4804",
+    "title": "Leveraging AI to Enhance XR in the AEC Industry",
+    "year": "2025",
+    "primary_category": "Reality Capture and Digital Twins",
+    "tags": [
+      "Cross-Modal Intelligence and Multimodal Integration",
+      "HCI-HBI",
+      "LLMs for AEC",
+      "Review Paper",
+      "Vision-Language Models for AEC",
+      "XRAI for AEC",
+      "metaverse for AEC"
+    ],
+    "authors": "Sepehr Alizadehsalehi, Ahmad Hadavi"
+  },
+  {
+    "id": "c6bb21de",
+    "title": "Integrating Parametric Modeling, BIM, and Building Performance Analysis into Augmented Reality for Architectural Design and Education",
+    "year": "2023",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "AR/VR/XR visualization",
+      "AR/VR interfaces",
+      "BIM validation",
+      "Parametric, Computational and Algorithmic Design",
+      "XR design review",
+      "building energy simulation",
+      "digital twins",
+      "energy-efficient design",
+      "immersive design",
+      "immersive education"
+    ],
+    "authors": "Kifah Alhazzaa, Wei Yan"
+  },
+  {
+    "id": "545424d6",
+    "title": "Building a sustainable campus for the world’s first climate-positive university",
+    "year": "2024",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "Case Study",
+      "Generative Design and Design Space Exploration",
+      "Parametric, Computational and Algorithmic Design",
+      "Performance-Driven Design",
+      "Sustainable Buildings"
+    ],
+    "authors": "Matt Alderton, Autodesk"
+  },
+  {
+    "id": "8fb54691",
+    "title": "Introduction to Human-Building Interaction (HBI): Interfacing HCI with Architecture and Urban Design",
+    "year": "2019",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "HCI-HBI",
+      "Occupant Behavior Analysis and Spatial Optimization",
+      "Review Paper",
+      "XRAI for AEC",
+      "behavior modeling",
+      "occupant behavior",
+      "space utilization",
+      "spatial analytics"
+    ],
+    "authors": "Hamed S. Alavi, Elizabeth F. Churchill, Mikael Wiberg, Denis Lalanne, Peter Dalsgaard, Ava Fatah gen Schieck, Yvonne Rogers"
+  },
+  {
+    "id": "759aad2b",
+    "title": "Exploring AI-Integrated VR Systems: A Methodological Approach to Inclusive Digital Urban Design",
+    "year": "2025",
+    "primary_category": "Human-Computer Interaction and Human-Building Interaction",
+    "tags": [
+      "AR/VR/XR visualization",
+      "Case Study",
+      "HCI-HBI",
+      "Interactive Visualization",
+      "XR design review",
+      "XRAI automated accessibility",
+      "XRAI for AEC",
+      "XRAI inclusive design",
+      "collaborative VR co-design",
+      "immersive design",
+      "metaverse for AEC"
+    ],
+    "authors": "Ehab Ahmed, Ahmad Aladawi, Gary Burnett"
+  },
+  {
+    "id": "57f5f3f0",
+    "title": "BIM and Machine Learning (ML) Integration in Design Coordination: Using ML to automate object classification for clash detection",
+    "year": "2023",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "BIM",
+      "BIM validation",
+      "QA/QC in BIM",
+      "Quality Control and Validation",
+      "automated compliance checking",
+      "clash detection",
+      "data quality",
+      "geometric validation",
+      "model checking"
+    ],
+    "authors": "Ahmadpanah, Hooshiar, Haidar, Adonis and Latifi, Seyed Mostafa"
+  },
+  {
+    "id": "e3990201",
+    "title": "AI-Assisted Design: Utilising artificial intelligence as a generative form-finding tool in architectural design studio teaching",
+    "year": "2024",
+    "primary_category": "AI-Driven Design and Generative Architecture",
+    "tags": [
+      "GANs",
+      "Generative Design and Design Space Exploration",
+      "Review Paper",
+      "VAE",
+      "conditional generation",
+      "design automation",
+      "diffusion models",
+      "geometry generation",
+      "image-to-3D",
+      "text-to-3D"
+    ],
+    "authors": "Asterios Agkathidis, Yang Song, Ioanna Symeonidou"
+  },
+  {
+    "id": "1772803f",
+    "title": "A Systematic Review of the Applications of AI in a Sustainable Building’s Lifecycle",
+    "year": "2024",
+    "primary_category": "Sustainability and Environmental Performance",
+    "tags": [
+      "AI building automation",
+      "AI for Energy Performance Optimization",
+      "AI material selection",
+      "AI-Powered Real Estate Valuation",
+      "ML for sustainable real estate",
+      "Predictive Analytics and Performance Optimization",
+      "Review Paper",
+      "Smart Building Systems and IoT Integration",
+      "Sustainable Buildings",
+      "adaptive control",
+      "building performance dashboard",
+      "circular economy",
+      "digital twins",
+      "embodied carbon",
+      "human-centric IoT",
+      "lifecycle assessment",
+      "sustainable materials"
+    ],
+    "authors": "Bukola Adejoke Adewale, Vincent Onyedikachi Ene, Babatunde Fatai Ogunbayo,\nClinton Ohis Aigbavboa"
+  },
+  {
+    "id": "8a6b9de6",
+    "title": "From Principles to Practices: Realising the value of circular economy in real estate - a report by Arup",
+    "year": "2020",
+    "primary_category": "Sustainable Real Estate Valuation and Economics",
+    "tags": [
+      "AI in asset management",
+      "AI material selection",
+      "AI-Powered Real Estate Valuation",
+      "ML for sustainable real estate",
+      "Review Paper",
+      "Sustainable Buildings",
+      "big data in buildings",
+      "circular economy",
+      "real estate analytics",
+      "sustainable materials"
+    ],
+    "authors": "Devni Acharya, Richard Boyd, Olivia Finch"
+  },
+  {
+    "id": "8a0bd8c4",
+    "title": "Formal analysis and validation of Levels of Geometry (LOG) in building information models",
+    "year": "2020",
+    "primary_category": "Computational BIM and Intelligent Operations",
+    "tags": [
+      "BIM",
+      "BIM validation",
+      "QA/QC in BIM",
+      "Quality Control and Validation",
+      "automated compliance checking",
+      "clash detection",
+      "data quality",
+      "geometric validation",
+      "model checking"
+    ],
+    "authors": "J. Abualdenien, A. Borrmann"
+  }
+]

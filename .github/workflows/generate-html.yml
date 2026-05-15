@@ -1,0 +1,189 @@
+name: Generate and Deploy
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'awesome_xrai_architecture_papers.yaml'
+      - 'src/templates/index.html'
+      - '.github/workflows/generate-html.yml'
+      - 'src/generate.py'
+      - 'requirements.txt'
+      - 'src/templates/analytics.html'
+      - 'analytics.html'
+      - 'index.html'
+      - 'README.md'
+  workflow_dispatch: # Allow manual trigger
+    inputs:
+      force_deploy:
+        description: 'Force deployment even if no changes detected'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then
+          pip install -r requirements.txt
+          echo "✅ Dependencies installed from requirements.txt"
+        else
+          echo "⚠️ requirements.txt not found, installing basic packages"
+          pip install pyyaml jinja2
+        fi
+
+    - name: Setup Git
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+
+    - name: Verify source files
+      run: |
+        echo "🔍 Verifying source files..."
+        if [ ! -f "awesome_xrai_architecture_papers.yaml" ]; then
+          echo "❌ YAML data file not found!"
+          exit 1
+        fi
+        
+        if [ ! -f "src/generate.py" ]; then
+          echo "❌ HTML generator not found!"
+          echo "📁 Contents of src/:"
+          ls -la src/ 2>/dev/null || echo "src/ directory not found"
+          exit 1
+        fi
+        
+        echo "✅ All source files found"
+        echo "📊 YAML file size: $(wc -c < awesome_xrai_architecture_papers.yaml) bytes"
+
+    - name: Generate index.html
+      run: |
+        echo "🏗️ Generating website..."
+        python src/generate.py awesome_xrai_architecture_papers.yaml index.html
+        
+        if [ $? -eq 0 ] && [ -f "index.html" ]; then
+          echo "✅ index.html generated successfully"
+          echo "📏 Generated file size: $(wc -c < index.html) bytes"
+        else
+          echo "❌ Failed to generate index.html"
+          exit 1
+        fi
+
+    - name: Verify generated files
+      run: |
+        if [ ! -f "index.html" ]; then
+          echo "❌ index.html not found after generation!"
+          exit 1
+        fi
+        
+        # Basic HTML validation
+        if ! grep -q "<html" index.html; then
+          echo "❌ Generated file doesn't appear to be valid HTML"
+          exit 1
+        fi
+        
+        echo "✅ Generated files verified"
+        echo "📄 HTML file size: $(wc -c < index.html) bytes"
+        echo "🔍 HTML structure check:"
+        echo "  - Title tags: $(grep -c '<title>' index.html || echo 0)"
+        echo "  - Body tag: $(grep -c '<body' index.html || echo 0)"
+        echo "  - Script tags: $(grep -c '<script' index.html || echo 0)"
+
+    - name: Check for changes
+      id: check_changes
+      run: |
+        if git diff --quiet HEAD -- index.html; then
+          echo "changes=false" >> $GITHUB_OUTPUT
+          echo "📄 No changes detected in index.html"
+        else
+          echo "changes=true" >> $GITHUB_OUTPUT
+          echo "📄 Changes detected in index.html"
+          echo "📊 Diff summary:"
+          git diff --stat HEAD -- index.html || echo "No diff available"
+        fi
+
+    - name: Commit and push changes
+      if: steps.check_changes.outputs.changes == 'true' || github.event.inputs.force_deploy == 'true'
+      run: |
+        git add index.html
+        
+        COMMIT_MSG="🤖 Auto-update website from YAML data
+
+        📅 Generated: $(date -u '+%Y-%m-%d %H:%M:%S UTC')
+        🔧 Trigger: ${{ github.event_name }}
+        📊 Source: awesome_xrai_architecture_papers.yaml
+        🔗 Commit: ${{ github.sha }}
+        
+        [skip ci]"
+        
+        git commit -m "$COMMIT_MSG" || echo "No changes to commit"
+        git push || echo "Nothing to push"
+        echo "✅ Website files committed and pushed"
+
+    - name: Setup GitHub Pages
+      uses: actions/configure-pages@v4
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: '.'
+
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
+      
+    - name: Create deployment summary
+      if: success()
+      run: |
+        echo "## 🚀 Website Deployment Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "✅ **Status:** Successfully deployed" >> $GITHUB_STEP_SUMMARY
+        echo "🌐 **Website URL:** ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
+        echo "📝 **Files Updated:** index.html" >> $GITHUB_STEP_SUMMARY
+        echo "🔄 **Changes Detected:** ${{ steps.check_changes.outputs.changes }}" >> $GITHUB_STEP_SUMMARY
+        echo "📅 **Deployed at:** $(date -u)" >> $GITHUB_STEP_SUMMARY
+        echo "📊 **File Size:** $(wc -c < index.html) bytes" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "🎉 **Your research database website is now live!**" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "Visit: ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
+
+    - name: Notify on failure
+      if: failure()
+      run: |
+        echo "## ❌ Deployment Failed" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "The website deployment encountered an error." >> $GITHUB_STEP_SUMMARY
+        echo "Please check the workflow logs for details." >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "Common issues:" >> $GITHUB_STEP_SUMMARY
+        echo "- Missing or invalid YAML file" >> $GITHUB_STEP_SUMMARY
+        echo "- HTML generation errors" >> $GITHUB_STEP_SUMMARY
+        echo "- GitHub Pages configuration issues" >> $GITHUB_STEP_SUMMARY
