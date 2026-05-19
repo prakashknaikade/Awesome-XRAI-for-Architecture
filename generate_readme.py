@@ -3,6 +3,16 @@ from datetime import datetime, timedelta
 from collections import defaultdict
 import re
 
+PRIMARY_CATEGORY_ORDER = [
+    "AI-Driven Design and Generative Architecture",
+    "Reality Capture and Digital Twins",
+    "Computational BIM and Intelligent Operations",
+    "Heritage Conservation and Cultural Preservation",
+    "Sustainability and Environmental Performance",
+    "Sustainable Real Estate Valuation and Economics",
+    "Human-Computer Interaction and Human-Building Interaction",
+]
+
 class ReadmeGenerator:
     def __init__(self, yaml_file='awesome_xrai_architecture_papers.yaml', readme_file='README.md'):
         self.yaml_file = yaml_file
@@ -130,7 +140,10 @@ class ReadmeGenerator:
         papers_section = "# Papers List\n\n"
         
         # Sort categories alphabetically
-        for category in sorted(organized.keys()):
+        for category in PRIMARY_CATEGORY_ORDER:
+            if category not in organized:
+                print(f"⚠️ Warning: Category '{category}' not found in papers data. Skipping this category.")
+                continue
             papers_section += f"## {category}\n\n"
             
             # Sort years in descending order (newest first)

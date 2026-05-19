@@ -5578,8 +5578,8 @@
     research aims to contribute to the advancement of novel view synthesis methods
     for scenes involving reflective objects with structural colors.'
   primary_category: Reality Capture and Digital Twins
-  project_page: ''
-  paper: https://prakashknaikade.github.io/publications/nvs_structural_color_object/NVS_Structural_Color_Objects_compressed.pdf
+  project_page: https://prakashknaikade.github.io/publications/nvs_structural_color_object/
+  paper: https://doi.org/10.5281/zenodo.20258767
   code: ''
   video: ''
   tags:

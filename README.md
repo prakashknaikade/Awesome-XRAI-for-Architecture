@@ -3,28 +3,37 @@
 <img src="readme_assets/XRAI4AEC_naming_context.png" width="1249">
 
 <div align="center">
-  A curated collection of resources focused on XR+AI for AEC (<i><b>XRAI4AEC</b></i>) and related technologies such as (2D/3D) computer vision, computer graphics, LLMs, VLMS, GenAI, deep/machine learning and data science, for Design Generation, BIM, Digital Twin, etc.
+  A curated collection of resources focused on XR+AI for AEC (<i><b>XRAI4AEC</b></i>) and related technologies such as (2D/3D) computer vision, computer graphics, LLMs, VLMS, GenAI, deep/machine learning, data science, and AR/VR for Design Generation, BIM, Digital Twin, LCA, Dissaseembly Planning, Real Estate Valuation, and more for Intelligent, Sustainable, and Human-Centric Built Environments.
 
-  [**Browse Papers DB🛢️**](https://prakashknaikade.github.io/Awesome-XRAI-for-Architecture/) | [**Contribute**](CONTRIBUTING.md) | [**Prakash Naikade**](https://prakashknaikade.github.io/)
+  [**Browse Paper Database🛢️**](https://prakashknaikade.github.io/Awesome-XRAI-for-Architecture/) | [**Contribute**](CONTRIBUTING.md) | [**Prakash Naikade**](https://prakashknaikade.github.io/)
 
 </div>
 
 ## Contents
 
-- [Papers Database &amp; Documentation](#papers-database--documentation)
+- [Paper Database &amp; Documentation](#paper-database--documentation)
 - [Tools &amp; Utilities](#tools--utilities)
 - [Learning Resources](#learning-resources)
 - [Research Institutes for Collaboration](#research-institutes-for-collaboration)
 - [Changelog](#changelog)
-- [Papers List](#papers-list)
+- [List of Papers](#list-of-papers)
+  - [AI-Driven Design and Generative Architecture](#ai-driven-design-and-generative-architecture)
+  - [Reality Capture and Digital Twins](#reality-capture-and-digital-twins)
+  - [Computational BIM and Intelligent Operations](#computational-bim-and-intelligent-operations)
+  - [Heritage Conservation and Cultural Preservation](#heritage-conservation-and-cultural-preservation)
+  - [Sustainability and Environmental Performance](#sustainability-and-environmental-performance)
+  - [Sustainable Real Estate Valuation and Economics](#sustainable-real-estate-valuation-and-economics)
+  - [Human-Computer Interaction and Human-Building Interaction](#human-computer-interaction-and-human-building-interaction)
 - [Credits](#credits)
 
-## Papers Database & Documentation
+## Paper Database & Documentation
 
-### Papers Database
+### Paper Database
 
 Visit our comprehensive, searchable database of papers:
-🔍 [Papers Database](https://prakashknaikade.github.io/Awesome-XRAI-for-Architecture/)
+🔍 [Paper Database](https://prakashknaikade.github.io/Awesome-XRAI-for-Architecture/)
+
+You can also check [list of papers](#list-of-papers) here, but we recoomend to explore our [searchable paper database](https://prakashknaikade.github.io/Awesome-XRAI-for-Architecture/).
 
 ### Datasets
 
@@ -55,9 +64,23 @@ Visit our comprehensive, searchable database of papers:
 
 ### Courses
 
+#### Machine Learning / Computer Vision / Graphics Courses
+
+- [Deep Learning for Computer Vision](https://cs231n.stanford.edu/2025/schedule.html) → [Lecture Videos YT](https://www.youtube.com/playlist?list=PLoROMvodv4rOmsNzYBMe0gJY2XS8AQg16)
+
+- [Ray Tracing in One Weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html)
+
+- [Scratch a Pixel](https://www.scratchapixel.com/index.html)
+- [Physically Based Rendering: From Theory To Implementation](https://pbr-book.org/3ed-2018/contents)
+
+- [3D Computer Vision](https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/autonomous-vision/lectures/computer-vision/)
+
 - [MIT Inverse Graphics](https://www.scenerepresentations.org/courses/2023/fall/inverse-graphics/)
 
+#### AEC Related Courses (BIM, LCA, etc)
+
 - [BIM by TÜV SÜD](https://www.tuvsud.com/en-ph/services/training/e-learning-courses/building-information-modeling-bim-basics)
+
 - [BIM by Computer Integrated Construction Research Group at Penn State University](https://bim.psu.edu/)
 
 ## Research Institutes for Collaboration
@@ -518,6 +541,782 @@ As one of the emerging Computer-Aided Design (CAD) technologies for digital desi
 </details>
 
 **Links**: [📄 Paper](https://papers.cumincad.org/data/works/att/ijac201412303.pdf)
+
+## Reality Capture and Digital Twins
+
+### 2025
+
+### 1. Automated BIM-to-scan point cloud semantic segmentation using a domain adaptation network with hybrid attention and whitening (DawNet)
+
+**Authors**: Difeng Hu,Vincent J.L. Gan,
+Ruoming Zhai
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Deep learning-based point cloud semantic segmentation facilitates scene understanding and BIM modelling, but its success requires vast amount of labelled point clouds, which is laborious and time-consuming. To reduce point cloud annotation cost, researchers attempt to leverage synthetic point clouds, but the domain gap between synthetic and real point clouds deteriorates the segmentation accuracy. To address this issue, this study develops a BIM-to-Scan point cloud semantic segmentation approach to mitigate the domain gap between BIM and real point clouds, improving the segmentation performance on real point clouds. To this end, this study starts by proposing a BIM-based point cloud generation method, which uses FME and BIM models to automatically generate and label synthetic point clouds, decreasing the annotation cost. To fill the domain gap, a DawNet is invented by integrating a domain adaptation network with ZCA whitening operation and hybrid attention mechanism. Specifically, ResPointNet++ is used to extract geometric features and execute the segmentation task, which is then combined with a domain discriminator to perform domain adversarial learning, aligning the data distribution of BIM and real point clouds. To improve the performance of the DawNet, a residual learning block with whitening and a hybrid attention module are designed. These two modules help extract and exploit domain-invariant features to boost the generalisation and segmentation performance of the DawNet. Finally comprehensive experiments show that the proposed BIM-based method spends 0.5 person-hours to generate 0.45 billion labelled BIM point clouds, and that the developed DawNet achieves 17% and 11% more mIoU than ResPointNet++ and DANN. The ablation study also confirms the effectiveness of the hybrid attention module and ZCA whitening operation.
+
+</details>
+
+**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S0926580524002097)
+
+### 2. Automated Scan-to-BIM: A Deep Learning-Based Framework for Indoor Environments with Complex Furniture Elements
+
+**Authors**: Mostafa Mahmoud, Zhebin Zhao, Wu Chen,
+Mahmoud Adham, Yaxin Li
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Extensive 3D parametric datasets, such as Building Information Modeling (BIM) models, are crucial for reducing project costs, supporting planning, and enhancing operational efficiency in building management. However, conventional Scan-to-BIM methods rely heavily on manual or semi-automatic techniques, focusing on space-forming elements such as walls while often neglecting indoor space-occupying furniture. These methods struggle with incomplete point clouds, capturing shapes and orientations, and clustering inaccuracies. This paper presents an innovative and efficient deep learning-based framework to automatically reconstruct 3D models from point clouds. The framework accommodates diverse space-forming layouts and automatically generates parametric 3D BIM models for complex space-occupying elements like tables and chairs within the Revit platform. It also produces non-parametric 3D semantic representations of complete indoor scenes. Evaluation of publicly available and locally acquired datasets shows that the framework achieves over 98 % precision, recall, and F1-score, confirming its accuracy and effectiveness in generating complete 3D models. The reconstructed models preserve key real-world characteristics, including geometric fidelity, numerical attributes, spatial positioning, and various shapes and orientations of furniture. Seamless integration of deep learning and model-driven techniques overcomes the limitations of traditional Scan-to-BIM methods, providing an accurate and efficient solution for complex indoor space reconstruction.
+
+</details>
+
+**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S2352710225008332)
+
+### 3. CAGE: Continuity-Aware edGE Network Unlocks Robust Floorplan Reconstruction
+
+**Authors**: Yiyi Liu, Chunyang Liu, Bohan Wang, Weiqin Jiao, Bojian Wu, Lubin Fan, Yuwei Chen, Fashuai Li, Biao Xiong
+
+<details>
+<summary><b>Abstract</b></summary>
+
+We present CAGE (Continuity-Aware edGE) network, a robust framework for reconstructing vector floorplans directly from point-cloud density maps. Traditional corner-based polygon representations are highly sensitive to noise and incomplete observations, often resulting in fragmented or implausible layouts.Recent line grouping methods leverage structural cues to improve robustness but still struggle to recover fine geometric details. To address these limitations,we propose a native edge-centric formulation, modeling each wall segment as a directed, geometrically continuous edge. This representation enables inference of coherent floorplan structures, ensuring watertight, topologically valid room boundaries while improving robustness and reducing artifacts. Towards this design, we develop a dual-query transformer decoder that integrates perturbed and latent queries within a denoising framework, which not only stabilizes optimization but also accelerates convergence. Extensive experiments on Structured3D and SceneCAD show that CAGE achieves state-of-the-art performance, with F1 scores of 99.1% (rooms), 91.7% (corners), and 89.3% (angles). The method also demonstrates strong cross-dataset generalization, underscoring the efficacy of our architectural innovations. Code and pretrained models are available on our project page: https://github.com/ee-Liu/CAGE.git.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2509.15459.pdf) | [🌐 Project Page](https://ee-liu.github.io/CAGE_page/) | [💻 Code](https://github.com/ee-Liu/CAGE) | [🎥 Video](https://ee-liu.github.io/CAGE_page/static/videos/cage_video.mp4)
+
+### 4. Decompositional Neural Scene Reconstruction with Generative Diffusion Prior
+
+**Authors**: Junfeng Ni, Yu Liu, Ruijie Lu, Zirui Zhou, Song-Chun Zhu, Yixin Chen, Siyuan Huang
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Decompositional reconstruction of 3D scenes, with complete shapes and detailed texture of all objects within, is intriguing for downstream applications but remains challenging, particularly with sparse views as input. Recent approaches incorporate semantic or geometric regularization to address this issue, but they suffer significant degradation in underconstrained areas and fail to recover occluded regions. We argue that the key to solving this problem lies in supplementing missing information for these areas. To this end, we propose DP-Recon, which employs diffusion priors in the form of Score Distillation Sampling (SDS) to optimize the neural representation of each individual object under novel views. This provides additional information for the underconstrained areas, but directly incorporating diffusion prior raises potential conflicts between the reconstruction and generative guidance. Therefore, we further introduce a visibility-guided approach to dynamically adjust the per-pixel SDS loss weights. Together these components enhance both geometry and appearance recovery while remaining faithful to input images. Extensive experiments across Replica and ScanNet++ demonstrate that our method significantly outperforms SOTA methods. Notably, it achieves better object reconstruction under 10 views than the baselines under 100 views. Our method enables seamless text-based editing for geometry and appearance through SDS optimization and produces decomposed object meshes with detailed UV maps that support photorealistic Visual effects (VFX) editing. The project page is available at https://dp-recon.github.io/.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2503.14830.pdf)
+
+### 5. ExCap3D: Expressive 3D Scene Understanding via Object Captioning with Varying Detail
+
+**Authors**: Chandan Yeshwanth, David Rozenberszki, Angela Dai
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Generating text descriptions of objects in 3D indoor scenes is an important building block of embodied understanding. Existing methods do this by describing objects at a single level of detail, which often does not capture fine-grained details such as varying textures, materials, and shapes of the parts of objects. We propose the task of expressive 3D captioning: given an input 3D scene, describe objects at multiple levels of detail: a high-level object description, and a low-level description of the properties of its parts. To produce such captions, we present ExCap3D, an expressive 3D captioning model which takes as input a 3D scan, and for each detected object in the scan, generates a fine-grained collective description of the parts of the object, along with an object-level description conditioned on the part-level description. We design ExCap3D to encourage semantic consistency between the generated text descriptions, as well as textual similarity in the latent space, to further increase the quality of the generated captions. To enable this task, we generated the ExCap3D Dataset by leveraging a visual-language model (VLM) for multi-view captioning. The ExCap3D Dataset contains captions on the ScanNet++ dataset with varying levels of detail, comprising 190k text descriptions of 34k 3D objects in 947 indoor scenes. Our experiments show that the object- and part-level of detail captions generated by ExCap3D are of higher quality than those produced by state-of-the-art methods, with a Cider score improvement of 17% and 124% for object- and part-level details respectively. Our code, dataset and models will be made publicly available.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2503.17044.pdf)
+
+### 6. Fast3R: Towards 3D Reconstruction of 1000+ Images in One Forward Pass
+
+**Authors**: Jianing Yang, Alexander Sax, Kevin J. Liang, Mikael Henaff, Hao Tang, Ang Cao, Joyce Chai, Franziska Meier, Matt Feiszli
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Multi-view 3D reconstruction remains a core challenge in computer vision, particularly in applications requiring accurate and scalable representations across diverse perspectives. Current leading methods such as DUSt3R employ a fundamentally pairwise approach, processing images in pairs and necessitating costly global alignment procedures to reconstruct from multiple views. In this work, we propose Fast 3D Reconstruction (Fast3R), a novel multi-view generalization to DUSt3R that achieves efficient and scalable 3D reconstruction by processing many views in parallel. Fast3R's Transformer-based architecture forwards N images in a single forward pass, bypassing the need for iterative alignment. Through extensive experiments on camera pose estimation and 3D reconstruction, Fast3R demonstrates state-of-the-art performance, with significant improvements in inference speed and reduced error accumulation. These results establish Fast3R as a robust alternative for multi-view applications, offering enhanced scalability without compromising reconstruction accuracy.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2501.13928.pdf)
+
+### 7. Floorplan-SLAM: A Real-Time, High-Accuracy, and Long-Term Multi-Session Point-Plane SLAM for Efficient Floorplan Reconstruction
+
+**Authors**: Haolin Wang, Zeren Lv, Hao Wei, Haijiang Zhu, Yihong Wu
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Floorplan reconstruction provides structural priors essential for reliable indoor robot navigation and high-level scene understanding. However, existing approaches either require time-consuming offline processing with a complete map, or rely on expensive sensors and substantial computational resources. To address the problems, we propose Floorplan-SLAM, which incorporates floorplan reconstruction tightly into a multi-session SLAM system by seamlessly interacting with plane extraction, pose estimation, and back-end optimization, achieving real-time, high-accuracy, and long-term floorplan reconstruction using only a stereo camera. Specifically, we present a robust plane extraction algorithm that operates in a compact plane parameter space and leverages spatially complementary features to accurately detect planar structures, even in weakly textured scenes. Furthermore, we propose a floorplan reconstruction module tightly coupled with the SLAM system, which uses continuously optimized plane landmarks and poses to formulate and solve a novel optimization problem, thereby enabling real-time incremental floorplan reconstruction. Note that by leveraging the map merging capability of multi-session SLAM, our method supports long-term floorplan reconstruction across multiple sessions without redundant data collection. Experiments on the VECtor and the self-collected datasets indicate that Floorplan-SLAM significantly outperforms state-of-the-art methods in terms of plane extraction robustness, pose estimation accuracy, and floorplan reconstruction fidelity and speed, achieving real-time performance at 25-45 FPS without GPU acceleration, which reduces the floorplan reconstruction time for a 1000 square meters scene from over 10 hours to just 9.44 minutes.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2503.00397v2.pdf)
+
+### 8. FloorplanMAE:A self-supervised framework for complete floorplan generation from partial inputs
+
+**Authors**: Jun Yin, Jing Zhong, Pengyu Zeng, Peilin Li, Miao Zhang, Ran Luo, Shuai Lu
+
+<details>
+<summary><b>Abstract</b></summary>
+
+In the architectural design process, floorplan design is often a dynamic and iterative process. Architects progressively draw various parts of the floorplan according to their ideas and requirements, continuously adjusting and refining throughout the design process. Therefore, the ability to predict a complete floorplan from a partial one holds significant value in the design process. Such prediction can help architects quickly generate preliminary designs, improve design efficiency, and reduce the workload associated with repeated modifications. To address this need, we propose FloorplanMAE, a self-supervised learning framework for restoring incomplete floor plans into complete ones. First, we developed a floor plan reconstruction dataset, FloorplanNet, specifically trained on architectural floor plans. Secondly, we propose a floor plan reconstruction method based on Masked Autoencoders (MAE), which reconstructs missing parts by masking sections of the floor plan and training a lightweight Vision Transformer (ViT). We evaluated the reconstruction accuracy of FloorplanMAE and compared it with state-of-the-art benchmarks. Additionally, we validated the model using real sketches from the early stages of architectural design. Experimental results show that the FloorplanMAE model can generate high-quality complete floor plans from incomplete partial plans. This framework provides a scalable solution for floor plan generation, with broad application prospects.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2506.08363.pdf)
+
+### 9. HouseLayout3D: A Benchmark and Training-free Baseline for 3D Layout Estimation in the Wild
+
+**Authors**: Valentin Bieri, Marie-Julie Rakotosaona, Keisuke Tateno, Francis Engelmann, Leonidas Guibas
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Current 3D layout estimation models are predominantly trained on synthetic datasets biased toward simplistic, single-floor scenes. This prevents them from generalizing to complex, multi-floor buildings, often forcing a per-floor processing approach that sacrifices global context. Few works have attempted to holistically address multi-floor layouts. In this work, we introduce HouseLayout3D, a real-world benchmark dataset, which highlights the limitations of existing research when handling expansive, architecturally complex spaces. Additionally, we propose MultiFloor3D, a baseline method leveraging recent advances in 3D reconstruction and 2D segmentation. Our approach significantly outperforms state-of-the-art methods on both our new and existing datasets. Remarkably, it does not require any layout-specific training.
+
+</details>
+
+**Links**: [💻 Code](https://github.com/valebi/house-layout-3d-eval)
+
+### 10. Human-in-the-Loop Local Corrections of 3D Scene Layouts via Infilling
+
+**Authors**: Christopher Xie, Armen Avetisyan, Henry Howard-Jenkins, Yawar Siddiqui, Julian Straub, Richard Newcombe, Vasileios Balntas, Jakob Engel
+
+<details>
+<summary><b>Abstract</b></summary>
+
+We present a novel human-in-the-loop approach to estimate 3D scene layout that uses human feedback from an egocentric standpoint. We study this approach through introduction of a novel local correction task, where users identify local errors and prompt a model to automatically correct them. Building on SceneScript, a state-of-the-art framework for 3D scene layout estimation that leverages structured language, we propose a solution that structures this problem as "infilling", a task studied in natural language processing. We train a multi-task version of SceneScript that maintains performance on global predictions while significantly improving its local correction ability. We integrate this into a human-in-the-loop system, enabling a user to iteratively refine scene layout estimates via a low-friction "one-click fix'' workflow. Our system enables the final refined layout to diverge from the training distribution, allowing for more accurate modelling of complex layouts.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2503.11806.pdf)
+
+### 11. Leveraging AI to Enhance XR in the AEC Industry
+
+**Authors**: Sepehr Alizadehsalehi, Ahmad Hadavi
+
+<details>
+<summary><b>Abstract</b></summary>
+
+The Architecture, Engineering, and Construction (AEC) industry will benefit significantly from integrating Artificial Intelligence (AI) and Extended Reality (XR) technologies. This paper explores the immense potential of AI-enhanced XR in tackling the industry challenges. While AI and XR are currently employed independently, this paper proposes a framework for their integration, aiming to optimize resource allocation, elevate safety protocols, and enhance project accuracy. Supported by a SWOT analysis, the study presents practical implications and proposed use cases showcasing the application of AI and XR in AEC projects. The paper provides a strategic roadmap for integrating AI-driven XR, emphasizing its potential to drive immediate and sustainable advancements in construction practices and set new industry benchmarks for innovation and efficiency.
+
+</details>
+
+**Links**: [📄 Paper](https://link.springer.com/chapter/10.1007/978-981-96-4051-5_105)
+
+### 12. MUSt3R: Multi-view Network for Stereo 3D Reconstruction
+
+**Authors**: Yohann Cabon, Lucas Stoffl, Leonid Antsfeld, Gabriela Csurka, Boris Chidlovskii, Jerome Revaud, Vincent Leroy
+
+<details>
+<summary><b>Abstract</b></summary>
+
+DUSt3R introduced a novel paradigm in geometric computer vision by proposing a model that can provide dense and unconstrained Stereo 3D Reconstruction of arbitrary image collections with no prior information about camera calibration nor viewpoint poses. Under the hood, however, DUSt3R processes image pairs, regressing local 3D reconstructions that need to be aligned in a global coordinate system. The number of pairs, growing quadratically, is an inherent limitation that becomes especially concerning for robust and fast optimization in the case of large image collections. In this paper, we propose an extension of DUSt3R from pairs to multiple views, that addresses all aforementioned concerns. Indeed, we propose a Multi-view Network for Stereo 3D Reconstruction, or MUSt3R, that modifies the DUSt3R architecture by making it symmetric and extending it to directly predict 3D structure for all views in a common coordinate frame. Second, we entail the model with a multi-layer memory mechanism which allows to reduce the computational complexity and to scale the reconstruction to large collections, inferring thousands of 3D pointmaps at high frame-rates with limited added complexity. The framework is designed to perform 3D reconstruction both offline and online, and hence can be seamlessly applied to SfM and visual SLAM scenarios showing state-of-the-art performance on various 3D downstream tasks, including uncalibrated Visual Odometry, relative camera pose, scale and focal estimation, 3D reconstruction and multi-view depth estimation.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2503.01661.pdf) | [🌐 Project Page](https://europe.naverlabs.com/research/publications/must3r-multi-view-network-for-stereo-3d-reconstruction/) | [💻 Code](https://github.com/naver/must3r)
+
+### 13. NeRFPrior: Learning Neural Radiance Field as a Prior for Indoor Scene Reconstruction
+
+**Authors**: Wenyuan Zhang, Emily Yue-ting Jia, Junsheng Zhou, Baorui Ma, Kanle Shi, Yu-Shen Liu, Zhizhong Han
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Recently, it has shown that priors are vital for neural implicit functions to reconstruct high-quality surfaces from multi-view RGB images. However, current priors require large-scale pre-training, and merely provide geometric clues without considering the importance of color. In this paper, we present NeRFPrior, which adopts a neural radiance field as a prior to learn signed distance fields using volume rendering for surface reconstruction. Our NeRF prior can provide both geometric and color clues, and also get trained fast under the same scene without additional data. Based on the NeRF prior, we are enabled to learn a signed distance function (SDF) by explicitly imposing a multi-view consistency constraint on each ray intersection for surface inference. Specifically, at each ray intersection, we use the density in the prior as a coarse geometry estimation, while using the color near the surface as a clue to check its visibility from another view angle. For the textureless areas where the multi-view consistency constraint does not work well, we further introduce a depth consistency loss with confidence weights to infer the SDF. Our experimental results outperform the state-of-the-art methods under the widely used benchmarks.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2503.18361.pdf)
+
+### 14. PolyGraph: A Graph-Based Method for Floorplan Reconstruction From 3D Scans
+
+**Authors**: Q. Sun, C. Fang, S. Liu, Y. Sun, Y. Shang, Y. He
+
+<details>
+<summary><b>Abstract</b></summary>
+
+The task of reconstructing indoor floorplans has become an increasingly popular subject, offering substantial benefits across various applications such as interior design, virtual reality, and robotics. Despite the growing interest, existing approaches frequently encounter challenges due to high computational costs and sensitivity to errors in primitive detection. In this article, we introduce PolyGraph, a new computational framework that combines a deep-learning based primitive detection network with an optimization-based reconstruction algorithm to facilitate high-quality reconstruction results. Specifically, we develop a novel guided wall point primitive estimation network capable of generating dense samples along wall boundaries. This network not only retains structural detail but also shows improved robustness in the detection phase. Then, PolyGraph utilizes wall points to establish a graph-based representation, formulating indoor floorplan reconstruction as a subgraph optimization problem. This approach significantly reduces the search space comparing to existing pixel-level optimization approaches. By utilizing “structural weight”, we seamlessly integrate the structural information of walls and rooms into graph representations, ensuring high-quality reconstruction results. Experimental results demonstrate PolyGraph's effectiveness and its advantages compared to other optimization-based approaches, showcasing its computational efficiency, and its ability to preserve structural integrity and capture fine details, as quantified by the structure metrics.
+
+</details>
+
+**Links**: [📄 Paper](https://ieeexplore.ieee.org/document/10899892)
+
+### 15. QuickSplat: Fast 3D Surface Reconstruction via Learned Gaussian Initialization
+
+**Authors**: Yueh-Cheng Liu, Lukas Höllein, Matthias Nießner, Angela Dai
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Surface reconstruction is fundamental to computer vision and graphics, enabling applications in 3D modeling, mixed reality, robotics, and more. Existing approaches based on volumetric rendering obtain promising results, but optimize on a per-scene basis, resulting in a slow optimization that can struggle to model under-observed or textureless regions. We introduce QuickSplat, which learns data-driven priors to generate dense initializations for 2D gaussian splatting optimization of large-scale indoor scenes. This provides a strong starting point for the reconstruction, which accelerates the convergence of the optimization and improves the geometry of flat wall structures. We further learn to jointly estimate the densification and update of the scene parameters during each iteration; our proposed densifier network predicts new Gaussians based on the rendering gradients of existing ones, removing the needs of heuristics for densification. Extensive experiments on large-scale indoor scene reconstruction demonstrate the superiority of our data-driven optimization. Concretely, we accelerate runtime by 8x, while decreasing depth errors by up to 48% in comparison to state of the art methods.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2505.05591.pdf) | [🌐 Project Page](https://liu115.github.io/quicksplat) | [💻 Code](https://github.com/liu115/QuickSplat) | [🎥 Video](https://youtu.be/2IA_gnFvFG8)
+
+### 16. Radiance Meshes for Volumetric Reconstruction
+
+**Authors**: Alexander Mai, Trevor Hedstrom, George Kopanas, Janne Kontkanen, Falko Kuester, Jonathan T. Barron
+
+<details>
+<summary><b>Abstract</b></summary>
+
+We introduce radiance meshes, a technique for representing radiance fields with constant density tetrahedral cells produced with a Delaunay tetrahedralization. Unlike a Voronoi diagram, a Delaunay tetrahedralization yields simple triangles that are natively supported by existing hardware. As such, our model is able to perform exact and fast volume rendering using both rasterization and ray-tracing. We introduce a new rasterization method that achieves faster rendering speeds than all prior radiance field representations (assuming an equivalent number of primitives and resolution) across a variety of platforms. Optimizing the positions of Delaunay vertices introduces topological discontinuities (edge flips). To solve this, we use a Zip-NeRF-style backbone which allows us to express a smoothly varying field even when the topology changes. Our rendering method exactly evaluates the volume rendering equation and enables high quality, real-time view synthesis on standard consumer hardware. Our tetrahedral meshes also lend themselves to a variety of exciting applications including fisheye lens distortion, physics-based simulation, editing, and mesh extraction.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2512.04076.pdf)
+
+### 17. ResPlan: A Large-Scale Vector-Graph Dataset of 17,000 Residential Floor Plans
+
+**Authors**: Mohamed Abouagour, Eleftherios Garyfallidis
+
+<details>
+<summary><b>Abstract</b></summary>
+
+We introduce ResPlan, a large-scale dataset of 17,000 detailed, structurally rich, and realistic residential floor plans, created to advance spatial AI research. Each plan includes precise annotations of architectural elements (walls, doors, windows, balconies) and functional spaces (such as kitchens, bedrooms, and bathrooms). ResPlan addresses key limitations of existing datasets such as RPLAN (Wu et al., 2019) and MSD (van Engelenburg et al., 2024) by offering enhanced visual fidelity and greater structural diversity, reflecting realistic and non-idealized residential layouts. Designed as a versatile, general-purpose resource, ResPlan supports a wide range of applications including robotics, reinforcement learning, generative AI, virtual and augmented reality, simulations, and game development. Plans are provided in both geometric and graph-based formats, enabling direct integration into simulation engines and fast 3D conversion. A key contribution is an open-source pipeline for geometry cleaning, alignment, and annotation refinement. Additionally, ResPlan includes structured representations of room connectivity, supporting graph-based spatial reasoning tasks. Finally, we present comparative analyses with existing benchmarks and outline several open benchmark tasks enabled by ResPlan. Ultimately, ResPlan offers a significant advance in scale, realism, and usability, providing a robust foundation for developing and benchmarking next-generation spatial intelligence systems.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2508.14006v1.pdf)
+
+### 18. Scan-to-BIM-to-Sim: Automated reconstruction of digital and simulation models from point clouds with applications on bridges
+
+**Authors**: Yunping Fang
+, Stergios-Aristoteles Mitoulis, Daniel Boddice
+,
+Jialiang Yu
+, Jelena Ninic
+
+<details>
+<summary><b>Abstract</b></summary>
+
+The automation of 3D geometric model reconstruction from point clouds is essential for efficient management of critical infrastructure assets like bridges, significantly streamlining and enhancing inspection and structural analysis tasks. However, existing automated frameworks frequently encounter challenges due to substantial computational demands and the difficulties when applied to defective point clouds, which arise from adverse environmental conditions, measurement errors, and limitations of surveying equipment. Major limitations also exist in achieving real-time data exchange and mapping between Building Information Modelling (BIM) models and simulation (Sim) models. To address this gap, this paper proposes a comprehensive Scan-to-BIM-to-Sim framework that efficiently reconstructs bridge BIM models from imperfect point clouds and supports bidirec tional mapping between BIM and numerical simulations. The method proposes an improved edge detection for contour extraction from imperfect point cloud and parametric modelling for the direct generation of 3D models within BIM software. Additionally, it automates the exchange between BIM models and simulation software, facilitating bidirectional operation for real-time analysis and visualisation. The framework, validated using the Arial Aqueduct Bridge case, reduces modelling time and computational demands, thereby streamlining con struction simulations with improved accuracy and cost efficiency. The dataset collected for model generation and validation is openly available at https://doi.org/10.17632/znxxsgn2ky.1.
+
+</details>
+
+**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S2590123025003743)
+
+### 19. ScanEdit: Hierarchically-Guided Functional 3D Scan Editing
+
+**Authors**: Mohamed el amine Boudjoghra, Ivan Laptev, Angela Dai
+
+<details>
+<summary><b>Abstract</b></summary>
+
+With the fast pace of 3D capture technology and resulting abundance of 3D data, effective 3D scene editing becomes essential for a variety of graphics applications. In this work we present ScanEdit, an instruction-driven method for functional editing of complex, real-world 3D scans. To model large and interdependent sets of ob- jectswe propose a hierarchically-guided approach. Given a 3D scan decomposed into its object instances, we first construct a hierarchical scene graph representation to enable effective, tractable editing. We then leverage reason- ing capabilities of Large Language Models (LLMs) and translate high-level language instructions into actionable commands applied hierarchically to the scene graph. Fi- nally, ScanEdit integrates LLM-based guidance with ex- plicit physical constraints and generates realistic scenes where object arrangements obey both physics and common sense. In our extensive experimental evaluation ScanEdit outperforms state of the art and demonstrates excellent re- sults for a variety of real-world scenes and input instruc- tions.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2504.15049.pdf) | [🌐 Project Page](https://aminebdj.github.io/scanedit/) | [💻 Code](https://github.com/aminebdj/ScanEdit) | [🎥 Video](https://www.youtube.com/watch?v=Dfmu2g6pVlg)
+
+### 20. WildGS-SLAM: Monocular Gaussian Splatting SLAM in Dynamic Environments
+
+**Authors**: Jianhao Zheng, Zihan Zhu, Valentin Bieri, Marc Pollefeys, Songyou Peng, Iro Armeni
+
+<details>
+<summary><b>Abstract</b></summary>
+
+We present WildGS-SLAM, a robust and efficient monocular RGB SLAM system designed to handle dynamic environments by leveraging uncertainty-aware geometric mapping. Unlike traditional SLAM systems, which assume static scenes, our approach integrates depth and uncertainty information to enhance tracking, mapping, and rendering performance in the presence of moving objects. We introduce an uncertainty map, predicted by a shallow multi-layer perceptron and DINOv2 features, to guide dynamic object removal during both tracking and mapping. This uncertainty map enhances dense bundle adjustment and Gaussian map optimization, improving reconstruction accuracy. Our system is evaluated on multiple datasets and demonstrates artifact-free view synthesis. Results showcase WildGS-SLAM's superior performance in dynamic environments compared to state-of-the-art methods.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2504.03886.pdf) | [🌐 Project Page](https://wildgs-slam.github.io/) | [💻 Code](https://github.com/GradientSpaces/WildGS-SLAM.git) | [🎥 Video](https://www.youtube.com/watch?v=xXuolzFvddQ&t=11s)
+
+### 2024
+
+### 1. Automated BIM generation for large-scale indoor complex environments based on deep learning
+
+**Authors**: Mostafa Mahmoud, Wu Chen, Yang Yang, Yaxin Li
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Large volumes of 3D parametric datasets, such as building information modeling (BIM), are the foundation for developing and applying smart city and digital twin technologies. Those datasets are also considered valuable tools for efficiently managing rebuilt structures during the operation and maintenance stages. Nevertheless, current approaches developed for the scan-to-BIM process rely on manual or semi-automatic procedures and insufficiently leverage semantic data in point clouds. These methods struggle to accurately represent large-scale indoor complex layouts and extract details from irregular-shaped unstructured elements, causing inefficiencies in BIM model generation. To address these issues, we propose an innovative scan-to-BIM framework based on deep learning algorithms and raw point cloud data, enabling the automatic generation of 3D models for both structured and unstructured indoor elements. Initially, we propose an enhanced deep learning neural network to improve the point clouds' semantic segmentation accuracy. Subsequently, an efficient workflow is developed to reconstruct 3D building models of structured indoor scenes. The proposed workflow can reconstruct large-scale data with multiple room layouts of Manhattan or non-Manhattan structures and reconstruct 3D models automatically by using a BIM parametric algorithm implemented in Revit software. Moreover, we introduce a robust method for unstructured elements to automatically generate corresponding 3D BIM models, even when the incorporating semantic information is incomplete. The proposed approach was evaluated on synthetic and real data for different scales and complexities of indoor scenes. The results of the experiments demonstrate that the improved model significantly enhances the overall semantic segmentation accuracy compared to the baseline models. The proposed scan-to-BIM framework is efficient for indoor element 3D reconstruction, achieving precision, recall, and F-score values ranging from 96% to 99%. The generated BIM models are competitive with traditional methods regarding model completeness and geometric accuracy.
+
+</details>
+
+**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S0926580524001122)
+
+### 2. FRI-Net: Floorplan Reconstruction via Room-wise Implicit Representation
+
+**Authors**: Honghao Xu, Juzhan Xu, Zeyu Huang, Pengfei Xu, Hui Huang, Ruizhen Hu
+
+<details>
+<summary><b>Abstract</b></summary>
+
+In this paper, we introduce a novel method called FRI-Net for 2D floorplan reconstruction from 3D point cloud. Existing methods typically rely on corner regression or box regression, which lack consideration for the global shapes of rooms. To address these issues, we propose a novel approach using a room-wise implicit representation with structural regularization to characterize the shapes of rooms in floorplans. By incorporating geometric priors of room layouts in floorplans into our training strategy, the generated room polygons are more geometrically regular. We have conducted experiments on two challenging datasets, Structured3D and SceneCAD. Our method demonstrates improved performance compared to state-of-the-art methods, validating the effectiveness of our proposed representation for floorplan reconstruction.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2407.10687v1.pdf) | [💻 Code](https://github.com/Daisy-1227/FRI-Net)
+
+### 3. Infrastructure digital twin technology: A new paradigm for future construction industry
+
+**Authors**: Taofeeq D. Moshood, James OB. Rotimi, Wajiha Shahzad, J.A. Bamgbade
+
+<details>
+<summary><b>Abstract</b></summary>
+
+The construction industry has traditionally been slow to adopt digital technology, resulting in inefficient workflows, frequent cost overruns, and delays. Moreover, its fragmented structure, inherent to market dynamics, exacerbates these challenges. Embracing digitalization and transitioning to Industry 4.0 can substantially enhance efficiency and productivity in construction through increased innovation and improved collaboration, ultimately reducing information gaps and data discrepancies. This study aims to assess the potential integration of digital twin technology across various construction stages, spanning from initial design to project delivery. Existing literature emphasizes the transformative power of digital twin technology in advancing building innovation and environmental sustainability. These virtual replicas are crucial in optimizing industrial manufacturing by harmonizing production processes and societal interactions. A focused examination of digital twin technology applications in construction highlights its ability to streamline coordination and facilitate data sharing among stakeholders. Property owners increasingly recognise the value of digital twin technology in local contexts, driving the digitization of design and collaboration methods in construction. Integrating digital twin technology right from a project's inception and extending it across design phases optimizes project delivery, enhances asset quality, and contributes to societal sustainability. As the nexus between digitalization and sustainability goals strengthens, the construction industry stands at the cusp of a significant transformative journey.
+
+</details>
+
+**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S0160791X24000678)
+
+### 4. Integrating Data from Terrestrial Laser Scanning and Unmanned Aerial Vehicle with LiDAR for BIM Developing
+
+**Authors**: Wioleta Blaszczak-Bak, Andrea Masiero, Paweł Bąk, Kamil Kuderko
+
+<details>
+<summary><b>Abstract</b></summary>
+
+The use of Building Information Modeling (BIM) in building construction and management is becoming increasingly common. Nevertheless, the generation of BIM models for already existing buildings is still an operation requiring a significant human effort. The generation of a geometrically reliable and complete BIM model requires geometric information on all the building parts. Since acquiring such information with a unique acquisition tool is quite hard, integration of data acquired with different acquisition tools and platforms is strongly recommended in order to obtain a geometrically complete 3D description of the building. This work presents a procedure for integrating data acquired with Terrestrial Laser Scanning (TLS), UAV (Unmanned Aerial Vehicle) LiDAR (Light Detection and Ranging) and Smartphone with LiDAR, showing the obtained results on two case studies, two buildings in the campus of the University of Warmia and Mazury in Olsztyn. Finally, a BIM model have been successfully generated in both the case studies by using the Blender software.
+
+</details>
+
+**Links**: [📄 Paper](https://isprs-archives.copernicus.org/articles/XLVIII-1-2024/25/2024/isprs-archives-XLVIII-1-2024-25-2024.pdf)
+
+### 5. LoopSplat: Loop Closure by Registering 3D Gaussian Splats
+
+**Authors**: Liyuan Zhu, Yue Li, Erik Sandström, Shengyu Huang, Konrad Schindler, Iro Armeni
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Simultaneous Localization and Mapping (SLAM) based on 3D Gaussian Splats (3DGS) has recently shown promise towards more accurate, dense 3D scene maps. However, existing 3DGS-based methods fail to address the global consistency of the scene via loop closure and/or global bundle adjustment. To this end, we propose LoopSplat, which takes RGB-D images as input and performs dense mapping with 3DGS submaps and frame-to-model tracking. LoopSplat triggers loop closure online and computes relative loop edge constraints between submaps directly via 3DGS registration, leading to improvements in efficiency and accuracy over traditional global-to-local point cloud registration. It uses a robust pose graph optimization formulation and rigidly aligns the submaps to achieve global consistency. Evaluation on the synthetic Replica and real-world TUM-RGBD, ScanNet, and ScanNet++ datasets demonstrates competitive or superior tracking, mapping, and rendering compared to existing methods for dense RGB-D SLAM. Code is available at loopsplat.github.io.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2408.10154.pdf) | [🌐 Project Page](https://loopsplat.github.io/) | [💻 Code](https://github.com/GradientSpaces/LoopSplat)
+
+### 6. NC-SDF: Enhancing Indoor Scene Reconstruction Using Neural SDFs with View-Dependent Normal Compensation
+
+**Authors**: Ziyi Chen, Xiaolong Wu, Yu Zhang
+
+<details>
+<summary><b>Abstract</b></summary>
+
+State-of-the-art neural implicit surface representations have achieved impressive results in indoor scene reconstruction by incorporating monocular geometric priors as additional supervision. However, we have observed that multi-view inconsistency between such priors poses a challenge for high-quality reconstructions. In response, we present NC-SDF, a neural signed distance field (SDF) 3D reconstruction framework with view-dependent normal compensation (NC). Specifically, we integrate view-dependent biases in monocular normal priors into the neural implicit representation of the scene. By adaptively learning and correcting the biases, our NC-SDF effectively mitigates the adverse impact of inconsistent supervision, enhancing both the global consistency and local details in the reconstructions. To further refine the details, we introduce an informative pixel sampling strategy to pay more attention to intricate geometry with higher information content. Additionally, we design a hybrid geometry modeling approach to improve the neural implicit representation. Experiments on synthetic and real-world datasets demonstrate that NC-SDF outperforms existing approaches in terms of reconstruction quality.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2405.00340.pdf)
+
+### 7. Novel View Synthesis of Structural Color Objects Created by Laser Markings
+
+**Authors**: Prakash Naikade
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Transforming physical object into its high quality 3D digital twin using novel view
+synthesis is crucial for researchers in the domain of automatic laser marking of any
+color image on different metal substrates. Current Radiance Field methods have significantly advanced novel view synthesis of scenes captured with multiple photos or videos. But, they struggle to represent the scene with shiny objects. Moreover, multiview reconstruction of reflective objects with structural colors is extremely challenging because specular reflections are view-dependent and thus violate the multiview consistency, which is the cornerstone for most multiview reconstruction methods.
+However, there is a general lack of synthetic datasets for objects with structural colors and a literature review on state-of-the-art (SOTA) novel view synthesis methods
+for this kind of materials. Addressing these issues, we introduce a novel synthetic
+dataset that is used to conduct quantitative and qualitative analysis on a SOTA
+novel view synthesis methods. We demonstrate different techniques to improve the
+scene representation of laser printed planar structural color objects, focusing on the
+3D Gaussian Splatting (3D-GS) method, which performs exceptionally well on our
+synthetic dataset. Our techniques, such as using geometric prior of planar structural
+color objects while initializing scene with sparse structure-from-motion (SfM) point
+cloud and the Anisotropy Regularizer, significantly improves the visual quality of view
+synthesis. We design different capture setups to acquire images of objects and evaluate the visual quality of the scene with different capture setups. Additionally, we present comprehensive experimentation to demonstrate methods to simulate structural color objects using just captured images of laser-printed primaries. This comprehensive research aims to contribute to the advancement of novel view synthesis methods for scenes involving reflective objects with structural colors.
+
+</details>
+
+**Links**: [📄 Paper](https://doi.org/10.5281/zenodo.20258767) | [🌐 Project Page](https://prakashknaikade.github.io/publications/nvs_structural_color_object/)
+
+### 8. PolyRoom: Room-aware Transformer for Floorplan Reconstruction
+
+**Authors**: Yuzhou Liu, Lingjie Zhu, Xiaodong Ma, Hanqiao Ye, Xiang Gao, Xianwei Zheng, Shuhan Shen
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Reconstructing geometry and topology structures from raw unstructured data has always been an important research topic in indoor mapping research. In this paper, we aim to reconstruct the floorplan with a vectorized representation from point clouds. Despite significant advancements achieved in recent years, current methods still encounter several challenges, such as missing corners or edges, inaccuracies in corner positions or angles, self-intersecting or overlapping polygons, and potentially implausible topology. To tackle these challenges, we present PolyRoom, a room-aware Transformer that leverages uniform sampling representation, room-aware query initialization, and room-aware self-attention for floorplan reconstruction. Specifically, we adopt a uniform sampling floorplan representation to enable dense supervision during training and effective utilization of angle information. Additionally, we propose a room-aware query initialization scheme to prevent non-polygonal sequences and introduce room-aware self-attention to enhance memory efficiency and model performance. Experimental results on two widely used datasets demonstrate that PolyRoom surpasses current state-of-the-art methods both quantitatively and qualitatively. Our code is available at: https://github.com/3dv-casia/PolyRoom/.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2407.10439v1.pdf) | [💻 Code](https://github.com/3dv-casia/PolyRoom/)
+
+### 9. SceneScript: Reconstructing Scenes With An Autoregressive Structured Language Model
+
+**Authors**: Armen Avetisyan, Christopher Xie, Henry Howard-Jenkins, Tsun-Yi Yang, Samir Aroudj, Suvam Patra, Fuyang Zhang, Duncan Frost, Luke Holland, Campbell Orme, Jakob Engel, Edward Miller, Richard Newcombe, Vasileios Balntas
+
+<details>
+<summary><b>Abstract</b></summary>
+
+We introduce SceneScript, a method that directly produces full scene models as a sequence of structured language commands using an autoregressive, token-based approach. Our proposed scene representation is inspired by recent successes in transformers & LLMs, and departs from more traditional methods which commonly describe scenes as meshes, voxel grids, point clouds or radiance fields. Our method infers the set of structured language commands directly from encoded visual data using a scene language encoder-decoder architecture. To train SceneScript, we generate and release a large-scale synthetic dataset called Aria Synthetic Environments consisting of 100k high-quality in-door scenes, with photorealistic and ground-truth annotated renders of egocentric scene walkthroughs. Our method gives state-of-the art results in architectural layout estimation, and competitive results in 3D object detection. Lastly, we explore an advantage for SceneScript, which is the ability to readily adapt to new commands via simple additions to the structured language, which we illustrate for tasks such as coarse 3D object part reconstruction.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2403.13064.pdf) | [🌐 Project Page](https://www.projectaria.com/scenescript/) | [💻 Code](https://github.com/facebookresearch/scenescript) | [🎥 Video](https://www.projectaria.com/scenescript/#)
+
+### 10. WAFFLE: Multimodal Floorplan Understanding in the Wild
+
+**Authors**: Keren Ganon, Morris Alper, Rachel Mikulinsky, Hadar Averbuch-Elor
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Buildings are a central feature of human culture and are increasingly being analyzed with computational methods. However, recent works on computational building understanding have largely focused on natural imagery of buildings, neglecting the fundamental element defining a building's structure -- its floorplan. Conversely, existing works on floorplan understanding are extremely limited in scope, often focusing on floorplans of a single semantic category and region (e.g. floorplans of apartments from a single country). In this work, we introduce WAFFLE, a novel multimodal floorplan understanding dataset of nearly 20K floorplan images and metadata curated from Internet data spanning diverse building types, locations, and data formats. By using a large language model and multimodal foundation models, we curate and extract semantic information from these images and their accompanying noisy metadata. We show that WAFFLE enables progress on new building understanding tasks, both discriminative and generative, which were not feasible using prior datasets. We will publicly release WAFFLE along with our code and trained models, providing the research community with a new foundation for learning the semantics of buildings.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2412.00955v2.pdf) | [🌐 Project Page](https://tau-vailab.github.io/WAFFLE/) | [💻 Code](https://github.com/TAU-VAILab/WAFFLE)
+
+### 2023
+
+### 1. 3D Gaussian Splatting for Real-Time Radiance Field Rendering
+
+**Authors**: Bernhard Kerbl, Georgios Kopanas, Thomas Leimkühler, George Drettakis
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Radiance Field methods have recently revolutionized novel-view synthesis of scenes captured with multiple photos or videos. However, achieving high visual quality still requires neural networks that are costly to train and render, while recent faster methods inevitably trade off speed for quality. For unbounded and complete scenes (rather than isolated objects) and 1080p resolution rendering, no current method can achieve real-time display rates. We introduce three key elements that allow us to achieve state-of-the-art visual quality while maintaining competitive training times and importantly allow high-quality real-time (>= 30 fps) novel-view synthesis at 1080p resolution. First, starting from sparse points produced during camera calibration, we represent the scene with 3D Gaussians that preserve desirable properties of continuous volumetric radiance fields for scene optimization while avoiding unnecessary computation in empty space; Second, we perform interleaved optimization/density control of the 3D Gaussians, notably optimizing anisotropic covariance to achieve an accurate representation of the scene; Third, we develop a fast visibility-aware rendering algorithm that supports anisotropic splatting and both accelerates training and allows realtime rendering. We demonstrate state-of-the-art visual quality and real-time rendering on several established datasets.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2308.04079.pdf) | [🌐 Project Page](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/) | [💻 Code](https://github.com/graphdeco-inria/gaussian-splatting) | [🎥 Video](https://youtu.be/T_kXY43VZnk)
+
+### 2. A-Scan2BIM: Assistive Scan to Building Information Modeling
+
+**Authors**: Weilian Song, Jieliang Luo, Dale Zhao, Yan Fu, Chin-Yi Cheng, Yasutaka Furukawa
+
+<details>
+<summary><b>Abstract</b></summary>
+
+This paper proposes an assistive system for architects that converts a large-scale point cloud into a standardized digital representation of a building for Building Information Modeling (BIM) applications. The process is known as Scan-to-BIM, which requires many hours of manual work even for a single building floor by a professional architect. Given its challenging nature, the paper focuses on helping architects on the Scan-to-BIM process, instead of replacing them. Concretely, we propose an assistive Scan-to-BIM system that takes the raw sensor data and edit history (including the current BIM model), then auto-regressively predicts a sequence of model editing operations as APIs of a professional BIM software (i.e., Autodesk Revit). The paper also presents the first building-scale Scan2BIM dataset that contains a sequence of model editing operations as the APIs of Autodesk Revit. The dataset contains 89 hours of Scan2BIM modeling processes by professional architects over 16 scenes, spanning over 35,000 m^2. We report our system's reconstruction quality with standard metrics, and we introduce a novel metric that measures how natural the order of reconstructed operations is. A simple modification to the reconstruction module helps improve performance, and our method is far superior to two other baselines in the order metric. We will release data, code, and models at a-scan2bim.github.io.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2311.18166.pdf) | [🌐 Project Page](https://a-scan2bim.github.io/) | [💻 Code](https://github.com/weiliansong/A-Scan2BIM)
+
+### 3. Automating the retrospective generation of As-is BIM models using machine learning
+
+**Authors**: Phillip Schönfelder, 
+Angelina Aziz, 
+Benedikt Faltin, Markus König
+
+<details>
+<summary><b>Abstract</b></summary>
+
+The manual creation of digital models of existing buildings for operations and maintenance is difficult and time-consuming. Machine learning and deep learning techniques have recently emerged to help automate this process. To assess the numerous publications in the field, this paper presents a systematic literature review and highlights potential research gaps and development opportunities. Following the procedure suggested by PRISMA (Preferred Reporting Items for Systematic Reviews and Meta-Analyses), 95 eligible publications are selected for the final review. The findings indicate that future research should explore alternative data sources, extract component attributes alongside geometries, and address retrospective infrastructure modeling, which remains widely unexplored. This paper sheds new insights on the latest research on using ML approaches to generate digital models of existing buildings, with the aim of providing guidance for researchers seeking ideas for future studies in this area.
+
+</details>
+
+**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S0926580523001978)
+
+### 4. DUSt3R: Geometric 3D Vision Made Easy
+
+**Authors**: Shuzhe Wang, Vincent Leroy, Yohann Cabon, Boris Chidlovskii, Jerome Revaud
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Multi-view stereo reconstruction (MVS) in the wild requires to first estimate the camera parameters e.g. intrinsic and extrinsic parameters. These are usually tedious and cumbersome to obtain, yet they are mandatory to triangulate corresponding pixels in 3D space, which is the core of all best performing MVS algorithms. In this work, we take an opposite stance and introduce DUSt3R, a radically novel paradigm for Dense and Unconstrained Stereo 3D Reconstruction of arbitrary image collections, i.e. operating without prior information about camera calibration nor viewpoint poses. We cast the pairwise reconstruction problem as a regression of pointmaps, relaxing the hard constraints of usual projective camera models. We show that this formulation smoothly unifies the monocular and binocular reconstruction cases. In the case where more than two images are provided, we further propose a simple yet effective global alignment strategy that expresses all pairwise pointmaps in a common reference frame. We base our network architecture on standard Transformer encoders and decoders, allowing us to leverage powerful pretrained models. Our formulation directly provides a 3D model of the scene as well as depth information, but interestingly, we can seamlessly recover from it, pixel matches, relative and absolute camera. Exhaustive experiments on all these tasks showcase that the proposed DUSt3R can unify various 3D vision tasks and set new SoTAs on monocular/multi-view depth estimation as well as relative pose estimation. In summary, DUSt3R makes many geometric 3D vision tasks easy.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2312.14132.pdf) | [💻 Code](https://github.com/naver/dust3r)
+
+### 5. Deep Learning from Parametrically Generated Virtual Buildings for Real-World Object Recognition
+
+**Authors**: Mohammad Alawadhi, Wei Yan
+
+<details>
+<summary><b>Abstract</b></summary>
+
+We study the use of parametric building information modeling (BIM) to automatically generate training data for artificial neural networks (ANNs) to recognize building objects in photos. Teaching artificial intelligence (AI) machines to detect building objects in images is the foundation toward AI-assisted semantic 3D reconstruction of existing buildings. However, there exists the challenge of acquiring training data which is typically human-annotated, that is, unless a computer machine can generate high-quality data to train itself for a certain task. In that vein, we trained ANNs solely on realistic computer-generated images of 3D BIM models which were parametrically and automatically generated using the BIMGenE program. The ANN training result demonstrated generalizability and good semantic segmentation on a test case as well as arbitrary photos of buildings that are outside the range of the training data, which is significant for the future of training AI with generated data for solving real-world architectural problems.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2302.05283.pdf)
+
+### 6. I2-SDF: Intrinsic Indoor Scene Reconstruction and Editing via Raytracing in Neural SDFs
+
+**Authors**: Jingsen Zhu, Yuchi Huo, Qi Ye, Fujun Luan, Jifan Li, Dianbing Xi, Lisha Wang, Rui Tang, Wei Hua, Hujun Bao, Rui Wang
+
+<details>
+<summary><b>Abstract</b></summary>
+
+In this work, we present I$^2$-SDF, a new method for intrinsic indoor scene reconstruction and editing using differentiable Monte Carlo raytracing on neural signed distance fields (SDFs). Our holistic neural SDF-based framework jointly recovers the underlying shapes, incident radiance and materials from multi-view images. We introduce a novel bubble loss for fine-grained small objects and error-guided adaptive sampling scheme to largely improve the reconstruction quality on large-scale indoor scenes. Further, we propose to decompose the neural radiance field into spatially-varying material of the scene as a neural field through surface-based, differentiable Monte Carlo raytracing and emitter semantic segmentations, which enables physically based and photorealistic scene relighting and editing applications. Through a number of qualitative and quantitative experiments, we demonstrate the superior quality of our method on indoor scene reconstruction, novel view synthesis, and scene editing compared to state-of-the-art baselines.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2303.07634.pdf) | [🌐 Project Page](https://jingsenzhu.github.io/i2-sdf/) | [💻 Code](https://github.com/jingsenzhu/i2-sdf)
+
+### 7. Modeling of 3D geometry uncertainty in Scan-to-BIM automatic indoor reconstruction
+
+**Authors**: M. Jarząbek-Rychard, H.-G. Maas
+
+<details>
+<summary><b>Abstract</b></summary>
+
+The rapidly expanding field of Scan-to-BIM applications highlights the importance of model uncertainty assessment in describing the quality of modeling results. Although there have been recent research advancements in point cloud-based building modeling, there has been limited investigation into accurately analyzing error propagation. This paper estimates the geometry uncertainty in 3D modeling based on a strict application of geodetic stochastic modeling. Statistical uncertainty is incorporated into the building reconstruction process and procedures that enable self-verification within this process are developed. The method can be successfully used to evaluate the dimensional uncertainty of generated BIMs, which is especially important in the field of civil engineering with high accuracy requirements concerning metric quality control. Follow-up research will also consider systematic errors and apply the methods to other 3D point cloud acquisition techniques.
+
+</details>
+
+**Links**: [📄 Paper](https://www.researchgate.net/publication/374352855_Modeling_of_3D_geometry_uncertainty_in_Scan-to-BIM_automatic_indoor_reconstruction)
+
+### 8. PanoContext-Former: Panoramic Total Scene Understanding with a Transformer
+
+**Authors**: Yuan Dong, Chuan Fang, Liefeng Bo, Zilong Dong, Ping Tan
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Panoramic image enables deeper understanding and more holistic perception of $360^\circ$ surrounding environment, which can naturally encode enriched scene context information compared to standard perspective image. Previous work has made lots of effort to solve the scene understanding task in a bottom-up form, thus each sub-task is processed separately and few correlations are explored in this procedure. In this paper, we propose a novel method using depth prior for holistic indoor scene understanding which recovers the objects' shapes, oriented bounding boxes and the 3D room layout simultaneously from a single panorama. In order to fully utilize the rich context information, we design a transformer-based context module to predict the representation and relationship among each component of the scene. In addition, we introduce a real-world dataset for scene understanding, including photo-realistic panoramas, high-fidelity depth images, accurately annotated room layouts, and oriented object bounding boxes and shapes. Experiments on the synthetic and real-world datasets demonstrate that our method outperforms previous panoramic scene understanding methods in terms of both layout estimation and 3D object detection.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2305.12497.pdf) | [🌐 Project Page](https://fangchuan.github.io/PanoContext-Former/) | [💻 Code](https://github.com/fdyuandong/ReplicaPano-Dataset)
+
+### 9. Project Aria: A New Tool for Egocentric Multi-Modal AI Research
+
+**Authors**: Jakob Engel, Kiran Somasundaram, Michael Goesele, Albert Sun, Alexander Gamino, Andrew Turner, Arjang Talattof, Arnie Yuan, Bilal Souti, Brighid Meredith, Cheng Peng, Chris Sweeney, Cole Wilson, Dan Barnes, Daniel DeTone, David Caruso, Derek Valleroy, Dinesh Ginjupalli, Duncan Frost, Edward Miller, Elias Mueggler, Evgeniy Oleinik, Fan Zhang, Guruprasad Somasundaram, Gustavo Solaira, Harry Lanaras, Henry Howard-Jenkins, Huixuan Tang, Hyo Jin Kim, Jaime Rivera, Ji Luo, Jing Dong, Julian Straub, Kevin Bailey, Kevin Eckenhoff, Lingni Ma, Luis Pesqueira, Mark Schwesinger, Maurizio Monge, Nan Yang, Nick Charron, Nikhil Raina, Omkar Parkhi, Peter Borschowa, Pierre Moulon, Prince Gupta, Raul Mur-Artal, Robbie Pennington, Sachin Kulkarni, Sagar Miglani, Santosh Gondi, Saransh Solanki, Sean Diener, Shangyi Cheng, Simon Green, Steve Saarinen, Suvam Patra, Tassos Mourikis, Thomas Whelan, Tripti Singh, Vasileios Balntas, Vijay Baiyya, Wilson Dreewes, Xiaqing Pan, Yang Lou, Yipu Zhao, Yusuf Mansour, Yuyang Zou, Zhaoyang Lv, Zijian Wang, Mingfei Yan, Carl Ren, Renzo De Nardi, Richard Newcombe
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Egocentric, multi-modal data as available on future augmented reality (AR) devices provides unique challenges and opportunities for machine perception. These future devices will need to be all-day wearable in a socially acceptable form-factor to support always available, context-aware and personalized AI applications. Our team at Meta Reality Labs Research built the Aria device, an egocentric, multi-modal data recording and streaming device with the goal to foster and accelerate research in this area. In this paper, we describe the Aria device hardware including its sensor configuration and the corresponding software tools that enable recording and processing of such data.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2308.13561.pdf) | [🌐 Project Page](https://www.projectaria.com/)
+
+### 10. ScanNet++: A High-Fidelity Dataset of 3D Indoor Scenes
+
+**Authors**: Chandan Yeshwanth, Yueh-Cheng Liu, Matthias Nießner, Angela Dai
+
+<details>
+<summary><b>Abstract</b></summary>
+
+We present ScanNet++, a large-scale dataset that couples together capture of high-quality and commodity-level geometry and color of indoor scenes. Each scene is captured with a high-end laser scanner at sub-millimeter resolution, along with registered 33-megapixel images from a DSLR camera, and RGB-D streams from an iPhone. Scene reconstructions are further annotated with an open vocabulary of semantics, with label-ambiguous scenarios explicitly annotated for comprehensive semantic understanding. ScanNet++ enables a new real-world benchmark for novel view synthesis, both from high-quality RGB capture, and importantly also from commodity-level images, in addition to a new benchmark for 3D semantic scene understanding that comprehensively encapsulates diverse and ambiguous semantic labeling scenarios. Currently, ScanNet++ contains 460 scenes, 280,000 captured DSLR images, and over 3.7M iPhone RGBD frames.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2308.11417.pdf) | [🌐 Project Page](https://scannetpp.mlsg.cit.tum.de/scannetpp/) | [💻 Code](https://github.com/scannetpp/scannetpp) | [🎥 Video](https://www.youtube.com/watch?v=E6P9e2r6M8I)
+
+### 11. SurfelNeRF: Neural Surfel Radiance Fields for Online Photorealistic Reconstruction of Indoor Scenes
+
+**Authors**: Yiming Gao, Yan-Pei Cao, Ying Shan
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Online reconstructing and rendering of large-scale indoor scenes is a long-standing challenge. SLAM-based methods can reconstruct 3D scene geometry progressively in real time but can not render photorealistic results. While NeRF-based methods produce promising novel view synthesis results, their long offline optimization time and lack of geometric constraints pose challenges to efficiently handling online input. Inspired by the complementary advantages of classical 3D reconstruction and NeRF, we thus investigate marrying explicit geometric representation with NeRF rendering to achieve efficient online reconstruction and high-quality rendering. We introduce SurfelNeRF, a variant of neural radiance field which employs a flexible and scalable neural surfel representation to store geometric attributes and extracted appearance features from input images. We further extend the conventional surfel-based fusion scheme to progressively integrate incoming input frames into the reconstructed global neural scene representation. In addition, we propose a highly-efficient differentiable rasterization scheme for rendering neural surfel radiance fields, which helps SurfelNeRF achieve $10\times$ speedups in training and inference time, respectively. Experimental results show that our method achieves the state-of-the-art 23.82 PSNR and 29.58 PSNR on ScanNet in feedforward inference and per-scene optimization settings, respectively.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2304.08971.pdf) | [🌐 Project Page](https://gymat.github.io/SurfelNeRF-web/) | [💻 Code](https://github.com/Gymat/SurfelNeRF/tree/unofficial)
+
+### 2022
+
+### 1. Connecting the Dots: Floorplan Reconstruction Using Two-Level Queries
+
+**Authors**: Yuanwen Yue, Theodora Kontogianni, Konrad Schindler, Francis Engelmann
+
+<details>
+<summary><b>Abstract</b></summary>
+
+We address 2D floorplan reconstruction from 3D scans. Existing approaches typically employ heuristically designed multi-stage pipelines. Instead, we formulate floorplan reconstruction as a single-stage structured prediction task: find a variable-size set of polygons, which in turn are variable-length sequences of ordered vertices. To solve it we develop a novel Transformer architecture that generates polygons of multiple rooms in parallel, in a holistic manner without hand-crafted intermediate stages. The model features two-level queries for polygons and corners, and includes polygon matching to make the network end-to-end trainable. Our method achieves a new state-of-the-art for two challenging datasets, Structured3D and SceneCAD, along with significantly faster inference than previous methods. Moreover, it can readily be extended to predict additional information, i.e., semantic room types and architectural elements like doors and windows. Our code and models are available at: https://github.com/ywyue/RoomFormer.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2211.15658.pdf) | [🌐 Project Page](https://ywyue.github.io/RoomFormer/) | [💻 Code](https://github.com/ywyue/RoomFormer) | [🎥 Video](https://www.youtube.com/watch?v=yzYe4yVN1NU)
+
+### 2. Object verification based on deep learning point feature comparison for scan-to-BIM
+
+**Authors**: Boyu Wang, Qian Wang, Jack C.P. Cheng, Chao Yin
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Building information models (BIMs) have been widely adopted in current construction projects to enhance the efficiency of facility maintenance operations. As-built BIMs can reflect the actual conditions of facilities and thus as-built BIM reconstruction has shown great significance in digital twin generation, building health monitoring, facility management and urban renewal. Laser scanners are capable to capture dense 3D measurements of the environment in a fast and highly accurate way. Therefore, laser scanning data have been widely used for as-built BIM generation. Although research efforts have been made on how to automatically achieve “Scan-to-BIM”, there are still gaps from applying current solutions to real scenarios. One of the challenges is that some irrelevant point clusters may be wrongly recognized as the desired object in the detection stage. This study presents a novel object verification approach based on deep learning point feature comparison to improve the accuracy of automated BIM reconstruction process. Firstly, a KPConv-based deep neural network is developed and trained to perform 3D point feature computation. Then through comparing point features calculated for extracted point clusters and as-designed BIM generated point clouds, point feature distance maps are generated. Afterwards, to automatically analyze the generated feature distance maps, a dataset including simulated positive and negative instances is created based on ModelNet40. And a tiny neural network is established and trained on the prepared dataset to acquire ability of distinguishment. To validate the feasibility of the proposed technique, experiments were conducted on both artificial point clouds and real scan data collected in one MEP room in a water treatment work in Hong Kong. It is demonstrated that the proposed technique can successfully filter out all the false positives in the Scan-to-BIM process, improving reconstruction accuracy significantly.
+
+</details>
+
+**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/abs/pii/S0926580522003880)
+
+### 2021
+
+### 1. DeepPanoContext: Panoramic 3D Scene Understanding with Holistic Scene Context Graph and Relation-based Optimization
+
+**Authors**: Cheng Zhang, Zhaopeng Cui, Cai Chen, Shuaicheng Liu, Bing Zeng, Hujun Bao, Yinda Zhang
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Panorama images have a much larger field-of-view thus naturally encode enriched scene context information compared to standard perspective images, which however is not well exploited in the previous scene understanding methods. In this paper, we propose a novel method for panoramic 3D scene understanding which recovers the 3D room layout and the shape, pose, position, and semantic category for each object from a single full-view panorama image. In order to fully utilize the rich context information, we design a novel graph neural network based context model to predict the relationship among objects and room layout, and a differentiable relationship-based optimization module to optimize object arrangement with well-designed objective functions on-the-fly. Realizing the existing data are either with incomplete ground truth or overly-simplified scene, we present a new synthetic dataset with good diversity in room layout and furniture placement, and realistic image quality for total panoramic 3D scene understanding. Experiments demonstrate that our method outperforms existing methods on panoramic scene understanding in terms of both geometry accuracy and object arrangement. Code is available at https://chengzhag.github.io/publication/dpc.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2108.10743.pdf)
+
+### 2. HEAT: Holistic Edge Attention Transformer for Structured Reconstruction
+
+**Authors**: Jiacheng Chen, Yiming Qian, Yasutaka Furukawa
+
+<details>
+<summary><b>Abstract</b></summary>
+
+This paper presents a novel attention-based neural network for structured reconstruction, which takes a 2D raster image as an input and reconstructs a planar graph depicting an underlying geometric structure. The approach detects corners and classifies edge candidates between corners in an end-to-end manner. Our contribution is a holistic edge classification architecture, which 1) initializes the feature of an edge candidate by a trigonometric positional encoding of its end-points; 2) fuses image feature to each edge candidate by deformable attention; 3) employs two weight-sharing Transformer decoders to learn holistic structural patterns over the graph edge candidates; and 4) is trained with a masked learning strategy. The corner detector is a variant of the edge classification architecture, adapted to operate on pixels as corner candidates. We conduct experiments on two structured reconstruction tasks: outdoor building architecture and indoor floorplan planar graph reconstruction. Extensive qualitative and quantitative evaluations demonstrate the superiority of our approach over the state of the art. Code and pre-trained models are available at https://heat-structured-reconstruction.github.io.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2111.15143.pdf)
+
+### 3. MonteFloor: Extending MCTS for Reconstructing Accurate Large-Scale Floor Plans
+
+**Authors**: Sinisa Stekovic, Mahdi Rad, Friedrich Fraundorfer, Vincent Lepetit
+
+<details>
+<summary><b>Abstract</b></summary>
+
+We propose a novel method for reconstructing floor plans from noisy 3D point clouds. Our main contribution is a principled approach that relies on the Monte Carlo Tree Search (MCTS) algorithm to maximize a suitable objective function efficiently despite the complexity of the problem. Like previous work, we first project the input point cloud to a top view to create a density map and extract room proposals from it. Our method selects and optimizes the polygonal shapes of these room proposals jointly to fit the density map and outputs an accurate vectorized floor map even for large complex scenes. To do this, we adapted MCTS, an algorithm originally designed to learn to play games, to select the room proposals by maximizing an objective function combining the fitness with the density map as predicted by a deep network and regularizing terms on the room shapes. We also introduce a refinement step to MCTS that adjusts the shape of the room proposals. For this step, we propose a novel differentiable method for rendering the polygonal shapes of these proposals. We evaluate our method on the recent and challenging Structured3D and Floor-SP datasets and show a significant improvement over the state-of-the-art, without imposing any hard constraints nor assumptions on the floor plan configurations.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2103.11161.pdf) | [🌐 Project Page](https://www.tugraz.at/index.php?id=52770)
+
+### 4. Residential floor plan recognition and reconstruction
+
+**Authors**: Xiaolei Lv, Shengchu Zhao, Xinyang Yu, Binqiang Zhao
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Recognition and reconstruction of residential floor plan drawings are important and challenging in design, decoration, and architectural remodeling fields. An automatic framework is provided that accurately recognizes the structure, type, and size of the room, and outputs vectorized 3D reconstruction results. Deep segmentation and detection neural networks are utilized to extract room structural information. Key points detection network and cluster analysis are utilized to calculate scales of rooms. The vectorization of room information is processed through an iterative optimization-based method. The system significantly increases accuracy and generalization ability, compared with existing methods. It outperforms other systems in floor plan segmentation and vectorization process, especially inclined wall detection.
+
+</details>
+
+**Links**: [📄 Paper](https://openaccess.thecvf.com/content/CVPR2021/papers/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.pdf#:~:text=Recognition%20and%20reconstruction%20of%20residential,system%20significantly%20in%02creases%20accuracy%20and)
+
+### 2020
+
+### 1. NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis
+
+**Authors**: Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, Ren Ng
+
+<details>
+<summary><b>Abstract</b></summary>
+
+We present a method that achieves state-of-the-art results for synthesizing novel views of complex scenes by optimizing an underlying continuous volumetric scene function using a sparse set of input views. Our algorithm represents a scene using a fully-connected (non-convolutional) deep network, whose input is a single continuous 5D coordinate (spatial location $(x,y,z)$ and viewing direction $(\theta, \phi)$) and whose output is the volume density and view-dependent emitted radiance at that spatial location. We synthesize views by querying 5D coordinates along camera rays and use classic volume rendering techniques to project the output colors and densities into an image. Because volume rendering is naturally differentiable, the only input required to optimize our representation is a set of images with known camera poses. We describe how to effectively optimize neural radiance fields to render photorealistic novel views of scenes with complicated geometry and appearance, and demonstrate results that outperform prior work on neural rendering and view synthesis. View synthesis results are best viewed as videos, so we urge readers to view our supplementary video for convincing comparisons.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2003.08934.pdf) | [🌐 Project Page](https://www.matthewtancik.com/nerf) | [💻 Code](https://github.com/bmild/nerf) | [🎥 Video](https://youtu.be/JuH79E8rdKc)
+
+### 2019
+
+### 1. 3D Scene Graph: A Structure for Unified Semantics, 3D Space, and Camera
+
+**Authors**: Iro Armeni, Zhi-Yang He, JunYoung Gwak, Amir R. Zamir, Martin Fischer, Jitendra Malik, Silvio Savarese
+
+<details>
+<summary><b>Abstract</b></summary>
+
+A comprehensive semantic understanding of a scene is important for many applications - but in what space should diverse semantic information (e.g., objects, scene categories, material types, texture, etc.) be grounded and what should be its structure? Aspiring to have one unified structure that hosts diverse types of semantics, we follow the Scene Graph paradigm in 3D, generating a 3D Scene Graph. Given a 3D mesh and registered panoramic images, we construct a graph that spans the entire building and includes semantics on objects (e.g., class, material, and other attributes), rooms (e.g., scene category, volume, etc.) and cameras (e.g., location, etc.), as well as the relationships among these entities.   However, this process is prohibitively labor heavy if done manually. To alleviate this we devise a semi-automatic framework that employs existing detection methods and enhances them using two main constraints: I. framing of query images sampled on panoramas to maximize the performance of 2D detectors, and II. multi-view consistency enforcement across 2D detections that originate in different camera locations.
+Dataset: https://3dscenegraph.stanford.edu/database.html
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/1910.02527.pdf) | [🌐 Project Page](https://3dscenegraph.stanford.edu/index.html)
+
+### 2. DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation
+
+**Authors**: Jeong Joon Park, Peter Florence, Julian Straub, Richard Newcombe, Steven Lovegrove
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Computer graphics, 3D computer vision and robotics communities have produced multiple approaches to representing 3D geometry for rendering and reconstruction. These provide trade-offs across fidelity, efficiency and compression capabilities. In this work, we introduce DeepSDF, a learned continuous Signed Distance Function (SDF) representation of a class of shapes that enables high quality shape representation, interpolation and completion from partial and noisy 3D input data. DeepSDF, like its classical counterpart, represents a shape's surface by a continuous volumetric field: the magnitude of a point in the field represents the distance to the surface boundary and the sign indicates whether the region is inside (-) or outside (+) of the shape, hence our representation implicitly encodes a shape's boundary as the zero-level-set of the learned function while explicitly representing the classification of space as being part of the shapes interior or not. While classical SDF's both in analytical or discretized voxel form typically represent the surface of a single shape, DeepSDF can represent an entire class of shapes. Furthermore, we show state-of-the-art performance for learned 3D shape representation and completion while reducing the model size by an order of magnitude compared with previous work.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/1901.05103.pdf)
+
+### 3. Structured3D: A Large Photo-realistic Dataset for Structured 3D Modeling
+
+**Authors**: Jia Zheng, Junfei Zhang, Jing Li, Rui Tang, Shenghua Gao, Zihan Zhou
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Recently, there has been growing interest in developing learning-based methods to detect and utilize salient semi-global or global structures, such as junctions, lines, planes, cuboids, smooth surfaces, and all types of symmetries, for 3D scene modeling and understanding. However, the ground truth annotations are often obtained via human labor, which is particularly challenging and inefficient for such tasks due to the large number of 3D structure instances (e.g., line segments) and other factors such as viewpoints and occlusions. In this paper, we present a new synthetic dataset, Structured3D, with the aim of providing large-scale photo-realistic images with rich 3D structure annotations for a wide spectrum of structured 3D modeling tasks. We take advantage of the availability of professional interior designs and automatically extract 3D structures from them. We generate high-quality images with an industry-leading rendering engine. We use our synthetic dataset in combination with real images to train deep networks for room layout estimation and demonstrate improved performance on benchmark datasets.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/1908.00222.pdf)
+
+### 2018
+
+### 1. FloorNet: A Unified Framework for Floorplan Reconstruction from 3D Scans
+
+**Authors**: Chen Liu, Jiaye Wu, Yasutaka Furukawa
+
+<details>
+<summary><b>Abstract</b></summary>
+
+The ultimate goal of this indoor mapping research is to automatically reconstruct a floorplan simply by walking through a house with a smartphone in a pocket. This paper tackles this problem by proposing FloorNet, a novel deep neural architecture. The challenge lies in the processing of RGBD streams spanning a large 3D space. FloorNet effectively processes the data through three neural network branches: 1) PointNet with 3D points, exploiting the 3D information; 2) CNN with a 2D point density image in a top-down view, enhancing the local spatial reasoning; and 3) CNN with RGB images, utilizing the full image information. FloorNet exchanges intermediate features across the branches to exploit the best of all the architectures. We have created a benchmark for floorplan reconstruction by acquiring RGBD video streams for 155 residential houses or apartments with Google Tango phones and annotating complete floorplan information. Our qualitative and quantitative evaluations demonstrate that the fusion of three branches effectively improves the reconstruction quality. We hope that the paper together with the benchmark will be an important step towards solving a challenging vector-graphics reconstruction problem. Code and data are available at https://github.com/art-programmer/FloorNet.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/1804.00090.pdf)
+
+### 2017
+
+### 1. A Survey of Structure from Motion
+
+**Authors**: Onur Ozyesil, Vladislav Voroninski, Ronen Basri, Amit Singer
+
+<details>
+<summary><b>Abstract</b></summary>
+
+The structure from motion (SfM) problem in computer vision is the problem of recovering the three-dimensional ($3$D) structure of a stationary scene from a set of projective measurements, represented as a collection of two-dimensional ($2$D) images, via estimation of motion of the cameras corresponding to these images. In essence, SfM involves the three main stages of (1) extraction of features in images (e.g., points of interest, lines, etc.) and matching these features between images, (2) camera motion estimation (e.g., using relative pairwise camera positions estimated from the extracted features), and (3) recovery of the $3$D structure using the estimated motion and features (e.g., by minimizing the so-called reprojection error). This survey mainly focuses on relatively recent developments in the literature pertaining to stages (2) and (3). More specifically, after touching upon the early factorization-based techniques for motion and structure estimation, we provide a detailed account of some of the recent camera location estimation methods in the literature, followed by discussion of notable techniques for $3$D structure recovery. We also cover the basics of the simultaneous localization and mapping (SLAM) problem, which can be viewed as a specific case of the SfM problem. Further, our survey includes a review of the fundamentals of feature extraction and matching (i.e., stage (1) above), various recent methods for handling ambiguities in $3$D scenes, SfM techniques involving relatively uncommon camera models and image features, and popular sources of data and SfM software.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/1701.08493.pdf)
+
+### 2. Joint 2D-3D-Semantic Data for Indoor Scene Understanding
+
+**Authors**: Iro Armeni, Sasha Sax, Amir R. Zamir, Silvio Savarese
+
+<details>
+<summary><b>Abstract</b></summary>
+
+We present a dataset of large-scale indoor spaces that provides a variety of mutually registered modalities from 2D, 2.5D and 3D domains, with instance-level semantic and geometric annotations. The dataset covers over 6,000m2 and contains over 70,000 RGB images, along with the corresponding depths, surface normals, semantic annotations, global XYZ images (all in forms of both regular and 360{\deg} equirectangular images) as well as camera information. It also includes registered raw and semantically annotated 3D meshes and point clouds. The dataset enables development of joint and cross-modal learning models and potentially unsupervised approaches utilizing the regularities present in large-scale indoor spaces. The dataset is available here: http://3Dsemantics.stanford.edu/
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/1702.01105.pdf)
+
+### 2016
+
+### 1. Past, Present, and Future of Simultaneous Localization And Mapping: Towards the Robust-Perception Age
+
+**Authors**: Cesar Cadena, Luca Carlone, Henry Carrillo, Yasir Latif, Davide Scaramuzza, Jose Neira, Ian Reid, John J. Leonard
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Simultaneous Localization and Mapping (SLAM)consists in the concurrent construction of a model of the environment (the map), and the estimation of the state of the robot moving within it. The SLAM community has made astonishing progress over the last 30 years, enabling large-scale real-world applications, and witnessing a steady transition of this technology to industry. We survey the current state of SLAM. We start by presenting what is now the de-facto standard formulation for SLAM. We then review related work, covering a broad set of topics including robustness and scalability in long-term mapping, metric and semantic representations for mapping, theoretical performance guarantees, active SLAM and exploration, and other new frontiers. This paper simultaneously serves as a position paper and tutorial to those who are users of SLAM. By looking at the published research with a critical eye, we delineate open challenges and new research issues, that still deserve careful scientific investigation. The paper also contains the authors' take on two questions that often animate discussions during robotics conferences: Do robots need SLAM? and Is SLAM solved?
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/1606.05830.pdf)
+
+### 2. Structure-from-Motion Revisited
+
+**Authors**: Schonberger Johannes Lutz, Frahm Jan-Michael
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Incremental Structure-from-Motion is a prevalent strategy for 3D reconstruction from unordered image collections. While incremental reconstruction systems have
+tremendously advanced in all regards, robustness, accuracy, completeness, and scalability remain the key problems
+towards building a truly general-purpose pipeline. We propose a new SfM technique that improves upon the state of
+the art to make a further step towards this ultimate goal.
+The full reconstruction pipeline is released to the public as
+an open-source implementation.
+
+</details>
+
+**Links**: [📄 Paper](https://openaccess.thecvf.com/content_cvpr_2016/papers/Schonberger_Structure-From-Motion_Revisited_CVPR_2016_paper.pdf)
 
 ## Computational BIM and Intelligent Operations
 
@@ -1593,6 +2392,706 @@ Precise documentation of cultural heritage status is essential for its protectio
 
 **Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S1296207407001082)
 
+## Sustainability and Environmental Performance
+
+### 2025
+
+### 1. A framework of BIM-IoT application in construction projects through multiple case study approach
+
+**Authors**: Hong Yixin, Guo Fangyu
+
+<details>
+<summary><b>Abstract</b></summary>
+
+This study investigates the integration of Building Information Modeling (BIM) and the Internet of Things (IoT) in construction projects to enhance efficiency, safety, and lifecycle monitoring. Despite the significant potential of BIM and IoT to facilitate the transformation of the construction industry, existing research lacks a comprehensive framework that addresses its interoperability challenges, data security concerns, and real-world implementation barriers. To address this gap, a multiple case study approach was employed, incorporating semi-structured interviews, document analysis, and real-world project evaluations. The results find that standardized protocols, data encryption, and modular IoT devices are essential for effective BIM-IoT adoption across different construction phases. The proposed framework offers a structured approach for construction teams to effectively utilize BIM and IoT, facilitating smarter and more sustainable project management. The contribution of this paper resides in the detailed analysis of the BIM-IoT applications, clearly demonstrating its advantages, such as improving building productivity and safety, and its potential to align with China’s sustainable urban development goals. The study also provides a forward-looking prediction of the future development trend of BIM-IoT in China, offering valuable insights for construction project teams and decision makers. By demonstrating the structured framework and its practical application, this study provides guidance for the industry’s transition to smarter and safer construction practices.
+
+</details>
+
+**Links**: [📄 Paper](http://www.sciexplor.com/articles/jbde.2025.0004.html)
+
+### 2. Advanced integration of BIM and VR in the built environment: Enhancing sustainability and resilience in urban development
+
+**Authors**: Ali Shehadeh, Odey Alshboul, Madhar M Taamneh, Aiman Q Jaradat, Ahmad H Alomari, Mai Arar
+
+<details>
+<summary><b>Abstract</b></summary>
+
+This study explores the strategic integration of Building Information Modeling (BIM) and Virtual Reality (VR) within the built environment, addressing the growing complexities of urban development. Through a detailed examination of BIM applications, the research highlights a 37 % reduction in design conflicts and iterations, thereby enhancing design precision and efficiency in urban construction projects. Simultaneously, VR technology is demonstrated to increase stakeholder engagement by 62 % and improve spatial awareness by 48 %, fostering greater community participation and inclusivity in the development process. The combined use of BIM and VR optimizes not only construction workflows but also considerably enhances environmental and socio-economic outcomes, such as a remarkable 20 % reduction in greenhouse gas emissions. It will, therefore, support advanced urban infrastructure development and provide a replicable model for sustainable and resilient urban planning. This research underlines the crucial contribution of integrating BIM and VR technologies to the development of sustainability and resilience of the built environment.
+
+</details>
+
+**Links**: [📄 Paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11870248/)
+
+### 3. Advancing circular economy transition in the Nigeria construction industry through digital twin technology adoption
+
+**Authors**: Imoleayo A. Awodele,
+Emmanuel C. Eze,
+Angel M. Gento Municio,
+Molusiwa S. Ramabodu, Nathaniel A. Olatunde
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Despite the environmentally detrimental consequences of the prevailing traditional linear project delivery model, research on the influence of digital twinning (DT) in facilitating the transition to a circular economy (CE) within the construction sector of developing nations has garnered limited attention. This research examines the role of digital twinning (DT) in advancing the circular economy (CE) within the construction industry, with the aim of accelerating progress towards achieving sustainable development goals. A comprehensive literature assessment was conducted to ascertain the impact of digital transformation on the transition to a circular economy and the advantages of this digital twinning (DT) in the construction industry’s efforts towards circular economy transition. A survey questionnaire was developed and distributed to construction professionals utilizing convenience sample methods. The collected data, exhibiting a response rate of 57.76% and a reliability of above 0.750, were analyzed utilizing frequency and percentage, mean item score, normalization value, Kruskal–Wallis H-test and Kendall’s coefficient of concordance. This study identified seven major benefits of adopting Digital Twinning to enhance the circular economy transition efforts in Nigeria’s construction industry. These are: waste reduction and recycling, supporting circular economy transition, customer insights, asset management and efficiency, new business opportunities, advanced monitoring and prediction and boost production and profits. Also, Kendall’s W test indicated a significant statistical consensus among survey participants for the advantages of enhancing digital twins in the construction activities’ circular economy transition. Research on the incorporation of digital twinning (DT) in the circular economy transition is limited, particularly in the Nigerian setting. This study represents a pioneering investigation into the role of Digital Twinning in facilitating the transition to a Circular Economy in Nigeria, a domain where research is limited.
+
+</details>
+
+**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S2949736125000351)
+
+### 4. Applications and Trends of Machine Learning in Building Energy Optimization: A Bibliometric Analysis
+
+**Authors**: Jingyi Liu,
+Jianfei Chen
+
+<details>
+<summary><b>Abstract</b></summary>
+
+With the rapid advancement of machine learning (ML) technologies, their innovative applications in enhancing building energy efficiency are increasingly prominent. Utilizing tools such as VOSviewer and Bibliometrix, this study systematically reviews the body of the related literature, focusing on the key applications and emerging trends of cutting-edge ML techniques, including deep learning, reinforcement learning, and unsupervised learning, in optimizing building energy performance and managing carbon emissions. First, this paper delves into the role of ML in building performance prediction, intelligent energy management, and sustainable design, with particular emphasis on how smart building systems leverage real-time data analysis and prediction to optimize energy usage and significantly reduce carbon emissions dynamically. Second, this study summarizes the technological evolution and future trends of ML in the building sector and identifies critical challenges faced by the field. The findings provide a technology-driven perspective for advancing sustainability in the construction industry and offer valuable insights for future research directions.
+
+</details>
+
+**Links**: [📄 Paper](https://www.mdpi.com/2075-5309/15/7/994#:~:text=analysis%20suggests%20that%20future%20research,innovation%20in%20the%20built%20environment)
+
+### 5. BIM-driven digital twin for demolition waste management of existing residential buildings
+
+**Authors**: Sakdirat Kaewunruen, Yi-Hsuan Lin, Yuxin Guo
+
+<details>
+<summary><b>Abstract</b></summary>
+
+With the accelerated development of urbanisation, the construction industry has significantly contributed to environmental degradation due to its substantial energy consumption and construction and demolition (C&D) waste generation. By assessing the ecological impact of the construction industry alongside existing demolition waste management practices, this article aims to develop a conceptual framework to optimise building demolition, transportation, and recycling processes. This study integrates a BIM-driven Digital Twin framework into C&D waste management, aiming to maximise economic benefits and advance the sustainable development of construction practices. Specifically, it simulates the demolition process of an existing townhouse in Washington, D.C., using BIM-Navisworks software and employs a digital twin to update demolition data in real-time. This approach optimises the classification and transportation of demolition waste, enhancing efficiency and sustainability. The study validates the proposed conceptual framework for building demolition waste management through case simulation. Additionally, it utilises BIM-Dynamo software to analyse the economic benefits of demolition waste recycling, demonstrating that a high recycling rate can significantly enhance economic outcomes. The proposed framework leverages BIM technology to optimise demolition and recycling processes, providing a valuable reference for selecting demolition waste management strategies for other buildings.
+
+</details>
+
+**Links**: [📄 Paper](https://www.nature.com/articles/s41598-025-13938-9)
+
+### 6. Construction Progress Monitoring with Drone + BIM Integration
+
+**Authors**: Santosh Kumar Bhoda, BSMA Enterprises
+
+<details>
+<summary><b>Abstract</b></summary>
+
+In an era where real-time information and digital precision are pivotal to infrastructure development, the fusion of drones and Building Information Modeling (BIM) has emerged as a powerful approach for construction progress monitoring. This integration is transforming how construction teams track project timelines, assess work quality, and manage deviations on-site. By combining high-resolution aerial visuals from drones with the structured data environment of BIM, stakeholders gain a comprehensive and dynamic understanding of construction progress. This article explores the technical foundations, benefits, and real-world implications of using Drone + BIM integration in construction progress tracking.
+
+</details>
+
+**Links**: [📄 Paper](https://bsmaenterprises.com/blog-1/f/construction-progress-monitoring-with-drone-bim-integration)
+
+### 7. Demand response optimization for smart grid integrated buildings: Review of technology enablers landscape and innovation challenges
+
+**Authors**: Liana Toderean, Tudor Cioara, Ionut Anghel, 
+Elissaios Sarmas,
+Vasilis Michalakopoulos, Vangelis Marinakis
+
+<details>
+<summary><b>Abstract</b></summary>
+
+This paper provides a comprehensive overview and analysis of state-of-the-art technological advancements in building integration insmartgrids, with a focus on enabling their participation in demand response (DR). We consolidate knowledge from high-quality sources on the main research topics, helping researchers, building owners, and energy stakeholders to stay informed about the latest developments, trends, and best practices inthe field.Our review covers reputable journals papers that offer technological enablers and evidence-based insights onbuilding interoperability, AI-based energy prediction models, demand optimization and coordination, data privacy, and decentralization.Managing buildings in DR requires careful coordination and control,thuswe provide valuable insights into current practices and opportunities by examining the EU innovation projects and identifying technological innovation trends that aim to increase resident engagement by addressing regulatory and socio-economic concerns. We also discuss the main barriers to buildings’ participation in DR identifying future research directions in the field and providing mitigation insights to the building owners and grid operators. Our findings indicate that despite their potentialbuildingparticipation is limited due to the absence of a clear regulatory framework and lack of mature technologiesto fully support and automate theprogramsimplementation. While AI and optimization technologiesshow promise for improving demand coordination, challenges such as limited interoperability between buildings and energy grids, privacy concerns, and insufficient financial incentivization significantly limit the building’s participation in DR.
+
+</details>
+
+**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S0378778824011836)
+
+### 8. Formalizing Information for Disassembly Potenttial of Buildings Using BIM and Labeled Property Graphs
+
+**Authors**: Kasimir Forth, Catherine De Wolf
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Building circularity assessments aim to reduce waste and primary material demand. Indicators like the disassembly potential (DP) assess the detachability of elements and layers, but Building Information Modeling (BIM) lacks sufficiently detailed DP information in early design stages. Key information, such as connection types between elements and components, is missing in open BIM formats such as Industry Foundation Classes (IFC). To address this, we propose a new method using labeled property graphs to represent component-specific archetypes based on BIM. Tested in a case study, this approach enhances assessments of DP, providing designers with improved insights for early-stage circularity decisions.
+
+</details>
+
+**Links**: [📄 Paper](https://ec-3.org/publications/conference/paper/?id=EC32025_197)
+
+### 9. From point cloud to material passport: automated creation of material passports of existing steel structures based on point clouds
+
+**Authors**: Noichl Florian, Forth Kasimir, de Wolf Catherine, Borrmann André, Moreno-Rangel Alejandro, Kumar Bimal
+
+<details>
+<summary><b>Abstract</b></summary>
+
+This paper presents a step towards automated material passport creation and environmental assessment of existing buildings based on point cloud data. While the construction industry faces environmental challenges requiring circular economy principles, existing buildings lack comprehensive material information for sustainability analysis. Our method transforms point clouds of steel beam structures into semantically rich building information models through a streamlined workflow. Following geometric processing, we emphasize semantic enrichment by identifying standard steel cross-sections and linking components with environmental datasets. This connects geometric representations to material properties, connection types, and impact factors – essential data for circularity metrics. Evaluated on a steel roof structure, our approach generates enriched IFC4 models enabling automated calculation of material circularity indicator, disassembly potential, and life cycle assessment in the Madaster platform. This methodology demonstrates the potential for scalable environmental assessment of steel structural elements, advancing toward comprehensive building assessment without manual inventory processes.
+
+</details>
+
+**Links**: [📄 Paper](https://strathprints.strath.ac.uk/id/eprint/93257)
+
+### 10. Integrating IoT and BIM for Sustainable Construction Management: A Data-Driven Civil Engineering Model
+
+**Authors**: Pankaj Mudholkar, Megha Mudholkar, Muneshwara M S, Shiyam V, Surrya Prakash Dillibabu, T. Mamatha
+
+<details>
+<summary><b>Abstract</b></summary>
+
+The construction sector is quickly changing and adopting digital technologies that support the good use of the environment, cost-effectivity, and smart decision-making. The Internet of Things (IoT) and Building Information Modeling (BIM), which are some of these innovations, have come out as revolutionary in contemporary civil engineering. The paper submits a data driven model that harnesses the synergy between IoT and BIM to play a greater role in the management of sustainable construction. Constructed IoT sensors present in building constructions sites produce real-time information about energy consumption, the health of structures, environmental conditions, and the functionality of equipment, all which are dynamically passed to BIM systems. The integration can support predictive analytics in alerts, and project workflow, and eventually proactive resource allocation, minimizing environmental impact, and project safety. The adoption of a hybrid approach based on field-level sensors systems and 3D modelling and remote analytics reveals that via interactive tools implementing smart monitoring and BIM visualization, one can achieve measurable sustainability results. The simulated case analysis gives a practical demonstration of the IoT-BIM model during the enhancement of operational transparency, achievement of carbon reduction objectives, and interdisciplinary cooperation in multifaceted projects. The findings highlight the importance of digital twins as a key way of supporting smart construction and green development goals.
+
+</details>
+
+**Links**: [📄 Paper](https://eksplorium.com/index.php/journal/article/view/273)
+
+### 11. Regenarative Twin - Morgan Sindall Construction
+
+**Authors**: Morgan Sindall Construction
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Putting regenrative design principles at the heart of development.
+
+</details>
+
+**Links**: [📄 Paper](https://insights.morgansindallconstruction.com/story/regenerative-twin/)
+
+### 12. Streamlining LEED Submittals: How AI Agents Automate Documentation for Green Building Consultants
+
+**Authors**: Datagrid
+
+<details>
+<summary><b>Abstract</b></summary>
+
+LEED certification paperwork has become a drain on your time and focus. Chasing updates from project teams, reconciling spreadsheets, and formatting submissions leaves little room for actual consulting. Errors creep in. Deadlines slip. Clients get frustrated. And you’re stuck in admin instead of driving strategy.
+
+Thanks to advancements in Agentic AI, it’s now becoming easier than ever to automate the grunt work and keep certification efforts on track. Datagrid’s data connectors link AI agents directly to your project tools and systems. In this article, you’ll see how AI agents handle the process end-to-end.
+
+</details>
+
+**Links**: [📄 Paper](https://datagrid.com/blog/ai-agents-automate-leed-certification-documentation)
+
+### 13. Towards Tracking Circular Construction Supply Chains: Data Carrier Performance in Realistic Experiments
+
+**Authors**: Clara P Blum, Brandon S Byers, Jens J Hunhevicz, Catherine De Wolf
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Due to the need for effective track and trace systems to enable circular construction supply chains (CCSC), this study evaluated the performance of radio-frequency identification (RFID), near-field communication (NFC) chips, quick response (QR) codes and Direct Product Marking (DPM) in identifying and reading material information. Key metrics - detection speed, error rates, and user experience - were assessed and gave consideration to the differential impacts of controlled and uncontrolled experimental conditions. Findings indicate that, relative to DPM, RFID and NFC offered improved usability and reduced reading times, with minimal differences in error rates; results were strongly influenced by usability and experimental context.
+
+</details>
+
+**Links**: [📄 Paper](https://ec-3.org/publications/conference/paper/?id=EC32025_324)
+
+### 14. Towards the Use of AI for Assessing Construction Sustainability: A State-of-the-Art Review on BREEAM Assessment
+
+**Authors**: Tala Kasim, Maxwell Antwi-Afari
+
+<details>
+<summary><b>Abstract</b></summary>
+
+In response to the environmental concerns arising from construction activities, prioritising sustainability is crucial. The Building Research Establishment Environmental Assessment Method (BREEAM) is one of the methods of assessing building sustainability. Obtaining BREEAM certification is paramount for ensuring high-performance buildings. This paper introduces a novel framework that integrates artificial intelligence (AI) to optimise and automate the BREEAM assessment process. The Scopus database was used to retrieve relevant articles by following a standardised systematic literature review process. The study synthesises previous research findings in two themes—Automating BREEAM Assessment Methods and the Application of AI in Construction—to formulate a streamlined AI-driven methodology for BREEAM certification. The proposed process suggests that AI technologies can enhance the accuracy, efficiency, and comprehensiveness of BREEAM assessments and eventually lead to improved building performance. This can be achieved by automating complex evaluation tasks and providing real-time data analysis. The outcomes underscore the potential of AI to transform traditional assessment frameworks, paving the way for more sustainable, efficient, and resilient building practices.
+
+</details>
+
+**Links**: [📄 Paper](https://link.springer.com/10.1007/978-3-031-95890-8_2)
+
+### 15. Upcycling of regular wood trunks and logs using wave function collapse (WFC), augmented reality (AR), and mixed reality (MR) technologies for circular design
+
+**Authors**: Jianing Luo, Boyuan Yu, Yuan Jiang, Adam Fingrut, Adam Holloway
+
+<details>
+<summary><b>Abstract</b></summary>
+
+In sustainable building design and construction (SBDC), irregular timber elements, such as unprocessed logs, forks, and branches, remain significantly underutilised due to their complex geometries, which complicate reconfiguration and lead to considerable material waste. This study addresses this challenge by introducing a computational workflow that optimises the upcycling of irregular wood into feasible building components. The CAAD contribution of this work lies in applying Wave Function Collapse (WFC) as a digital aggregation method, enabling automated spatial configuration of irregular wood elements. This method integrates 3D scanning, algorithmic aggregation, and finite element analysis (FEA) to assess structural viability, ensuring efficient material utilisation. For joinery experiments, our engineering application involves the development of a heat-moldable joinery method using recycled PET bottles, which eliminates the need for adhesives or mechanical fasteners. By leveraging the heat-shrink properties of PET, structurally stable connections are formed between upcycled wood components. The proposed framework is demonstrated through the fabrication of functional furniture and pavilion-scale architectural prototypes, showcasing an innovative approach to material repurposing. This study advances Computer-Aided Architectural Design (CAAD) and construction techniques by 3D scanning, volumetric design, AI-driven building scale ideation and Augmented Reality (AR) and MR-assisted assembly, demonstrating scalable solutions for sustainable architecture and circular material reuse.
+
+</details>
+
+**Links**: [📄 Paper](https://www.nature.com/articles/s41598-025-20398-8)
+
+### 2024
+
+### 1. A Systematic Review of the Applications of AI in a Sustainable Building’s Lifecycle
+
+**Authors**: Bukola Adejoke Adewale, Vincent Onyedikachi Ene, Babatunde Fatai Ogunbayo,
+Clinton Ohis Aigbavboa
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Buildings significantly contribute to global energy consumption and greenhouse gas emissions. This systematic literature review explores the potential of artificial intelegence (AI) to enhance sustainability throughout a building’s lifecycle. The review identifies AI technologies applicable to sustainable building practices, examines their influence, and analyses implementation challenges. The findings reveal AI’s capabilities in optimising energy efficiency, enabling predictive maintenance, and aiding in design simulation. Advanced machine learning algorithms facilitate data-driven analysis, while digital twins provide real-time insights for decision-making. The review also identifies barriers to AI adoption, including cost concerns, data security risks, and implementation challenges. While AI offers innovative solutions for energy optimisation and environmentally conscious practices, addressing technical and practical challenges is crucial for its successful integration in sustainable building practices.
+
+</details>
+
+**Links**: [📄 Paper](https://www.mdpi.com/2075-5309/14/7/2137)
+
+### 2. Augmented reality applications in construction productivity: A systematic literature review
+
+**Authors**: Zhidong Xu,
+Zhenan Feng,
+Mostafa Babaeian Jelodar, Brian H.W. Guo
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Augmented reality (AR) has been extensively researched for its applications in the construction industry. However, there is limited focus on its effects on productivity. This paper aims to bridge the gap by using a systematic literature review to investigate AR applications in the planning, design, and construction phases, focusing on their mechanisms for enhancing productivity. The paper classifies AR applications by their target construction tasks, features, and factors contributing to improved productivity. Additionally, it proposes a framework for prototyping AR applications and evaluating their effects on productivity. Key findings reveal several contributions: the need for further investigation of AR for positioning and hazard notification tasks; the utilisation of different augmentation methods, display tools, and tracking methods based on specific construction tasks; AR’s positive impact on productivity in design review, discrepancy check, assembly, and hazard notification, while future research on evaluating productivity in progress management, planning simulation, and positioning.
+
+</details>
+
+**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S1474034624004464)
+
+### 3. Can Digital Matchmaking Boost Circular Construction? Lessons from Reusing the Glass of Centre Pompidou
+
+**Authors**: Catherine De Wolf,
+Sultan Çetin,
+Nancy Bocken
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Digitalization is driving innovation towards a circular economy in various industries---but the construction industry is lagging behind. The building industry, a growth sector due to increasing urbanization, is at the same time actively depleting our resources, generating waste, and emitting greenhouse gases at a tremendous scale and speed. This chapter argues that we must urgently shift from a linear take--make--waste model to a circular one whereby we utilize our resources wisely and keep them from becoming waste. The experience of reusing the glass from the Centre Pompidou in Paris, France, confronted the architects with the many challenges we face when renovating a building with circular principles. Finding architects to use the iconic bent glass instead of crushing it for recycling (or worse, for disposing it in a landfill) turned out to be a time-consuming task. Adopting artificial intelligence and digital information sharing to match materials for reuse with people who can reuse them is exactly what the construction industry needs for a paradigm shift towards circularity.
+
+</details>
+
+**Links**: [📄 Paper](https://www.researchgate.net/publication/375716849_Can_Digital_Matchmaking_Boost_Circular_Construction_Lessons_from_Reusing_the_Glass_of_Centre_Pompidou)
+
+### 4. Combining Building Information Model and Life Cycle Assessment for Defining Circular Economy Strategies
+
+**Authors**: Annie Guerriero, Federico Busio, Michael Saidani, Calin Boje, Nico Mack
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Although the construction industry has the potential to implement circular economy (CE) principles, the sector suffers from a veritable lack of initiatives to develop circular and regenerative design principles. However, existing buildings intended to be demolished could be considered as material banks for future constructions, with the aim to exploit anthropogenic resources, extend material/product efficiency, and reduce the extraction of natural resources. This concept of buildings as material banks is being studied more and more in the scientific literature, but it still requires the existing building stock to be fully digitalized, thus making materials reusable in new buildings starting from the architectural design stage. Moreover, the decision process regarding CE strategies requires the consideration of the environmental impacts of the deconstruction and end-of-life processes, which is essential in CE implementation. This paper introduces a digital platform for generating materials inventory and supporting the definition of reuse strategies. Then, by using digital tools in combination with life cycle assessment (LCA) studies of the deconstruction process and output of materials and components inventories, a method is defined and tested on a pilot building in Luxembourg.
+
+</details>
+
+**Links**: [📄 Paper](https://www.mdpi.com/2071-1050/16/11/4561)
+
+### 5. D5 digital circular workflow: five digital steps towards matchmaking for material reuse in construction
+
+**Authors**: Catherine De Wolf, Brandon S. Byers, Deepika Raghu, Matthew Gordon, Vanessa Schwarzkopf, Eleftherios Triantafyllidis
+
+<details>
+<summary><b>Abstract</b></summary>
+
+The intersection of digital transformation and circular construction practices presents significant potential to mitigate environmental impacts through optimised material reuse. We propose a five-step (D5) digital circular workflow that integrates these digital innovations towards reuse, validated through real-world case studies. We assessed a variety of digital tools for enhancing the reuse of construction materials, including digital product passports, material classification assisted by artificial intelligence (AI), reality capture, computational design, design inspired by generative AI, digital fabrication techniques, extended reality, and blockchain technology. Using action research through a multiple case study approach, we disassembled several buildings that were set for demolition and subsequently designed and executed construction projects using the salvaged materials. Our findings indicate that digital transformation for detection, disassembly, distribution, design, and finally deployment significantly support the application of circular economy principles. We demonstrate the potential of the proposed workflow for industry implementation and scalability.
+
+</details>
+
+**Links**: [📄 Paper](https://www.nature.com/articles/s44296-024-00034-8)
+
+### 6. Development of a 3D Digital Model of End-of-Service-Life Buildings for Improved Demolition Waste Management through Automated Demolition Waste Audit
+
+**Authors**: Muhammad Omer, Yong C. Wang, Mikel Quintana Roma, Stanislav Bedrich, V´aclav Neˇzerka, Juan
+Ferriz-Papi, Jesus J. Moros Montanes, Ines Diez Ortiz
+
+<details>
+<summary><b>Abstract</b></summary>
+
+This paper presents the development of a 3D digital model of end-of-service-life buildings to facilitate a step change in preparation of pre-demolition protocols that can eliminate problems of inadequate documentation and extensive time spent in preparing pre-demolition audits. The 3D digital model consists of the following four main components: (i) digitization of paper-based drawings and their conversion to CAD; (ii) automated generation of a 3D digital model from CAD; (iii) corrections to the 3D digital model to account for changes in the lifetime of a building; (iv) a sub-model for performing pre-demolition audit. This paper proposes the innovative approaches of incorporating a minimal amount of human intervention to overcome numerous difficulties in automated drawing analysis, application of augmented reality (AR) in corrections to the 3D digital model, and data compatibility for pre-demolition audit. These processes are demonstrated using one building as case study. Using the digital model, a pre-demolition audit can be prepared in minutes rather than the many days required in current practice without a digital model. The accurate quantification of the quantities and locations of different demolition waste materials and products in buildings to be demolished will enable a systematic and quantitative evaluation of potentials of material and product reuse and eliminate contamination of different demolition waste streams (which may contain hazardous waste), which is the main cause of environmental degradation and downcycling of demolition waste materials.
+
+</details>
+
+**Links**: [📄 Paper](https://www.mdpi.com/2076-3298/11/7/138)
+
+### 7. Digital Twin Enabled Construction Progress Monitoring
+
+**Authors**: Alwyn Mathew, Shuyan Li, Kacper Pluta, Rahima Djahel, Ioannis Brilakis
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Digital Twin technology has revolutionized overseeing newly built structures. This study proposes employing digital twin-based automatic progress monitoring on construction sites, comparing 3D point clouds with Building Information Modeling to track progress and predict completion. It highlights integrating semi-continuous monitoring with a building's digital twin for efficient construction management. Leveraging precise data, it enhances understanding and identifies schedule deviations, enabling timely actions. Demonstrated through real-world construction data, visualized Gantt charts showcase its efficacy, offering insights into task status and projected completion dates. This underscores digital twin technology's potential to transform construction oversight.
+
+</details>
+
+**Links**: [📄 Paper](https://ec-3.org/publications/conference/paper/?id=EC32024_210)
+
+### 8. From research to practice: A review on technologies for addressing the information gap for building material reuse in circular construction
+
+**Authors**: Brandon S. Byers, Deepika Raghu, Adama Olumo, Catherine De Wolf, Carl Haas
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Reusing high-value construction materials from existing buildings that otherwise would be discarded as waste is a key strategy for achieving a circular economy. However, this potential for reuse is often hindered by a critical information gap between material life cycles. Reliable, accurate, and sufficient information in digital form for the characterization and assessment of recovered materials for reuse is typically not available, nor are there well-established processes for generating such information. This review aims to understand how to address this broad knowledge gap to help scale up material reuse in the built environment. A flexible pattern-matching methodology is used to illuminate the research-industry gap by synthesizing insights from state-of-the-art literature on material reuse strategies as well as empirical data from various real-world cases. Results indicate that the organization of construction material information for reuse can be categorized into three main categories: information property attributes, information source, and reuse actions. This research contributes to the existing body of literature on building material reuse by a) synthesizing the current state-of-the-art in building material reuse research, b) identifying gaps and recurring themes across research and industrial practices, and c) contrasting theoretical approaches with real-world applications, highlighting areas of convergence and divergence. This study provides a taxonomy that can be useful for industry practitioners and academics, offering actionable insights to accelerate the transition to a more circular construction paradigm.
+
+</details>
+
+**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S2352550923002920)
+
+### 9. Smarter Buildings, Cleaner Grid: The Case for Automated Demand Management
+
+**Authors**: noda.ai
+
+<details>
+<summary><b>Abstract</b></summary>
+
+It’s well recognized that our built environment accounts for roughly 40% of global greenhouse gas emissions. Although this often-cited figure may seem overused, it continues to underscore a key point: operating our existing building stock more intelligently holds immense potential for combating climate change.
+
+Within the broader realm of building operations, automated demand management (ADM) is poised to be a game changer for improving energy performance, reducing operational costs, lowering emissions, and enhancing grid stability.
+
+But what exactly is ADM, and who stands to gain? At its core, ADM focuses on adjusting buildings’ energy use patterns in direct response to real-time conditions—such as grid load, weather, and the availability of renewable energy. By layering external factors on top of internal operations, commercial real estate teams can extend beyond traditional efficiency approaches and achieve deeper savings, while meaningfully cutting emissions and alleviating grid stress.
+
+</details>
+
+**Links**: [📄 Paper](https://noda.ai/insights/smarter-buildings-cleaner-grid-adm)
+
+### 10. Sustainability scoring tool for real estate according to German and European valuation principles in the purchasing process
+
+**Authors**: Katharina Oktabec, Nadine Wills
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Purpose Sustainability has become an integral part of the real estate industry, alongside advancing globalization and demographic development. Due to real estate's influence on greenhouse gas emissions throughout its life cycle, both the regulatory and legal requirements concerning the sustainability of real estate are growing and, as a result of social responsibility, the interest of tenants and investors in sustainable real estate. However, criteria for measuring the ecological sustainability of a real estate investment in the purchase process in order to reduce the risk of including “stranded assets” in the portfolio are missing. This paper aims to address the need to integrate the issue of carbon stranding into existing sustainability rating tools. Design/methodology/approach Existing tools are examined based on defined criteria to determine whether they are suitable for purchasing a property before suitable tools for purchase are compared. Strengths and weaknesses are identified, which are to be remedied with the scoring tool. Taxonomy regulation is integrated into the existing valuation basis as a legal regulation. Findings The result is a scoring tool that enables real estate companies to measure and evaluate the ecological sustainability performance of a property during the acquisition process, taking into account the three aspects of sustainability and considering them when determining an appropriate purchase price in line with market conditions. Moreover, the developed tool helps to minimize the risk of acquiring a stranding asset. Research limitations/implications The environmental, social and governance (ESG) framework employed in this study does not incorporate governance considerations. While the analysis extensively evaluates the building's environmental and social aspects, it does not extend to examining the governance practices of the companies involved. Thus, the assessment is confined solely to the physical attributes of the property without accounting for broader corporate governance factors. Practical implications The developed scoring tool represents a valuable tool for the real estate industry, offering insights into sustainability performance during property acquisitions and providing a structured framework for decision-making. By addressing both certification and taxonomy regulation requirements, the tool contributes to the industry's evolution toward more sustainable and environmentally responsible real estate practices. Originality/value In response to the growing importance of sustainability in the real estate industry, this paper introduces a novel scoring tool for evaluating the sustainability of real estate investments during the acquisition process.
+
+</details>
+
+**Links**: [📄 Paper](https://www.researchgate.net/publication/379567330_Sustainability_scoring_tool_for_real_estate_according_to_German_and_European_valuation_principles_in_the_purchasing_process)
+
+### 11. Towards a holistic assessment of circular economy strategies: The 9R circularity index
+
+**Authors**: Santiago Muñoz, M. Reza Hosseini, Robert H. Crawford
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Our planet faces mounting environmental burdens due to linear production and consumption. Circular economy strategies offer a promising alternative, but evaluating their effectiveness requires robust measurement tools. Existing approaches lack a comprehensive framework incorporating the hierarchical strategies proposed by the 9R framework and the butterfly diagram. Based on the current circular economy indicators, this study gathers a set of indicators designed to assess the efficacy of circular economy strategies, considering the hierarchical levels outlined in the 9R framework. Moreover, it leverages the Analytic Hierarchy Process (AHP) fundamental scale as an integration tool to consolidate the suggested indicators into a unified metric termed the “9R circularity index”. This approach relies on a bottom-up approach to measure circular economy at various levels. The “9R circularity index” enhances the ability to compare results from a material flow analysis perspective. In addition, this paper presents a step-by-step approach and a supporting software tool that aims to facilitate the measurement, selection and comparison between circular and linear models. Ultimately, this proposed approach offers a workable, data-driven tool to support the transition towards a circular economy.
+
+</details>
+
+**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S235255092400112X)
+
+### 12. Using augmented reality models to engage stakeholders on retrofitting buildings
+
+**Authors**: EU-RnD
+
+<details>
+<summary><b>Abstract</b></summary>
+
+In this project success story ARV focuses on several elements. These include: the development of a method for cost-optimal retrofitting in a large-scale renovation process that can be easily replicated and adapted to other municipalities, and the use of Virtual Reality (VR) and Augmented Reality (AR) to test it in demonstration buildings in Oslo, Norway and Palma, Spain.
+
+</details>
+
+**Links**: [📄 Paper](https://projects.research-and-innovation.ec.europa.eu/en/strategy/strategy-2020-2024/environment-and-climate/european-green-deal/green-deal-projects-support/green-deal-success-stories/using-augmented-reality-models-engage-stakeholders-retrofitting-buildings)
+
+### 13. Virtual reality-based site layout planning for building design
+
+**Authors**: Fabian Jarrin, Yasuko Koga, Diego Thomas, Hiroshi Kawasaki
+
+<details>
+<summary><b>Abstract</b></summary>
+
+This paper addresses the challenge of integrating optimized design solutions in Site Layout Planning (SLP) through Virtual Reality (VR), questioning how VR simulations can enhance their acceptance. The methodology involves a multi-objective optimization model that evaluates critical factors like earthwork volume, cost, and environmental impact, integrated into a VR framework for interactive participant evaluations. Results show a notable 48.3% increase in decision-making accuracy among participants using VR, highlighting VR's potential to significantly improve comprehension and application of complex data-driven designs in SLP. This underlines the transformative impact of VR on enhancing stakeholder engagement and optimizing design outcomes. Future research will broaden the participant base and further investigate the long-term effects of VR integration in professional environments.
+
+</details>
+
+**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S0926580524004266)
+
+### 14. Web-Based Material Database for Circular Design
+
+**Authors**: Ian Law, Keng Chia Chang, Beril Önalan, Dominik Reisach, Simon Griffioen, Arabelle de Saussure, Benjamin Dillenburger, Catherine De Wolf
+
+<details>
+<summary><b>Abstract</b></summary>
+
+In circular construction, sourcing reclaimed materials for design projects is often hindered by inconsistent data formats and lack of 3D data integration. This study addresses these barriers by proposing a digital workflow to streamline information flow between 3D architectural models and circular materials. Our approach includes three key elements: a PostgreSQL database integrated into the CAD environment for easy querying of reclaimed materials, an automated 3D model generation system using image-segmentation and depth-estimation models with OpenCV and META Segment Anything Model, and an intuitive user-interface within 3D CAD software.
+
+The workflow detects and segments elements like windows and doors from image data, performs perspective transformations, and converts the data into JSON format for 3D model generation in CAD software to reduce manual modeling effort. It also includes a database for standardized material data and an intuitive user interface integrated into 3D modeling software to provide architects real-time access to circular materials. The interface features cost calculations, greenhouse gas emissions visualizations, and summary tools, ensuring digital models correlate with physical materials.
+
+This user-friendly approach simplifies incorporating reclaimed materials into designs, paving the way for future investigations into more complex shapes and materials. This integration significantly enhances efficiency for designers and architects during the design stage. Overall, in this research, we aim to showcase a more user-friendly approach to simplify the use of reclaimed materials. The proposed workflow enables architects and designers to efficiently and effectively incorporate reclaimed materials with detailed characteristics into their designs. Future work will expand the database to include diverse material types, such as structural components, and address the challenges of photo-based 3D model generation for more complex geometric shapes.
+
+</details>
+
+**Links**: [📄 Paper](https://link.springer.com/chapter/10.1007/978-3-031-68275-9_10)
+
+### 2023
+
+### 1. Building Materials and the Climate: Constructing a New Future
+
+**Authors**: United Nations Environment Programme
+
+<details>
+<summary><b>Abstract</b></summary>
+
+This report highlights the urgent need to develop new models for cooperation on the decarbonisation of building materials, if the world is to reach its goals for net zero emissions from the built environment sector by the mid-century. It focuses on three urgent pathways that must be facilitated by supporting stakeholders across the lifecycle of the built environment sector in order to decarbonise: i) AVOID extraction and production of raw materials by galvanising a circular economy; ii) SHIFT to regenerative material practices wherever possible by using ethically produced low carbon earth- and bio-based building materials whenever possible; and iii) IMPROVE methods to radically decarbonise conventional materials.
+
+</details>
+
+**Links**: [📄 Paper](https://wedocs.unep.org/handle/20.500.11822/43293)
+
+### 2. Circular economy adoption barriers in built environment- a case of emerging economy
+
+**Authors**: Purva Mhatre, Vidyadhar V. Gedam, Seema Unnikrishnan, Rakesh D. Raut
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Built environment consumes vast volumes of natural resources and also poses several environmental threats owing to mining, construction emissions, and waste disposal processes. Thus, it is imperative that the principles of circular economy (CE) be adopted to enable the recirculation of resources back to the construction system. However, in the emerging economies, owing to numerous barriers, the momentum for achieving accountable progress towards CE adoption in the construction sector has not been adequate. This research article aims to understand & examine the factors that obstruct the incorporation of CE in the built environment or the construction sector in India. A total of sixteen barriers hampering the adoption of CE in built environment are identified and categorised under six categories of economic, environmental, technical, societal, governmental, and behavioral barriers. The research uses Decision-Making Trial and Evaluation Laboratory (DEMATEL) method to analyse the barriers and develop a cause-effect relationship among them. This study reveals that the most predominant barrier to adopting CE in the Indian construction sector is an environmental barrier. The lack of environmentally safe material recovery processes and high operating costs for running a circular supply chain are other significant barriers. Authors further stress on the interdependence of factors and propose appropriate enablers to facilitate CE in built environment. The study's findings are intended to enable policy and decision-makers of the built environment to implement CE effectively.
+
+</details>
+
+**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/abs/pii/S0959652623003591)
+
+### 3. City Loops
+
+**Authors**: CityLoops
+
+<details>
+<summary><b>Abstract</b></summary>
+
+The CityLoops project brings together seven European cities – Apeldoorn, Bodø, Mikkeli, Porto, Seville, Høje-Taastrup and Roskilde - to pilot a series of demonstration actions to close the loop of two of the most important waste streams in Europe: Construction and Demolition Waste, and Bio-waste. Their ultimate aim is to become circular cities in which no resource goes to waste, driving the transition to the circular economy.
+
+</details>
+
+**Links**: [📄 Paper](https://cityloops.eu)
+
+### 4. Exploring Building Information Modeling (BIM) and Internet of Things (IoT) Integration for Sustainable Building
+
+**Authors**: Yali Chen, Xiaozi Wang, Zhen Liu, Jia Cui, Mohamed Osmani, Peter Demian
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Sustainable development, which has become the priority study of architectural design, is receiving increasing attention with global climate change. At the same time, the building industry is urgently changing towards intelligent and digitalized tendencies. As a result, Building Information Modeling (BIM) and the Internet of Things (IoT) make crucial contributions to the transforming process. However, there is little knowledge of the integration of BIM–IoT in sustainable building from a macro perspective. Moreover, most existing research adopts a literature review method and lacks objective quantitative analysis. Few papers use bibliometric analysis to study the respective BIM and IoT research fields. Furthermore, few studies use Citespace software tools to analyze the integrated application of BIM–IoT. Therefore, this paper aims to investigate the research frontiers and knowledge structure in BIM–IoT integration and the relationship between BIM-IoT and sustainable building and explore the research hotspots, trends, and future research directions. A quick and objective method was proposed to understand the research status of these new and rapidly developing fields. This paper uses topic search in the web of science core collection to obtain relevant literature and then uses Citespace for bibliometric analysis based on the literature review. Controlled terms and subject terms statistics from the Engineering Index core database search results are also used to briefly examine the fields’ research frontiers and hotspots as obtained from Citespace. The results show that: (1) The research on BIM–IoT integration focuses on building intelligence with BIM as the basis of application, and research on BIM–IoT integration within the field of sustainable building is currently focused on the first three phases of the life cycle. (2) The development of sustainable buildings needs to be considered on its human and social dimensions. BIM provides a platform for sharing information and communication among stakeholders involved in the building’s entire life cycle. At the same time, IoT allows occupants to better participate in buildings’ sustainable design and decision making. (3) In the future, more emerging technologies such as cloud computing and big data are required to better promote sustainable buildings and thus realize the construction of sustainable smart cities. At the same time, researchers should also pay attention to the sustainable transformation of existing buildings
+
+</details>
+
+**Links**: [📄 Paper](https://www.mdpi.com/2075-5309/13/2/288)
+
+### 2022
+
+### 1. Circular TwAIn --- circular-twain-project.eu
+
+**Authors**: EU
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Circular TwAIn researches, develops, validates, and exploits a novel AI platform for circular manufacturing value chains, which will support the development of interoperable circular twins for end-to-end sustainability.
+
+</details>
+
+**Links**: [📄 Paper](https://www.circular-twain-project.eu/)
+
+### 2. More than just a big idea – how extended reality tech can enable a circular economy
+
+**Authors**: Emma Elobeid, Claire Murphy, Laura Collacott,
+Ellen MacArthur Foundation
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Imagination is the original innovation accelerator. It is essential if we are to solve big problems like climate change, waste, and pollution. The vision for a circular economy is more than just a big idea. It is a systems solution framework that sets out a new way to design our global economy so that it flows and functions within planetary boundaries. Implementing it at scale will require not only huge ambition but concerted action at every level of business and society. All of that starts by bringing to life the vision of a better future and making it tangible.
+
+</details>
+
+**Links**: [📄 Paper](https://www.ellenmacarthurfoundation.org/tech-enablers-series/part-1)
+
+### 3. Proposal for a Regulation of the European Parliament and the Council establishing a framework for setting ecodesign requirements for sustainable products and repealing Directive 2009/125/EC
+
+**Authors**: European Commission
+
+<details>
+<summary><b>Abstract</b></summary>
+
+
+
+</details>
+
+**Links**: [📄 Paper](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=COM:2022:0142:FIN)
+
+### 2021
+
+### 1. BIM and IoT Sensors Integration: A Framework for Consumption and Indoor Conditions Data Monitoring of Existing Buildings
+
+**Authors**: Giuseppe Desogus,
+Emanuela Quaquero, Giulia Rubiu, Gianluca Gatto,
+Cristian Perra
+
+<details>
+<summary><b>Abstract</b></summary>
+
+The low accessibility to the information regarding buildings current performances causes deep difficulties in planning appropriate interventions. Internet of Things (IoT) sensors make available a high quantity of data on energy consumptions and indoor conditions of an existing building that can drive the choice of energy retrofit interventions. Moreover, the current developments in the topic of the digital twin are leading the diffusion of Building Information Modeling (BIM) methods and tools that can provide valid support to manage all data and information for the retrofit process. This paper shows the aim and the findings of research focused on testing the integrated use of BIM methodology and IoT systems. A common data platform for the visualization of building indoor conditions (e.g., temperature, luminance etc.) and of energy consumption parameters was carried out. This platform, tested on a case study located in Italy, is developed with the integration of low-cost IoT sensors and the Revit model. To obtain a dynamic and automated exchange of data between the sensors and the BIM model, the Revit software was integrated with the Dynamo visual programming platform and with a specific Application Programming Interface (API). It is an easy and straightforward tool that can provide building managers with real-time data and information about the energy consumption and the indoor conditions of buildings, but also allows for viewing of the historical sensor data table and creating graphical historical sensor data. Furthermore, the BIM model allows the management of other useful information about the building, such as dimensional data, functions, characteristics of the components of the building, maintenance status etc., which are essential for a much more conscious, effective and accurate management of the building and for defining the most suitable retrofit scenarios.
+
+</details>
+
+**Links**: [📄 Paper](https://www.mdpi.com/2071-1050/13/8/4496)
+
+### 2. Blockchain-driven integration technology for the AEC industry
+
+**Authors**: Botao Zhong,
+Xing Pan, Lieyun Ding, 
+Qiang Chen,
+Xiaowei Hu
+
+<details>
+<summary><b>Abstract</b></summary>
+
+In the architecture, engineering, and construction (AEC) industry, blockchain-driven integration technology (BDIT) has witnessed rapid development. A critical literature review of BDIT can contribute toward innovation for the AEC industry. In this study, a quantitative mapping of 247 BDIT literatures from 2017 to 2022 was conducted. Following the clue of quantitative work, two critical levels of technological development and application for BDIT were analyzed. The findings suggest: (1) the technological developments of BDIT may involve technological integration (i.e., integration of blockchain and internet of thing/building information modeling/edge computing) and knowledge framework; and (2) the technological applications of BDIT may involve information automation management and building information management. To further explore the trends of BDIT, some future evolutions (i.e., integration of blockchain and federated learning/digital twin/cloud-edge-end), application scenarios and challenges of BDIT were discussed. This study provides valuable theoretical and practical references for future research on BDIT in the AEC industry.
+
+</details>
+
+**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S0926580523000511)
+
+### 3. Building Information Modeling and Internet of Things integration for smart and sustainable environments: A review
+
+**Authors**: Ada Malagnino
+, 
+Teodoro Montanaro
+, Mariangela Lazoi
+, 
+Ilaria Sergi
+, Angelo Corallo
+, Luigi Patrono
+
+<details>
+<summary><b>Abstract</b></summary>
+
+During the last decades, society has increasingly moved towards the adoption of digital solutions in almost every aspect of people's lives with the aim of enhancing daily activities. At the same time, the environmental impact of the built environment has attracted the attention of public opinion that is gradually perceiving the necessity of limiting its negative effects in order to safeguard the Earth and people's wellbeing. The Internet of Things is one of the biggest ecosystems that is bringing innovations encompassing digital solutions in almost every sector. On the other hand, the Building Information Modeling approach allows for data sharing among stakeholders, traceability, and the integrated management of the building or infrastructure life-cycle through a 3D informative virtual model. Our study reviews existing research works and technological solutions that integrate these two important topics to enhance the sustainability of the built environment, making it smarter. The presented review analyses the existing papers available in literature from January 2015 to December 2020, to present the best practices in this integration and discuss limitations of the identified solutions. Based on the outcomes of the analysis and aiming at the creation of a solid knowledge basis for the community interested in the sector, a comprehensive modular architecture has been proposed. Finally, new directions for future works are presented by discussing how the proposed architecture can actually facilitate the design and development phases.
+
+</details>
+
+**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S095965262101934X)
+
+### 2020
+
+### 1. A selective disassembly multi-objective optimization approach for adaptive reuse of building components
+
+**Authors**: Benjamin Sanchez,
+Christopher Rausch, Carl Haas, Rebecca Saari
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Adaptive reuse of buildings plays a key role in the transition from a resource-based economy and towards a Circular Economy (CE) in the construction industry. Adaptive reuse has the potential to maximize the residual utility and value of existing assets through green design methods such as selective disassembly planning. Studies in the field of selective disassembly are scarce and there is no evidence of established methodologies for the optimization of the environmental and financial benefits. A multi-objective analysis is key to obtaining several effective selective disassembly plans for the adaptive reuse of an existing asset through the combination of different deconstruction methods. The analysis is carried out in terms of the physical, environmental, and economic constraints of the deconstruction methods per building component. The Sequential Disassembly Planning for Buildings (SDPB) method is used in order to generate the optimized disassembly plans for retrieving target components. At the end, a weighted multi-objective optimization analysis is incorporated to generate the set of noninferior solutions that minimizes environmental impacts and building cost. The results show that different complete disassembly plans exist for all the possible combinations. The possible combinations are driven by the deconstruction methods per component, as well as the dismantling interdependence. The method described in this study can be used to improve the project outcomes according to specific goals and constraints (e.g. environmental, economic, technical). The results of this study improve the decision-making process for adaptive reuse building projects by adding comprehensive quantitative analysis towards sustainable management and conservation of resources.
+
+</details>
+
+**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/abs/pii/S0921344919305117)
+
+### 2. Circular Twin --- cundall.com
+
+**Authors**: Cundall
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Ground-breaking digital twinning project to demonstrate the feasibility of net zero.
+
+</details>
+
+**Links**: [📄 Paper](https://www.cundall.com/projects/circular-twin)
+
+### 2017
+
+### 1. The application of web of data technologies in building materials information modelling for construction waste analytics
+
+**Authors**: Muhammad Bilal, Lukumon O. Oyedele, Kamran Munir, Saheed O. Ajayi, Olugbenga O. Akinade, Hakeem A. Owolabi, Hafiz A. Alaka
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Predicting and designing out construction waste in real time is complex during building waste analysis (BWA) since it involves a large number of analyses for investigating multiple waste-efficient design strategies. These analyses require highly specific data of materials that are scattered across different data sources. A repository that facilitates applications in gaining seamless access to relatively large and distributed data sources of building materials is currently unavailable for conducting the BWA. Such a repository is the first step to developing a simulation tool for the BWA. Existing product data exchange ontologies and classification systems lack adequate modelling of building materials for the BWA. In this paper, we propose a highly resilient and data-agnostic building materials database. We use ontologies at the core of our approach to capture highly accurate and semantically conflicting data of building materials using the Resource Description Framework (RDF) and Web Ontology Language (OWL). Owing to the inherent capabilities of RDF, the architecture provides syntactical homogeneity while accessing the diverse and distributed data of building materials during the BWA. We use software packages such as Protégé and Oracle RDF Graph database for implementing the proposed architecture. Our research provides technical details and insights for researchers and software engineers who are seeking to develop the semantic repositories of similar kind of simulation applications that can be used for building waste performance analysis.
+
+</details>
+
+**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/abs/pii/S2214993716300410)
+
+## Sustainable Real Estate Valuation and Economics
+
+### 2025
+
+### 1. Real estate valuation with multi-source image fusion and enhanced machine learning pipeline
+
+**Authors**: Lin Deng
+
+<details>
+<summary><b>Abstract</b></summary>
+
+The automated valuation model (AVM) has been widely used by real estate stakeholders to provide accurate property value estimations automatically. Traditional valuation models are subjective and inaccurate, and previous studies have shown that machine learning (ML) approaches perform better in real estate valuation. These valuation models are based on structured tabular data, and few consider integrating multi-source unstructured data such as images. Most previous studies use fixed feature space for model training without considering the model performance variation brought by various feature configuration parameters. To fill these gaps, this study uses Hong Kong as a case study and proposes an enhanced ML-based real estate valuation framework with feature configuration and multi-source image data fusion, including exterior housing photos, street view and remote sensing images. ‌‌Eight ML regressors, namely, Random Forest, Extra Tree, XGBoost, Light Gradient Boosting Machine (LightGBM), K-Nearest Neighbors (KNN), Support Vector Regression (SVR), Multilayer Perceptron (MLP), and Multiple Linear Regression (MLR) are used to formulate ML pipelines for training. The SHapley Additive exPlanations (SHAP) method is used to examine the effects of images on housing prices. The experimental results show that the model performances using different feature configuration parameters are significantly different, indicating the necessity of feature configuration to obtain more accurate and reliable predictions. Extra Tree performs significantly better than other models. Half of the top 10 significant features are image features, and incorporating multi-source image features can improve property valuation accuracy. Nonlinear associations exist between image features and housing prices, and the spatial distribution patterns of image feature values and corresponding SHAP main effects vary significantly from the city centre to the suburbs. These findings contribute to a better understanding of AVM development with image fusion and the nonlinear associations between image features and housing prices for public authorities, urban planners, and real estate developers.
+
+</details>
+
+**Links**: [📄 Paper](https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0321951)
+
+### 2. Using ensemble methods of machine learning to predict real estate prices
+
+**Authors**: Oleh Pastukh, Viktor Khomyshyn
+
+<details>
+<summary><b>Abstract</b></summary>
+
+In recent years, machine learning (ML) techniques have become a powerful tool for improving the accuracy of predictions and decision-making. Machine learning technologies have begun to penetrate all areas, including the real estate sector. Correct forecasting of real estate value plays an important role in the buyer-seller chain, because it ensures reasonableness of price expectations based on the offers available in the market and helps to avoid financial risks for both parties of the transaction. Accurate forecasting is also important for real estate investors to make an informed decision on a specific property. This study helps to gain a deeper understanding of how effective and accurate ensemble machine learning methods are in predicting real estate values. The results obtained in the work are quite accurate, as can be seen from the coefficient of determination (R^2), root mean square error (RMSE) and mean absolute error (MAE) calculated for each model. The Gradient Boosting Regressor model provides the highest accuracy, the Extra Trees Regressor, Hist Gradient Boosting Regressor and Random Forest Regressor models give good results. In general, ensemble machine learning techniques can be effectively used to solve real estate valuation. This work forms ideas for future research, which consist in the preliminary processing of the data set by searching and extracting anomalous values, as well as the practical implementation of the obtained results.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2504.04303.pdf)
+
+### 2023
+
+### 1. A Review of Machine Learning Approaches for
+Real Estate Valuation
+
+**Authors**: Thomas H. Root, Troy J. Strader, Yu-Hsiang (John) Huang
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Real estate managers must identify the value for properties in their current market. Traditionally, this involved simple data analysis with adjustments made based on manager’s experience. Given the amount of money currently involved in these decisions, and the complexity and speed at which valuation decisions must be made, machine learning technologies provide a newer alternative for property valuation that could improve upon traditional methods. This study utilizes a systematic literature review methodology to identify published studies from the past two decades where specific machine learning technologies have been applied to the property valuation task. We develop a data, reasoning, usefulness (DRU) framework that provides a set of theoretical and practice-based criteria for a multi-faceted performance assessment for each system. This assessment provides the basis for identifying the current state of research in this domain as well as theoretical and practical implications and directions for future research.
+
+</details>
+
+**Links**: [📄 Paper](https://aisel.aisnet.org/cgi/viewcontent.cgi?article=1101&context=jmwais)
+
+### 2. Digital real estate: a review of the technologies and tools transforming the industry and society
+
+**Authors**: Nida Naeem, Irfan Rana, Abdur Nasir
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Real estate plays a crucial role in driving national economies. However, the process of transferring properties and engaging with various stakeholders can be hindered by a lack of adequate information, complex procedures, and excessive paperwork. The advent of digital real estate has revolutionized the industry and how stakeholders interact. The present study aims to conduct a bibliometric and systematic review of digital real estate, utilizing historical, institutional, country, and keyword analyses for the bibliometric review and Preferred Reporting Items for Systematic Reviews and Meta-Analysis (PRISMA) guidelines for the systematic review. Through thematic analysis, the study identified four key themes for transforming digital real estate: information communication technologies, data collection technologies, data networking tools, and digital decision-making systems. Additionally, the study proposes a digital real estate transformation framework that can assist stakeholders, urban planners, and decision-makers in embracing digital tools and technologies. The study concludes that digital real estate has the potential to revolutionize future urban planning and real estate development through the use of decision support systems and advanced technologies.
+
+</details>
+
+**Links**: [📄 Paper](https://www.researchgate.net/publication/374924059_Digital_real_estate_a_review_of_the_technologies_and_tools_transforming_the_industry_and_society)
+
+### 3. Toward 3D Property Valuation—A Review of Urban 3D Modelling Methods for Digital Twin Creation
+
+**Authors**: Yue Ying, Mila Koeva, Monika Kuffer, Jaap Zevenbergen
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Increasing urbanisation has inevitably led to the continuous construction of buildings. Urban expansion and densification processes reshape cities and, in particular, the third dimension (3D), thus calling for a technical shift from 2D to 3D for property valuation. However, most property valuation studies employ 2D geoinformation in hedonic price models, while the benefits of 3D modelling potentially brought for property valuation and the general context of digital twin (DT) creation are not sufficiently explored. Therefore, this review aims to identify appropriate urban 3D modelling method(s) for city DT, which can be used for 3D property valuation (3DPV) in the future (both short-term and long-term). We focused on 3D modelling studies investigating buildings and urban elements directly linked with residential properties. In total, 180 peer-reviewed journal papers were selected between 2016 and 2020 with a narrative review approach. Analytical criteria for 3D modelling methods were explicitly defined and covered four aspects: metadata, technical characteristics, users’ requirements, and ethical considerations. From this, we derived short-term and long-term prospects for 3DPV. The results provide references for integrating 3D modelling and DT in property valuation and call for interdisciplinary collaboration including researchers and stakeholders in the real estate sector, such as real estate companies, house buyers and local governments.
+
+</details>
+
+**Links**: [📄 Paper](https://www.mdpi.com/2220-9964/12/1/2)
+
+### 2020
+
+### 1. From Principles to Practices: Realising the value of circular economy in real estate - a report by Arup
+
+**Authors**: Devni Acharya, Richard Boyd, Olivia Finch
+
+<details>
+<summary><b>Abstract</b></summary>
+
+From Principles to Practices is a two-phase collaborative project led by Arup and the Ellen MacArthur Foundation that aims to translate the principles of a circular economy into everyday built environment practices. Phase 1 of the project established our vision for a circular built environment and identified the key barriers, opportunities and enablers of implementing circular economy practices. It also informed proposals for who needs to lead the change and what their first steps might be. The key outputs from Phase 1 were published in a report titled, First Steps Towards a Circular Built Environment, released in July 2018. The second phase of the project, described in this report, aims to demonstrate the value and process of implementing circular economy principles in the built environment to real estate investors and construction clients. We have focused on these two stakeholder groups because our Phase 1 work highlighted they are best placed to lead the transition to a circular built environment, since they have the greatest capacity to influence decision-making, set direction and catalyse action throughout the value chain. Policy makers were also identified as possible first movers, yet in our interviews in Phase 1, policy makers made it clear they needed an evidence base of the benefits of a circular economy to be developed by investors and construction clients. Our research also revealed that value and the way in which it is created from real estate assets is set by investors and construction clients through investment requirements, tenure models and design briefs (developed within the confines of the policy environment in which they operate). Despite this, the business case for implementing circular economy principles has not yet been explicitly articulated to investors or construction clients to incentivise a change in this direction. The aim of this project is, therefore, to signpost the business case.
+
+</details>
+
+**Links**: [📄 Paper](https://circulareconomy.europa.eu/platform/sites/default/files/from_principles_to_practices_realising_the_value_of_circular_economy_2020.pdf) | [🌐 Project Page](https://circulareconomy.europa.eu/platform/en/knowledge/principles-practices-realising-value-circular-economy-real-estate-report-arup)
+
+### 2018
+
+### 1. Reflecting Sustainability in Property Valuation - Defining the Problem
+
+**Authors**: Ewa Kucharska-Stasiak, Katarzyna Olbińska
+
+<details>
+<summary><b>Abstract</b></summary>
+
+A major topic in discussions about environmental protection is the concept of sustainable development utilizing the economic criteria enhanced by environmental, social and ethical aspects. The concept inspired a new approach to construction and paved the way for the idea of sustainable buildings. Sustainable buildings are expected to offer economic benefits to their owners and tenants that should be reflected in property values. The authors test a hypothesis that the real estate market in Poland still fails to incorporate sustainability in property valuation. The article seeks evidence in support of this hypothesis, as well as attempting to find out why the market does not pay a premium for sustainability. To accomplish the purpose of the research, a systematic literature review, an analysis of the pilot studies available in Poland and a preliminary assessment of the ability of valuation methods to reflect sustainability in property valuations are performed. The focus of the research is on the office property market, one of the fastest growing and most modern segments of the real estate market. The conclusion drawn from the research is that, of all respondents surveyed by international studies, Polish developers, property owners, tenants and valuers know the least about sustainable building and that the evidence of the benefits of sustainable building is still unavailable in the Polish real estate market. Such benefits are rather hypothesized to exist and considered theoretically rather than empirically confirmed. It is possible that the reasons for these findings are the short period of research and problems with distinguishing sustainable buildings from conventional ones, which make it difficult for valuers to reflect the benefits of sustainability in valuations. Nevertheless, a new approach to property valuation encompassing environmental, ethical and moral aspects seems necessary. This would encourage sustainable building and green investment strategies. Sustainable valuation would also be an opportunity for the development of the valuation profession.
+
+</details>
+
+**Links**: [📄 Paper](https://www.researchgate.net/publication/326484254_Reflecting_Sustainability_in_Property_Valuation_-_Defining_the_Problem)
+
 ## Human-Computer Interaction and Human-Building Interaction
 
 ### 2025
@@ -2334,1482 +3833,6 @@ Architecture and Virtual Reality (VR) are joined in a very special relationship.
 </details>
 
 **Links**: [📄 Paper](https://dl.acm.org/doi/pdf/10.1145/3304181.3304198)
-
-## Reality Capture and Digital Twins
-
-### 2025
-
-### 1. Automated BIM-to-scan point cloud semantic segmentation using a domain adaptation network with hybrid attention and whitening (DawNet)
-
-**Authors**: Difeng Hu,Vincent J.L. Gan,
-Ruoming Zhai
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Deep learning-based point cloud semantic segmentation facilitates scene understanding and BIM modelling, but its success requires vast amount of labelled point clouds, which is laborious and time-consuming. To reduce point cloud annotation cost, researchers attempt to leverage synthetic point clouds, but the domain gap between synthetic and real point clouds deteriorates the segmentation accuracy. To address this issue, this study develops a BIM-to-Scan point cloud semantic segmentation approach to mitigate the domain gap between BIM and real point clouds, improving the segmentation performance on real point clouds. To this end, this study starts by proposing a BIM-based point cloud generation method, which uses FME and BIM models to automatically generate and label synthetic point clouds, decreasing the annotation cost. To fill the domain gap, a DawNet is invented by integrating a domain adaptation network with ZCA whitening operation and hybrid attention mechanism. Specifically, ResPointNet++ is used to extract geometric features and execute the segmentation task, which is then combined with a domain discriminator to perform domain adversarial learning, aligning the data distribution of BIM and real point clouds. To improve the performance of the DawNet, a residual learning block with whitening and a hybrid attention module are designed. These two modules help extract and exploit domain-invariant features to boost the generalisation and segmentation performance of the DawNet. Finally comprehensive experiments show that the proposed BIM-based method spends 0.5 person-hours to generate 0.45 billion labelled BIM point clouds, and that the developed DawNet achieves 17% and 11% more mIoU than ResPointNet++ and DANN. The ablation study also confirms the effectiveness of the hybrid attention module and ZCA whitening operation.
-
-</details>
-
-**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S0926580524002097)
-
-### 2. Automated Scan-to-BIM: A Deep Learning-Based Framework for Indoor Environments with Complex Furniture Elements
-
-**Authors**: Mostafa Mahmoud, Zhebin Zhao, Wu Chen,
-Mahmoud Adham, Yaxin Li
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Extensive 3D parametric datasets, such as Building Information Modeling (BIM) models, are crucial for reducing project costs, supporting planning, and enhancing operational efficiency in building management. However, conventional Scan-to-BIM methods rely heavily on manual or semi-automatic techniques, focusing on space-forming elements such as walls while often neglecting indoor space-occupying furniture. These methods struggle with incomplete point clouds, capturing shapes and orientations, and clustering inaccuracies. This paper presents an innovative and efficient deep learning-based framework to automatically reconstruct 3D models from point clouds. The framework accommodates diverse space-forming layouts and automatically generates parametric 3D BIM models for complex space-occupying elements like tables and chairs within the Revit platform. It also produces non-parametric 3D semantic representations of complete indoor scenes. Evaluation of publicly available and locally acquired datasets shows that the framework achieves over 98 % precision, recall, and F1-score, confirming its accuracy and effectiveness in generating complete 3D models. The reconstructed models preserve key real-world characteristics, including geometric fidelity, numerical attributes, spatial positioning, and various shapes and orientations of furniture. Seamless integration of deep learning and model-driven techniques overcomes the limitations of traditional Scan-to-BIM methods, providing an accurate and efficient solution for complex indoor space reconstruction.
-
-</details>
-
-**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S2352710225008332)
-
-### 3. CAGE: Continuity-Aware edGE Network Unlocks Robust Floorplan Reconstruction
-
-**Authors**: Yiyi Liu, Chunyang Liu, Bohan Wang, Weiqin Jiao, Bojian Wu, Lubin Fan, Yuwei Chen, Fashuai Li, Biao Xiong
-
-<details>
-<summary><b>Abstract</b></summary>
-
-We present CAGE (Continuity-Aware edGE) network, a robust framework for reconstructing vector floorplans directly from point-cloud density maps. Traditional corner-based polygon representations are highly sensitive to noise and incomplete observations, often resulting in fragmented or implausible layouts.Recent line grouping methods leverage structural cues to improve robustness but still struggle to recover fine geometric details. To address these limitations,we propose a native edge-centric formulation, modeling each wall segment as a directed, geometrically continuous edge. This representation enables inference of coherent floorplan structures, ensuring watertight, topologically valid room boundaries while improving robustness and reducing artifacts. Towards this design, we develop a dual-query transformer decoder that integrates perturbed and latent queries within a denoising framework, which not only stabilizes optimization but also accelerates convergence. Extensive experiments on Structured3D and SceneCAD show that CAGE achieves state-of-the-art performance, with F1 scores of 99.1% (rooms), 91.7% (corners), and 89.3% (angles). The method also demonstrates strong cross-dataset generalization, underscoring the efficacy of our architectural innovations. Code and pretrained models are available on our project page: https://github.com/ee-Liu/CAGE.git.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2509.15459.pdf) | [🌐 Project Page](https://ee-liu.github.io/CAGE_page/) | [💻 Code](https://github.com/ee-Liu/CAGE) | [🎥 Video](https://ee-liu.github.io/CAGE_page/static/videos/cage_video.mp4)
-
-### 4. Decompositional Neural Scene Reconstruction with Generative Diffusion Prior
-
-**Authors**: Junfeng Ni, Yu Liu, Ruijie Lu, Zirui Zhou, Song-Chun Zhu, Yixin Chen, Siyuan Huang
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Decompositional reconstruction of 3D scenes, with complete shapes and detailed texture of all objects within, is intriguing for downstream applications but remains challenging, particularly with sparse views as input. Recent approaches incorporate semantic or geometric regularization to address this issue, but they suffer significant degradation in underconstrained areas and fail to recover occluded regions. We argue that the key to solving this problem lies in supplementing missing information for these areas. To this end, we propose DP-Recon, which employs diffusion priors in the form of Score Distillation Sampling (SDS) to optimize the neural representation of each individual object under novel views. This provides additional information for the underconstrained areas, but directly incorporating diffusion prior raises potential conflicts between the reconstruction and generative guidance. Therefore, we further introduce a visibility-guided approach to dynamically adjust the per-pixel SDS loss weights. Together these components enhance both geometry and appearance recovery while remaining faithful to input images. Extensive experiments across Replica and ScanNet++ demonstrate that our method significantly outperforms SOTA methods. Notably, it achieves better object reconstruction under 10 views than the baselines under 100 views. Our method enables seamless text-based editing for geometry and appearance through SDS optimization and produces decomposed object meshes with detailed UV maps that support photorealistic Visual effects (VFX) editing. The project page is available at https://dp-recon.github.io/.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2503.14830.pdf)
-
-### 5. ExCap3D: Expressive 3D Scene Understanding via Object Captioning with Varying Detail
-
-**Authors**: Chandan Yeshwanth, David Rozenberszki, Angela Dai
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Generating text descriptions of objects in 3D indoor scenes is an important building block of embodied understanding. Existing methods do this by describing objects at a single level of detail, which often does not capture fine-grained details such as varying textures, materials, and shapes of the parts of objects. We propose the task of expressive 3D captioning: given an input 3D scene, describe objects at multiple levels of detail: a high-level object description, and a low-level description of the properties of its parts. To produce such captions, we present ExCap3D, an expressive 3D captioning model which takes as input a 3D scan, and for each detected object in the scan, generates a fine-grained collective description of the parts of the object, along with an object-level description conditioned on the part-level description. We design ExCap3D to encourage semantic consistency between the generated text descriptions, as well as textual similarity in the latent space, to further increase the quality of the generated captions. To enable this task, we generated the ExCap3D Dataset by leveraging a visual-language model (VLM) for multi-view captioning. The ExCap3D Dataset contains captions on the ScanNet++ dataset with varying levels of detail, comprising 190k text descriptions of 34k 3D objects in 947 indoor scenes. Our experiments show that the object- and part-level of detail captions generated by ExCap3D are of higher quality than those produced by state-of-the-art methods, with a Cider score improvement of 17% and 124% for object- and part-level details respectively. Our code, dataset and models will be made publicly available.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2503.17044.pdf)
-
-### 6. Fast3R: Towards 3D Reconstruction of 1000+ Images in One Forward Pass
-
-**Authors**: Jianing Yang, Alexander Sax, Kevin J. Liang, Mikael Henaff, Hao Tang, Ang Cao, Joyce Chai, Franziska Meier, Matt Feiszli
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Multi-view 3D reconstruction remains a core challenge in computer vision, particularly in applications requiring accurate and scalable representations across diverse perspectives. Current leading methods such as DUSt3R employ a fundamentally pairwise approach, processing images in pairs and necessitating costly global alignment procedures to reconstruct from multiple views. In this work, we propose Fast 3D Reconstruction (Fast3R), a novel multi-view generalization to DUSt3R that achieves efficient and scalable 3D reconstruction by processing many views in parallel. Fast3R's Transformer-based architecture forwards N images in a single forward pass, bypassing the need for iterative alignment. Through extensive experiments on camera pose estimation and 3D reconstruction, Fast3R demonstrates state-of-the-art performance, with significant improvements in inference speed and reduced error accumulation. These results establish Fast3R as a robust alternative for multi-view applications, offering enhanced scalability without compromising reconstruction accuracy.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2501.13928.pdf)
-
-### 7. Floorplan-SLAM: A Real-Time, High-Accuracy, and Long-Term Multi-Session Point-Plane SLAM for Efficient Floorplan Reconstruction
-
-**Authors**: Haolin Wang, Zeren Lv, Hao Wei, Haijiang Zhu, Yihong Wu
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Floorplan reconstruction provides structural priors essential for reliable indoor robot navigation and high-level scene understanding. However, existing approaches either require time-consuming offline processing with a complete map, or rely on expensive sensors and substantial computational resources. To address the problems, we propose Floorplan-SLAM, which incorporates floorplan reconstruction tightly into a multi-session SLAM system by seamlessly interacting with plane extraction, pose estimation, and back-end optimization, achieving real-time, high-accuracy, and long-term floorplan reconstruction using only a stereo camera. Specifically, we present a robust plane extraction algorithm that operates in a compact plane parameter space and leverages spatially complementary features to accurately detect planar structures, even in weakly textured scenes. Furthermore, we propose a floorplan reconstruction module tightly coupled with the SLAM system, which uses continuously optimized plane landmarks and poses to formulate and solve a novel optimization problem, thereby enabling real-time incremental floorplan reconstruction. Note that by leveraging the map merging capability of multi-session SLAM, our method supports long-term floorplan reconstruction across multiple sessions without redundant data collection. Experiments on the VECtor and the self-collected datasets indicate that Floorplan-SLAM significantly outperforms state-of-the-art methods in terms of plane extraction robustness, pose estimation accuracy, and floorplan reconstruction fidelity and speed, achieving real-time performance at 25-45 FPS without GPU acceleration, which reduces the floorplan reconstruction time for a 1000 square meters scene from over 10 hours to just 9.44 minutes.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2503.00397v2.pdf)
-
-### 8. FloorplanMAE:A self-supervised framework for complete floorplan generation from partial inputs
-
-**Authors**: Jun Yin, Jing Zhong, Pengyu Zeng, Peilin Li, Miao Zhang, Ran Luo, Shuai Lu
-
-<details>
-<summary><b>Abstract</b></summary>
-
-In the architectural design process, floorplan design is often a dynamic and iterative process. Architects progressively draw various parts of the floorplan according to their ideas and requirements, continuously adjusting and refining throughout the design process. Therefore, the ability to predict a complete floorplan from a partial one holds significant value in the design process. Such prediction can help architects quickly generate preliminary designs, improve design efficiency, and reduce the workload associated with repeated modifications. To address this need, we propose FloorplanMAE, a self-supervised learning framework for restoring incomplete floor plans into complete ones. First, we developed a floor plan reconstruction dataset, FloorplanNet, specifically trained on architectural floor plans. Secondly, we propose a floor plan reconstruction method based on Masked Autoencoders (MAE), which reconstructs missing parts by masking sections of the floor plan and training a lightweight Vision Transformer (ViT). We evaluated the reconstruction accuracy of FloorplanMAE and compared it with state-of-the-art benchmarks. Additionally, we validated the model using real sketches from the early stages of architectural design. Experimental results show that the FloorplanMAE model can generate high-quality complete floor plans from incomplete partial plans. This framework provides a scalable solution for floor plan generation, with broad application prospects.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2506.08363.pdf)
-
-### 9. HouseLayout3D: A Benchmark and Training-free Baseline for 3D Layout Estimation in the Wild
-
-**Authors**: Valentin Bieri, Marie-Julie Rakotosaona, Keisuke Tateno, Francis Engelmann, Leonidas Guibas
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Current 3D layout estimation models are predominantly trained on synthetic datasets biased toward simplistic, single-floor scenes. This prevents them from generalizing to complex, multi-floor buildings, often forcing a per-floor processing approach that sacrifices global context. Few works have attempted to holistically address multi-floor layouts. In this work, we introduce HouseLayout3D, a real-world benchmark dataset, which highlights the limitations of existing research when handling expansive, architecturally complex spaces. Additionally, we propose MultiFloor3D, a baseline method leveraging recent advances in 3D reconstruction and 2D segmentation. Our approach significantly outperforms state-of-the-art methods on both our new and existing datasets. Remarkably, it does not require any layout-specific training.
-
-</details>
-
-**Links**: [💻 Code](https://github.com/valebi/house-layout-3d-eval)
-
-### 10. Human-in-the-Loop Local Corrections of 3D Scene Layouts via Infilling
-
-**Authors**: Christopher Xie, Armen Avetisyan, Henry Howard-Jenkins, Yawar Siddiqui, Julian Straub, Richard Newcombe, Vasileios Balntas, Jakob Engel
-
-<details>
-<summary><b>Abstract</b></summary>
-
-We present a novel human-in-the-loop approach to estimate 3D scene layout that uses human feedback from an egocentric standpoint. We study this approach through introduction of a novel local correction task, where users identify local errors and prompt a model to automatically correct them. Building on SceneScript, a state-of-the-art framework for 3D scene layout estimation that leverages structured language, we propose a solution that structures this problem as "infilling", a task studied in natural language processing. We train a multi-task version of SceneScript that maintains performance on global predictions while significantly improving its local correction ability. We integrate this into a human-in-the-loop system, enabling a user to iteratively refine scene layout estimates via a low-friction "one-click fix'' workflow. Our system enables the final refined layout to diverge from the training distribution, allowing for more accurate modelling of complex layouts.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2503.11806.pdf)
-
-### 11. Leveraging AI to Enhance XR in the AEC Industry
-
-**Authors**: Sepehr Alizadehsalehi, Ahmad Hadavi
-
-<details>
-<summary><b>Abstract</b></summary>
-
-The Architecture, Engineering, and Construction (AEC) industry will benefit significantly from integrating Artificial Intelligence (AI) and Extended Reality (XR) technologies. This paper explores the immense potential of AI-enhanced XR in tackling the industry challenges. While AI and XR are currently employed independently, this paper proposes a framework for their integration, aiming to optimize resource allocation, elevate safety protocols, and enhance project accuracy. Supported by a SWOT analysis, the study presents practical implications and proposed use cases showcasing the application of AI and XR in AEC projects. The paper provides a strategic roadmap for integrating AI-driven XR, emphasizing its potential to drive immediate and sustainable advancements in construction practices and set new industry benchmarks for innovation and efficiency.
-
-</details>
-
-**Links**: [📄 Paper](https://link.springer.com/chapter/10.1007/978-981-96-4051-5_105)
-
-### 12. MUSt3R: Multi-view Network for Stereo 3D Reconstruction
-
-**Authors**: Yohann Cabon, Lucas Stoffl, Leonid Antsfeld, Gabriela Csurka, Boris Chidlovskii, Jerome Revaud, Vincent Leroy
-
-<details>
-<summary><b>Abstract</b></summary>
-
-DUSt3R introduced a novel paradigm in geometric computer vision by proposing a model that can provide dense and unconstrained Stereo 3D Reconstruction of arbitrary image collections with no prior information about camera calibration nor viewpoint poses. Under the hood, however, DUSt3R processes image pairs, regressing local 3D reconstructions that need to be aligned in a global coordinate system. The number of pairs, growing quadratically, is an inherent limitation that becomes especially concerning for robust and fast optimization in the case of large image collections. In this paper, we propose an extension of DUSt3R from pairs to multiple views, that addresses all aforementioned concerns. Indeed, we propose a Multi-view Network for Stereo 3D Reconstruction, or MUSt3R, that modifies the DUSt3R architecture by making it symmetric and extending it to directly predict 3D structure for all views in a common coordinate frame. Second, we entail the model with a multi-layer memory mechanism which allows to reduce the computational complexity and to scale the reconstruction to large collections, inferring thousands of 3D pointmaps at high frame-rates with limited added complexity. The framework is designed to perform 3D reconstruction both offline and online, and hence can be seamlessly applied to SfM and visual SLAM scenarios showing state-of-the-art performance on various 3D downstream tasks, including uncalibrated Visual Odometry, relative camera pose, scale and focal estimation, 3D reconstruction and multi-view depth estimation.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2503.01661.pdf) | [🌐 Project Page](https://europe.naverlabs.com/research/publications/must3r-multi-view-network-for-stereo-3d-reconstruction/) | [💻 Code](https://github.com/naver/must3r)
-
-### 13. NeRFPrior: Learning Neural Radiance Field as a Prior for Indoor Scene Reconstruction
-
-**Authors**: Wenyuan Zhang, Emily Yue-ting Jia, Junsheng Zhou, Baorui Ma, Kanle Shi, Yu-Shen Liu, Zhizhong Han
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Recently, it has shown that priors are vital for neural implicit functions to reconstruct high-quality surfaces from multi-view RGB images. However, current priors require large-scale pre-training, and merely provide geometric clues without considering the importance of color. In this paper, we present NeRFPrior, which adopts a neural radiance field as a prior to learn signed distance fields using volume rendering for surface reconstruction. Our NeRF prior can provide both geometric and color clues, and also get trained fast under the same scene without additional data. Based on the NeRF prior, we are enabled to learn a signed distance function (SDF) by explicitly imposing a multi-view consistency constraint on each ray intersection for surface inference. Specifically, at each ray intersection, we use the density in the prior as a coarse geometry estimation, while using the color near the surface as a clue to check its visibility from another view angle. For the textureless areas where the multi-view consistency constraint does not work well, we further introduce a depth consistency loss with confidence weights to infer the SDF. Our experimental results outperform the state-of-the-art methods under the widely used benchmarks.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2503.18361.pdf)
-
-### 14. PolyGraph: A Graph-Based Method for Floorplan Reconstruction From 3D Scans
-
-**Authors**: Q. Sun, C. Fang, S. Liu, Y. Sun, Y. Shang, Y. He
-
-<details>
-<summary><b>Abstract</b></summary>
-
-The task of reconstructing indoor floorplans has become an increasingly popular subject, offering substantial benefits across various applications such as interior design, virtual reality, and robotics. Despite the growing interest, existing approaches frequently encounter challenges due to high computational costs and sensitivity to errors in primitive detection. In this article, we introduce PolyGraph, a new computational framework that combines a deep-learning based primitive detection network with an optimization-based reconstruction algorithm to facilitate high-quality reconstruction results. Specifically, we develop a novel guided wall point primitive estimation network capable of generating dense samples along wall boundaries. This network not only retains structural detail but also shows improved robustness in the detection phase. Then, PolyGraph utilizes wall points to establish a graph-based representation, formulating indoor floorplan reconstruction as a subgraph optimization problem. This approach significantly reduces the search space comparing to existing pixel-level optimization approaches. By utilizing “structural weight”, we seamlessly integrate the structural information of walls and rooms into graph representations, ensuring high-quality reconstruction results. Experimental results demonstrate PolyGraph's effectiveness and its advantages compared to other optimization-based approaches, showcasing its computational efficiency, and its ability to preserve structural integrity and capture fine details, as quantified by the structure metrics.
-
-</details>
-
-**Links**: [📄 Paper](https://ieeexplore.ieee.org/document/10899892)
-
-### 15. QuickSplat: Fast 3D Surface Reconstruction via Learned Gaussian Initialization
-
-**Authors**: Yueh-Cheng Liu, Lukas Höllein, Matthias Nießner, Angela Dai
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Surface reconstruction is fundamental to computer vision and graphics, enabling applications in 3D modeling, mixed reality, robotics, and more. Existing approaches based on volumetric rendering obtain promising results, but optimize on a per-scene basis, resulting in a slow optimization that can struggle to model under-observed or textureless regions. We introduce QuickSplat, which learns data-driven priors to generate dense initializations for 2D gaussian splatting optimization of large-scale indoor scenes. This provides a strong starting point for the reconstruction, which accelerates the convergence of the optimization and improves the geometry of flat wall structures. We further learn to jointly estimate the densification and update of the scene parameters during each iteration; our proposed densifier network predicts new Gaussians based on the rendering gradients of existing ones, removing the needs of heuristics for densification. Extensive experiments on large-scale indoor scene reconstruction demonstrate the superiority of our data-driven optimization. Concretely, we accelerate runtime by 8x, while decreasing depth errors by up to 48% in comparison to state of the art methods.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2505.05591.pdf) | [🌐 Project Page](https://liu115.github.io/quicksplat) | [💻 Code](https://github.com/liu115/QuickSplat) | [🎥 Video](https://youtu.be/2IA_gnFvFG8)
-
-### 16. Radiance Meshes for Volumetric Reconstruction
-
-**Authors**: Alexander Mai, Trevor Hedstrom, George Kopanas, Janne Kontkanen, Falko Kuester, Jonathan T. Barron
-
-<details>
-<summary><b>Abstract</b></summary>
-
-We introduce radiance meshes, a technique for representing radiance fields with constant density tetrahedral cells produced with a Delaunay tetrahedralization. Unlike a Voronoi diagram, a Delaunay tetrahedralization yields simple triangles that are natively supported by existing hardware. As such, our model is able to perform exact and fast volume rendering using both rasterization and ray-tracing. We introduce a new rasterization method that achieves faster rendering speeds than all prior radiance field representations (assuming an equivalent number of primitives and resolution) across a variety of platforms. Optimizing the positions of Delaunay vertices introduces topological discontinuities (edge flips). To solve this, we use a Zip-NeRF-style backbone which allows us to express a smoothly varying field even when the topology changes. Our rendering method exactly evaluates the volume rendering equation and enables high quality, real-time view synthesis on standard consumer hardware. Our tetrahedral meshes also lend themselves to a variety of exciting applications including fisheye lens distortion, physics-based simulation, editing, and mesh extraction.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2512.04076.pdf)
-
-### 17. ResPlan: A Large-Scale Vector-Graph Dataset of 17,000 Residential Floor Plans
-
-**Authors**: Mohamed Abouagour, Eleftherios Garyfallidis
-
-<details>
-<summary><b>Abstract</b></summary>
-
-We introduce ResPlan, a large-scale dataset of 17,000 detailed, structurally rich, and realistic residential floor plans, created to advance spatial AI research. Each plan includes precise annotations of architectural elements (walls, doors, windows, balconies) and functional spaces (such as kitchens, bedrooms, and bathrooms). ResPlan addresses key limitations of existing datasets such as RPLAN (Wu et al., 2019) and MSD (van Engelenburg et al., 2024) by offering enhanced visual fidelity and greater structural diversity, reflecting realistic and non-idealized residential layouts. Designed as a versatile, general-purpose resource, ResPlan supports a wide range of applications including robotics, reinforcement learning, generative AI, virtual and augmented reality, simulations, and game development. Plans are provided in both geometric and graph-based formats, enabling direct integration into simulation engines and fast 3D conversion. A key contribution is an open-source pipeline for geometry cleaning, alignment, and annotation refinement. Additionally, ResPlan includes structured representations of room connectivity, supporting graph-based spatial reasoning tasks. Finally, we present comparative analyses with existing benchmarks and outline several open benchmark tasks enabled by ResPlan. Ultimately, ResPlan offers a significant advance in scale, realism, and usability, providing a robust foundation for developing and benchmarking next-generation spatial intelligence systems.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2508.14006v1.pdf)
-
-### 18. Scan-to-BIM-to-Sim: Automated reconstruction of digital and simulation models from point clouds with applications on bridges
-
-**Authors**: Yunping Fang
-, Stergios-Aristoteles Mitoulis, Daniel Boddice
-,
-Jialiang Yu
-, Jelena Ninic
-
-<details>
-<summary><b>Abstract</b></summary>
-
-The automation of 3D geometric model reconstruction from point clouds is essential for efficient management of critical infrastructure assets like bridges, significantly streamlining and enhancing inspection and structural analysis tasks. However, existing automated frameworks frequently encounter challenges due to substantial computational demands and the difficulties when applied to defective point clouds, which arise from adverse environmental conditions, measurement errors, and limitations of surveying equipment. Major limitations also exist in achieving real-time data exchange and mapping between Building Information Modelling (BIM) models and simulation (Sim) models. To address this gap, this paper proposes a comprehensive Scan-to-BIM-to-Sim framework that efficiently reconstructs bridge BIM models from imperfect point clouds and supports bidirec tional mapping between BIM and numerical simulations. The method proposes an improved edge detection for contour extraction from imperfect point cloud and parametric modelling for the direct generation of 3D models within BIM software. Additionally, it automates the exchange between BIM models and simulation software, facilitating bidirectional operation for real-time analysis and visualisation. The framework, validated using the Arial Aqueduct Bridge case, reduces modelling time and computational demands, thereby streamlining con struction simulations with improved accuracy and cost efficiency. The dataset collected for model generation and validation is openly available at https://doi.org/10.17632/znxxsgn2ky.1.
-
-</details>
-
-**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S2590123025003743)
-
-### 19. ScanEdit: Hierarchically-Guided Functional 3D Scan Editing
-
-**Authors**: Mohamed el amine Boudjoghra, Ivan Laptev, Angela Dai
-
-<details>
-<summary><b>Abstract</b></summary>
-
-With the fast pace of 3D capture technology and resulting abundance of 3D data, effective 3D scene editing becomes essential for a variety of graphics applications. In this work we present ScanEdit, an instruction-driven method for functional editing of complex, real-world 3D scans. To model large and interdependent sets of ob- jectswe propose a hierarchically-guided approach. Given a 3D scan decomposed into its object instances, we first construct a hierarchical scene graph representation to enable effective, tractable editing. We then leverage reason- ing capabilities of Large Language Models (LLMs) and translate high-level language instructions into actionable commands applied hierarchically to the scene graph. Fi- nally, ScanEdit integrates LLM-based guidance with ex- plicit physical constraints and generates realistic scenes where object arrangements obey both physics and common sense. In our extensive experimental evaluation ScanEdit outperforms state of the art and demonstrates excellent re- sults for a variety of real-world scenes and input instruc- tions.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2504.15049.pdf) | [🌐 Project Page](https://aminebdj.github.io/scanedit/) | [💻 Code](https://github.com/aminebdj/ScanEdit) | [🎥 Video](https://www.youtube.com/watch?v=Dfmu2g6pVlg)
-
-### 20. WildGS-SLAM: Monocular Gaussian Splatting SLAM in Dynamic Environments
-
-**Authors**: Jianhao Zheng, Zihan Zhu, Valentin Bieri, Marc Pollefeys, Songyou Peng, Iro Armeni
-
-<details>
-<summary><b>Abstract</b></summary>
-
-We present WildGS-SLAM, a robust and efficient monocular RGB SLAM system designed to handle dynamic environments by leveraging uncertainty-aware geometric mapping. Unlike traditional SLAM systems, which assume static scenes, our approach integrates depth and uncertainty information to enhance tracking, mapping, and rendering performance in the presence of moving objects. We introduce an uncertainty map, predicted by a shallow multi-layer perceptron and DINOv2 features, to guide dynamic object removal during both tracking and mapping. This uncertainty map enhances dense bundle adjustment and Gaussian map optimization, improving reconstruction accuracy. Our system is evaluated on multiple datasets and demonstrates artifact-free view synthesis. Results showcase WildGS-SLAM's superior performance in dynamic environments compared to state-of-the-art methods.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2504.03886.pdf) | [🌐 Project Page](https://wildgs-slam.github.io/) | [💻 Code](https://github.com/GradientSpaces/WildGS-SLAM.git) | [🎥 Video](https://www.youtube.com/watch?v=xXuolzFvddQ&t=11s)
-
-### 2024
-
-### 1. Automated BIM generation for large-scale indoor complex environments based on deep learning
-
-**Authors**: Mostafa Mahmoud, Wu Chen, Yang Yang, Yaxin Li
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Large volumes of 3D parametric datasets, such as building information modeling (BIM), are the foundation for developing and applying smart city and digital twin technologies. Those datasets are also considered valuable tools for efficiently managing rebuilt structures during the operation and maintenance stages. Nevertheless, current approaches developed for the scan-to-BIM process rely on manual or semi-automatic procedures and insufficiently leverage semantic data in point clouds. These methods struggle to accurately represent large-scale indoor complex layouts and extract details from irregular-shaped unstructured elements, causing inefficiencies in BIM model generation. To address these issues, we propose an innovative scan-to-BIM framework based on deep learning algorithms and raw point cloud data, enabling the automatic generation of 3D models for both structured and unstructured indoor elements. Initially, we propose an enhanced deep learning neural network to improve the point clouds' semantic segmentation accuracy. Subsequently, an efficient workflow is developed to reconstruct 3D building models of structured indoor scenes. The proposed workflow can reconstruct large-scale data with multiple room layouts of Manhattan or non-Manhattan structures and reconstruct 3D models automatically by using a BIM parametric algorithm implemented in Revit software. Moreover, we introduce a robust method for unstructured elements to automatically generate corresponding 3D BIM models, even when the incorporating semantic information is incomplete. The proposed approach was evaluated on synthetic and real data for different scales and complexities of indoor scenes. The results of the experiments demonstrate that the improved model significantly enhances the overall semantic segmentation accuracy compared to the baseline models. The proposed scan-to-BIM framework is efficient for indoor element 3D reconstruction, achieving precision, recall, and F-score values ranging from 96% to 99%. The generated BIM models are competitive with traditional methods regarding model completeness and geometric accuracy.
-
-</details>
-
-**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S0926580524001122)
-
-### 2. FRI-Net: Floorplan Reconstruction via Room-wise Implicit Representation
-
-**Authors**: Honghao Xu, Juzhan Xu, Zeyu Huang, Pengfei Xu, Hui Huang, Ruizhen Hu
-
-<details>
-<summary><b>Abstract</b></summary>
-
-In this paper, we introduce a novel method called FRI-Net for 2D floorplan reconstruction from 3D point cloud. Existing methods typically rely on corner regression or box regression, which lack consideration for the global shapes of rooms. To address these issues, we propose a novel approach using a room-wise implicit representation with structural regularization to characterize the shapes of rooms in floorplans. By incorporating geometric priors of room layouts in floorplans into our training strategy, the generated room polygons are more geometrically regular. We have conducted experiments on two challenging datasets, Structured3D and SceneCAD. Our method demonstrates improved performance compared to state-of-the-art methods, validating the effectiveness of our proposed representation for floorplan reconstruction.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2407.10687v1.pdf) | [💻 Code](https://github.com/Daisy-1227/FRI-Net)
-
-### 3. Infrastructure digital twin technology: A new paradigm for future construction industry
-
-**Authors**: Taofeeq D. Moshood, James OB. Rotimi, Wajiha Shahzad, J.A. Bamgbade
-
-<details>
-<summary><b>Abstract</b></summary>
-
-The construction industry has traditionally been slow to adopt digital technology, resulting in inefficient workflows, frequent cost overruns, and delays. Moreover, its fragmented structure, inherent to market dynamics, exacerbates these challenges. Embracing digitalization and transitioning to Industry 4.0 can substantially enhance efficiency and productivity in construction through increased innovation and improved collaboration, ultimately reducing information gaps and data discrepancies. This study aims to assess the potential integration of digital twin technology across various construction stages, spanning from initial design to project delivery. Existing literature emphasizes the transformative power of digital twin technology in advancing building innovation and environmental sustainability. These virtual replicas are crucial in optimizing industrial manufacturing by harmonizing production processes and societal interactions. A focused examination of digital twin technology applications in construction highlights its ability to streamline coordination and facilitate data sharing among stakeholders. Property owners increasingly recognise the value of digital twin technology in local contexts, driving the digitization of design and collaboration methods in construction. Integrating digital twin technology right from a project's inception and extending it across design phases optimizes project delivery, enhances asset quality, and contributes to societal sustainability. As the nexus between digitalization and sustainability goals strengthens, the construction industry stands at the cusp of a significant transformative journey.
-
-</details>
-
-**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S0160791X24000678)
-
-### 4. Integrating Data from Terrestrial Laser Scanning and Unmanned Aerial Vehicle with LiDAR for BIM Developing
-
-**Authors**: Wioleta Blaszczak-Bak, Andrea Masiero, Paweł Bąk, Kamil Kuderko
-
-<details>
-<summary><b>Abstract</b></summary>
-
-The use of Building Information Modeling (BIM) in building construction and management is becoming increasingly common. Nevertheless, the generation of BIM models for already existing buildings is still an operation requiring a significant human effort. The generation of a geometrically reliable and complete BIM model requires geometric information on all the building parts. Since acquiring such information with a unique acquisition tool is quite hard, integration of data acquired with different acquisition tools and platforms is strongly recommended in order to obtain a geometrically complete 3D description of the building. This work presents a procedure for integrating data acquired with Terrestrial Laser Scanning (TLS), UAV (Unmanned Aerial Vehicle) LiDAR (Light Detection and Ranging) and Smartphone with LiDAR, showing the obtained results on two case studies, two buildings in the campus of the University of Warmia and Mazury in Olsztyn. Finally, a BIM model have been successfully generated in both the case studies by using the Blender software.
-
-</details>
-
-**Links**: [📄 Paper](https://isprs-archives.copernicus.org/articles/XLVIII-1-2024/25/2024/isprs-archives-XLVIII-1-2024-25-2024.pdf)
-
-### 5. LoopSplat: Loop Closure by Registering 3D Gaussian Splats
-
-**Authors**: Liyuan Zhu, Yue Li, Erik Sandström, Shengyu Huang, Konrad Schindler, Iro Armeni
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Simultaneous Localization and Mapping (SLAM) based on 3D Gaussian Splats (3DGS) has recently shown promise towards more accurate, dense 3D scene maps. However, existing 3DGS-based methods fail to address the global consistency of the scene via loop closure and/or global bundle adjustment. To this end, we propose LoopSplat, which takes RGB-D images as input and performs dense mapping with 3DGS submaps and frame-to-model tracking. LoopSplat triggers loop closure online and computes relative loop edge constraints between submaps directly via 3DGS registration, leading to improvements in efficiency and accuracy over traditional global-to-local point cloud registration. It uses a robust pose graph optimization formulation and rigidly aligns the submaps to achieve global consistency. Evaluation on the synthetic Replica and real-world TUM-RGBD, ScanNet, and ScanNet++ datasets demonstrates competitive or superior tracking, mapping, and rendering compared to existing methods for dense RGB-D SLAM. Code is available at loopsplat.github.io.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2408.10154.pdf) | [🌐 Project Page](https://loopsplat.github.io/) | [💻 Code](https://github.com/GradientSpaces/LoopSplat)
-
-### 6. NC-SDF: Enhancing Indoor Scene Reconstruction Using Neural SDFs with View-Dependent Normal Compensation
-
-**Authors**: Ziyi Chen, Xiaolong Wu, Yu Zhang
-
-<details>
-<summary><b>Abstract</b></summary>
-
-State-of-the-art neural implicit surface representations have achieved impressive results in indoor scene reconstruction by incorporating monocular geometric priors as additional supervision. However, we have observed that multi-view inconsistency between such priors poses a challenge for high-quality reconstructions. In response, we present NC-SDF, a neural signed distance field (SDF) 3D reconstruction framework with view-dependent normal compensation (NC). Specifically, we integrate view-dependent biases in monocular normal priors into the neural implicit representation of the scene. By adaptively learning and correcting the biases, our NC-SDF effectively mitigates the adverse impact of inconsistent supervision, enhancing both the global consistency and local details in the reconstructions. To further refine the details, we introduce an informative pixel sampling strategy to pay more attention to intricate geometry with higher information content. Additionally, we design a hybrid geometry modeling approach to improve the neural implicit representation. Experiments on synthetic and real-world datasets demonstrate that NC-SDF outperforms existing approaches in terms of reconstruction quality.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2405.00340.pdf)
-
-### 7. Novel View Synthesis of Structural Color Objects Created by Laser Markings
-
-**Authors**: Prakash Naikade
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Transforming physical object into its high quality 3D digital twin using novel view
-synthesis is crucial for researchers in the domain of automatic laser marking of any
-color image on different metal substrates. Current Radiance Field methods have significantly advanced novel view synthesis of scenes captured with multiple photos or videos. But, they struggle to represent the scene with shiny objects. Moreover, multiview reconstruction of reflective objects with structural colors is extremely challenging because specular reflections are view-dependent and thus violate the multiview consistency, which is the cornerstone for most multiview reconstruction methods.
-However, there is a general lack of synthetic datasets for objects with structural colors and a literature review on state-of-the-art (SOTA) novel view synthesis methods
-for this kind of materials. Addressing these issues, we introduce a novel synthetic
-dataset that is used to conduct quantitative and qualitative analysis on a SOTA
-novel view synthesis methods. We demonstrate different techniques to improve the
-scene representation of laser printed planar structural color objects, focusing on the
-3D Gaussian Splatting (3D-GS) method, which performs exceptionally well on our
-synthetic dataset. Our techniques, such as using geometric prior of planar structural
-color objects while initializing scene with sparse structure-from-motion (SfM) point
-cloud and the Anisotropy Regularizer, significantly improves the visual quality of view
-synthesis. We design different capture setups to acquire images of objects and evaluate the visual quality of the scene with different capture setups. Additionally, we present comprehensive experimentation to demonstrate methods to simulate structural color objects using just captured images of laser-printed primaries. This comprehensive research aims to contribute to the advancement of novel view synthesis methods for scenes involving reflective objects with structural colors.
-
-</details>
-
-**Links**: [📄 Paper](https://prakashknaikade.github.io/publications/nvs_structural_color_object/NVS_Structural_Color_Objects_compressed.pdf)
-
-### 8. PolyRoom: Room-aware Transformer for Floorplan Reconstruction
-
-**Authors**: Yuzhou Liu, Lingjie Zhu, Xiaodong Ma, Hanqiao Ye, Xiang Gao, Xianwei Zheng, Shuhan Shen
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Reconstructing geometry and topology structures from raw unstructured data has always been an important research topic in indoor mapping research. In this paper, we aim to reconstruct the floorplan with a vectorized representation from point clouds. Despite significant advancements achieved in recent years, current methods still encounter several challenges, such as missing corners or edges, inaccuracies in corner positions or angles, self-intersecting or overlapping polygons, and potentially implausible topology. To tackle these challenges, we present PolyRoom, a room-aware Transformer that leverages uniform sampling representation, room-aware query initialization, and room-aware self-attention for floorplan reconstruction. Specifically, we adopt a uniform sampling floorplan representation to enable dense supervision during training and effective utilization of angle information. Additionally, we propose a room-aware query initialization scheme to prevent non-polygonal sequences and introduce room-aware self-attention to enhance memory efficiency and model performance. Experimental results on two widely used datasets demonstrate that PolyRoom surpasses current state-of-the-art methods both quantitatively and qualitatively. Our code is available at: https://github.com/3dv-casia/PolyRoom/.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2407.10439v1.pdf) | [💻 Code](https://github.com/3dv-casia/PolyRoom/)
-
-### 9. SceneScript: Reconstructing Scenes With An Autoregressive Structured Language Model
-
-**Authors**: Armen Avetisyan, Christopher Xie, Henry Howard-Jenkins, Tsun-Yi Yang, Samir Aroudj, Suvam Patra, Fuyang Zhang, Duncan Frost, Luke Holland, Campbell Orme, Jakob Engel, Edward Miller, Richard Newcombe, Vasileios Balntas
-
-<details>
-<summary><b>Abstract</b></summary>
-
-We introduce SceneScript, a method that directly produces full scene models as a sequence of structured language commands using an autoregressive, token-based approach. Our proposed scene representation is inspired by recent successes in transformers & LLMs, and departs from more traditional methods which commonly describe scenes as meshes, voxel grids, point clouds or radiance fields. Our method infers the set of structured language commands directly from encoded visual data using a scene language encoder-decoder architecture. To train SceneScript, we generate and release a large-scale synthetic dataset called Aria Synthetic Environments consisting of 100k high-quality in-door scenes, with photorealistic and ground-truth annotated renders of egocentric scene walkthroughs. Our method gives state-of-the art results in architectural layout estimation, and competitive results in 3D object detection. Lastly, we explore an advantage for SceneScript, which is the ability to readily adapt to new commands via simple additions to the structured language, which we illustrate for tasks such as coarse 3D object part reconstruction.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2403.13064.pdf) | [🌐 Project Page](https://www.projectaria.com/scenescript/) | [💻 Code](https://github.com/facebookresearch/scenescript) | [🎥 Video](https://www.projectaria.com/scenescript/#)
-
-### 10. WAFFLE: Multimodal Floorplan Understanding in the Wild
-
-**Authors**: Keren Ganon, Morris Alper, Rachel Mikulinsky, Hadar Averbuch-Elor
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Buildings are a central feature of human culture and are increasingly being analyzed with computational methods. However, recent works on computational building understanding have largely focused on natural imagery of buildings, neglecting the fundamental element defining a building's structure -- its floorplan. Conversely, existing works on floorplan understanding are extremely limited in scope, often focusing on floorplans of a single semantic category and region (e.g. floorplans of apartments from a single country). In this work, we introduce WAFFLE, a novel multimodal floorplan understanding dataset of nearly 20K floorplan images and metadata curated from Internet data spanning diverse building types, locations, and data formats. By using a large language model and multimodal foundation models, we curate and extract semantic information from these images and their accompanying noisy metadata. We show that WAFFLE enables progress on new building understanding tasks, both discriminative and generative, which were not feasible using prior datasets. We will publicly release WAFFLE along with our code and trained models, providing the research community with a new foundation for learning the semantics of buildings.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2412.00955v2.pdf) | [🌐 Project Page](https://tau-vailab.github.io/WAFFLE/) | [💻 Code](https://github.com/TAU-VAILab/WAFFLE)
-
-### 2023
-
-### 1. 3D Gaussian Splatting for Real-Time Radiance Field Rendering
-
-**Authors**: Bernhard Kerbl, Georgios Kopanas, Thomas Leimkühler, George Drettakis
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Radiance Field methods have recently revolutionized novel-view synthesis of scenes captured with multiple photos or videos. However, achieving high visual quality still requires neural networks that are costly to train and render, while recent faster methods inevitably trade off speed for quality. For unbounded and complete scenes (rather than isolated objects) and 1080p resolution rendering, no current method can achieve real-time display rates. We introduce three key elements that allow us to achieve state-of-the-art visual quality while maintaining competitive training times and importantly allow high-quality real-time (>= 30 fps) novel-view synthesis at 1080p resolution. First, starting from sparse points produced during camera calibration, we represent the scene with 3D Gaussians that preserve desirable properties of continuous volumetric radiance fields for scene optimization while avoiding unnecessary computation in empty space; Second, we perform interleaved optimization/density control of the 3D Gaussians, notably optimizing anisotropic covariance to achieve an accurate representation of the scene; Third, we develop a fast visibility-aware rendering algorithm that supports anisotropic splatting and both accelerates training and allows realtime rendering. We demonstrate state-of-the-art visual quality and real-time rendering on several established datasets.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2308.04079.pdf) | [🌐 Project Page](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/) | [💻 Code](https://github.com/graphdeco-inria/gaussian-splatting) | [🎥 Video](https://youtu.be/T_kXY43VZnk)
-
-### 2. A-Scan2BIM: Assistive Scan to Building Information Modeling
-
-**Authors**: Weilian Song, Jieliang Luo, Dale Zhao, Yan Fu, Chin-Yi Cheng, Yasutaka Furukawa
-
-<details>
-<summary><b>Abstract</b></summary>
-
-This paper proposes an assistive system for architects that converts a large-scale point cloud into a standardized digital representation of a building for Building Information Modeling (BIM) applications. The process is known as Scan-to-BIM, which requires many hours of manual work even for a single building floor by a professional architect. Given its challenging nature, the paper focuses on helping architects on the Scan-to-BIM process, instead of replacing them. Concretely, we propose an assistive Scan-to-BIM system that takes the raw sensor data and edit history (including the current BIM model), then auto-regressively predicts a sequence of model editing operations as APIs of a professional BIM software (i.e., Autodesk Revit). The paper also presents the first building-scale Scan2BIM dataset that contains a sequence of model editing operations as the APIs of Autodesk Revit. The dataset contains 89 hours of Scan2BIM modeling processes by professional architects over 16 scenes, spanning over 35,000 m^2. We report our system's reconstruction quality with standard metrics, and we introduce a novel metric that measures how natural the order of reconstructed operations is. A simple modification to the reconstruction module helps improve performance, and our method is far superior to two other baselines in the order metric. We will release data, code, and models at a-scan2bim.github.io.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2311.18166.pdf) | [🌐 Project Page](https://a-scan2bim.github.io/) | [💻 Code](https://github.com/weiliansong/A-Scan2BIM)
-
-### 3. Automating the retrospective generation of As-is BIM models using machine learning
-
-**Authors**: Phillip Schönfelder, 
-Angelina Aziz, 
-Benedikt Faltin, Markus König
-
-<details>
-<summary><b>Abstract</b></summary>
-
-The manual creation of digital models of existing buildings for operations and maintenance is difficult and time-consuming. Machine learning and deep learning techniques have recently emerged to help automate this process. To assess the numerous publications in the field, this paper presents a systematic literature review and highlights potential research gaps and development opportunities. Following the procedure suggested by PRISMA (Preferred Reporting Items for Systematic Reviews and Meta-Analyses), 95 eligible publications are selected for the final review. The findings indicate that future research should explore alternative data sources, extract component attributes alongside geometries, and address retrospective infrastructure modeling, which remains widely unexplored. This paper sheds new insights on the latest research on using ML approaches to generate digital models of existing buildings, with the aim of providing guidance for researchers seeking ideas for future studies in this area.
-
-</details>
-
-**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S0926580523001978)
-
-### 4. DUSt3R: Geometric 3D Vision Made Easy
-
-**Authors**: Shuzhe Wang, Vincent Leroy, Yohann Cabon, Boris Chidlovskii, Jerome Revaud
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Multi-view stereo reconstruction (MVS) in the wild requires to first estimate the camera parameters e.g. intrinsic and extrinsic parameters. These are usually tedious and cumbersome to obtain, yet they are mandatory to triangulate corresponding pixels in 3D space, which is the core of all best performing MVS algorithms. In this work, we take an opposite stance and introduce DUSt3R, a radically novel paradigm for Dense and Unconstrained Stereo 3D Reconstruction of arbitrary image collections, i.e. operating without prior information about camera calibration nor viewpoint poses. We cast the pairwise reconstruction problem as a regression of pointmaps, relaxing the hard constraints of usual projective camera models. We show that this formulation smoothly unifies the monocular and binocular reconstruction cases. In the case where more than two images are provided, we further propose a simple yet effective global alignment strategy that expresses all pairwise pointmaps in a common reference frame. We base our network architecture on standard Transformer encoders and decoders, allowing us to leverage powerful pretrained models. Our formulation directly provides a 3D model of the scene as well as depth information, but interestingly, we can seamlessly recover from it, pixel matches, relative and absolute camera. Exhaustive experiments on all these tasks showcase that the proposed DUSt3R can unify various 3D vision tasks and set new SoTAs on monocular/multi-view depth estimation as well as relative pose estimation. In summary, DUSt3R makes many geometric 3D vision tasks easy.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2312.14132.pdf) | [💻 Code](https://github.com/naver/dust3r)
-
-### 5. Deep Learning from Parametrically Generated Virtual Buildings for Real-World Object Recognition
-
-**Authors**: Mohammad Alawadhi, Wei Yan
-
-<details>
-<summary><b>Abstract</b></summary>
-
-We study the use of parametric building information modeling (BIM) to automatically generate training data for artificial neural networks (ANNs) to recognize building objects in photos. Teaching artificial intelligence (AI) machines to detect building objects in images is the foundation toward AI-assisted semantic 3D reconstruction of existing buildings. However, there exists the challenge of acquiring training data which is typically human-annotated, that is, unless a computer machine can generate high-quality data to train itself for a certain task. In that vein, we trained ANNs solely on realistic computer-generated images of 3D BIM models which were parametrically and automatically generated using the BIMGenE program. The ANN training result demonstrated generalizability and good semantic segmentation on a test case as well as arbitrary photos of buildings that are outside the range of the training data, which is significant for the future of training AI with generated data for solving real-world architectural problems.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2302.05283.pdf)
-
-### 6. I2-SDF: Intrinsic Indoor Scene Reconstruction and Editing via Raytracing in Neural SDFs
-
-**Authors**: Jingsen Zhu, Yuchi Huo, Qi Ye, Fujun Luan, Jifan Li, Dianbing Xi, Lisha Wang, Rui Tang, Wei Hua, Hujun Bao, Rui Wang
-
-<details>
-<summary><b>Abstract</b></summary>
-
-In this work, we present I$^2$-SDF, a new method for intrinsic indoor scene reconstruction and editing using differentiable Monte Carlo raytracing on neural signed distance fields (SDFs). Our holistic neural SDF-based framework jointly recovers the underlying shapes, incident radiance and materials from multi-view images. We introduce a novel bubble loss for fine-grained small objects and error-guided adaptive sampling scheme to largely improve the reconstruction quality on large-scale indoor scenes. Further, we propose to decompose the neural radiance field into spatially-varying material of the scene as a neural field through surface-based, differentiable Monte Carlo raytracing and emitter semantic segmentations, which enables physically based and photorealistic scene relighting and editing applications. Through a number of qualitative and quantitative experiments, we demonstrate the superior quality of our method on indoor scene reconstruction, novel view synthesis, and scene editing compared to state-of-the-art baselines.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2303.07634.pdf) | [🌐 Project Page](https://jingsenzhu.github.io/i2-sdf/) | [💻 Code](https://github.com/jingsenzhu/i2-sdf)
-
-### 7. Modeling of 3D geometry uncertainty in Scan-to-BIM automatic indoor reconstruction
-
-**Authors**: M. Jarząbek-Rychard, H.-G. Maas
-
-<details>
-<summary><b>Abstract</b></summary>
-
-The rapidly expanding field of Scan-to-BIM applications highlights the importance of model uncertainty assessment in describing the quality of modeling results. Although there have been recent research advancements in point cloud-based building modeling, there has been limited investigation into accurately analyzing error propagation. This paper estimates the geometry uncertainty in 3D modeling based on a strict application of geodetic stochastic modeling. Statistical uncertainty is incorporated into the building reconstruction process and procedures that enable self-verification within this process are developed. The method can be successfully used to evaluate the dimensional uncertainty of generated BIMs, which is especially important in the field of civil engineering with high accuracy requirements concerning metric quality control. Follow-up research will also consider systematic errors and apply the methods to other 3D point cloud acquisition techniques.
-
-</details>
-
-**Links**: [📄 Paper](https://www.researchgate.net/publication/374352855_Modeling_of_3D_geometry_uncertainty_in_Scan-to-BIM_automatic_indoor_reconstruction)
-
-### 8. PanoContext-Former: Panoramic Total Scene Understanding with a Transformer
-
-**Authors**: Yuan Dong, Chuan Fang, Liefeng Bo, Zilong Dong, Ping Tan
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Panoramic image enables deeper understanding and more holistic perception of $360^\circ$ surrounding environment, which can naturally encode enriched scene context information compared to standard perspective image. Previous work has made lots of effort to solve the scene understanding task in a bottom-up form, thus each sub-task is processed separately and few correlations are explored in this procedure. In this paper, we propose a novel method using depth prior for holistic indoor scene understanding which recovers the objects' shapes, oriented bounding boxes and the 3D room layout simultaneously from a single panorama. In order to fully utilize the rich context information, we design a transformer-based context module to predict the representation and relationship among each component of the scene. In addition, we introduce a real-world dataset for scene understanding, including photo-realistic panoramas, high-fidelity depth images, accurately annotated room layouts, and oriented object bounding boxes and shapes. Experiments on the synthetic and real-world datasets demonstrate that our method outperforms previous panoramic scene understanding methods in terms of both layout estimation and 3D object detection.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2305.12497.pdf) | [🌐 Project Page](https://fangchuan.github.io/PanoContext-Former/) | [💻 Code](https://github.com/fdyuandong/ReplicaPano-Dataset)
-
-### 9. Project Aria: A New Tool for Egocentric Multi-Modal AI Research
-
-**Authors**: Jakob Engel, Kiran Somasundaram, Michael Goesele, Albert Sun, Alexander Gamino, Andrew Turner, Arjang Talattof, Arnie Yuan, Bilal Souti, Brighid Meredith, Cheng Peng, Chris Sweeney, Cole Wilson, Dan Barnes, Daniel DeTone, David Caruso, Derek Valleroy, Dinesh Ginjupalli, Duncan Frost, Edward Miller, Elias Mueggler, Evgeniy Oleinik, Fan Zhang, Guruprasad Somasundaram, Gustavo Solaira, Harry Lanaras, Henry Howard-Jenkins, Huixuan Tang, Hyo Jin Kim, Jaime Rivera, Ji Luo, Jing Dong, Julian Straub, Kevin Bailey, Kevin Eckenhoff, Lingni Ma, Luis Pesqueira, Mark Schwesinger, Maurizio Monge, Nan Yang, Nick Charron, Nikhil Raina, Omkar Parkhi, Peter Borschowa, Pierre Moulon, Prince Gupta, Raul Mur-Artal, Robbie Pennington, Sachin Kulkarni, Sagar Miglani, Santosh Gondi, Saransh Solanki, Sean Diener, Shangyi Cheng, Simon Green, Steve Saarinen, Suvam Patra, Tassos Mourikis, Thomas Whelan, Tripti Singh, Vasileios Balntas, Vijay Baiyya, Wilson Dreewes, Xiaqing Pan, Yang Lou, Yipu Zhao, Yusuf Mansour, Yuyang Zou, Zhaoyang Lv, Zijian Wang, Mingfei Yan, Carl Ren, Renzo De Nardi, Richard Newcombe
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Egocentric, multi-modal data as available on future augmented reality (AR) devices provides unique challenges and opportunities for machine perception. These future devices will need to be all-day wearable in a socially acceptable form-factor to support always available, context-aware and personalized AI applications. Our team at Meta Reality Labs Research built the Aria device, an egocentric, multi-modal data recording and streaming device with the goal to foster and accelerate research in this area. In this paper, we describe the Aria device hardware including its sensor configuration and the corresponding software tools that enable recording and processing of such data.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2308.13561.pdf) | [🌐 Project Page](https://www.projectaria.com/)
-
-### 10. ScanNet++: A High-Fidelity Dataset of 3D Indoor Scenes
-
-**Authors**: Chandan Yeshwanth, Yueh-Cheng Liu, Matthias Nießner, Angela Dai
-
-<details>
-<summary><b>Abstract</b></summary>
-
-We present ScanNet++, a large-scale dataset that couples together capture of high-quality and commodity-level geometry and color of indoor scenes. Each scene is captured with a high-end laser scanner at sub-millimeter resolution, along with registered 33-megapixel images from a DSLR camera, and RGB-D streams from an iPhone. Scene reconstructions are further annotated with an open vocabulary of semantics, with label-ambiguous scenarios explicitly annotated for comprehensive semantic understanding. ScanNet++ enables a new real-world benchmark for novel view synthesis, both from high-quality RGB capture, and importantly also from commodity-level images, in addition to a new benchmark for 3D semantic scene understanding that comprehensively encapsulates diverse and ambiguous semantic labeling scenarios. Currently, ScanNet++ contains 460 scenes, 280,000 captured DSLR images, and over 3.7M iPhone RGBD frames.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2308.11417.pdf) | [🌐 Project Page](https://scannetpp.mlsg.cit.tum.de/scannetpp/) | [💻 Code](https://github.com/scannetpp/scannetpp) | [🎥 Video](https://www.youtube.com/watch?v=E6P9e2r6M8I)
-
-### 11. SurfelNeRF: Neural Surfel Radiance Fields for Online Photorealistic Reconstruction of Indoor Scenes
-
-**Authors**: Yiming Gao, Yan-Pei Cao, Ying Shan
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Online reconstructing and rendering of large-scale indoor scenes is a long-standing challenge. SLAM-based methods can reconstruct 3D scene geometry progressively in real time but can not render photorealistic results. While NeRF-based methods produce promising novel view synthesis results, their long offline optimization time and lack of geometric constraints pose challenges to efficiently handling online input. Inspired by the complementary advantages of classical 3D reconstruction and NeRF, we thus investigate marrying explicit geometric representation with NeRF rendering to achieve efficient online reconstruction and high-quality rendering. We introduce SurfelNeRF, a variant of neural radiance field which employs a flexible and scalable neural surfel representation to store geometric attributes and extracted appearance features from input images. We further extend the conventional surfel-based fusion scheme to progressively integrate incoming input frames into the reconstructed global neural scene representation. In addition, we propose a highly-efficient differentiable rasterization scheme for rendering neural surfel radiance fields, which helps SurfelNeRF achieve $10\times$ speedups in training and inference time, respectively. Experimental results show that our method achieves the state-of-the-art 23.82 PSNR and 29.58 PSNR on ScanNet in feedforward inference and per-scene optimization settings, respectively.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2304.08971.pdf) | [🌐 Project Page](https://gymat.github.io/SurfelNeRF-web/) | [💻 Code](https://github.com/Gymat/SurfelNeRF/tree/unofficial)
-
-### 2022
-
-### 1. Connecting the Dots: Floorplan Reconstruction Using Two-Level Queries
-
-**Authors**: Yuanwen Yue, Theodora Kontogianni, Konrad Schindler, Francis Engelmann
-
-<details>
-<summary><b>Abstract</b></summary>
-
-We address 2D floorplan reconstruction from 3D scans. Existing approaches typically employ heuristically designed multi-stage pipelines. Instead, we formulate floorplan reconstruction as a single-stage structured prediction task: find a variable-size set of polygons, which in turn are variable-length sequences of ordered vertices. To solve it we develop a novel Transformer architecture that generates polygons of multiple rooms in parallel, in a holistic manner without hand-crafted intermediate stages. The model features two-level queries for polygons and corners, and includes polygon matching to make the network end-to-end trainable. Our method achieves a new state-of-the-art for two challenging datasets, Structured3D and SceneCAD, along with significantly faster inference than previous methods. Moreover, it can readily be extended to predict additional information, i.e., semantic room types and architectural elements like doors and windows. Our code and models are available at: https://github.com/ywyue/RoomFormer.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2211.15658.pdf) | [🌐 Project Page](https://ywyue.github.io/RoomFormer/) | [💻 Code](https://github.com/ywyue/RoomFormer) | [🎥 Video](https://www.youtube.com/watch?v=yzYe4yVN1NU)
-
-### 2. Object verification based on deep learning point feature comparison for scan-to-BIM
-
-**Authors**: Boyu Wang, Qian Wang, Jack C.P. Cheng, Chao Yin
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Building information models (BIMs) have been widely adopted in current construction projects to enhance the efficiency of facility maintenance operations. As-built BIMs can reflect the actual conditions of facilities and thus as-built BIM reconstruction has shown great significance in digital twin generation, building health monitoring, facility management and urban renewal. Laser scanners are capable to capture dense 3D measurements of the environment in a fast and highly accurate way. Therefore, laser scanning data have been widely used for as-built BIM generation. Although research efforts have been made on how to automatically achieve “Scan-to-BIM”, there are still gaps from applying current solutions to real scenarios. One of the challenges is that some irrelevant point clusters may be wrongly recognized as the desired object in the detection stage. This study presents a novel object verification approach based on deep learning point feature comparison to improve the accuracy of automated BIM reconstruction process. Firstly, a KPConv-based deep neural network is developed and trained to perform 3D point feature computation. Then through comparing point features calculated for extracted point clusters and as-designed BIM generated point clouds, point feature distance maps are generated. Afterwards, to automatically analyze the generated feature distance maps, a dataset including simulated positive and negative instances is created based on ModelNet40. And a tiny neural network is established and trained on the prepared dataset to acquire ability of distinguishment. To validate the feasibility of the proposed technique, experiments were conducted on both artificial point clouds and real scan data collected in one MEP room in a water treatment work in Hong Kong. It is demonstrated that the proposed technique can successfully filter out all the false positives in the Scan-to-BIM process, improving reconstruction accuracy significantly.
-
-</details>
-
-**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/abs/pii/S0926580522003880)
-
-### 2021
-
-### 1. DeepPanoContext: Panoramic 3D Scene Understanding with Holistic Scene Context Graph and Relation-based Optimization
-
-**Authors**: Cheng Zhang, Zhaopeng Cui, Cai Chen, Shuaicheng Liu, Bing Zeng, Hujun Bao, Yinda Zhang
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Panorama images have a much larger field-of-view thus naturally encode enriched scene context information compared to standard perspective images, which however is not well exploited in the previous scene understanding methods. In this paper, we propose a novel method for panoramic 3D scene understanding which recovers the 3D room layout and the shape, pose, position, and semantic category for each object from a single full-view panorama image. In order to fully utilize the rich context information, we design a novel graph neural network based context model to predict the relationship among objects and room layout, and a differentiable relationship-based optimization module to optimize object arrangement with well-designed objective functions on-the-fly. Realizing the existing data are either with incomplete ground truth or overly-simplified scene, we present a new synthetic dataset with good diversity in room layout and furniture placement, and realistic image quality for total panoramic 3D scene understanding. Experiments demonstrate that our method outperforms existing methods on panoramic scene understanding in terms of both geometry accuracy and object arrangement. Code is available at https://chengzhag.github.io/publication/dpc.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2108.10743.pdf)
-
-### 2. HEAT: Holistic Edge Attention Transformer for Structured Reconstruction
-
-**Authors**: Jiacheng Chen, Yiming Qian, Yasutaka Furukawa
-
-<details>
-<summary><b>Abstract</b></summary>
-
-This paper presents a novel attention-based neural network for structured reconstruction, which takes a 2D raster image as an input and reconstructs a planar graph depicting an underlying geometric structure. The approach detects corners and classifies edge candidates between corners in an end-to-end manner. Our contribution is a holistic edge classification architecture, which 1) initializes the feature of an edge candidate by a trigonometric positional encoding of its end-points; 2) fuses image feature to each edge candidate by deformable attention; 3) employs two weight-sharing Transformer decoders to learn holistic structural patterns over the graph edge candidates; and 4) is trained with a masked learning strategy. The corner detector is a variant of the edge classification architecture, adapted to operate on pixels as corner candidates. We conduct experiments on two structured reconstruction tasks: outdoor building architecture and indoor floorplan planar graph reconstruction. Extensive qualitative and quantitative evaluations demonstrate the superiority of our approach over the state of the art. Code and pre-trained models are available at https://heat-structured-reconstruction.github.io.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2111.15143.pdf)
-
-### 3. MonteFloor: Extending MCTS for Reconstructing Accurate Large-Scale Floor Plans
-
-**Authors**: Sinisa Stekovic, Mahdi Rad, Friedrich Fraundorfer, Vincent Lepetit
-
-<details>
-<summary><b>Abstract</b></summary>
-
-We propose a novel method for reconstructing floor plans from noisy 3D point clouds. Our main contribution is a principled approach that relies on the Monte Carlo Tree Search (MCTS) algorithm to maximize a suitable objective function efficiently despite the complexity of the problem. Like previous work, we first project the input point cloud to a top view to create a density map and extract room proposals from it. Our method selects and optimizes the polygonal shapes of these room proposals jointly to fit the density map and outputs an accurate vectorized floor map even for large complex scenes. To do this, we adapted MCTS, an algorithm originally designed to learn to play games, to select the room proposals by maximizing an objective function combining the fitness with the density map as predicted by a deep network and regularizing terms on the room shapes. We also introduce a refinement step to MCTS that adjusts the shape of the room proposals. For this step, we propose a novel differentiable method for rendering the polygonal shapes of these proposals. We evaluate our method on the recent and challenging Structured3D and Floor-SP datasets and show a significant improvement over the state-of-the-art, without imposing any hard constraints nor assumptions on the floor plan configurations.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2103.11161.pdf) | [🌐 Project Page](https://www.tugraz.at/index.php?id=52770)
-
-### 4. Residential floor plan recognition and reconstruction
-
-**Authors**: Xiaolei Lv, Shengchu Zhao, Xinyang Yu, Binqiang Zhao
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Recognition and reconstruction of residential floor plan drawings are important and challenging in design, decoration, and architectural remodeling fields. An automatic framework is provided that accurately recognizes the structure, type, and size of the room, and outputs vectorized 3D reconstruction results. Deep segmentation and detection neural networks are utilized to extract room structural information. Key points detection network and cluster analysis are utilized to calculate scales of rooms. The vectorization of room information is processed through an iterative optimization-based method. The system significantly increases accuracy and generalization ability, compared with existing methods. It outperforms other systems in floor plan segmentation and vectorization process, especially inclined wall detection.
-
-</details>
-
-**Links**: [📄 Paper](https://openaccess.thecvf.com/content/CVPR2021/papers/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.pdf#:~:text=Recognition%20and%20reconstruction%20of%20residential,system%20significantly%20in%02creases%20accuracy%20and)
-
-### 2020
-
-### 1. NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis
-
-**Authors**: Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, Ren Ng
-
-<details>
-<summary><b>Abstract</b></summary>
-
-We present a method that achieves state-of-the-art results for synthesizing novel views of complex scenes by optimizing an underlying continuous volumetric scene function using a sparse set of input views. Our algorithm represents a scene using a fully-connected (non-convolutional) deep network, whose input is a single continuous 5D coordinate (spatial location $(x,y,z)$ and viewing direction $(\theta, \phi)$) and whose output is the volume density and view-dependent emitted radiance at that spatial location. We synthesize views by querying 5D coordinates along camera rays and use classic volume rendering techniques to project the output colors and densities into an image. Because volume rendering is naturally differentiable, the only input required to optimize our representation is a set of images with known camera poses. We describe how to effectively optimize neural radiance fields to render photorealistic novel views of scenes with complicated geometry and appearance, and demonstrate results that outperform prior work on neural rendering and view synthesis. View synthesis results are best viewed as videos, so we urge readers to view our supplementary video for convincing comparisons.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2003.08934.pdf) | [🌐 Project Page](https://www.matthewtancik.com/nerf) | [💻 Code](https://github.com/bmild/nerf) | [🎥 Video](https://youtu.be/JuH79E8rdKc)
-
-### 2019
-
-### 1. 3D Scene Graph: A Structure for Unified Semantics, 3D Space, and Camera
-
-**Authors**: Iro Armeni, Zhi-Yang He, JunYoung Gwak, Amir R. Zamir, Martin Fischer, Jitendra Malik, Silvio Savarese
-
-<details>
-<summary><b>Abstract</b></summary>
-
-A comprehensive semantic understanding of a scene is important for many applications - but in what space should diverse semantic information (e.g., objects, scene categories, material types, texture, etc.) be grounded and what should be its structure? Aspiring to have one unified structure that hosts diverse types of semantics, we follow the Scene Graph paradigm in 3D, generating a 3D Scene Graph. Given a 3D mesh and registered panoramic images, we construct a graph that spans the entire building and includes semantics on objects (e.g., class, material, and other attributes), rooms (e.g., scene category, volume, etc.) and cameras (e.g., location, etc.), as well as the relationships among these entities.   However, this process is prohibitively labor heavy if done manually. To alleviate this we devise a semi-automatic framework that employs existing detection methods and enhances them using two main constraints: I. framing of query images sampled on panoramas to maximize the performance of 2D detectors, and II. multi-view consistency enforcement across 2D detections that originate in different camera locations.
-Dataset: https://3dscenegraph.stanford.edu/database.html
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/1910.02527.pdf) | [🌐 Project Page](https://3dscenegraph.stanford.edu/index.html)
-
-### 2. DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation
-
-**Authors**: Jeong Joon Park, Peter Florence, Julian Straub, Richard Newcombe, Steven Lovegrove
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Computer graphics, 3D computer vision and robotics communities have produced multiple approaches to representing 3D geometry for rendering and reconstruction. These provide trade-offs across fidelity, efficiency and compression capabilities. In this work, we introduce DeepSDF, a learned continuous Signed Distance Function (SDF) representation of a class of shapes that enables high quality shape representation, interpolation and completion from partial and noisy 3D input data. DeepSDF, like its classical counterpart, represents a shape's surface by a continuous volumetric field: the magnitude of a point in the field represents the distance to the surface boundary and the sign indicates whether the region is inside (-) or outside (+) of the shape, hence our representation implicitly encodes a shape's boundary as the zero-level-set of the learned function while explicitly representing the classification of space as being part of the shapes interior or not. While classical SDF's both in analytical or discretized voxel form typically represent the surface of a single shape, DeepSDF can represent an entire class of shapes. Furthermore, we show state-of-the-art performance for learned 3D shape representation and completion while reducing the model size by an order of magnitude compared with previous work.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/1901.05103.pdf)
-
-### 3. Structured3D: A Large Photo-realistic Dataset for Structured 3D Modeling
-
-**Authors**: Jia Zheng, Junfei Zhang, Jing Li, Rui Tang, Shenghua Gao, Zihan Zhou
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Recently, there has been growing interest in developing learning-based methods to detect and utilize salient semi-global or global structures, such as junctions, lines, planes, cuboids, smooth surfaces, and all types of symmetries, for 3D scene modeling and understanding. However, the ground truth annotations are often obtained via human labor, which is particularly challenging and inefficient for such tasks due to the large number of 3D structure instances (e.g., line segments) and other factors such as viewpoints and occlusions. In this paper, we present a new synthetic dataset, Structured3D, with the aim of providing large-scale photo-realistic images with rich 3D structure annotations for a wide spectrum of structured 3D modeling tasks. We take advantage of the availability of professional interior designs and automatically extract 3D structures from them. We generate high-quality images with an industry-leading rendering engine. We use our synthetic dataset in combination with real images to train deep networks for room layout estimation and demonstrate improved performance on benchmark datasets.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/1908.00222.pdf)
-
-### 2018
-
-### 1. FloorNet: A Unified Framework for Floorplan Reconstruction from 3D Scans
-
-**Authors**: Chen Liu, Jiaye Wu, Yasutaka Furukawa
-
-<details>
-<summary><b>Abstract</b></summary>
-
-The ultimate goal of this indoor mapping research is to automatically reconstruct a floorplan simply by walking through a house with a smartphone in a pocket. This paper tackles this problem by proposing FloorNet, a novel deep neural architecture. The challenge lies in the processing of RGBD streams spanning a large 3D space. FloorNet effectively processes the data through three neural network branches: 1) PointNet with 3D points, exploiting the 3D information; 2) CNN with a 2D point density image in a top-down view, enhancing the local spatial reasoning; and 3) CNN with RGB images, utilizing the full image information. FloorNet exchanges intermediate features across the branches to exploit the best of all the architectures. We have created a benchmark for floorplan reconstruction by acquiring RGBD video streams for 155 residential houses or apartments with Google Tango phones and annotating complete floorplan information. Our qualitative and quantitative evaluations demonstrate that the fusion of three branches effectively improves the reconstruction quality. We hope that the paper together with the benchmark will be an important step towards solving a challenging vector-graphics reconstruction problem. Code and data are available at https://github.com/art-programmer/FloorNet.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/1804.00090.pdf)
-
-### 2017
-
-### 1. A Survey of Structure from Motion
-
-**Authors**: Onur Ozyesil, Vladislav Voroninski, Ronen Basri, Amit Singer
-
-<details>
-<summary><b>Abstract</b></summary>
-
-The structure from motion (SfM) problem in computer vision is the problem of recovering the three-dimensional ($3$D) structure of a stationary scene from a set of projective measurements, represented as a collection of two-dimensional ($2$D) images, via estimation of motion of the cameras corresponding to these images. In essence, SfM involves the three main stages of (1) extraction of features in images (e.g., points of interest, lines, etc.) and matching these features between images, (2) camera motion estimation (e.g., using relative pairwise camera positions estimated from the extracted features), and (3) recovery of the $3$D structure using the estimated motion and features (e.g., by minimizing the so-called reprojection error). This survey mainly focuses on relatively recent developments in the literature pertaining to stages (2) and (3). More specifically, after touching upon the early factorization-based techniques for motion and structure estimation, we provide a detailed account of some of the recent camera location estimation methods in the literature, followed by discussion of notable techniques for $3$D structure recovery. We also cover the basics of the simultaneous localization and mapping (SLAM) problem, which can be viewed as a specific case of the SfM problem. Further, our survey includes a review of the fundamentals of feature extraction and matching (i.e., stage (1) above), various recent methods for handling ambiguities in $3$D scenes, SfM techniques involving relatively uncommon camera models and image features, and popular sources of data and SfM software.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/1701.08493.pdf)
-
-### 2. Joint 2D-3D-Semantic Data for Indoor Scene Understanding
-
-**Authors**: Iro Armeni, Sasha Sax, Amir R. Zamir, Silvio Savarese
-
-<details>
-<summary><b>Abstract</b></summary>
-
-We present a dataset of large-scale indoor spaces that provides a variety of mutually registered modalities from 2D, 2.5D and 3D domains, with instance-level semantic and geometric annotations. The dataset covers over 6,000m2 and contains over 70,000 RGB images, along with the corresponding depths, surface normals, semantic annotations, global XYZ images (all in forms of both regular and 360{\deg} equirectangular images) as well as camera information. It also includes registered raw and semantically annotated 3D meshes and point clouds. The dataset enables development of joint and cross-modal learning models and potentially unsupervised approaches utilizing the regularities present in large-scale indoor spaces. The dataset is available here: http://3Dsemantics.stanford.edu/
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/1702.01105.pdf)
-
-### 2016
-
-### 1. Past, Present, and Future of Simultaneous Localization And Mapping: Towards the Robust-Perception Age
-
-**Authors**: Cesar Cadena, Luca Carlone, Henry Carrillo, Yasir Latif, Davide Scaramuzza, Jose Neira, Ian Reid, John J. Leonard
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Simultaneous Localization and Mapping (SLAM)consists in the concurrent construction of a model of the environment (the map), and the estimation of the state of the robot moving within it. The SLAM community has made astonishing progress over the last 30 years, enabling large-scale real-world applications, and witnessing a steady transition of this technology to industry. We survey the current state of SLAM. We start by presenting what is now the de-facto standard formulation for SLAM. We then review related work, covering a broad set of topics including robustness and scalability in long-term mapping, metric and semantic representations for mapping, theoretical performance guarantees, active SLAM and exploration, and other new frontiers. This paper simultaneously serves as a position paper and tutorial to those who are users of SLAM. By looking at the published research with a critical eye, we delineate open challenges and new research issues, that still deserve careful scientific investigation. The paper also contains the authors' take on two questions that often animate discussions during robotics conferences: Do robots need SLAM? and Is SLAM solved?
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/1606.05830.pdf)
-
-### 2. Structure-from-Motion Revisited
-
-**Authors**: Schonberger Johannes Lutz, Frahm Jan-Michael
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Incremental Structure-from-Motion is a prevalent strategy for 3D reconstruction from unordered image collections. While incremental reconstruction systems have
-tremendously advanced in all regards, robustness, accuracy, completeness, and scalability remain the key problems
-towards building a truly general-purpose pipeline. We propose a new SfM technique that improves upon the state of
-the art to make a further step towards this ultimate goal.
-The full reconstruction pipeline is released to the public as
-an open-source implementation.
-
-</details>
-
-**Links**: [📄 Paper](https://openaccess.thecvf.com/content_cvpr_2016/papers/Schonberger_Structure-From-Motion_Revisited_CVPR_2016_paper.pdf)
-
-## Sustainability and Environmental Performance
-
-### 2025
-
-### 1. A framework of BIM-IoT application in construction projects through multiple case study approach
-
-**Authors**: Hong Yixin, Guo Fangyu
-
-<details>
-<summary><b>Abstract</b></summary>
-
-This study investigates the integration of Building Information Modeling (BIM) and the Internet of Things (IoT) in construction projects to enhance efficiency, safety, and lifecycle monitoring. Despite the significant potential of BIM and IoT to facilitate the transformation of the construction industry, existing research lacks a comprehensive framework that addresses its interoperability challenges, data security concerns, and real-world implementation barriers. To address this gap, a multiple case study approach was employed, incorporating semi-structured interviews, document analysis, and real-world project evaluations. The results find that standardized protocols, data encryption, and modular IoT devices are essential for effective BIM-IoT adoption across different construction phases. The proposed framework offers a structured approach for construction teams to effectively utilize BIM and IoT, facilitating smarter and more sustainable project management. The contribution of this paper resides in the detailed analysis of the BIM-IoT applications, clearly demonstrating its advantages, such as improving building productivity and safety, and its potential to align with China’s sustainable urban development goals. The study also provides a forward-looking prediction of the future development trend of BIM-IoT in China, offering valuable insights for construction project teams and decision makers. By demonstrating the structured framework and its practical application, this study provides guidance for the industry’s transition to smarter and safer construction practices.
-
-</details>
-
-**Links**: [📄 Paper](http://www.sciexplor.com/articles/jbde.2025.0004.html)
-
-### 2. Advanced integration of BIM and VR in the built environment: Enhancing sustainability and resilience in urban development
-
-**Authors**: Ali Shehadeh, Odey Alshboul, Madhar M Taamneh, Aiman Q Jaradat, Ahmad H Alomari, Mai Arar
-
-<details>
-<summary><b>Abstract</b></summary>
-
-This study explores the strategic integration of Building Information Modeling (BIM) and Virtual Reality (VR) within the built environment, addressing the growing complexities of urban development. Through a detailed examination of BIM applications, the research highlights a 37 % reduction in design conflicts and iterations, thereby enhancing design precision and efficiency in urban construction projects. Simultaneously, VR technology is demonstrated to increase stakeholder engagement by 62 % and improve spatial awareness by 48 %, fostering greater community participation and inclusivity in the development process. The combined use of BIM and VR optimizes not only construction workflows but also considerably enhances environmental and socio-economic outcomes, such as a remarkable 20 % reduction in greenhouse gas emissions. It will, therefore, support advanced urban infrastructure development and provide a replicable model for sustainable and resilient urban planning. This research underlines the crucial contribution of integrating BIM and VR technologies to the development of sustainability and resilience of the built environment.
-
-</details>
-
-**Links**: [📄 Paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11870248/)
-
-### 3. Advancing circular economy transition in the Nigeria construction industry through digital twin technology adoption
-
-**Authors**: Imoleayo A. Awodele,
-Emmanuel C. Eze,
-Angel M. Gento Municio,
-Molusiwa S. Ramabodu, Nathaniel A. Olatunde
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Despite the environmentally detrimental consequences of the prevailing traditional linear project delivery model, research on the influence of digital twinning (DT) in facilitating the transition to a circular economy (CE) within the construction sector of developing nations has garnered limited attention. This research examines the role of digital twinning (DT) in advancing the circular economy (CE) within the construction industry, with the aim of accelerating progress towards achieving sustainable development goals. A comprehensive literature assessment was conducted to ascertain the impact of digital transformation on the transition to a circular economy and the advantages of this digital twinning (DT) in the construction industry’s efforts towards circular economy transition. A survey questionnaire was developed and distributed to construction professionals utilizing convenience sample methods. The collected data, exhibiting a response rate of 57.76% and a reliability of above 0.750, were analyzed utilizing frequency and percentage, mean item score, normalization value, Kruskal–Wallis H-test and Kendall’s coefficient of concordance. This study identified seven major benefits of adopting Digital Twinning to enhance the circular economy transition efforts in Nigeria’s construction industry. These are: waste reduction and recycling, supporting circular economy transition, customer insights, asset management and efficiency, new business opportunities, advanced monitoring and prediction and boost production and profits. Also, Kendall’s W test indicated a significant statistical consensus among survey participants for the advantages of enhancing digital twins in the construction activities’ circular economy transition. Research on the incorporation of digital twinning (DT) in the circular economy transition is limited, particularly in the Nigerian setting. This study represents a pioneering investigation into the role of Digital Twinning in facilitating the transition to a Circular Economy in Nigeria, a domain where research is limited.
-
-</details>
-
-**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S2949736125000351)
-
-### 4. Applications and Trends of Machine Learning in Building Energy Optimization: A Bibliometric Analysis
-
-**Authors**: Jingyi Liu,
-Jianfei Chen
-
-<details>
-<summary><b>Abstract</b></summary>
-
-With the rapid advancement of machine learning (ML) technologies, their innovative applications in enhancing building energy efficiency are increasingly prominent. Utilizing tools such as VOSviewer and Bibliometrix, this study systematically reviews the body of the related literature, focusing on the key applications and emerging trends of cutting-edge ML techniques, including deep learning, reinforcement learning, and unsupervised learning, in optimizing building energy performance and managing carbon emissions. First, this paper delves into the role of ML in building performance prediction, intelligent energy management, and sustainable design, with particular emphasis on how smart building systems leverage real-time data analysis and prediction to optimize energy usage and significantly reduce carbon emissions dynamically. Second, this study summarizes the technological evolution and future trends of ML in the building sector and identifies critical challenges faced by the field. The findings provide a technology-driven perspective for advancing sustainability in the construction industry and offer valuable insights for future research directions.
-
-</details>
-
-**Links**: [📄 Paper](https://www.mdpi.com/2075-5309/15/7/994#:~:text=analysis%20suggests%20that%20future%20research,innovation%20in%20the%20built%20environment)
-
-### 5. BIM-driven digital twin for demolition waste management of existing residential buildings
-
-**Authors**: Sakdirat Kaewunruen, Yi-Hsuan Lin, Yuxin Guo
-
-<details>
-<summary><b>Abstract</b></summary>
-
-With the accelerated development of urbanisation, the construction industry has significantly contributed to environmental degradation due to its substantial energy consumption and construction and demolition (C&D) waste generation. By assessing the ecological impact of the construction industry alongside existing demolition waste management practices, this article aims to develop a conceptual framework to optimise building demolition, transportation, and recycling processes. This study integrates a BIM-driven Digital Twin framework into C&D waste management, aiming to maximise economic benefits and advance the sustainable development of construction practices. Specifically, it simulates the demolition process of an existing townhouse in Washington, D.C., using BIM-Navisworks software and employs a digital twin to update demolition data in real-time. This approach optimises the classification and transportation of demolition waste, enhancing efficiency and sustainability. The study validates the proposed conceptual framework for building demolition waste management through case simulation. Additionally, it utilises BIM-Dynamo software to analyse the economic benefits of demolition waste recycling, demonstrating that a high recycling rate can significantly enhance economic outcomes. The proposed framework leverages BIM technology to optimise demolition and recycling processes, providing a valuable reference for selecting demolition waste management strategies for other buildings.
-
-</details>
-
-**Links**: [📄 Paper](https://www.nature.com/articles/s41598-025-13938-9)
-
-### 6. Construction Progress Monitoring with Drone + BIM Integration
-
-**Authors**: Santosh Kumar Bhoda, BSMA Enterprises
-
-<details>
-<summary><b>Abstract</b></summary>
-
-In an era where real-time information and digital precision are pivotal to infrastructure development, the fusion of drones and Building Information Modeling (BIM) has emerged as a powerful approach for construction progress monitoring. This integration is transforming how construction teams track project timelines, assess work quality, and manage deviations on-site. By combining high-resolution aerial visuals from drones with the structured data environment of BIM, stakeholders gain a comprehensive and dynamic understanding of construction progress. This article explores the technical foundations, benefits, and real-world implications of using Drone + BIM integration in construction progress tracking.
-
-</details>
-
-**Links**: [📄 Paper](https://bsmaenterprises.com/blog-1/f/construction-progress-monitoring-with-drone-bim-integration)
-
-### 7. Demand response optimization for smart grid integrated buildings: Review of technology enablers landscape and innovation challenges
-
-**Authors**: Liana Toderean, Tudor Cioara, Ionut Anghel, 
-Elissaios Sarmas,
-Vasilis Michalakopoulos, Vangelis Marinakis
-
-<details>
-<summary><b>Abstract</b></summary>
-
-This paper provides a comprehensive overview and analysis of state-of-the-art technological advancements in building integration insmartgrids, with a focus on enabling their participation in demand response (DR). We consolidate knowledge from high-quality sources on the main research topics, helping researchers, building owners, and energy stakeholders to stay informed about the latest developments, trends, and best practices inthe field.Our review covers reputable journals papers that offer technological enablers and evidence-based insights onbuilding interoperability, AI-based energy prediction models, demand optimization and coordination, data privacy, and decentralization.Managing buildings in DR requires careful coordination and control,thuswe provide valuable insights into current practices and opportunities by examining the EU innovation projects and identifying technological innovation trends that aim to increase resident engagement by addressing regulatory and socio-economic concerns. We also discuss the main barriers to buildings’ participation in DR identifying future research directions in the field and providing mitigation insights to the building owners and grid operators. Our findings indicate that despite their potentialbuildingparticipation is limited due to the absence of a clear regulatory framework and lack of mature technologiesto fully support and automate theprogramsimplementation. While AI and optimization technologiesshow promise for improving demand coordination, challenges such as limited interoperability between buildings and energy grids, privacy concerns, and insufficient financial incentivization significantly limit the building’s participation in DR.
-
-</details>
-
-**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S0378778824011836)
-
-### 8. Formalizing Information for Disassembly Potenttial of Buildings Using BIM and Labeled Property Graphs
-
-**Authors**: Kasimir Forth, Catherine De Wolf
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Building circularity assessments aim to reduce waste and primary material demand. Indicators like the disassembly potential (DP) assess the detachability of elements and layers, but Building Information Modeling (BIM) lacks sufficiently detailed DP information in early design stages. Key information, such as connection types between elements and components, is missing in open BIM formats such as Industry Foundation Classes (IFC). To address this, we propose a new method using labeled property graphs to represent component-specific archetypes based on BIM. Tested in a case study, this approach enhances assessments of DP, providing designers with improved insights for early-stage circularity decisions.
-
-</details>
-
-**Links**: [📄 Paper](https://ec-3.org/publications/conference/paper/?id=EC32025_197)
-
-### 9. From point cloud to material passport: automated creation of material passports of existing steel structures based on point clouds
-
-**Authors**: Noichl Florian, Forth Kasimir, de Wolf Catherine, Borrmann André, Moreno-Rangel Alejandro, Kumar Bimal
-
-<details>
-<summary><b>Abstract</b></summary>
-
-This paper presents a step towards automated material passport creation and environmental assessment of existing buildings based on point cloud data. While the construction industry faces environmental challenges requiring circular economy principles, existing buildings lack comprehensive material information for sustainability analysis. Our method transforms point clouds of steel beam structures into semantically rich building information models through a streamlined workflow. Following geometric processing, we emphasize semantic enrichment by identifying standard steel cross-sections and linking components with environmental datasets. This connects geometric representations to material properties, connection types, and impact factors – essential data for circularity metrics. Evaluated on a steel roof structure, our approach generates enriched IFC4 models enabling automated calculation of material circularity indicator, disassembly potential, and life cycle assessment in the Madaster platform. This methodology demonstrates the potential for scalable environmental assessment of steel structural elements, advancing toward comprehensive building assessment without manual inventory processes.
-
-</details>
-
-**Links**: [📄 Paper](https://strathprints.strath.ac.uk/id/eprint/93257)
-
-### 10. Integrating IoT and BIM for Sustainable Construction Management: A Data-Driven Civil Engineering Model
-
-**Authors**: Pankaj Mudholkar, Megha Mudholkar, Muneshwara M S, Shiyam V, Surrya Prakash Dillibabu, T. Mamatha
-
-<details>
-<summary><b>Abstract</b></summary>
-
-The construction sector is quickly changing and adopting digital technologies that support the good use of the environment, cost-effectivity, and smart decision-making. The Internet of Things (IoT) and Building Information Modeling (BIM), which are some of these innovations, have come out as revolutionary in contemporary civil engineering. The paper submits a data driven model that harnesses the synergy between IoT and BIM to play a greater role in the management of sustainable construction. Constructed IoT sensors present in building constructions sites produce real-time information about energy consumption, the health of structures, environmental conditions, and the functionality of equipment, all which are dynamically passed to BIM systems. The integration can support predictive analytics in alerts, and project workflow, and eventually proactive resource allocation, minimizing environmental impact, and project safety. The adoption of a hybrid approach based on field-level sensors systems and 3D modelling and remote analytics reveals that via interactive tools implementing smart monitoring and BIM visualization, one can achieve measurable sustainability results. The simulated case analysis gives a practical demonstration of the IoT-BIM model during the enhancement of operational transparency, achievement of carbon reduction objectives, and interdisciplinary cooperation in multifaceted projects. The findings highlight the importance of digital twins as a key way of supporting smart construction and green development goals.
-
-</details>
-
-**Links**: [📄 Paper](https://eksplorium.com/index.php/journal/article/view/273)
-
-### 11. Regenarative Twin - Morgan Sindall Construction
-
-**Authors**: Morgan Sindall Construction
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Putting regenrative design principles at the heart of development.
-
-</details>
-
-**Links**: [📄 Paper](https://insights.morgansindallconstruction.com/story/regenerative-twin/)
-
-### 12. Streamlining LEED Submittals: How AI Agents Automate Documentation for Green Building Consultants
-
-**Authors**: Datagrid
-
-<details>
-<summary><b>Abstract</b></summary>
-
-LEED certification paperwork has become a drain on your time and focus. Chasing updates from project teams, reconciling spreadsheets, and formatting submissions leaves little room for actual consulting. Errors creep in. Deadlines slip. Clients get frustrated. And you’re stuck in admin instead of driving strategy.
-
-Thanks to advancements in Agentic AI, it’s now becoming easier than ever to automate the grunt work and keep certification efforts on track. Datagrid’s data connectors link AI agents directly to your project tools and systems. In this article, you’ll see how AI agents handle the process end-to-end.
-
-</details>
-
-**Links**: [📄 Paper](https://datagrid.com/blog/ai-agents-automate-leed-certification-documentation)
-
-### 13. Towards Tracking Circular Construction Supply Chains: Data Carrier Performance in Realistic Experiments
-
-**Authors**: Clara P Blum, Brandon S Byers, Jens J Hunhevicz, Catherine De Wolf
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Due to the need for effective track and trace systems to enable circular construction supply chains (CCSC), this study evaluated the performance of radio-frequency identification (RFID), near-field communication (NFC) chips, quick response (QR) codes and Direct Product Marking (DPM) in identifying and reading material information. Key metrics - detection speed, error rates, and user experience - were assessed and gave consideration to the differential impacts of controlled and uncontrolled experimental conditions. Findings indicate that, relative to DPM, RFID and NFC offered improved usability and reduced reading times, with minimal differences in error rates; results were strongly influenced by usability and experimental context.
-
-</details>
-
-**Links**: [📄 Paper](https://ec-3.org/publications/conference/paper/?id=EC32025_324)
-
-### 14. Towards the Use of AI for Assessing Construction Sustainability: A State-of-the-Art Review on BREEAM Assessment
-
-**Authors**: Tala Kasim, Maxwell Antwi-Afari
-
-<details>
-<summary><b>Abstract</b></summary>
-
-In response to the environmental concerns arising from construction activities, prioritising sustainability is crucial. The Building Research Establishment Environmental Assessment Method (BREEAM) is one of the methods of assessing building sustainability. Obtaining BREEAM certification is paramount for ensuring high-performance buildings. This paper introduces a novel framework that integrates artificial intelligence (AI) to optimise and automate the BREEAM assessment process. The Scopus database was used to retrieve relevant articles by following a standardised systematic literature review process. The study synthesises previous research findings in two themes—Automating BREEAM Assessment Methods and the Application of AI in Construction—to formulate a streamlined AI-driven methodology for BREEAM certification. The proposed process suggests that AI technologies can enhance the accuracy, efficiency, and comprehensiveness of BREEAM assessments and eventually lead to improved building performance. This can be achieved by automating complex evaluation tasks and providing real-time data analysis. The outcomes underscore the potential of AI to transform traditional assessment frameworks, paving the way for more sustainable, efficient, and resilient building practices.
-
-</details>
-
-**Links**: [📄 Paper](https://link.springer.com/10.1007/978-3-031-95890-8_2)
-
-### 15. Upcycling of regular wood trunks and logs using wave function collapse (WFC), augmented reality (AR), and mixed reality (MR) technologies for circular design
-
-**Authors**: Jianing Luo, Boyuan Yu, Yuan Jiang, Adam Fingrut, Adam Holloway
-
-<details>
-<summary><b>Abstract</b></summary>
-
-In sustainable building design and construction (SBDC), irregular timber elements, such as unprocessed logs, forks, and branches, remain significantly underutilised due to their complex geometries, which complicate reconfiguration and lead to considerable material waste. This study addresses this challenge by introducing a computational workflow that optimises the upcycling of irregular wood into feasible building components. The CAAD contribution of this work lies in applying Wave Function Collapse (WFC) as a digital aggregation method, enabling automated spatial configuration of irregular wood elements. This method integrates 3D scanning, algorithmic aggregation, and finite element analysis (FEA) to assess structural viability, ensuring efficient material utilisation. For joinery experiments, our engineering application involves the development of a heat-moldable joinery method using recycled PET bottles, which eliminates the need for adhesives or mechanical fasteners. By leveraging the heat-shrink properties of PET, structurally stable connections are formed between upcycled wood components. The proposed framework is demonstrated through the fabrication of functional furniture and pavilion-scale architectural prototypes, showcasing an innovative approach to material repurposing. This study advances Computer-Aided Architectural Design (CAAD) and construction techniques by 3D scanning, volumetric design, AI-driven building scale ideation and Augmented Reality (AR) and MR-assisted assembly, demonstrating scalable solutions for sustainable architecture and circular material reuse.
-
-</details>
-
-**Links**: [📄 Paper](https://www.nature.com/articles/s41598-025-20398-8)
-
-### 2024
-
-### 1. A Systematic Review of the Applications of AI in a Sustainable Building’s Lifecycle
-
-**Authors**: Bukola Adejoke Adewale, Vincent Onyedikachi Ene, Babatunde Fatai Ogunbayo,
-Clinton Ohis Aigbavboa
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Buildings significantly contribute to global energy consumption and greenhouse gas emissions. This systematic literature review explores the potential of artificial intelegence (AI) to enhance sustainability throughout a building’s lifecycle. The review identifies AI technologies applicable to sustainable building practices, examines their influence, and analyses implementation challenges. The findings reveal AI’s capabilities in optimising energy efficiency, enabling predictive maintenance, and aiding in design simulation. Advanced machine learning algorithms facilitate data-driven analysis, while digital twins provide real-time insights for decision-making. The review also identifies barriers to AI adoption, including cost concerns, data security risks, and implementation challenges. While AI offers innovative solutions for energy optimisation and environmentally conscious practices, addressing technical and practical challenges is crucial for its successful integration in sustainable building practices.
-
-</details>
-
-**Links**: [📄 Paper](https://www.mdpi.com/2075-5309/14/7/2137)
-
-### 2. Augmented reality applications in construction productivity: A systematic literature review
-
-**Authors**: Zhidong Xu,
-Zhenan Feng,
-Mostafa Babaeian Jelodar, Brian H.W. Guo
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Augmented reality (AR) has been extensively researched for its applications in the construction industry. However, there is limited focus on its effects on productivity. This paper aims to bridge the gap by using a systematic literature review to investigate AR applications in the planning, design, and construction phases, focusing on their mechanisms for enhancing productivity. The paper classifies AR applications by their target construction tasks, features, and factors contributing to improved productivity. Additionally, it proposes a framework for prototyping AR applications and evaluating their effects on productivity. Key findings reveal several contributions: the need for further investigation of AR for positioning and hazard notification tasks; the utilisation of different augmentation methods, display tools, and tracking methods based on specific construction tasks; AR’s positive impact on productivity in design review, discrepancy check, assembly, and hazard notification, while future research on evaluating productivity in progress management, planning simulation, and positioning.
-
-</details>
-
-**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S1474034624004464)
-
-### 3. Can Digital Matchmaking Boost Circular Construction? Lessons from Reusing the Glass of Centre Pompidou
-
-**Authors**: Catherine De Wolf,
-Sultan Çetin,
-Nancy Bocken
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Digitalization is driving innovation towards a circular economy in various industries---but the construction industry is lagging behind. The building industry, a growth sector due to increasing urbanization, is at the same time actively depleting our resources, generating waste, and emitting greenhouse gases at a tremendous scale and speed. This chapter argues that we must urgently shift from a linear take--make--waste model to a circular one whereby we utilize our resources wisely and keep them from becoming waste. The experience of reusing the glass from the Centre Pompidou in Paris, France, confronted the architects with the many challenges we face when renovating a building with circular principles. Finding architects to use the iconic bent glass instead of crushing it for recycling (or worse, for disposing it in a landfill) turned out to be a time-consuming task. Adopting artificial intelligence and digital information sharing to match materials for reuse with people who can reuse them is exactly what the construction industry needs for a paradigm shift towards circularity.
-
-</details>
-
-**Links**: [📄 Paper](https://www.researchgate.net/publication/375716849_Can_Digital_Matchmaking_Boost_Circular_Construction_Lessons_from_Reusing_the_Glass_of_Centre_Pompidou)
-
-### 4. Combining Building Information Model and Life Cycle Assessment for Defining Circular Economy Strategies
-
-**Authors**: Annie Guerriero, Federico Busio, Michael Saidani, Calin Boje, Nico Mack
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Although the construction industry has the potential to implement circular economy (CE) principles, the sector suffers from a veritable lack of initiatives to develop circular and regenerative design principles. However, existing buildings intended to be demolished could be considered as material banks for future constructions, with the aim to exploit anthropogenic resources, extend material/product efficiency, and reduce the extraction of natural resources. This concept of buildings as material banks is being studied more and more in the scientific literature, but it still requires the existing building stock to be fully digitalized, thus making materials reusable in new buildings starting from the architectural design stage. Moreover, the decision process regarding CE strategies requires the consideration of the environmental impacts of the deconstruction and end-of-life processes, which is essential in CE implementation. This paper introduces a digital platform for generating materials inventory and supporting the definition of reuse strategies. Then, by using digital tools in combination with life cycle assessment (LCA) studies of the deconstruction process and output of materials and components inventories, a method is defined and tested on a pilot building in Luxembourg.
-
-</details>
-
-**Links**: [📄 Paper](https://www.mdpi.com/2071-1050/16/11/4561)
-
-### 5. D5 digital circular workflow: five digital steps towards matchmaking for material reuse in construction
-
-**Authors**: Catherine De Wolf, Brandon S. Byers, Deepika Raghu, Matthew Gordon, Vanessa Schwarzkopf, Eleftherios Triantafyllidis
-
-<details>
-<summary><b>Abstract</b></summary>
-
-The intersection of digital transformation and circular construction practices presents significant potential to mitigate environmental impacts through optimised material reuse. We propose a five-step (D5) digital circular workflow that integrates these digital innovations towards reuse, validated through real-world case studies. We assessed a variety of digital tools for enhancing the reuse of construction materials, including digital product passports, material classification assisted by artificial intelligence (AI), reality capture, computational design, design inspired by generative AI, digital fabrication techniques, extended reality, and blockchain technology. Using action research through a multiple case study approach, we disassembled several buildings that were set for demolition and subsequently designed and executed construction projects using the salvaged materials. Our findings indicate that digital transformation for detection, disassembly, distribution, design, and finally deployment significantly support the application of circular economy principles. We demonstrate the potential of the proposed workflow for industry implementation and scalability.
-
-</details>
-
-**Links**: [📄 Paper](https://www.nature.com/articles/s44296-024-00034-8)
-
-### 6. Development of a 3D Digital Model of End-of-Service-Life Buildings for Improved Demolition Waste Management through Automated Demolition Waste Audit
-
-**Authors**: Muhammad Omer, Yong C. Wang, Mikel Quintana Roma, Stanislav Bedrich, V´aclav Neˇzerka, Juan
-Ferriz-Papi, Jesus J. Moros Montanes, Ines Diez Ortiz
-
-<details>
-<summary><b>Abstract</b></summary>
-
-This paper presents the development of a 3D digital model of end-of-service-life buildings to facilitate a step change in preparation of pre-demolition protocols that can eliminate problems of inadequate documentation and extensive time spent in preparing pre-demolition audits. The 3D digital model consists of the following four main components: (i) digitization of paper-based drawings and their conversion to CAD; (ii) automated generation of a 3D digital model from CAD; (iii) corrections to the 3D digital model to account for changes in the lifetime of a building; (iv) a sub-model for performing pre-demolition audit. This paper proposes the innovative approaches of incorporating a minimal amount of human intervention to overcome numerous difficulties in automated drawing analysis, application of augmented reality (AR) in corrections to the 3D digital model, and data compatibility for pre-demolition audit. These processes are demonstrated using one building as case study. Using the digital model, a pre-demolition audit can be prepared in minutes rather than the many days required in current practice without a digital model. The accurate quantification of the quantities and locations of different demolition waste materials and products in buildings to be demolished will enable a systematic and quantitative evaluation of potentials of material and product reuse and eliminate contamination of different demolition waste streams (which may contain hazardous waste), which is the main cause of environmental degradation and downcycling of demolition waste materials.
-
-</details>
-
-**Links**: [📄 Paper](https://www.mdpi.com/2076-3298/11/7/138)
-
-### 7. Digital Twin Enabled Construction Progress Monitoring
-
-**Authors**: Alwyn Mathew, Shuyan Li, Kacper Pluta, Rahima Djahel, Ioannis Brilakis
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Digital Twin technology has revolutionized overseeing newly built structures. This study proposes employing digital twin-based automatic progress monitoring on construction sites, comparing 3D point clouds with Building Information Modeling to track progress and predict completion. It highlights integrating semi-continuous monitoring with a building's digital twin for efficient construction management. Leveraging precise data, it enhances understanding and identifies schedule deviations, enabling timely actions. Demonstrated through real-world construction data, visualized Gantt charts showcase its efficacy, offering insights into task status and projected completion dates. This underscores digital twin technology's potential to transform construction oversight.
-
-</details>
-
-**Links**: [📄 Paper](https://ec-3.org/publications/conference/paper/?id=EC32024_210)
-
-### 8. From research to practice: A review on technologies for addressing the information gap for building material reuse in circular construction
-
-**Authors**: Brandon S. Byers, Deepika Raghu, Adama Olumo, Catherine De Wolf, Carl Haas
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Reusing high-value construction materials from existing buildings that otherwise would be discarded as waste is a key strategy for achieving a circular economy. However, this potential for reuse is often hindered by a critical information gap between material life cycles. Reliable, accurate, and sufficient information in digital form for the characterization and assessment of recovered materials for reuse is typically not available, nor are there well-established processes for generating such information. This review aims to understand how to address this broad knowledge gap to help scale up material reuse in the built environment. A flexible pattern-matching methodology is used to illuminate the research-industry gap by synthesizing insights from state-of-the-art literature on material reuse strategies as well as empirical data from various real-world cases. Results indicate that the organization of construction material information for reuse can be categorized into three main categories: information property attributes, information source, and reuse actions. This research contributes to the existing body of literature on building material reuse by a) synthesizing the current state-of-the-art in building material reuse research, b) identifying gaps and recurring themes across research and industrial practices, and c) contrasting theoretical approaches with real-world applications, highlighting areas of convergence and divergence. This study provides a taxonomy that can be useful for industry practitioners and academics, offering actionable insights to accelerate the transition to a more circular construction paradigm.
-
-</details>
-
-**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S2352550923002920)
-
-### 9. Smarter Buildings, Cleaner Grid: The Case for Automated Demand Management
-
-**Authors**: noda.ai
-
-<details>
-<summary><b>Abstract</b></summary>
-
-It’s well recognized that our built environment accounts for roughly 40% of global greenhouse gas emissions. Although this often-cited figure may seem overused, it continues to underscore a key point: operating our existing building stock more intelligently holds immense potential for combating climate change.
-
-Within the broader realm of building operations, automated demand management (ADM) is poised to be a game changer for improving energy performance, reducing operational costs, lowering emissions, and enhancing grid stability.
-
-But what exactly is ADM, and who stands to gain? At its core, ADM focuses on adjusting buildings’ energy use patterns in direct response to real-time conditions—such as grid load, weather, and the availability of renewable energy. By layering external factors on top of internal operations, commercial real estate teams can extend beyond traditional efficiency approaches and achieve deeper savings, while meaningfully cutting emissions and alleviating grid stress.
-
-</details>
-
-**Links**: [📄 Paper](https://noda.ai/insights/smarter-buildings-cleaner-grid-adm)
-
-### 10. Sustainability scoring tool for real estate according to German and European valuation principles in the purchasing process
-
-**Authors**: Katharina Oktabec, Nadine Wills
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Purpose Sustainability has become an integral part of the real estate industry, alongside advancing globalization and demographic development. Due to real estate's influence on greenhouse gas emissions throughout its life cycle, both the regulatory and legal requirements concerning the sustainability of real estate are growing and, as a result of social responsibility, the interest of tenants and investors in sustainable real estate. However, criteria for measuring the ecological sustainability of a real estate investment in the purchase process in order to reduce the risk of including “stranded assets” in the portfolio are missing. This paper aims to address the need to integrate the issue of carbon stranding into existing sustainability rating tools. Design/methodology/approach Existing tools are examined based on defined criteria to determine whether they are suitable for purchasing a property before suitable tools for purchase are compared. Strengths and weaknesses are identified, which are to be remedied with the scoring tool. Taxonomy regulation is integrated into the existing valuation basis as a legal regulation. Findings The result is a scoring tool that enables real estate companies to measure and evaluate the ecological sustainability performance of a property during the acquisition process, taking into account the three aspects of sustainability and considering them when determining an appropriate purchase price in line with market conditions. Moreover, the developed tool helps to minimize the risk of acquiring a stranding asset. Research limitations/implications The environmental, social and governance (ESG) framework employed in this study does not incorporate governance considerations. While the analysis extensively evaluates the building's environmental and social aspects, it does not extend to examining the governance practices of the companies involved. Thus, the assessment is confined solely to the physical attributes of the property without accounting for broader corporate governance factors. Practical implications The developed scoring tool represents a valuable tool for the real estate industry, offering insights into sustainability performance during property acquisitions and providing a structured framework for decision-making. By addressing both certification and taxonomy regulation requirements, the tool contributes to the industry's evolution toward more sustainable and environmentally responsible real estate practices. Originality/value In response to the growing importance of sustainability in the real estate industry, this paper introduces a novel scoring tool for evaluating the sustainability of real estate investments during the acquisition process.
-
-</details>
-
-**Links**: [📄 Paper](https://www.researchgate.net/publication/379567330_Sustainability_scoring_tool_for_real_estate_according_to_German_and_European_valuation_principles_in_the_purchasing_process)
-
-### 11. Towards a holistic assessment of circular economy strategies: The 9R circularity index
-
-**Authors**: Santiago Muñoz, M. Reza Hosseini, Robert H. Crawford
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Our planet faces mounting environmental burdens due to linear production and consumption. Circular economy strategies offer a promising alternative, but evaluating their effectiveness requires robust measurement tools. Existing approaches lack a comprehensive framework incorporating the hierarchical strategies proposed by the 9R framework and the butterfly diagram. Based on the current circular economy indicators, this study gathers a set of indicators designed to assess the efficacy of circular economy strategies, considering the hierarchical levels outlined in the 9R framework. Moreover, it leverages the Analytic Hierarchy Process (AHP) fundamental scale as an integration tool to consolidate the suggested indicators into a unified metric termed the “9R circularity index”. This approach relies on a bottom-up approach to measure circular economy at various levels. The “9R circularity index” enhances the ability to compare results from a material flow analysis perspective. In addition, this paper presents a step-by-step approach and a supporting software tool that aims to facilitate the measurement, selection and comparison between circular and linear models. Ultimately, this proposed approach offers a workable, data-driven tool to support the transition towards a circular economy.
-
-</details>
-
-**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S235255092400112X)
-
-### 12. Using augmented reality models to engage stakeholders on retrofitting buildings
-
-**Authors**: EU-RnD
-
-<details>
-<summary><b>Abstract</b></summary>
-
-In this project success story ARV focuses on several elements. These include: the development of a method for cost-optimal retrofitting in a large-scale renovation process that can be easily replicated and adapted to other municipalities, and the use of Virtual Reality (VR) and Augmented Reality (AR) to test it in demonstration buildings in Oslo, Norway and Palma, Spain.
-
-</details>
-
-**Links**: [📄 Paper](https://projects.research-and-innovation.ec.europa.eu/en/strategy/strategy-2020-2024/environment-and-climate/european-green-deal/green-deal-projects-support/green-deal-success-stories/using-augmented-reality-models-engage-stakeholders-retrofitting-buildings)
-
-### 13. Virtual reality-based site layout planning for building design
-
-**Authors**: Fabian Jarrin, Yasuko Koga, Diego Thomas, Hiroshi Kawasaki
-
-<details>
-<summary><b>Abstract</b></summary>
-
-This paper addresses the challenge of integrating optimized design solutions in Site Layout Planning (SLP) through Virtual Reality (VR), questioning how VR simulations can enhance their acceptance. The methodology involves a multi-objective optimization model that evaluates critical factors like earthwork volume, cost, and environmental impact, integrated into a VR framework for interactive participant evaluations. Results show a notable 48.3% increase in decision-making accuracy among participants using VR, highlighting VR's potential to significantly improve comprehension and application of complex data-driven designs in SLP. This underlines the transformative impact of VR on enhancing stakeholder engagement and optimizing design outcomes. Future research will broaden the participant base and further investigate the long-term effects of VR integration in professional environments.
-
-</details>
-
-**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S0926580524004266)
-
-### 14. Web-Based Material Database for Circular Design
-
-**Authors**: Ian Law, Keng Chia Chang, Beril Önalan, Dominik Reisach, Simon Griffioen, Arabelle de Saussure, Benjamin Dillenburger, Catherine De Wolf
-
-<details>
-<summary><b>Abstract</b></summary>
-
-In circular construction, sourcing reclaimed materials for design projects is often hindered by inconsistent data formats and lack of 3D data integration. This study addresses these barriers by proposing a digital workflow to streamline information flow between 3D architectural models and circular materials. Our approach includes three key elements: a PostgreSQL database integrated into the CAD environment for easy querying of reclaimed materials, an automated 3D model generation system using image-segmentation and depth-estimation models with OpenCV and META Segment Anything Model, and an intuitive user-interface within 3D CAD software.
-
-The workflow detects and segments elements like windows and doors from image data, performs perspective transformations, and converts the data into JSON format for 3D model generation in CAD software to reduce manual modeling effort. It also includes a database for standardized material data and an intuitive user interface integrated into 3D modeling software to provide architects real-time access to circular materials. The interface features cost calculations, greenhouse gas emissions visualizations, and summary tools, ensuring digital models correlate with physical materials.
-
-This user-friendly approach simplifies incorporating reclaimed materials into designs, paving the way for future investigations into more complex shapes and materials. This integration significantly enhances efficiency for designers and architects during the design stage. Overall, in this research, we aim to showcase a more user-friendly approach to simplify the use of reclaimed materials. The proposed workflow enables architects and designers to efficiently and effectively incorporate reclaimed materials with detailed characteristics into their designs. Future work will expand the database to include diverse material types, such as structural components, and address the challenges of photo-based 3D model generation for more complex geometric shapes.
-
-</details>
-
-**Links**: [📄 Paper](https://link.springer.com/chapter/10.1007/978-3-031-68275-9_10)
-
-### 2023
-
-### 1. Building Materials and the Climate: Constructing a New Future
-
-**Authors**: United Nations Environment Programme
-
-<details>
-<summary><b>Abstract</b></summary>
-
-This report highlights the urgent need to develop new models for cooperation on the decarbonisation of building materials, if the world is to reach its goals for net zero emissions from the built environment sector by the mid-century. It focuses on three urgent pathways that must be facilitated by supporting stakeholders across the lifecycle of the built environment sector in order to decarbonise: i) AVOID extraction and production of raw materials by galvanising a circular economy; ii) SHIFT to regenerative material practices wherever possible by using ethically produced low carbon earth- and bio-based building materials whenever possible; and iii) IMPROVE methods to radically decarbonise conventional materials.
-
-</details>
-
-**Links**: [📄 Paper](https://wedocs.unep.org/handle/20.500.11822/43293)
-
-### 2. Circular economy adoption barriers in built environment- a case of emerging economy
-
-**Authors**: Purva Mhatre, Vidyadhar V. Gedam, Seema Unnikrishnan, Rakesh D. Raut
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Built environment consumes vast volumes of natural resources and also poses several environmental threats owing to mining, construction emissions, and waste disposal processes. Thus, it is imperative that the principles of circular economy (CE) be adopted to enable the recirculation of resources back to the construction system. However, in the emerging economies, owing to numerous barriers, the momentum for achieving accountable progress towards CE adoption in the construction sector has not been adequate. This research article aims to understand & examine the factors that obstruct the incorporation of CE in the built environment or the construction sector in India. A total of sixteen barriers hampering the adoption of CE in built environment are identified and categorised under six categories of economic, environmental, technical, societal, governmental, and behavioral barriers. The research uses Decision-Making Trial and Evaluation Laboratory (DEMATEL) method to analyse the barriers and develop a cause-effect relationship among them. This study reveals that the most predominant barrier to adopting CE in the Indian construction sector is an environmental barrier. The lack of environmentally safe material recovery processes and high operating costs for running a circular supply chain are other significant barriers. Authors further stress on the interdependence of factors and propose appropriate enablers to facilitate CE in built environment. The study's findings are intended to enable policy and decision-makers of the built environment to implement CE effectively.
-
-</details>
-
-**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/abs/pii/S0959652623003591)
-
-### 3. City Loops
-
-**Authors**: CityLoops
-
-<details>
-<summary><b>Abstract</b></summary>
-
-The CityLoops project brings together seven European cities – Apeldoorn, Bodø, Mikkeli, Porto, Seville, Høje-Taastrup and Roskilde - to pilot a series of demonstration actions to close the loop of two of the most important waste streams in Europe: Construction and Demolition Waste, and Bio-waste. Their ultimate aim is to become circular cities in which no resource goes to waste, driving the transition to the circular economy.
-
-</details>
-
-**Links**: [📄 Paper](https://cityloops.eu)
-
-### 4. Exploring Building Information Modeling (BIM) and Internet of Things (IoT) Integration for Sustainable Building
-
-**Authors**: Yali Chen, Xiaozi Wang, Zhen Liu, Jia Cui, Mohamed Osmani, Peter Demian
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Sustainable development, which has become the priority study of architectural design, is receiving increasing attention with global climate change. At the same time, the building industry is urgently changing towards intelligent and digitalized tendencies. As a result, Building Information Modeling (BIM) and the Internet of Things (IoT) make crucial contributions to the transforming process. However, there is little knowledge of the integration of BIM–IoT in sustainable building from a macro perspective. Moreover, most existing research adopts a literature review method and lacks objective quantitative analysis. Few papers use bibliometric analysis to study the respective BIM and IoT research fields. Furthermore, few studies use Citespace software tools to analyze the integrated application of BIM–IoT. Therefore, this paper aims to investigate the research frontiers and knowledge structure in BIM–IoT integration and the relationship between BIM-IoT and sustainable building and explore the research hotspots, trends, and future research directions. A quick and objective method was proposed to understand the research status of these new and rapidly developing fields. This paper uses topic search in the web of science core collection to obtain relevant literature and then uses Citespace for bibliometric analysis based on the literature review. Controlled terms and subject terms statistics from the Engineering Index core database search results are also used to briefly examine the fields’ research frontiers and hotspots as obtained from Citespace. The results show that: (1) The research on BIM–IoT integration focuses on building intelligence with BIM as the basis of application, and research on BIM–IoT integration within the field of sustainable building is currently focused on the first three phases of the life cycle. (2) The development of sustainable buildings needs to be considered on its human and social dimensions. BIM provides a platform for sharing information and communication among stakeholders involved in the building’s entire life cycle. At the same time, IoT allows occupants to better participate in buildings’ sustainable design and decision making. (3) In the future, more emerging technologies such as cloud computing and big data are required to better promote sustainable buildings and thus realize the construction of sustainable smart cities. At the same time, researchers should also pay attention to the sustainable transformation of existing buildings
-
-</details>
-
-**Links**: [📄 Paper](https://www.mdpi.com/2075-5309/13/2/288)
-
-### 2022
-
-### 1. Circular TwAIn --- circular-twain-project.eu
-
-**Authors**: EU
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Circular TwAIn researches, develops, validates, and exploits a novel AI platform for circular manufacturing value chains, which will support the development of interoperable circular twins for end-to-end sustainability.
-
-</details>
-
-**Links**: [📄 Paper](https://www.circular-twain-project.eu/)
-
-### 2. More than just a big idea – how extended reality tech can enable a circular economy
-
-**Authors**: Emma Elobeid, Claire Murphy, Laura Collacott,
-Ellen MacArthur Foundation
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Imagination is the original innovation accelerator. It is essential if we are to solve big problems like climate change, waste, and pollution. The vision for a circular economy is more than just a big idea. It is a systems solution framework that sets out a new way to design our global economy so that it flows and functions within planetary boundaries. Implementing it at scale will require not only huge ambition but concerted action at every level of business and society. All of that starts by bringing to life the vision of a better future and making it tangible.
-
-</details>
-
-**Links**: [📄 Paper](https://www.ellenmacarthurfoundation.org/tech-enablers-series/part-1)
-
-### 3. Proposal for a Regulation of the European Parliament and the Council establishing a framework for setting ecodesign requirements for sustainable products and repealing Directive 2009/125/EC
-
-**Authors**: European Commission
-
-<details>
-<summary><b>Abstract</b></summary>
-
-
-
-</details>
-
-**Links**: [📄 Paper](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=COM:2022:0142:FIN)
-
-### 2021
-
-### 1. BIM and IoT Sensors Integration: A Framework for Consumption and Indoor Conditions Data Monitoring of Existing Buildings
-
-**Authors**: Giuseppe Desogus,
-Emanuela Quaquero, Giulia Rubiu, Gianluca Gatto,
-Cristian Perra
-
-<details>
-<summary><b>Abstract</b></summary>
-
-The low accessibility to the information regarding buildings current performances causes deep difficulties in planning appropriate interventions. Internet of Things (IoT) sensors make available a high quantity of data on energy consumptions and indoor conditions of an existing building that can drive the choice of energy retrofit interventions. Moreover, the current developments in the topic of the digital twin are leading the diffusion of Building Information Modeling (BIM) methods and tools that can provide valid support to manage all data and information for the retrofit process. This paper shows the aim and the findings of research focused on testing the integrated use of BIM methodology and IoT systems. A common data platform for the visualization of building indoor conditions (e.g., temperature, luminance etc.) and of energy consumption parameters was carried out. This platform, tested on a case study located in Italy, is developed with the integration of low-cost IoT sensors and the Revit model. To obtain a dynamic and automated exchange of data between the sensors and the BIM model, the Revit software was integrated with the Dynamo visual programming platform and with a specific Application Programming Interface (API). It is an easy and straightforward tool that can provide building managers with real-time data and information about the energy consumption and the indoor conditions of buildings, but also allows for viewing of the historical sensor data table and creating graphical historical sensor data. Furthermore, the BIM model allows the management of other useful information about the building, such as dimensional data, functions, characteristics of the components of the building, maintenance status etc., which are essential for a much more conscious, effective and accurate management of the building and for defining the most suitable retrofit scenarios.
-
-</details>
-
-**Links**: [📄 Paper](https://www.mdpi.com/2071-1050/13/8/4496)
-
-### 2. Blockchain-driven integration technology for the AEC industry
-
-**Authors**: Botao Zhong,
-Xing Pan, Lieyun Ding, 
-Qiang Chen,
-Xiaowei Hu
-
-<details>
-<summary><b>Abstract</b></summary>
-
-In the architecture, engineering, and construction (AEC) industry, blockchain-driven integration technology (BDIT) has witnessed rapid development. A critical literature review of BDIT can contribute toward innovation for the AEC industry. In this study, a quantitative mapping of 247 BDIT literatures from 2017 to 2022 was conducted. Following the clue of quantitative work, two critical levels of technological development and application for BDIT were analyzed. The findings suggest: (1) the technological developments of BDIT may involve technological integration (i.e., integration of blockchain and internet of thing/building information modeling/edge computing) and knowledge framework; and (2) the technological applications of BDIT may involve information automation management and building information management. To further explore the trends of BDIT, some future evolutions (i.e., integration of blockchain and federated learning/digital twin/cloud-edge-end), application scenarios and challenges of BDIT were discussed. This study provides valuable theoretical and practical references for future research on BDIT in the AEC industry.
-
-</details>
-
-**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S0926580523000511)
-
-### 3. Building Information Modeling and Internet of Things integration for smart and sustainable environments: A review
-
-**Authors**: Ada Malagnino
-, 
-Teodoro Montanaro
-, Mariangela Lazoi
-, 
-Ilaria Sergi
-, Angelo Corallo
-, Luigi Patrono
-
-<details>
-<summary><b>Abstract</b></summary>
-
-During the last decades, society has increasingly moved towards the adoption of digital solutions in almost every aspect of people's lives with the aim of enhancing daily activities. At the same time, the environmental impact of the built environment has attracted the attention of public opinion that is gradually perceiving the necessity of limiting its negative effects in order to safeguard the Earth and people's wellbeing. The Internet of Things is one of the biggest ecosystems that is bringing innovations encompassing digital solutions in almost every sector. On the other hand, the Building Information Modeling approach allows for data sharing among stakeholders, traceability, and the integrated management of the building or infrastructure life-cycle through a 3D informative virtual model. Our study reviews existing research works and technological solutions that integrate these two important topics to enhance the sustainability of the built environment, making it smarter. The presented review analyses the existing papers available in literature from January 2015 to December 2020, to present the best practices in this integration and discuss limitations of the identified solutions. Based on the outcomes of the analysis and aiming at the creation of a solid knowledge basis for the community interested in the sector, a comprehensive modular architecture has been proposed. Finally, new directions for future works are presented by discussing how the proposed architecture can actually facilitate the design and development phases.
-
-</details>
-
-**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S095965262101934X)
-
-### 2020
-
-### 1. A selective disassembly multi-objective optimization approach for adaptive reuse of building components
-
-**Authors**: Benjamin Sanchez,
-Christopher Rausch, Carl Haas, Rebecca Saari
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Adaptive reuse of buildings plays a key role in the transition from a resource-based economy and towards a Circular Economy (CE) in the construction industry. Adaptive reuse has the potential to maximize the residual utility and value of existing assets through green design methods such as selective disassembly planning. Studies in the field of selective disassembly are scarce and there is no evidence of established methodologies for the optimization of the environmental and financial benefits. A multi-objective analysis is key to obtaining several effective selective disassembly plans for the adaptive reuse of an existing asset through the combination of different deconstruction methods. The analysis is carried out in terms of the physical, environmental, and economic constraints of the deconstruction methods per building component. The Sequential Disassembly Planning for Buildings (SDPB) method is used in order to generate the optimized disassembly plans for retrieving target components. At the end, a weighted multi-objective optimization analysis is incorporated to generate the set of noninferior solutions that minimizes environmental impacts and building cost. The results show that different complete disassembly plans exist for all the possible combinations. The possible combinations are driven by the deconstruction methods per component, as well as the dismantling interdependence. The method described in this study can be used to improve the project outcomes according to specific goals and constraints (e.g. environmental, economic, technical). The results of this study improve the decision-making process for adaptive reuse building projects by adding comprehensive quantitative analysis towards sustainable management and conservation of resources.
-
-</details>
-
-**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/abs/pii/S0921344919305117)
-
-### 2. Circular Twin --- cundall.com
-
-**Authors**: Cundall
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Ground-breaking digital twinning project to demonstrate the feasibility of net zero.
-
-</details>
-
-**Links**: [📄 Paper](https://www.cundall.com/projects/circular-twin)
-
-### 2017
-
-### 1. The application of web of data technologies in building materials information modelling for construction waste analytics
-
-**Authors**: Muhammad Bilal, Lukumon O. Oyedele, Kamran Munir, Saheed O. Ajayi, Olugbenga O. Akinade, Hakeem A. Owolabi, Hafiz A. Alaka
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Predicting and designing out construction waste in real time is complex during building waste analysis (BWA) since it involves a large number of analyses for investigating multiple waste-efficient design strategies. These analyses require highly specific data of materials that are scattered across different data sources. A repository that facilitates applications in gaining seamless access to relatively large and distributed data sources of building materials is currently unavailable for conducting the BWA. Such a repository is the first step to developing a simulation tool for the BWA. Existing product data exchange ontologies and classification systems lack adequate modelling of building materials for the BWA. In this paper, we propose a highly resilient and data-agnostic building materials database. We use ontologies at the core of our approach to capture highly accurate and semantically conflicting data of building materials using the Resource Description Framework (RDF) and Web Ontology Language (OWL). Owing to the inherent capabilities of RDF, the architecture provides syntactical homogeneity while accessing the diverse and distributed data of building materials during the BWA. We use software packages such as Protégé and Oracle RDF Graph database for implementing the proposed architecture. Our research provides technical details and insights for researchers and software engineers who are seeking to develop the semantic repositories of similar kind of simulation applications that can be used for building waste performance analysis.
-
-</details>
-
-**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/abs/pii/S2214993716300410)
-
-## Sustainable Real Estate Valuation and Economics
-
-### 2025
-
-### 1. Real estate valuation with multi-source image fusion and enhanced machine learning pipeline
-
-**Authors**: Lin Deng
-
-<details>
-<summary><b>Abstract</b></summary>
-
-The automated valuation model (AVM) has been widely used by real estate stakeholders to provide accurate property value estimations automatically. Traditional valuation models are subjective and inaccurate, and previous studies have shown that machine learning (ML) approaches perform better in real estate valuation. These valuation models are based on structured tabular data, and few consider integrating multi-source unstructured data such as images. Most previous studies use fixed feature space for model training without considering the model performance variation brought by various feature configuration parameters. To fill these gaps, this study uses Hong Kong as a case study and proposes an enhanced ML-based real estate valuation framework with feature configuration and multi-source image data fusion, including exterior housing photos, street view and remote sensing images. ‌‌Eight ML regressors, namely, Random Forest, Extra Tree, XGBoost, Light Gradient Boosting Machine (LightGBM), K-Nearest Neighbors (KNN), Support Vector Regression (SVR), Multilayer Perceptron (MLP), and Multiple Linear Regression (MLR) are used to formulate ML pipelines for training. The SHapley Additive exPlanations (SHAP) method is used to examine the effects of images on housing prices. The experimental results show that the model performances using different feature configuration parameters are significantly different, indicating the necessity of feature configuration to obtain more accurate and reliable predictions. Extra Tree performs significantly better than other models. Half of the top 10 significant features are image features, and incorporating multi-source image features can improve property valuation accuracy. Nonlinear associations exist between image features and housing prices, and the spatial distribution patterns of image feature values and corresponding SHAP main effects vary significantly from the city centre to the suburbs. These findings contribute to a better understanding of AVM development with image fusion and the nonlinear associations between image features and housing prices for public authorities, urban planners, and real estate developers.
-
-</details>
-
-**Links**: [📄 Paper](https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0321951)
-
-### 2. Using ensemble methods of machine learning to predict real estate prices
-
-**Authors**: Oleh Pastukh, Viktor Khomyshyn
-
-<details>
-<summary><b>Abstract</b></summary>
-
-In recent years, machine learning (ML) techniques have become a powerful tool for improving the accuracy of predictions and decision-making. Machine learning technologies have begun to penetrate all areas, including the real estate sector. Correct forecasting of real estate value plays an important role in the buyer-seller chain, because it ensures reasonableness of price expectations based on the offers available in the market and helps to avoid financial risks for both parties of the transaction. Accurate forecasting is also important for real estate investors to make an informed decision on a specific property. This study helps to gain a deeper understanding of how effective and accurate ensemble machine learning methods are in predicting real estate values. The results obtained in the work are quite accurate, as can be seen from the coefficient of determination (R^2), root mean square error (RMSE) and mean absolute error (MAE) calculated for each model. The Gradient Boosting Regressor model provides the highest accuracy, the Extra Trees Regressor, Hist Gradient Boosting Regressor and Random Forest Regressor models give good results. In general, ensemble machine learning techniques can be effectively used to solve real estate valuation. This work forms ideas for future research, which consist in the preliminary processing of the data set by searching and extracting anomalous values, as well as the practical implementation of the obtained results.
-
-</details>
-
-**Links**: [📄 Paper](https://arxiv.org/pdf/2504.04303.pdf)
-
-### 2023
-
-### 1. A Review of Machine Learning Approaches for
-Real Estate Valuation
-
-**Authors**: Thomas H. Root, Troy J. Strader, Yu-Hsiang (John) Huang
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Real estate managers must identify the value for properties in their current market. Traditionally, this involved simple data analysis with adjustments made based on manager’s experience. Given the amount of money currently involved in these decisions, and the complexity and speed at which valuation decisions must be made, machine learning technologies provide a newer alternative for property valuation that could improve upon traditional methods. This study utilizes a systematic literature review methodology to identify published studies from the past two decades where specific machine learning technologies have been applied to the property valuation task. We develop a data, reasoning, usefulness (DRU) framework that provides a set of theoretical and practice-based criteria for a multi-faceted performance assessment for each system. This assessment provides the basis for identifying the current state of research in this domain as well as theoretical and practical implications and directions for future research.
-
-</details>
-
-**Links**: [📄 Paper](https://aisel.aisnet.org/cgi/viewcontent.cgi?article=1101&context=jmwais)
-
-### 2. Digital real estate: a review of the technologies and tools transforming the industry and society
-
-**Authors**: Nida Naeem, Irfan Rana, Abdur Nasir
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Real estate plays a crucial role in driving national economies. However, the process of transferring properties and engaging with various stakeholders can be hindered by a lack of adequate information, complex procedures, and excessive paperwork. The advent of digital real estate has revolutionized the industry and how stakeholders interact. The present study aims to conduct a bibliometric and systematic review of digital real estate, utilizing historical, institutional, country, and keyword analyses for the bibliometric review and Preferred Reporting Items for Systematic Reviews and Meta-Analysis (PRISMA) guidelines for the systematic review. Through thematic analysis, the study identified four key themes for transforming digital real estate: information communication technologies, data collection technologies, data networking tools, and digital decision-making systems. Additionally, the study proposes a digital real estate transformation framework that can assist stakeholders, urban planners, and decision-makers in embracing digital tools and technologies. The study concludes that digital real estate has the potential to revolutionize future urban planning and real estate development through the use of decision support systems and advanced technologies.
-
-</details>
-
-**Links**: [📄 Paper](https://www.researchgate.net/publication/374924059_Digital_real_estate_a_review_of_the_technologies_and_tools_transforming_the_industry_and_society)
-
-### 3. Toward 3D Property Valuation—A Review of Urban 3D Modelling Methods for Digital Twin Creation
-
-**Authors**: Yue Ying, Mila Koeva, Monika Kuffer, Jaap Zevenbergen
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Increasing urbanisation has inevitably led to the continuous construction of buildings. Urban expansion and densification processes reshape cities and, in particular, the third dimension (3D), thus calling for a technical shift from 2D to 3D for property valuation. However, most property valuation studies employ 2D geoinformation in hedonic price models, while the benefits of 3D modelling potentially brought for property valuation and the general context of digital twin (DT) creation are not sufficiently explored. Therefore, this review aims to identify appropriate urban 3D modelling method(s) for city DT, which can be used for 3D property valuation (3DPV) in the future (both short-term and long-term). We focused on 3D modelling studies investigating buildings and urban elements directly linked with residential properties. In total, 180 peer-reviewed journal papers were selected between 2016 and 2020 with a narrative review approach. Analytical criteria for 3D modelling methods were explicitly defined and covered four aspects: metadata, technical characteristics, users’ requirements, and ethical considerations. From this, we derived short-term and long-term prospects for 3DPV. The results provide references for integrating 3D modelling and DT in property valuation and call for interdisciplinary collaboration including researchers and stakeholders in the real estate sector, such as real estate companies, house buyers and local governments.
-
-</details>
-
-**Links**: [📄 Paper](https://www.mdpi.com/2220-9964/12/1/2)
-
-### 2020
-
-### 1. From Principles to Practices: Realising the value of circular economy in real estate - a report by Arup
-
-**Authors**: Devni Acharya, Richard Boyd, Olivia Finch
-
-<details>
-<summary><b>Abstract</b></summary>
-
-From Principles to Practices is a two-phase collaborative project led by Arup and the Ellen MacArthur Foundation that aims to translate the principles of a circular economy into everyday built environment practices. Phase 1 of the project established our vision for a circular built environment and identified the key barriers, opportunities and enablers of implementing circular economy practices. It also informed proposals for who needs to lead the change and what their first steps might be. The key outputs from Phase 1 were published in a report titled, First Steps Towards a Circular Built Environment, released in July 2018. The second phase of the project, described in this report, aims to demonstrate the value and process of implementing circular economy principles in the built environment to real estate investors and construction clients. We have focused on these two stakeholder groups because our Phase 1 work highlighted they are best placed to lead the transition to a circular built environment, since they have the greatest capacity to influence decision-making, set direction and catalyse action throughout the value chain. Policy makers were also identified as possible first movers, yet in our interviews in Phase 1, policy makers made it clear they needed an evidence base of the benefits of a circular economy to be developed by investors and construction clients. Our research also revealed that value and the way in which it is created from real estate assets is set by investors and construction clients through investment requirements, tenure models and design briefs (developed within the confines of the policy environment in which they operate). Despite this, the business case for implementing circular economy principles has not yet been explicitly articulated to investors or construction clients to incentivise a change in this direction. The aim of this project is, therefore, to signpost the business case.
-
-</details>
-
-**Links**: [📄 Paper](https://circulareconomy.europa.eu/platform/sites/default/files/from_principles_to_practices_realising_the_value_of_circular_economy_2020.pdf) | [🌐 Project Page](https://circulareconomy.europa.eu/platform/en/knowledge/principles-practices-realising-value-circular-economy-real-estate-report-arup)
-
-### 2018
-
-### 1. Reflecting Sustainability in Property Valuation - Defining the Problem
-
-**Authors**: Ewa Kucharska-Stasiak, Katarzyna Olbińska
-
-<details>
-<summary><b>Abstract</b></summary>
-
-A major topic in discussions about environmental protection is the concept of sustainable development utilizing the economic criteria enhanced by environmental, social and ethical aspects. The concept inspired a new approach to construction and paved the way for the idea of sustainable buildings. Sustainable buildings are expected to offer economic benefits to their owners and tenants that should be reflected in property values. The authors test a hypothesis that the real estate market in Poland still fails to incorporate sustainability in property valuation. The article seeks evidence in support of this hypothesis, as well as attempting to find out why the market does not pay a premium for sustainability. To accomplish the purpose of the research, a systematic literature review, an analysis of the pilot studies available in Poland and a preliminary assessment of the ability of valuation methods to reflect sustainability in property valuations are performed. The focus of the research is on the office property market, one of the fastest growing and most modern segments of the real estate market. The conclusion drawn from the research is that, of all respondents surveyed by international studies, Polish developers, property owners, tenants and valuers know the least about sustainable building and that the evidence of the benefits of sustainable building is still unavailable in the Polish real estate market. Such benefits are rather hypothesized to exist and considered theoretically rather than empirically confirmed. It is possible that the reasons for these findings are the short period of research and problems with distinguishing sustainable buildings from conventional ones, which make it difficult for valuers to reflect the benefits of sustainability in valuations. Nevertheless, a new approach to property valuation encompassing environmental, ethical and moral aspects seems necessary. This would encourage sustainable building and green investment strategies. Sustainable valuation would also be an opportunity for the development of the valuation profession.
-
-</details>
-
-**Links**: [📄 Paper](https://www.researchgate.net/publication/326484254_Reflecting_Sustainability_in_Property_Valuation_-_Defining_the_Problem)
 
 ## Credits
 
