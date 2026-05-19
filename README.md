@@ -5,7 +5,7 @@
 <div align="center">
   A curated collection of resources focused on XR+AI for AEC (<i><b>XRAI4AEC</b></i>) and related technologies such as (2D/3D) computer vision, computer graphics, LLMs, VLMS, GenAI, deep/machine learning, data science, and AR/VR for Design Generation, BIM, Digital Twin, LCA, Dissaseembly Planning, Real Estate Valuation, and more for Intelligent, Sustainable, and Human-Centric Built Environments.
 
-  [**Browse Paper Database🛢️**](https://prakashknaikade.github.io/Awesome-XRAI-for-Architecture/) | [**Contribute**](CONTRIBUTING.md) | [**Prakash Naikade**](https://prakashknaikade.github.io/)
+  [**Our Paper 📄**](https://doi.org/10.5281/zenodo.20283895) | [**Browse Paper Database 🛢️**](https://prakashknaikade.github.io/Awesome-XRAI-for-Architecture/) | [**Contribute 🤝🏼**](CONTRIBUTING.md) | [**Prakash Naikade 👤**](https://prakashknaikade.github.io/)
 
 </div>
 
