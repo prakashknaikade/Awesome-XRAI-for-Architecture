@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prakashknaikade.github.io/Awesome-XRAI-for-Architecture/sitemap.xml
