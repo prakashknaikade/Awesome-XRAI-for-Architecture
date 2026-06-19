@@ -2,5 +2,13 @@
 __pycache__/
 *.pyc
 
-#github agents
+# Local environments and configurations
+.env
+src/.env
+
+# Temporary files
+sys
+yaml
+
+# Github agents
 .github/agents/*.agent.md

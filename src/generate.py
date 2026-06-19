@@ -66,6 +66,50 @@ def sort_entries(entries: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         return (-d.toordinal(), _authors_str(e).lower(), e.get("title","").lower())
     return sorted(entries, key=key)
 
+def generate_json_ld(entries: List[Dict[str, Any]]) -> str:
+    """Generate Schema.org JSON-LD structured metadata for papers."""
+    schema_list = []
+    for entry in entries:
+        authors = entry.get("authors", "")
+        author_list = []
+        if isinstance(authors, list):
+            for a in authors:
+                author_list.append({"@type": "Person", "name": a.strip()})
+        elif isinstance(authors, str) and authors.strip():
+            for a in authors.split(","):
+                author_list.append({"@type": "Person", "name": a.strip()})
+                
+        pub_date = entry.get("publication_date")
+        if pub_date:
+            date_published = pub_date[:10]
+        else:
+            date_published = entry.get("year", "")
+            
+        desc = entry.get("abstract", "") or ""
+        if len(desc) > 500:
+            desc = desc[:500] + "..."
+            
+        article = {
+            "@type": "ScholarlyArticle",
+            "headline": entry.get("title", ""),
+            "author": author_list,
+            "datePublished": date_published,
+            "description": desc,
+            "url": entry.get("paper", "") or entry.get("paper_url", ""),
+            "keywords": ", ".join(entry.get("tags", []))
+        }
+        schema_list.append(article)
+        
+    main_schema = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "XRAI4AEC: Awesome XR & AI for AEC Research Papers Database",
+        "description": "A curated collection of papers focused on XR+AI for AEC (XRAI4AEC) and related technologies such as BIM, (2D/3D) computer vision, computer graphics, LLMs, VLMS, GenAI, deep/machine learning and data science.",
+        "url": "https://prakashknaikade.github.io/Awesome-XRAI-for-Architecture/",
+        "about": schema_list
+    }
+    return json.dumps(main_schema, indent=2, ensure_ascii=False)
+
 def generate_html(entries: List[Dict[str, Any]], output_file: str) -> None:
     """Generate optimized HTML page while preserving design."""
     base_dir = Path(__file__).parent
@@ -102,6 +146,7 @@ def generate_html(entries: List[Dict[str, Any]], output_file: str) -> None:
         'paper_cards': generate_paper_cards(entries),
         'highlighted_tags_json': json.dumps(list(HIGHLIGHTED_CATEGORIES)),
         'category_tags_json': json.dumps(category_tags_map),
+        'json_ld_schema': generate_json_ld(entries),
     }
 
     html = template.render(context)

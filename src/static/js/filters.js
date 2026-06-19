@@ -475,6 +475,7 @@ function applyFilters(){
   buildActiveFilters();
   setYearOptionsFromVisible();               // keep years in sync with current scope
   if (typeof lazyLoadInstance !== 'undefined') lazyLoadInstance.update();
+  if (typeof updateTagsDrawerToggleText === 'function') updateTagsDrawerToggleText();
 }
 
 /* ------------------ FULL RESET (Exposed) ------------------ */
@@ -729,6 +730,40 @@ function reorderAllPaperTags(){
 document.addEventListener('DOMContentLoaded', ()=>{
   reorderAllPaperTags();
 });
+
+// Tags Drawer toggle helper for mobile viewport
+function updateTagsDrawerToggleText() {
+  const btn = document.getElementById('tagsDrawerToggle');
+  const filters = document.getElementById('tagFilters');
+  if (!btn || !filters) return;
+  const isShow = filters.classList.contains('show');
+  
+  const activeCount = ST.includeTags.size + ST.excludeTags.size;
+  if (isShow) {
+    btn.innerHTML = `<i class="fas fa-tags"></i> Hide Tag Filters List`;
+    btn.classList.add('active');
+  } else {
+    btn.classList.remove('active');
+    if (activeCount > 0) {
+      btn.innerHTML = `<i class="fas fa-tags"></i> Show Tag Filters List (${activeCount} active)`;
+    } else {
+      btn.innerHTML = `<i class="fas fa-tags"></i> Show Tag Filters List`;
+    }
+  }
+}
+
+function toggleTagsDrawer() {
+  const filters = document.getElementById('tagFilters');
+  const btn = document.getElementById('tagsDrawerToggle');
+  if (filters && btn) {
+    filters.classList.toggle('show');
+    updateTagsDrawerToggleText();
+  }
+}
+
+// Expose globally
+window.toggleTagsDrawer = toggleTagsDrawer;
+window.updateTagsDrawerToggleText = updateTagsDrawerToggleText;
 
 // Expose for debug
 window.__reorderAllPaperTags = reorderAllPaperTags;

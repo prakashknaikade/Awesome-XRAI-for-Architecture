@@ -105,9 +105,10 @@ class YAMLUpdater:
         
         # Consider date source in sorting
         date_source = x.get('date_source', 'unknown')
-        source_priority = {'arxiv': 0, 'estimated': 1, 'unknown': 2}
+        source_priority = {'arxiv': 0, 'estimated': 1, 'manual': 2, 'unknown': 3}
+        priority = source_priority.get(date_source, 3)
         
-        return (pub_date, source_priority[date_source], last_name, title)
+        return (pub_date, priority, last_name, title)
 
     def update_yaml_with_dates(self, filename: str = "awesome_3dgs_papers.yaml"):
         """Update YAML file with publication dates."""

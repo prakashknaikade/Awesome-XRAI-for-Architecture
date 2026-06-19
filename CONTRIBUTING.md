@@ -64,9 +64,11 @@ If you have been added as a collaborator:
 
 ## Adding Papers
 
-We use a custom YAML editor to maintain the paper database. To add or edit papers:
+We use a custom database editor to maintain the paper database. To add or edit papers:
 
-### Method 1: Using the YAML Editor (Recommended)
+### Method 1: Using the Web-Based Editor (Recommended)
+
+This runs a local web application that allows you to easily manage papers from any browser, with no display server or external GUI dependencies required.
 
 1. Install dependencies:
 
@@ -74,7 +76,33 @@ We use a custom YAML editor to maintain the paper database. To add or edit paper
     pip install -r requirements.txt
     ```
 
-2. Install Poppler (required for PDF processing):
+2. Run the editor:
+
+    ```bash
+    python editor.py
+    ```
+
+3. Open your browser and navigate to the address shown in the terminal (usually `http://localhost:8000`).
+
+4. Use the web interface to:
+   - Add new papers manually (with instant form validation and tag selector buttons).
+   - Fetch metadata automatically using the **arXiv Details Fetcher** (just input any arXiv URL or ID).
+   - Edit, delete, or filter existing entries.
+   - Click **Save Database** to save changes, which automatically regenerates the site pages (`index.html` and `analytics.html`) and the repository `README.md`.
+
+---
+
+### Method 2: Using the Desktop App (Alternative)
+
+If you prefer a traditional desktop GUI, you can launch the PyQt6-based application. Note that this requires a local display server.
+
+1. Install dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+2. Install Poppler (required for PDF thumbnail processing inside the desktop client):
     - **Ubuntu/Debian:**
 
       ```bash
@@ -91,75 +119,60 @@ We use a custom YAML editor to maintain the paper database. To add or edit paper
       - Download and install from: <https://github.com/oschwartz10612/poppler-windows/releases/>
       - Add the `bin` directory to your system PATH
 
-3. Run the YAML editor:
+3. Run the desktop editor:
 
     ```bash
-    python src/yaml_editor.py
+    python editor.py --desktop
     ```
 
-    or
+---
 
-    ```bash
-    python -m src.yaml_editor
-    ```
+### Method 3: Manual YAML Editing
 
-It looks like following:
-<img src="readme_assets/yaml_editor.png" width="1249"> 
-
-4. Use the editor to:
-
-   - Add new papers manually by entering each fieald
-   - Add new papers using the "Add from arXiv" button
-   - Edit existing entries
-   - Add tags, links, and other metadata
-   - Preview thumbnails
-
-5. The editor will automatically save changes to `awesome_xrai_architecture_papers.yaml`
-
-### Method 2: Manual YAML Editing
-
-If you prefer to edit the YAML file directly, add your paper entry to `awesome_xrai_architecture_papers.yaml`:
+If you prefer to edit the YAML file directly, add your paper entry to `awesome_xrai_architecture_papers.yaml` using the following format:
 
 ```yaml
-- id: "unique id"
-  title: "Your Paper Title"
-  authors: ["Author 1", "Author 2", "Author 3"]
-  year: 2024
-  venue: "Conference/Journal Name"
-  paper_url: "https://arxiv.org/abs/xxxx.xxxxx"
+- id: "charles2011bim"
+  title: "BIM Handbook: A Guide to Building Information Modeling for Owners, Managers, Designers, Engineers and Contractors"
+  authors: ["Charles M. Eastman"]
+  year: 2011
+  venue: "John Wiley & Sons" # optional
+  paper_url: "https://books.google.com/books?id=-GjrBgAAQBAJ"
   code_url: "https://github.com/username/repo"    # optional
   project_url: "https://project-website.com"     # optional
-  tags: ["XR", "Architecture", "Design"]
-  primary_category: "XR in Architectural Design"
-  abstract: "Brief description of the paper and its contributions..."
+  tags: ["3D Reconstruction", "BIM", "Quality Control and Validation"]
+  primary_category: "Reality Capture and Digital Twins"
+  abstract: "Building Information Modeling (BIM) offers a novel approach to design, construction, and facility management..."
 ```
 
 ### Required Fields
 
-- `id`: unique id
-- `title`: Paper title
-- `authors`: List of authors
-- `year`: Publication year
-- `primary_category`: Main category (see categories below)
-- `abstract`: Paper abstract
+- `id`: A unique kebab-case ID (usually `firstauthorYEARshorttitle`, e.g. `charles2011bim`).
+- `title`: Complete paper title.
+- `authors`: List of authors (formatted as a YAML array).
+- `year`: Publication year (integer).
+- `paper_url` (or `paper`): Direct URL to the paper's PDF, publisher page, or abstract page.
+- `primary_category`: The main category the paper belongs to (must match one of the categories below).
+- `abstract`: Brief description of the paper and its contributions.
 
 ### Optional Fields
 
-- `venue`: Conference/journal name
-- `paper_url`: Link to paper (arXiv, DOI, etc.)
-- `code_url`: Link to code repository
-- `project_url`: Link to project page
-- `tags`: List of relevant tags
+- `venue`: Conference or journal name.
+- `code_url`: Link to the open-source code repository (e.g. GitHub).
+- `project_url`: Link to the project or research page.
+- `tags`: Additional descriptive tags or labels.
 
 ### Paper Categories
 
-- `XR in Architectural Design`
-- `AI for Architecture`
-- `Generative Design`
-- `Building Information Modeling (BIM)`
-- `Architectural Visualization`
-- `Smart Buildings`
-- `Computational Design`
+To maintain organization, the `primary_category` field must match one of the following exactly:
+
+- `AI-Driven Design and Generative Architecture`
+- `Reality Capture and Digital Twins`
+- `Computational BIM and Intelligent Operations`
+- `Heritage Conservation and Cultural Preservation`
+- `Sustainability and Environmental Performance`
+- `Sustainable Real Estate Valuation and Economics`
+- `Human-Computer Interaction and Human-Building Interaction`
 
 ## 🔧 Testing Your Changes
 

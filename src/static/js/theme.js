@@ -24,6 +24,9 @@ function setTheme(theme) {
 
 // Toggle between themes: light -> dark -> auto -> light
 function toggleTheme() {
+    // Add transitioning class to document root to enable smooth transition
+    document.documentElement.classList.add('theme-transitioning');
+    
     const themes = ['light', 'dark', 'auto'];
     const currentIndex = themes.indexOf(currentTheme);
     const nextIndex = (currentIndex + 1) % themes.length;
@@ -31,8 +34,10 @@ function toggleTheme() {
     
     setTheme(nextTheme);
     
-    // Show a brief notification
-    showThemeNotification(nextTheme);
+    // Remove transition class after the transition finishes (130ms)
+    setTimeout(() => {
+        document.documentElement.classList.remove('theme-transitioning');
+    }, 130);
 }
 
 // Update theme button tooltip
@@ -46,64 +51,6 @@ function updateThemeTooltip() {
         };
         themeButton.textContent = themeNames[currentTheme] || 'Toggle Theme';
     }
-}
-
-// Show theme change notification
-function showThemeNotification(theme) {
-    // Remove existing notification
-    const existingNotification = document.querySelector('.theme-notification');
-    if (existingNotification) {
-        existingNotification.remove();
-    }
-    
-    // Create notification
-    const notification = document.createElement('div');
-    notification.className = 'theme-notification';
-    notification.innerHTML = `
-        <i class="fas fa-${theme === 'light' ? 'sun' : theme === 'dark' ? 'moon' : 'circle-half-stroke'}"></i>
-        ${theme.charAt(0).toUpperCase() + theme.slice(1)} theme activated
-    `;
-    
-    // Style the notification
-    notification.style.cssText = `
-        position: fixed;
-        top: 80px;
-        left: 20px;
-        background: var(--bg-secondary);
-        color: var(--text-primary);
-        padding: 12px 16px;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px var(--shadow-color);
-        z-index: 1001;
-        font-size: 14px;
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        opacity: 0;
-        transform: translateX(-20px);
-        transition: all 0.3s ease;
-        pointer-events: none;
-    `;
-    
-    document.body.appendChild(notification);
-    
-    // Animate in
-    setTimeout(() => {
-        notification.style.opacity = '1';
-        notification.style.transform = 'translateX(0)';
-    }, 10);
-    
-    // Remove after delay
-    setTimeout(() => {
-        notification.style.opacity = '0';
-        notification.style.transform = 'translateX(-20px)';
-        setTimeout(() => {
-            if (notification.parentNode) {
-                notification.remove();
-            }
-        }, 300);
-    }, 2000);
 }
 
 // Listen for system theme changes when in auto mode

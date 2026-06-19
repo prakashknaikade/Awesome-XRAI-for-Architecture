@@ -325,9 +325,10 @@
 }
 
 .paper-tag {
-    font-size: .68rem;
-    padding: .2rem .55rem;
+    font-size: 0.78rem;
+    padding: 0.25rem 0.65rem;
     border-radius: 999px;
+    font-weight: 500;
 }
 
 .paper-links {

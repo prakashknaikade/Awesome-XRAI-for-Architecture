@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XRAI4AEC Database Editor</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-page: #0d1117;
+            --bg-panel: #161b22;
+            --bg-panel-alt: #21262d;
+            --bg-chip: #1f2a35;
+            --bg-chip-hover: #2d3d4f;
+            --accent-color: #58a6ff;
+            --accent-hover: #388bfd;
+            --text-primary: #f0f6fc;
+            --text-secondary: #8b949e;
+            --border-color: #30363d;
+            --success-color: #2ea043;
+            --success-hover: #3fb950;
+            --danger-color: #f85149;
+            --danger-hover: #ff7b72;
+            --yellow-color: #ecb22e;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Header styling */
+        header {
+            background-color: var(--bg-panel);
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .header-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header-title h1 {
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .header-title h1 span {
+            color: var(--accent-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        /* Buttons */
+        .btn {
+            background-color: var(--bg-panel-alt);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--border-color);
+        }
+
+        .btn-primary {
+            background-color: var(--success-color);
+            border-color: var(--success-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--success-hover);
+        }
+
+        .btn-accent {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: #0d1117;
+        }
+
+        .btn-accent:hover {
+            background-color: var(--accent-hover);
+            color: var(--text-primary);
+        }
+
+        .btn-danger {
+            background-color: var(--danger-color);
+            border-color: var(--danger-color);
+        }
+
+        .btn-danger:hover {
+            background-color: var(--danger-hover);
+        }
+
+        /* Workspace container */
+        .workspace {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 320px;
+            background-color: var(--bg-panel);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+
+        .search-area {
+            padding: 15px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .search-input-wrapper {
+            position: relative;
+        }
+
+        .search-input-wrapper i {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            pointer-events: none;
+        }
+
+        .search-input {
+            width: 100%;
+            background-color: var(--bg-page);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 8px 32px 8px 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            outline: none;
+        }
+
+        .search-input:focus {
+            border-color: var(--accent-color);
+        }
+
+        .paper-list {
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .paper-item {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: background-color 0.2s;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .paper-item:hover {
+            background-color: var(--bg-panel-alt);
+        }
+
+        .paper-item.active {
+            background-color: var(--bg-chip);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .paper-item-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            line-height: 1.3;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .paper-item-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        /* Editor Area */
+        .editor-container {
+            flex: 1;
+            overflow-y: auto;
+            padding: 30px;
+            background-color: var(--bg-page);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .editor-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .editor-columns {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .editor-column-left {
+            flex: 0.8;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            min-width: 0;
+        }
+
+        .editor-column-right {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            min-width: 0;
+        }
+
+        @media (max-width: 1024px) {
+            .editor-columns {
+                flex-direction: column;
+            }
+            .editor-column-left, .editor-column-right {
+                flex: none;
+                width: 100%;
+            }
+        }
+
+        .form-section {
+            background-color: var(--bg-panel);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-section-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .form-row-three {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+        }
+
+        label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        input[type="text"], select, textarea {
+            background-color: var(--bg-page);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 10px 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            outline: none;
+            width: 100%;
+            font-family: inherit;
+        }
+
+        input[type="text"]:focus, select:focus, textarea:focus {
+            border-color: var(--accent-color);
+        }
+
+        input[readonly] {
+            background-color: var(--bg-panel-alt);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+            line-height: 1.4;
+        }
+
+        /* Arxiv query area */
+        .arxiv-fetch-box {
+            display: flex;
+            gap: 10px;
+        }
+
+        .arxiv-fetch-box input {
+            flex: 1;
+        }
+
+        /* Category picker panel */
+        .category-picker-btn {
+            background-color: var(--bg-page);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.15s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            width: 100%;
+        }
+
+        .category-picker-btn:hover {
+            border-color: var(--text-secondary);
+            color: var(--text-primary);
+        }
+
+        .category-picker-btn.active {
+            background-color: rgba(46, 160, 67, 0.12);
+            border-color: var(--success-color);
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .category-picker-btn.active i {
+            color: var(--success-color);
+        }
+
+        /* Tags panel */
+        .tag-picker-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .tag-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .tag-group-title {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--yellow-color);
+            margin-top: 5px;
+        }
+
+        .tag-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag-badge {
+            background-color: var(--bg-page);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.15s ease;
+        }
+
+        .tag-badge:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            background-color: var(--bg-panel-alt);
+        }
+
+        .tag-badge.active {
+            background-color: var(--success-color);
+            border-color: var(--success-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        .tag-badge.highlighted {
+            color: var(--yellow-color);
+            border-color: var(--yellow-color);
+            font-weight: 500;
+        }
+
+        .tag-badge.highlighted.active {
+            background-color: var(--success-color);
+            border-color: var(--success-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        /* Toast notifications */
+        .toast-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .toast {
+            background-color: var(--bg-panel);
+            border-left: 4px solid var(--accent-color);
+            color: var(--text-primary);
+            padding: 12px 20px;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            min-width: 250px;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        .toast.success {
+            border-left-color: var(--success-color);
+        }
+
+        .toast.error {
+            border-left-color: var(--danger-color);
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Loading indicator overlay */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(13, 17, 23, 0.75);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .spinner {
+            border: 4px solid rgba(255,255,255,0.1);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border-left-color: var(--accent-color);
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .workspace {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                height: 250px;
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+            .editor-container {
+                padding: 15px;
+            }
+            .form-row, .form-row-three {
+                grid-template-columns: 1fr;
+            }
+            header {
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-title">
+            <i class="fa-solid fa-database-check" style="color: var(--accent-color); font-size: 1.5rem;"></i>
+            <h1>XRAI4AEC <span>Database Editor</span></h1>
+        </div>
+        <div class="header-actions">
+            <button class="btn" id="btnClose" onclick="window.location.href='./index.html'">
+                <i class="fa-solid fa-arrow-left"></i> Back to Main Page
+            </button>
+            <div id="totalPaperCount" style="font-size: 0.9rem; font-weight: 500; background-color: var(--bg-panel-alt); border: 1px solid var(--border-color); padding: 8px 14px; border-radius: 6px; color: var(--text-secondary); display: inline-flex; align-items: center; gap: 8px;">
+                <i class="fa-solid fa-file-invoice" style="color: var(--accent-color);"></i>
+                <span>Total Papers: <strong style="color: var(--text-primary);" id="paperCountNumber">0</strong></span>
+            </div>
+            <button class="btn btn-accent" id="btnDownloadYaml">
+                <i class="fa-solid fa-download"></i> Download YAML
+            </button>
+            <button class="btn btn-primary" id="btnSave">
+                <i class="fa-solid fa-floppy-disk"></i> Save Database
+            </button>
+        </div>
+    </header>
+
+    <div class="workspace">
+        <!-- Paper List Sidebar -->
+        <div class="sidebar">
+            <div class="search-area">
+                <div class="search-input-wrapper">
+                    <input type="text" class="search-input" id="searchSidebar" placeholder="Search papers...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <button class="btn" id="btnAddPaper" style="width: 100%; justify-content: center; background-color: var(--bg-panel-alt);">
+                    <i class="fa-solid fa-plus"></i> Add New Paper
+                </button>
+            </div>
+            <div class="paper-list" id="sidebarList">
+                <!-- Papers populated via JS -->
+            </div>
+        </div>
+
+        <!-- Form Editor Container -->
+        <div class="editor-container">
+            <div class="editor-form" id="editorForm" style="display: none;">
+                <!-- Section 1: Fetch details from arXiv -->
+                <div class="form-section" id="arxivFetchSection">
+                    <div class="form-section-title">
+                        <span>Auto-Fill from arXiv</span>
+                        <i class="fa-brands fa-square-envelope" style="color: #ff6b6b;"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="arxivInput">arXiv URL or ID</label>
+                        <div class="arxiv-fetch-box">
+                            <input type="text" id="arxivInput" placeholder="e.g. 2503.11806 or https://arxiv.org/abs/2503.11806">
+                            <button class="btn btn-accent" id="btnFetchArxiv">
+                                <i class="fa-solid fa-cloud-arrow-down"></i> Fetch Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Two-column layout container -->
+                <div class="editor-columns">
+                    <!-- Left Column: Metadata & Links -->
+                    <div class="editor-column-left">
+                        <!-- Section 2: Paper Metadata -->
+                        <div class="form-section">
+                            <div class="form-section-title">Paper Metadata</div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="pId">Paper ID (Unique Key)</label>
+                                    <input type="text" id="pId" readonly placeholder="Auto-generated or specified">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pYear">Year <span style="color: var(--danger-color);">*</span></label>
+                                    <input type="text" id="pYear" placeholder="e.g. 2025">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pTitle">Title <span style="color: var(--danger-color);">*</span></label>
+                                <input type="text" id="pTitle" placeholder="Enter paper title">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pAuthors">Authors <span style="color: var(--danger-color);">*</span></label>
+                                <input type="text" id="pAuthors" placeholder="Author name 1, Author name 2, ...">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pAbstract">Abstract <span style="color: var(--danger-color);">*</span></label>
+                                <textarea id="pAbstract" placeholder="Paste abstract text here..." style="min-height: 380px;"></textarea>
+                            </div>
+
+                            <div class="form-group" style="margin-top: 15px;">
+                                <label style="font-weight: 600; display: flex; align-items: center; gap: 6px;">
+                                    <span>Primary Category (Required)</span>
+                                    <span style="color: var(--danger-color); font-size: 0.95rem;">*</span>
+                                </label>
+                                <div id="primaryCategoryPicker" style="display: flex; flex-direction: column; gap: 8px; margin-top: 5px;">
+                                    <!-- Populated via JS -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 3: Links and Media -->
+                        <div class="form-section">
+                            <div class="form-section-title">Links & Files</div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="pPaper">Paper URL (PDF or Abstract Page) <span style="color: var(--danger-color);">*</span></label>
+                                    <input type="text" id="pPaper" placeholder="https://...">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pProject">Project Page URL</label>
+                                    <input type="text" id="pProject" placeholder="https://...">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="pCode">Code Repository URL</label>
+                                    <input type="text" id="pCode" placeholder="https://github.com/...">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pVideo">Video URL</label>
+                                    <input type="text" id="pVideo" placeholder="https://youtube.com/...">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pThumbnail">Thumbnail Path</label>
+                                <input type="text" id="pThumbnail" placeholder="assets/thumbnails/filename.jpg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Tags & Actions -->
+                    <div class="editor-column-right">
+                        <!-- Section 4: Tags selection -->
+                        <div class="form-section">
+                            <div class="form-section-title">Associated Tags</div>
+                            <div class="tag-picker-container" id="tagPicker">
+                                <!-- Categorized tag pools generated by JS -->
+                            </div>
+                        </div>
+
+                        <!-- Danger Zone inside Right Column -->
+                        <div class="form-section" style="border-color: var(--danger-color);">
+                            <div class="form-section-title" style="color: var(--danger-color);">Danger Zone</div>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">Deleting a paper will permanently remove it from the database list upon saving.</p>
+                            <div>
+                                <button class="btn btn-danger" id="btnDeletePaper">
+                                    <i class="fa-solid fa-trash-can"></i> Delete This Paper
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard placeholder when no paper selected -->
+            <div id="noSelectionPlaceholder" style="margin: auto; text-align: center; max-width: 400px; display: flex; flex-direction: column; gap: 20px; color: var(--text-secondary);">
+                <i class="fa-solid fa-file-pen" style="font-size: 4rem; color: var(--border-color);"></i>
+                <h2>Select a Paper</h2>
+                <p>Click on any paper in the sidebar list to edit its details, or click <strong>Add New Paper</strong> to start a new entry.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Loading overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <div style="font-size: 1.1rem; font-weight: 500;" id="loadingText">Processing...</div>
+    </div>
+
+    <script>
+        // Available Tags list grouped by Category for UI presentation
+        const TAG_SCHEMA = [
+            {
+                category: "Generative Design and Design Space Exploration",
+                tags: ["Generative Design and Design Space Exploration", "geometry generation", "Form Finding", "design automation", "GANs", "VAE", "diffusion models", "RL", "procedural modeling", "text-to-3D", "image-to-3D", "conditional generation", "design space optimization", "multi-objective optimization", "search-based design"]
+            },
+            {
+                category: "Parametric, Computational and Algorithmic Design",
+                tags: ["Parametric, Computational and Algorithmic Design", "rule-based modeling", "structural optimization", "Grasshopper", "Rhino", "Houdini"]
+            },
+            {
+                category: "Performance-Driven Design",
+                tags: ["Performance-Driven Design", "energy modeling", "energy optimization", "thermal simulation", "daylight optimization", "acoustics", "structural efficiency", "AI performance feedback", "environmental simulation", "multi-criteria optimization"]
+            },
+            {
+                category: "Reality Capture and Digital Twins",
+                tags: ["3D Reconstruction", "point clouds", "LiDAR", "photogrammetry", "SLAM", "NeRF", "3DGS", "SfM", "indoor scene reconstruction", "outdoor scene reconstruction", "scene understanding", "scene editing", "scene interaction"]
+            },
+            {
+                category: "Floor Plan Reconstruction and Parametrization",
+                tags: ["Floor Plan Reconstruction and Parametrization", "digital twins", "BIM", "parametric BIM", "mesh-to-BIM", "scan-to-BIM", "point-cloud-to-plan", "image-to-plan", "2D floor plan", "3D floor plan", "layout recovery", "room segmentation", "object detection", "semantic segmentation", "structural element detection", "Revit automation"]
+            },
+            {
+                category: "Predictive Analytics and Performance Optimization",
+                tags: ["Predictive Analytics and Performance Optimization", "predictive analytics", "building energy forecasting", "time-series analysis", "anomaly detection"]
+            },
+            {
+                category: "Quality Control and Validation",
+                tags: ["Quality Control and Validation", "BIM validation", "model checking", "clash detection", "data quality", "geometric validation", "automated compliance checking", "QA/QC in BIM"]
+            },
+            {
+                category: "Digital Documentation and Archiving",
+                tags: ["Digital Documentation and Archiving", "heritage digitization", "digital archives", "3D scanning", "Heritage BIM", "documentation workflows"]
+            },
+            {
+                category: "Predictive Conservation and Risk Assessment",
+                tags: ["Predictive Conservation and Risk Assessment", "conservation AI", "risk assessment", "risk modeling", "structural health monitoring", "predictive maintenance", "damage detection", "material degradation prediction"]
+            },
+            {
+                category: "Virtual Reality Experiences and Education",
+                tags: ["Virtual Reality Experiences and Education", "cultural heritage VR", "museum VR", "AR cultural experiences", "heritage XR visualization", "immersive education", "XR storytelling"]
+            },
+            {
+                category: "AI for Energy Performance Optimization",
+                tags: ["AI for Energy Performance Optimization", "building energy simulation", "AI HVAC optimization", "energy-efficient design", "smart grids"]
+            },
+            {
+                category: "Sustainable Buildings",
+                tags: ["Sustainable Buildings", "lifecycle assessment", "sustainable materials", "embodied carbon", "material simulation", "AI material selection", "circular economy", "material passports", "sustainable construction", "sustainable disassembly"]
+            },
+            {
+                category: "Smart Building Systems and IoT Integration",
+                tags: ["Smart Building Systems and IoT Integration", "intelligent environments", "AI building automation", "adaptive control", "real-time monitoring", "human-centric IoT", "sensor data integration", "building performance dashboard", "big data in buildings", "blockchain for AEC", "data templates for circularity"]
+            },
+            {
+                category: "Sustainable Real Estate Valuation and Economics",
+                tags: ["AI-Powered Real Estate Valuation", "predictive pricing", "ML for sustainable real estate", "AI in asset management", "real estate analytics", "predictive investment", "asset performance"]
+            },
+            {
+                category: "Virtual Property Tours and Marketing",
+                tags: ["Virtual Property Tours and Marketing", "XR immersive walkthroughs", "real estate visualization", "virtual staging"]
+            },
+            {
+                category: "Human-Computer Interaction and Human-Building Interaction",
+                tags: ["XRAI for AEC", "immersive design", "collaborative VR co-design", "XR design review", "XRAI inclusive design", "XRAI automated accessibility", "AR/VR/XR visualization", "Interactive Visualization", "AR/VR/interfaces", "VR dashboards", "adaptive environments", "metaverse for AEC", "Unity", "Unreal Engine", "HCI-HBI", "occupant behavior", "spatial analytics", "movement analysis", "space utilization", "sensor-driven design", "AI occupancy modeling", "behavior modeling"]
+            },
+            {
+                category: "Emerging & Multimodal AEC Intelligence",
+                tags: ["Cross-Modal Intelligence and Multimodal Integration", "Vision-Language Models for AEC", "LLMs for AEC", "Multimodal Design Assistance", "Context-Aware Spatial Intelligence", "Agent-based Modeling"]
+            },
+            {
+                category: "General Classifications",
+                tags: ["Review Paper", "Dataset", "Case Study", "Tool/Library"]
+            }
+        ];
+
+        // Flat set of all tags
+        const HIGHLIGHTED_CATEGORIES = new Set([
+            "Generative Design and Design Space Exploration",
+            "Parametric, Computational and Algorithmic Design",
+            "Performance-Driven Design",
+            "3D Reconstruction",
+            "Floor Plan Reconstruction and Parametrization",
+            "Predictive Analytics and Performance Optimization",
+            "Quality Control and Validation",
+            "Digital Documentation and Archiving",
+            "Predictive Conservation and Risk Assessment",
+            "Virtual Reality Experiences and Education",
+            "AI for Energy Performance Optimization",
+            "Sustainable Buildings",
+            "Smart Building Systems and IoT Integration",
+            "AI-Powered Real Estate Valuation",
+            "Portfolio Management and Investment Analysis",
+            "Virtual Property Tours and Marketing",
+            "XRAI for AEC",
+            "Occupant Behavior Analysis and Spatial Optimization",
+            "Cross-Modal Intelligence and Multimodal Integration",
+            "Review Paper", "Dataset", "Case Study", "Tool/Library"
+        ]);
+
+        const PRIMARY_CATEGORIES = [
+            "AI-Driven Design and Generative Architecture",
+            "Reality Capture and Digital Twins",
+            "Computational BIM and Intelligent Operations",
+            "Heritage Conservation and Cultural Preservation",
+            "Sustainability and Environmental Performance",
+            "Sustainable Real Estate Valuation and Economics",
+            "Human-Computer Interaction and Human-Building Interaction"
+        ];
+
+        let papersData = [];
+        let activePaper = null;
+        let selectedTags = new Set();
+        let isLocalMode = false; // Detected based on API availability
+
+        // Initialize Page
+        window.addEventListener('DOMContentLoaded', async () => {
+            showLoading("Initializing editor...");
+            
+            // Render Primary Category Picker
+            renderPrimaryCategoryPicker();
+
+            // Render Tag Picker template structure
+            renderTagPickerPools();
+
+            // Detect mode & load papers
+            await loadPapers();
+
+            // Setup Event Handlers
+            document.getElementById('searchSidebar').addEventListener('input', filterSidebar);
+            document.getElementById('btnAddPaper').addEventListener('click', createNewPaper);
+            document.getElementById('btnSave').addEventListener('click', saveDatabase);
+            document.getElementById('btnDownloadYaml').addEventListener('click', downloadYaml);
+            document.getElementById('btnFetchArxiv').addEventListener('click', fetchArxiv);
+            document.getElementById('btnDeletePaper').addEventListener('click', deleteActivePaper);
+
+            // Bind text changes to sync back to activePaper object
+            setupFormSync();
+            
+            hideLoading();
+        });
+
+        // Setup loading screen
+        function showLoading(text = "Processing...") {
+            document.getElementById('loadingText').textContent = text;
+            document.getElementById('loadingOverlay').style.display = 'flex';
+        }
+
+        function hideLoading() {
+            document.getElementById('loadingOverlay').style.display = 'none';
+        }
+
+        // Show Toast Notifications
+        function showToast(message, type = "info") {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            
+            let icon = 'fa-circle-info';
+            if (type === 'success') icon = 'fa-circle-check';
+            if (type === 'error') icon = 'fa-circle-xmark';
+            
+            toast.innerHTML = `<i class="fa-solid ${icon}"></i><span>${message}</span>`;
+            container.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.animation = 'slideIn 0.3s ease-out reverse';
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        // Render Primary Category Picker
+        function renderPrimaryCategoryPicker() {
+            const picker = document.getElementById('primaryCategoryPicker');
+            picker.innerHTML = '';
+            
+            PRIMARY_CATEGORIES.forEach(cat => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'category-picker-btn';
+                btn.dataset.category = cat;
+                btn.innerHTML = `<i class="fa-regular fa-circle"></i><span>${cat}</span>`;
+                btn.addEventListener('click', () => selectPrimaryCategory(cat, btn));
+                picker.appendChild(btn);
+            });
+        }
+
+        // Handle selection of primary category
+        function selectPrimaryCategory(cat, element) {
+            document.querySelectorAll('.category-picker-btn').forEach(btn => {
+                btn.classList.remove('active');
+                btn.querySelector('i').className = 'fa-regular fa-circle';
+            });
+            
+            element.classList.add('active');
+            element.querySelector('i').className = 'fa-solid fa-circle-check';
+            
+            if (activePaper) {
+                activePaper.primary_category = cat;
+            }
+        }
+
+        // Render Tag Picker pools grouped by category
+        function renderTagPickerPools() {
+            const picker = document.getElementById('tagPicker');
+            picker.innerHTML = '';
+            
+            TAG_SCHEMA.forEach(group => {
+                const groupDiv = document.createElement('div');
+                groupDiv.className = 'tag-group';
+                
+                const title = document.createElement('div');
+                title.className = 'tag-group-title';
+                title.textContent = group.category;
+                groupDiv.appendChild(title);
+                
+                const badgesDiv = document.createElement('div');
+                badgesDiv.className = 'tag-badges';
+                
+                group.tags.forEach(tag => {
+                    const badge = document.createElement('span');
+                    badge.className = 'tag-badge';
+                    if (HIGHLIGHTED_CATEGORIES.has(tag)) {
+                        badge.classList.add('highlighted');
+                    }
+                    badge.textContent = tag;
+                    badge.dataset.tag = tag;
+                    badge.addEventListener('click', () => toggleTag(tag, badge));
+                    badgesDiv.appendChild(badge);
+                });
+                
+                groupDiv.appendChild(badgesDiv);
+                picker.appendChild(groupDiv);
+            });
+        }
+
+        // Toggle tag selection
+        function toggleTag(tag, element) {
+            if (selectedTags.has(tag)) {
+                selectedTags.delete(tag);
+                element.classList.remove('active');
+            } else {
+                selectedTags.add(tag);
+                element.classList.add('active');
+            }
+            if (activePaper) {
+                activePaper.tags = Array.from(selectedTags).sort();
+            }
+        }
+
+        // Load papers from server (local dev server mode) or load static mock data
+        async function loadPapers() {
+            try {
+                const res = await fetch('/api/papers');
+                if (res.ok) {
+                    papersData = await res.json();
+                    isLocalMode = true;
+                    showToast("Loaded database from local server.", "success");
+                } else {
+                    throw new Error("Local API endpoint not available");
+                }
+            } catch (err) {
+                // If it fails (statically hosted on GH pages), try to load from papers_data.json or yaml directly
+                isLocalMode = false;
+                try {
+                    const res = await fetch('./src/papers_data.json');
+                    if (res.ok) {
+                        papersData = await res.json();
+                        showToast("Loaded database in STATIC preview mode. You can export/download YAML changes.", "info");
+                    } else {
+                        // Fallback to static empty array
+                        papersData = [];
+                        showToast("No database file found. Starting empty.", "error");
+                    }
+                } catch (err2) {
+                    papersData = [];
+                    showToast("Failed to fetch database.", "error");
+                }
+            }
+
+            // Sort papers by year (desc) and title (asc)
+            sortPapers();
+            populateSidebar();
+            updatePaperCount();
+        }
+
+        // Sort database entries
+        function sortPapers() {
+            papersData.sort((a, b) => {
+                const yearA = parseInt(a.year) || 0;
+                const yearB = parseInt(b.year) || 0;
+                if (yearB !== yearA) return yearB - yearA;
+                return (a.title || "").localeCompare(b.title || "");
+            });
+        }
+
+        // Populate Sidebar list
+        function populateSidebar() {
+            const list = document.getElementById('sidebarList');
+            list.innerHTML = '';
+            
+            papersData.forEach(paper => {
+                const item = document.createElement('div');
+                item.className = 'paper-item';
+                if (activePaper && activePaper.id === paper.id) {
+                    item.classList.add('active');
+                }
+                
+                item.innerHTML = `
+                    <div class="paper-item-title">${paper.title || '<i>Untitled Paper</i>'}</div>
+                    <div class="paper-item-meta">
+                        <span>${paper.year || 'Unknown'}</span>
+                        <span style="font-size: 0.65rem; background-color: var(--bg-panel-alt); padding: 2px 6px; border-radius: 4px; color: var(--accent-color);">
+                            ${paper.id}
+                        </span>
+                    </div>
+                `;
+                
+                item.addEventListener('click', () => selectPaper(paper.id));
+                list.appendChild(item);
+            });
+        }
+
+        // Update displayed total paper count
+        function updatePaperCount() {
+            const countEl = document.getElementById('paperCountNumber');
+            if (countEl) {
+                countEl.textContent = papersData.length;
+            }
+        }
+
+        // Filter Sidebar List
+        function filterSidebar() {
+            const query = document.getElementById('searchSidebar').value.toLowerCase();
+            const items = document.querySelectorAll('.paper-item');
+            
+            papersData.forEach((paper, idx) => {
+                const title = (paper.title || "").toLowerCase();
+                const authors = (paper.authors || "").toLowerCase();
+                const id = (paper.id || "").toLowerCase();
+                const isMatch = title.includes(query) || authors.includes(query) || id.includes(query);
+                
+                if (items[idx]) {
+                    items[idx].style.display = isMatch ? 'flex' : 'none';
+                }
+            });
+        }
+
+        // Select Paper to edit
+        function selectPaper(id) {
+            // Find paper object
+            const paper = papersData.find(p => p.id === id);
+            if (!paper) return;
+
+            activePaper = paper;
+            
+            // Highlight sidebar item
+            document.querySelectorAll('.paper-item').forEach(item => item.classList.remove('active'));
+            const listItems = document.querySelectorAll('.paper-item');
+            const paperIdx = papersData.findIndex(p => p.id === id);
+            if (listItems[paperIdx]) {
+                listItems[paperIdx].classList.add('active');
+            }
+
+            // Fill form
+            document.getElementById('pId').value = paper.id || "";
+            document.getElementById('pYear').value = paper.year || "";
+            document.getElementById('pTitle').value = paper.title || "";
+            document.getElementById('pAuthors').value = paper.authors || "";
+            // Fill primary category buttons
+            const activeCat = paper.primary_category || "";
+            document.querySelectorAll('.category-picker-btn').forEach(btn => {
+                if (btn.dataset.category === activeCat) {
+                    btn.classList.add('active');
+                    btn.querySelector('i').className = 'fa-solid fa-circle-check';
+                } else {
+                    btn.classList.remove('active');
+                    btn.querySelector('i').className = 'fa-regular fa-circle';
+                }
+            });
+            document.getElementById('pAbstract').value = paper.abstract || "";
+            document.getElementById('pPaper').value = paper.paper || "";
+            document.getElementById('pProject').value = paper.project_page || "";
+            document.getElementById('pCode').value = paper.code || "";
+            document.getElementById('pVideo').value = paper.video || "";
+            document.getElementById('pThumbnail').value = paper.thumbnail || "";
+
+            // Fill tags
+            selectedTags.clear();
+            const tags = paper.tags || [];
+            tags.forEach(t => selectedTags.add(t));
+            
+            document.querySelectorAll('.tag-badge').forEach(badge => {
+                const tag = badge.dataset.tag;
+                if (selectedTags.has(tag)) {
+                    badge.classList.add('active');
+                } else {
+                    badge.classList.remove('active');
+                }
+            });
+
+            // Show Form
+            document.getElementById('noSelectionPlaceholder').style.display = 'none';
+            document.getElementById('editorForm').style.display = 'flex';
+            
+            // Show/hide arXiv auto-fill section depending on whether it is a new paper
+            const fetchSection = document.getElementById('arxivFetchSection');
+            if (fetchSection) {
+                if (paper.id && paper.id.startsWith('new_paper_')) {
+                    fetchSection.style.display = 'flex';
+                } else {
+                    fetchSection.style.display = 'none';
+                }
+            }
+
+            // Clear arXiv inputs
+            document.getElementById('arxivInput').value = '';
+        }
+
+        // Sync inputs back to papersData list
+        function setupFormSync() {
+            const fields = {
+                'pYear': 'year',
+                'pTitle': 'title',
+                'pAuthors': 'authors',
+                'pAbstract': 'abstract',
+                'pPaper': 'paper',
+                'pProject': 'project_page',
+                'pCode': 'code',
+                'pVideo': 'video',
+                'pThumbnail': 'thumbnail'
+            };
+
+            Object.entries(fields).forEach(([elemId, dataKey]) => {
+                const element = document.getElementById(elemId);
+                element.addEventListener('input', () => {
+                    if (activePaper) {
+                        activePaper[dataKey] = element.value;
+                        // Refresh title in sidebar instantly
+                        if (dataKey === 'title' || dataKey === 'year') {
+                            const paperIdx = papersData.findIndex(p => p.id === activePaper.id);
+                            const sidebarItems = document.querySelectorAll('.paper-item');
+                            if (sidebarItems[paperIdx]) {
+                                sidebarItems[paperIdx].querySelector('.paper-item-title').innerHTML = activePaper.title || '<i>Untitled Paper</i>';
+                                sidebarItems[paperIdx].querySelector('.paper-item-meta span').textContent = activePaper.year || 'Unknown';
+                            }
+                        }
+                    }
+                });
+            });
+        }
+
+        // Add a blank new paper
+        function createNewPaper() {
+            const id = 'new_paper_' + Math.random().toString(36).substr(2, 9);
+            const newPaper = {
+                id: id,
+                title: "New Paper Title",
+                authors: "",
+                year: new Date().getFullYear().toString(),
+                primary_category: "",
+                abstract: "",
+                paper: "",
+                project_page: "",
+                code: "",
+                video: "",
+                tags: [],
+                thumbnail: `assets/thumbnails/${id}.jpg`
+            };
+
+            papersData.unshift(newPaper);
+            populateSidebar();
+            updatePaperCount();
+            selectPaper(id);
+            document.getElementById('pTitle').select();
+            showToast("Created a new blank paper card.", "info");
+        }
+
+        // Delete active paper
+        function deleteActivePaper() {
+            if (!activePaper) return;
+            
+            if (confirm(`Are you sure you want to delete "${activePaper.title}"?`)) {
+                const idx = papersData.findIndex(p => p.id === activePaper.id);
+                if (idx !== -1) {
+                    papersData.splice(idx, 1);
+                    activePaper = null;
+                    populateSidebar();
+                    updatePaperCount();
+                    
+                    // Hide editor form
+                    document.getElementById('editorForm').style.display = 'none';
+                    document.getElementById('noSelectionPlaceholder').style.display = 'flex';
+                    
+                    showToast("Paper removed from database list.", "info");
+                }
+            }
+        }
+
+        // Fetch details from arXiv API
+        async function fetchArxiv() {
+            const input = document.getElementById('arxivInput').value.trim();
+            if (!input) {
+                showToast("Please enter an arXiv URL or ID", "error");
+                return;
+            }
+
+            showLoading("Querying arXiv API...");
+            try {
+                const queryParam = encodeURIComponent(input);
+                const res = await fetch(`/api/arxiv?q=${queryParam}`);
+                if (!res.ok) throw new Error("arXiv fetch failed on server");
+                
+                const data = await res.json();
+                if (data && data.title) {
+                    // Update active paper fields
+                    if (activePaper) {
+                        // Keep ID if already defined or create one based on fetched data
+                        if (activePaper.id.startsWith('new_paper_')) {
+                            activePaper.id = data.id || activePaper.id;
+                            document.getElementById('pId').value = activePaper.id;
+                        }
+                        
+                        activePaper.title = data.title;
+                        activePaper.authors = data.authors;
+                        activePaper.year = data.year;
+                        activePaper.abstract = data.abstract || "";
+                        activePaper.paper = data.paper || activePaper.paper;
+                        activePaper.thumbnail = data.thumbnail || `assets/thumbnails/${activePaper.id}.jpg`;
+                        activePaper.tags = data.tags || [];
+                        
+                        // Select default category if it fits
+                        if (data.primary_category) {
+                            activePaper.primary_category = data.primary_category;
+                        }
+
+                        // Re-fill fields
+                        selectPaper(activePaper.id);
+                        showToast("Successfully fetched details from arXiv!", "success");
+                    }
+                } else {
+                    showToast("No paper matching that ID was found on arXiv.", "error");
+                }
+            } catch (err) {
+                console.error(err);
+                showToast("Failed to fetch from arXiv API. Ensure the backend server is running and the ID is valid.", "error");
+            } finally {
+                hideLoading();
+            }
+        }
+
+        // Validate database: check if all required fields are filled for every paper
+        function validateDatabase() {
+            for (let i = 0; i < papersData.length; i++) {
+                const paper = papersData[i];
+                
+                // Validate Title
+                if (!paper.title || paper.title.trim() === '') {
+                    selectPaper(paper.id);
+                    document.getElementById('pTitle').focus();
+                    showToast(`Validation Error: Please enter a Title for "${paper.id}" before saving.`, "error");
+                    return false;
+                }
+                
+                // Validate Year
+                if (!paper.year || paper.year.trim() === '') {
+                    selectPaper(paper.id);
+                    document.getElementById('pYear').focus();
+                    showToast(`Validation Error: Please enter a Year for "${paper.title}" before saving.`, "error");
+                    return false;
+                }
+                
+                // Validate Authors
+                if (!paper.authors || paper.authors.trim() === '') {
+                    selectPaper(paper.id);
+                    document.getElementById('pAuthors').focus();
+                    showToast(`Validation Error: Please enter Authors for "${paper.title}" before saving.`, "error");
+                    return false;
+                }
+                
+                // Validate Abstract
+                if (!paper.abstract || paper.abstract.trim() === '') {
+                    selectPaper(paper.id);
+                    document.getElementById('pAbstract').focus();
+                    showToast(`Validation Error: Please enter an Abstract for "${paper.title}" before saving.`, "error");
+                    return false;
+                }
+
+                // Validate Primary Category
+                if (!paper.primary_category || paper.primary_category.trim() === '') {
+                    selectPaper(paper.id);
+                    const picker = document.getElementById('primaryCategoryPicker');
+                    if (picker) {
+                        picker.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                    showToast(`Validation Error: Please select a Primary Category for "${paper.title}" before saving.`, "error");
+                    return false;
+                }
+                
+                // Validate Paper URL
+                if (!paper.paper || paper.paper.trim() === '') {
+                    selectPaper(paper.id);
+                    document.getElementById('pPaper').focus();
+                    showToast(`Validation Error: Please enter a Paper URL (PDF or Abstract Page) for "${paper.title}" before saving.`, "error");
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        // Save entire database (JSON payload to local backend server)
+        async function saveDatabase() {
+            if (!validateDatabase()) return;
+
+            if (!isLocalMode) {
+                showToast("Cannot save directly in STATIC mode. Use 'Download YAML' to save changes.", "error");
+                return;
+            }
+
+            showLoading("Saving database...");
+            try {
+                const res = await fetch('/api/papers', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(papersData)
+                });
+                
+                if (res.ok) {
+                    showToast("Database successfully saved and site regenerated!", "success");
+                    // Reload to update index / metadata
+                    await loadPapers();
+                } else {
+                    throw new Error("Server failed to save database");
+                }
+            } catch (err) {
+                console.error(err);
+                showToast("Failed to save database to server.", "error");
+            } finally {
+                hideLoading();
+            }
+        }
+
+        // Custom YAML Serializer to output clean YAML matching standard structure
+        function jsonToYaml(json) {
+            let yamlStr = '';
+            
+            const cleanStr = (str) => {
+                if (!str) return "''";
+                str = str.trim();
+                // Escape single quotes
+                const escaped = str.replace(/'/g, "''");
+                
+                // If contains special chars, return single quoted
+                if (/[:#[\]{}&!|*?|>'\"]/.test(str) || str.toLowerCase() === 'true' || str.toLowerCase() === 'false' || str.toLowerCase() === 'null') {
+                    return `'${escaped}'`;
+                }
+                return str;
+            };
+
+            const cleanAbstract = (str) => {
+                if (!str) return "''";
+                str = str.trim().replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+                
+                // Block style folder (abstracts are formatted with > )
+                let res = '>\n';
+                const lines = str.replace(/\n/g, ' ').match(/.{1,80}(?:\s|$)/g) || [str];
+                lines.forEach(l => {
+                    res += '    ' + l.trim() + '\n';
+                });
+                return res.trimEnd(); // Remove trailing newline
+            };
+
+            json.forEach(entry => {
+                yamlStr += `- id: ${entry.id}\n`;
+                yamlStr += `  title: ${cleanStr(entry.title)}\n`;
+                yamlStr += `  authors: ${entry.authors || ''}\n`;
+                yamlStr += `  year: '${entry.year || ''}'\n`;
+                yamlStr += `  abstract: ${cleanAbstract(entry.abstract)}\n`;
+                yamlStr += `  project_page: ${entry.project_page ? cleanStr(entry.project_page) : "''"}\n`;
+                yamlStr += `  paper: ${entry.paper || ''}\n`;
+                yamlStr += `  code: ${entry.code ? cleanStr(entry.code) : "''"}\n`;
+                yamlStr += `  video: ${entry.video ? cleanStr(entry.video) : "''"}\n`;
+                yamlStr += `  tags:\n`;
+                if (entry.tags && entry.tags.length > 0) {
+                    entry.tags.forEach(t => {
+                        yamlStr += `  - ${t}\n`;
+                    });
+                }
+                yamlStr += `  thumbnail: ${entry.thumbnail || ''}\n`;
+                yamlStr += `  primary_category: ${entry.primary_category || ''}\n`;
+                
+                if (entry.added_date) yamlStr += `  added_date: '${entry.added_date}'\n`;
+                if (entry.publication_date) yamlStr += `  publication_date: '${entry.publication_date}'\n`;
+                if (entry.date_source) yamlStr += `  date_source: ${entry.date_source}\n`;
+            });
+            
+            return yamlStr;
+        }
+
+        // Download database as YAML file (statically supported)
+        function downloadYaml() {
+            if (!validateDatabase()) return;
+
+            showLoading("Generating YAML file...");
+            try {
+                const yamlContent = jsonToYaml(papersData);
+                const blob = new Blob([yamlContent], { type: 'text/yaml;charset=utf-8;' });
+                const url = URL.createObjectURL(blob);
+                
+                const link = document.createElement("a");
+                link.setAttribute("href", url);
+                link.setAttribute("download", "awesome_xrai_architecture_papers.yaml");
+                link.style.visibility = 'hidden';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                showToast("YAML file generated and downloaded successfully!", "success");
+            } catch (err) {
+                console.error(err);
+                showToast("Failed to generate YAML download.", "error");
+            } finally {
+                hideLoading();
+            }
+        }
+    </script>
+</body>
+</html>

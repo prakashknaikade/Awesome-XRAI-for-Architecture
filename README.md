@@ -119,12 +119,12 @@ Here are some organizations we can collaborate within XRAI4AEC domain:
 
 *Recent additions (last 60 days):*
 
-**March 29, 2026**
+**June 04, 2026**
 
-- Google Arts and Culture → *Heritage Conservation and Cultural Preservation*
-- CyArk for digital documentation of cultural heritage sites and architecture → *Heritage Conservation and Cultural Preservation*
+- The Scene Language: Representing Scenes with Programs, Words, and Embeddings → *Reality Capture and Digital Twins*
+- BlenderAlchemy: Editing 3D Graphics with Vision-Language Models → *Reality Capture and Digital Twins*
 
-# Papers List
+# List of Papers
 
 ## AI-Driven Design and Generative Architecture
 
@@ -230,7 +230,8 @@ When using computational optimization for early-stage architectural design, most
 <details>
 <summary><b>Abstract</b></summary>
 
-
+Autodesk customer stories
+Learn about the builders, engineers, manufacturers, designers, 3D artists, and production teams who are reshaping the design and make industries—and the world.
 
 </details>
 
@@ -663,7 +664,7 @@ Current 3D layout estimation models are predominantly trained on synthetic datas
 
 </details>
 
-**Links**: [💻 Code](https://github.com/valebi/house-layout-3d-eval)
+**Links**: [📄 Paper](https://houselayout3d.github.io/assets/houselayout3d_paper.pdf) | [🌐 Project Page](https://houselayout3d.github.io/) | [💻 Code](https://github.com/valebi/house-layout-3d-eval)
 
 ### 10. Human-in-the-Loop Local Corrections of 3D Scene Layouts via Infilling
 
@@ -799,7 +800,20 @@ With the fast pace of 3D capture technology and resulting abundance of 3D data, 
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2504.15049.pdf) | [🌐 Project Page](https://aminebdj.github.io/scanedit/) | [💻 Code](https://github.com/aminebdj/ScanEdit) | [🎥 Video](https://www.youtube.com/watch?v=Dfmu2g6pVlg)
 
-### 20. WildGS-SLAM: Monocular Gaussian Splatting SLAM in Dynamic Environments
+### 20. The Scene Language: Representing Scenes with Programs, Words, and Embeddings
+
+**Authors**: Yunzhi Zhang, Zizhang Li, Matt Zhou, Shangzhe Wu, Jiajun Wu
+
+<details>
+<summary><b>Abstract</b></summary>
+
+We introduce the Scene Language, a visual scene representation that concisely and precisely describes the structure, semantics, and identity of visual scenes. It represents a scene with three key components: a program that specifies the hierarchical and relational structure of entities in the scene, words in natural language that summarize the semantic class of each entity, and embeddings that capture the visual identity of each entity. This representation can be inferred from pre-trained language models via a training-free inference technique, given text or image inputs. The resulting scene can be rendered into images using traditional, neural, or hybrid graphics renderers. Together, this forms a robust, automated system for high-quality 3D and 4D scene generation. Compared with existing representations like scene graphs, our proposed Scene Language generates complex scenes with higher fidelity, while explicitly modeling the scene structures to enable precise control and editing.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/abs/2410.16770) | [🌐 Project Page](https://ai.stanford.edu/~yzzhang/projects/scene-language/) | [💻 Code](https://github.com/zzyunzhi/scene-language) | [🎥 Video](https://ai.stanford.edu/~yzzhang/projects/scene-language/resources_compressed/teaser.mp4#t=0.001)
+
+### 21. WildGS-SLAM: Monocular Gaussian Splatting SLAM in Dynamic Environments
 
 **Authors**: Jianhao Zheng, Zihan Zhu, Valentin Bieri, Marc Pollefeys, Songyou Peng, Iro Armeni
 
@@ -827,7 +841,20 @@ Large volumes of 3D parametric datasets, such as building information modeling (
 
 **Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S0926580524001122)
 
-### 2. FRI-Net: Floorplan Reconstruction via Room-wise Implicit Representation
+### 2. BlenderAlchemy: Editing 3D Graphics with Vision-Language Models
+
+**Authors**: Ian Huang, Guandao Yang, Leonidas Guibas
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Graphics design is important for various applications, including movie production and game design. To create a high-quality scene, designers usually need to spend hours in software like Blender, in which they might need to interleave and repeat operations, such as connecting material nodes, hundreds of times. Moreover, slightly different design goals may require completely different sequences, making automation difficult. In this paper, we propose a system that leverages Vision-Language Models (VLMs), like GPT-4V, to intelligently search the design action space to arrive at an answer that can satisfy a user's intent. Specifically, we design a vision-based edit generator and state evaluator to work together to find the correct sequence of actions to achieve the goal. Inspired by the role of visual imagination in the human design process, we supplement the visual reasoning capabilities of VLMs with "imagined" reference images from image-generation models, providing visual grounding of abstract language descriptions. In this paper, we provide empirical evidence suggesting our system can produce simple but tedious Blender editing sequences for tasks such as editing procedural materials and geometry from text and/or reference images, as well as adjusting lighting configurations for product renderings in complex scenes.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/abs/2404.17672) | [🌐 Project Page](https://ianhuang0630.github.io/BlenderAlchemyWeb/) | [💻 Code](https://github.com/ianhuang0630/BlenderAlchemyOfficial) | [🎥 Video](https://www.youtube.com/watch?v=Uof4OkOX-wU)
+
+### 3. FRI-Net: Floorplan Reconstruction via Room-wise Implicit Representation
 
 **Authors**: Honghao Xu, Juzhan Xu, Zeyu Huang, Pengfei Xu, Hui Huang, Ruizhen Hu
 
@@ -840,7 +867,7 @@ In this paper, we introduce a novel method called FRI-Net for 2D floorplan recon
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2407.10687v1.pdf) | [💻 Code](https://github.com/Daisy-1227/FRI-Net)
 
-### 3. Infrastructure digital twin technology: A new paradigm for future construction industry
+### 4. Infrastructure digital twin technology: A new paradigm for future construction industry
 
 **Authors**: Taofeeq D. Moshood, James OB. Rotimi, Wajiha Shahzad, J.A. Bamgbade
 
@@ -853,7 +880,7 @@ The construction industry has traditionally been slow to adopt digital technolog
 
 **Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S0160791X24000678)
 
-### 4. Integrating Data from Terrestrial Laser Scanning and Unmanned Aerial Vehicle with LiDAR for BIM Developing
+### 5. Integrating Data from Terrestrial Laser Scanning and Unmanned Aerial Vehicle with LiDAR for BIM Developing
 
 **Authors**: Wioleta Blaszczak-Bak, Andrea Masiero, Paweł Bąk, Kamil Kuderko
 
@@ -866,7 +893,7 @@ The use of Building Information Modeling (BIM) in building construction and mana
 
 **Links**: [📄 Paper](https://isprs-archives.copernicus.org/articles/XLVIII-1-2024/25/2024/isprs-archives-XLVIII-1-2024-25-2024.pdf)
 
-### 5. LoopSplat: Loop Closure by Registering 3D Gaussian Splats
+### 6. LoopSplat: Loop Closure by Registering 3D Gaussian Splats
 
 **Authors**: Liyuan Zhu, Yue Li, Erik Sandström, Shengyu Huang, Konrad Schindler, Iro Armeni
 
@@ -879,7 +906,7 @@ Simultaneous Localization and Mapping (SLAM) based on 3D Gaussian Splats (3DGS) 
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2408.10154.pdf) | [🌐 Project Page](https://loopsplat.github.io/) | [💻 Code](https://github.com/GradientSpaces/LoopSplat)
 
-### 6. NC-SDF: Enhancing Indoor Scene Reconstruction Using Neural SDFs with View-Dependent Normal Compensation
+### 7. NC-SDF: Enhancing Indoor Scene Reconstruction Using Neural SDFs with View-Dependent Normal Compensation
 
 **Authors**: Ziyi Chen, Xiaolong Wu, Yu Zhang
 
@@ -892,7 +919,7 @@ State-of-the-art neural implicit surface representations have achieved impressiv
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2405.00340.pdf)
 
-### 7. Novel View Synthesis of Structural Color Objects Created by Laser Markings
+### 8. Novel View Synthesis of Structural Color Objects Created by Laser Markings
 
 **Authors**: Prakash Naikade
 
@@ -917,7 +944,7 @@ synthesis. We design different capture setups to acquire images of objects and e
 
 **Links**: [📄 Paper](https://doi.org/10.5281/zenodo.20258767) | [🌐 Project Page](https://prakashknaikade.github.io/publications/nvs_structural_color_object/)
 
-### 8. PolyRoom: Room-aware Transformer for Floorplan Reconstruction
+### 9. PolyRoom: Room-aware Transformer for Floorplan Reconstruction
 
 **Authors**: Yuzhou Liu, Lingjie Zhu, Xiaodong Ma, Hanqiao Ye, Xiang Gao, Xianwei Zheng, Shuhan Shen
 
@@ -930,7 +957,7 @@ Reconstructing geometry and topology structures from raw unstructured data has a
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2407.10439v1.pdf) | [💻 Code](https://github.com/3dv-casia/PolyRoom/)
 
-### 9. SceneScript: Reconstructing Scenes With An Autoregressive Structured Language Model
+### 10. SceneScript: Reconstructing Scenes With An Autoregressive Structured Language Model
 
 **Authors**: Armen Avetisyan, Christopher Xie, Henry Howard-Jenkins, Tsun-Yi Yang, Samir Aroudj, Suvam Patra, Fuyang Zhang, Duncan Frost, Luke Holland, Campbell Orme, Jakob Engel, Edward Miller, Richard Newcombe, Vasileios Balntas
 
@@ -943,7 +970,7 @@ We introduce SceneScript, a method that directly produces full scene models as a
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2403.13064.pdf) | [🌐 Project Page](https://www.projectaria.com/scenescript/) | [💻 Code](https://github.com/facebookresearch/scenescript) | [🎥 Video](https://www.projectaria.com/scenescript/#)
 
-### 10. WAFFLE: Multimodal Floorplan Understanding in the Wild
+### 11. WAFFLE: Multimodal Floorplan Understanding in the Wild
 
 **Authors**: Keren Ganon, Morris Alper, Rachel Mikulinsky, Hadar Averbuch-Elor
 
@@ -1863,7 +1890,7 @@ DeepMind
 <details>
 <summary><b>Abstract</b></summary>
 
-
+DeepMind AI Reduces Google Data Centre Cooling Bill by 40%.
 
 </details>
 
@@ -1895,7 +1922,19 @@ In the European Union, the building sector is one of the largest energy consumer
 <details>
 <summary><b>Abstract</b></summary>
 
+DISCOVER BIM: A BETTER WAY TO BUILD BETTER BUILDINGS
 
+Building Information Modeling (BIM) offers a novel approach to design, construction, and facility management in which a digital representation of the building process is used to facilitate the exchange and interoperability of information in digital format. BIM is beginning to change the way buildings look, the way they function, and the ways in which they are designed and built.
+
+The BIM Handbook, Second Edition provides an in-depth understanding of BIM technologies, the business and organizational issues associated with its implementation, and the profound advantages that effective use of BIM can provide to all members of a project team. Updates to this edition include:
+
+Completely updated material covering the current practice and technology in this fast-moving field
+Expanded coverage of lean construction and its use of BIM, with special focus on Integrated Project Delivery throughout the book
+New insight on the ways BIM facilitates sustainable building
+New information on interoperability schemas and collaboration tools
+Six new case studies
+
+Painting a colorful and thorough picture of the state of the art in building information modeling, the BIM Handbook, Second Edition guides readers to successful implementations, helping them to avoid needless frustration and costs and take full advantage of this paradigm-shifting approach to construct better buildings that consume fewer materials and require less time, labor, and capital resources.
 
 </details>
 
@@ -1956,7 +1995,7 @@ CyArk is unlocking the power of 3D technology to make the world's cultural herit
 
 </details>
 
-**Links**: [🌐 Project Page](https://www.cyark.org/projects/)
+**Links**: [📄 Paper](https://www.cyark.org/projects/) | [🌐 Project Page](https://www.cyark.org/projects/)
 
 ### 5. Dive into Heritage
 
@@ -1965,7 +2004,11 @@ CyArk is unlocking the power of 3D technology to make the world's cultural herit
 <details>
 <summary><b>Abstract</b></summary>
 
+Generously funded by the Ministry of Culture of the Kingdom of Saudi Arabia, Dive into Heritage is an online platform that uses cutting-the-edge digital technologies to offer a unique and immersive experience of World Heritage and its related intangible heritage. 
 
+The platform enables users to explore heritage sites through free, interactive and guided experiences using 3D models, geolocated narratives, and other media images and videos.
+
+It also aims to serve as a useful tool for sites monitoring and conservation, offering added value to the existing monitoring mechanisms of the World Heritage Convention.
 
 </details>
 
@@ -1982,7 +2025,7 @@ Google Arts & Culture is a non-commercial initiative. We work with cultural inst
 
 </details>
 
-**Links**: [🌐 Project Page](https://artsandculture.google.com/)
+**Links**: [📄 Paper](https://artsandculture.google.com/) | [🌐 Project Page](https://artsandculture.google.com/)
 
 ### 7. Virtual Reality applications for visualization of 6000-year-old Neolithic graves from Lenzburg (Switzerland)
 
@@ -2887,7 +2930,7 @@ Imagination is the original innovation accelerator. It is essential if we are to
 <details>
 <summary><b>Abstract</b></summary>
 
-
+Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL establishing a framework for setting ecodesign requirements for sustainable products and repealing Directive 2009/125/EC
 
 </details>
 
@@ -3673,7 +3716,7 @@ Navigation is an important human task that needs the human sense of vision. In t
 
 ### 3. The Effect of Virtual Tours on House Price and Time on Market
 
-**Authors**: 
+**Authors**: Wei Yua, Zhongming Ma, Gautam Pant and Jing Hu
 
 <details>
 <summary><b>Abstract</b></summary>
@@ -3682,7 +3725,7 @@ The integration of augmented reality in virtual tours was recently identified as
 
 </details>
 
-**Links**: [📄 Paper](https://doi.org/10.1080/09277544.2021.1876433)
+**Links**: [📄 Paper](https://www.tandfonline.com/doi/full/10.1080/09277544.2021.1876433)
 
 ### 2019
 
@@ -3779,7 +3822,7 @@ implemented in a pedagogical environment.
 
 ### 1. A Haptic-Audio Simulator Indoor Navigation: To Assist Visually Impaired Environment Exploration
 
-**Authors**: 
+**Authors**: Catherine A. Todd and Katy Naylo
 
 <details>
 <summary><b>Abstract</b></summary>
@@ -3807,7 +3850,7 @@ Computer vision remains an under-exploited technology for assistive devices. Her
 
 ### 1. Space–use analysis through computer vision
 
-**Authors**: 
+**Authors**: Ana Tomé, Martijn Kuipers, Tiago Pinheiro, Mário Nunes, Teresa Heitor
 
 <details>
 <summary><b>Abstract</b></summary>

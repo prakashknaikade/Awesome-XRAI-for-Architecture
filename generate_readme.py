@@ -133,11 +133,11 @@ class ReadmeGenerator:
         """Generate the papers section of README with proper formatting"""
         papers = self.load_papers()
         if not papers:
-            return "# Papers List\n\n*No papers found.*\n\n"
+            return "# List of Papers\n\n*No papers found.*\n\n"
         
         organized = self.organize_papers_by_category_and_year(papers)
         
-        papers_section = "# Papers List\n\n"
+        papers_section = "# List of Papers\n\n"
         
         # Sort categories alphabetically
         for category in PRIMARY_CATEGORY_ORDER:
@@ -251,7 +251,7 @@ class ReadmeGenerator:
         
         # Find section boundaries
         changelog_start = content.find('## Changelog')
-        papers_start = content.find('# Papers List')
+        papers_start = content.find('# List of Papers')
         
         # Find the FIRST occurrence of Credits (there might be duplicates)
         credits_matches = []

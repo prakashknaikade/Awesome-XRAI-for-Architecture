@@ -1,10 +1,36 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
+    <script>
+        // Inline theme initialization to prevent flash
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'auto';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Awesome XRAI for Architecture Papers List (XRAI4AEC)</title>
-    <meta name="description" content="Curated database of XR and AI research papers for architecture">
+    <meta name="description" content="Curated database of XR and AI research papers for architecture (XRAI4AEC)">
+    <meta name="keywords" content="XRAI, XR, AI, AEC, BIM, Floor plan reconstruction, Reality capture, Generative design, Digital Twins, Computational Architecture">
+    
+    <!-- OpenGraph Metadata -->
+    <meta property="og:title" content="Awesome XRAI for Architecture Papers List (XRAI4AEC)">
+    <meta property="og:description" content="Curated database of XR and AI research papers for architecture, BIM, floor plan reconstruction, and generative design.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prakashknaikade.github.io/Awesome-XRAI-for-Architecture/">
+    <meta property="og:image" content="https://raw.githubusercontent.com/prakashknaikade/Awesome-XRAI-for-Architecture/main/readme_assets/XRAI4AEC_naming_context.png">
+    
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Awesome XRAI for Architecture Papers List (XRAI4AEC)">
+    <meta name="twitter:description" content="Curated database of XR and AI research papers for architecture, BIM, floor plan reconstruction, and generative design.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/prakashknaikade/Awesome-XRAI-for-Architecture/main/readme_assets/XRAI4AEC_naming_context.png">
+
+    <!-- JSON-LD Structured Schema -->
+    <script type="application/ld+json">
+        ${json_ld_schema}
+    </script>
 
     <!-- Preconnects -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -221,25 +247,61 @@
 
         .theme-toggle-btn {
             position: relative;
-            width: 30px;
-            height: 30px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             border: none;
-            background: var(--bg-secondary);
-            color: var(--text-primary);
+            background: transparent;
+            color: var(--text-secondary);
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 15px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px var(--shadow-color);
+            font-size: 16px;
+            transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: none;
+        }
+
+        .theme-toggle-btn:hover {
+            color: var(--text-primary);
+            background: var(--bg-tertiary);
+            transform: scale(1.05);
+        }
+
+        .theme-toggle-btn .tooltip {
+            position: absolute;
+            top: 50%;
+            left: calc(100% + 8px);
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.12s ease, visibility 0.12s ease;
+            pointer-events: none;
+            z-index: 1001;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .theme-toggle-btn:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Smooth transition for theme morphing */
+        .theme-transitioning,
+        .theme-transitioning * {
+            transition: background-color 0.12s ease, color 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease, background 0.12s ease !important;
         }
 
         /* Theme Icons */
         .theme-icon {
             position: absolute;
-            transition: opacity 0.1s ease, transform 0.1s ease;
+            transition: opacity 0.12s cubic-bezier(0.4, 0, 0.2, 1), transform 0.12s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         /* Show active theme icon */
@@ -247,18 +309,26 @@
         [data-theme="dark"] .dark-icon,
         [data-theme="auto"] .auto-icon {
             opacity: 1;
-            transform: scale(1);
+            transform: scale(1) rotate(0deg);
         }
 
         /* Hide inactive theme icons */
         [data-theme="light"] .dark-icon,
-        [data-theme="light"] .auto-icon,
+        [data-theme="light"] .auto-icon {
+            opacity: 0;
+            transform: scale(0.5) rotate(-90deg);
+        }
+
         [data-theme="dark"] .light-icon,
-        [data-theme="dark"] .auto-icon,
+        [data-theme="dark"] .auto-icon {
+            opacity: 0;
+            transform: scale(0.5) rotate(90deg);
+        }
+
         [data-theme="auto"] .light-icon,
         [data-theme="auto"] .dark-icon {
             opacity: 0;
-            transform: scale(0.85);
+            transform: scale(0.5) rotate(-90deg);
         }
 
         /* Control Buttons */
@@ -444,13 +514,91 @@
             }
             
             .theme-toggle-btn {
-                width: 45px;
-                height: 45px;
+                width: 36px;
+                height: 36px;
                 font-size: 16px;
+                background: transparent;
+                box-shadow: none;
+            }
+
+            .theme-toggle-btn .tooltip {
+                display: none;
             }
             
             .button-group {
                 justify-content: center;
+            }
+
+            /* Floating Navigation & Selection Buttons on Mobile */
+            .floating-nav {
+                position: fixed !important;
+                bottom: 120px !important;
+                right: 16px !important;
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 10px !important;
+                margin: 0 !important;
+                z-index: 1000 !important;
+            }
+
+            .floating-nav button,
+            .scroll-progress,
+            .nav-link-btn {
+                width: 42px !important;
+                height: 42px !important;
+                font-size: 16px !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                border-radius: 50% !important;
+                box-shadow: 0 4px 12px var(--shadow-color) !important;
+            }
+
+            .scroll-progress {
+                font-size: 0.8rem !important;
+            }
+
+            .selection-mode-toggle {
+                position: fixed !important;
+                bottom: 16px !important;
+                right: 16px !important;
+                width: 42px !important;
+                height: 42px !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                border-radius: 50% !important;
+                box-shadow: 0 4px 12px var(--shadow-color) !important;
+                z-index: 1000 !important;
+            }
+
+            .selected-only-mode-toggle {
+                position: fixed !important;
+                bottom: 68px !important;
+                right: 16px !important;
+                width: 42px !important;
+                height: 42px !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                border-radius: 50% !important;
+                box-shadow: 0 4px 12px var(--shadow-color) !important;
+                z-index: 1000 !important;
+            }
+
+            .selection-mode-toggle i,
+            .selected-only-mode-toggle i {
+                font-size: 16px !important;
+            }
+
+            .tooltip {
+                display: none !important;
             }
         }
 
@@ -703,6 +851,11 @@
                 ${category_options}
             </select>
         </div>
+
+        <!-- Toggle Tags Drawer Button (visible only on mobile) -->
+        <button class="tags-drawer-toggle" id="tagsDrawerToggle" onclick="toggleTagsDrawer()" aria-label="Toggle tag filters list">
+            <i class="fas fa-tags"></i> Show Tag Filters List
+        </button>
 
         <!-- Tag Filters -->
         <div class="tag-filters" id="tagFilters">

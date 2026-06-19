@@ -2605,6 +2605,41 @@
   publication_date: ''
   date_source: manual
   added_date: '2025-09-18T14:42:20.807272'
+- id: bc4ae6f4
+  title: 'The Scene Language: Representing Scenes with Programs, Words, and Embeddings'
+  authors: Yunzhi Zhang, Zizhang Li, Matt Zhou, Shangzhe Wu, Jiajun Wu
+  year: '2025'
+  abstract: 'We introduce the Scene Language, a visual scene representation that concisely
+    and precisely describes the structure, semantics, and identity of visual scenes.
+    It represents a scene with three key components: a program that specifies the
+    hierarchical and relational structure of entities in the scene, words in natural
+    language that summarize the semantic class of each entity, and embeddings that
+    capture the visual identity of each entity. This representation can be inferred
+    from pre-trained language models via a training-free inference technique, given
+    text or image inputs. The resulting scene can be rendered into images using traditional,
+    neural, or hybrid graphics renderers. Together, this forms a robust, automated
+    system for high-quality 3D and 4D scene generation. Compared with existing representations
+    like scene graphs, our proposed Scene Language generates complex scenes with higher
+    fidelity, while explicitly modeling the scene structures to enable precise control
+    and editing.'
+  primary_category: Reality Capture and Digital Twins
+  project_page: https://ai.stanford.edu/~yzzhang/projects/scene-language/
+  paper: https://arxiv.org/abs/2410.16770
+  code: https://github.com/zzyunzhi/scene-language
+  video: https://ai.stanford.edu/~yzzhang/projects/scene-language/resources_compressed/teaser.mp4#t=0.001
+  tags:
+  - 3D Reconstruction
+  - 3D floor plan
+  - BIM
+  - Floor Plan Reconstruction and Parametrization
+  - digital twins
+  - indoor scene reconstruction
+  - layout recovery
+  - outdoor scene reconstruction
+  - scene understanding
+  publication_date: ''
+  date_source: manual
+  added_date: '2026-06-04T11:42:04.046779'
 - id: 6f068d1a
   title: 'Temporal-online hybrid machine learning for occupancy forecasting: Enhancing
     energy efficiency in smart building management systems'
@@ -2694,7 +2729,7 @@
   added_date: '2025-09-22T15:24:35.079107'
 - id: 000f41ae
   title: The Effect of Virtual Tours on House Price and Time on Market
-  authors: ''
+  authors: Wei Yua, Zhongming Ma, Gautam Pant and Jing Hu
   year: '2020'
   abstract: The integration of augmented reality in virtual tours was recently identified
     as a top emerging trend in real estate. However, little research has been conducted
@@ -2711,7 +2746,7 @@
     and increase property sales.
   primary_category: Human-Computer Interaction and Human-Building Interaction
   project_page: ''
-  paper: https://doi.org/10.1080/09277544.2021.1876433
+  paper: https://www.tandfonline.com/doi/full/10.1080/09277544.2021.1876433
   code: ''
   video: ''
   tags:
@@ -2727,97 +2762,6 @@
   publication_date: ''
   date_source: manual
   added_date: '2026-02-20T13:38:03.627376'
-- id: 7c1cd7fc
-  title: Space–use analysis through computer vision
-  authors: ''
-  year: '2015'
-  abstract: 'Buildings are complex dynamic systems composed of sub-systems and components
-    in continuous interaction with human behavior. Occupancy and movement data are
-    crucial to deepen the understanding of the built environment performance. Observation
-    data is paramount in space–use studies. However, there is a lack of automatic
-    observation techniques, which enable the continuous and systematic recording of
-    the mobility behavior, the producing of non-arbitrary registries, the gathering
-    of big data and the emergence of patterns. This study is divided into two companion,
-    although autonomous, papers. The first paper [M. Kuipers, A. Tomé, T. Pinheiro,
-    M. Nunes, T. Heitor, Building Space–Use Analysis System — a Multi Location/Multi
-    Sensor Platform, Automation in Construction 47 (2014) 10–23] describe the video-based
-    analysis system and give account of preliminary use patterns obtained by data
-    fusion of video plus RFID inputs; the present paper expand the obtained results
-    and focus on investigating analytical procedures aimed at the study of the functional
-    condition of architectural artifacts, and promotion of a better understanding
-    with the spatial conditions, based on computer vision based tracking. Computer
-    vision allows the simultaneous recording of the user and the spatial container
-    and a full description of the movement behavior. The proposed method for the analysis
-    of the space–use interactions is evaluated in two main atriums of a university
-    department building. It allows to: a) represent, describe and quantify occupancy/co-presence
-    patterns and movement/navigation patterns; and b) establish correlations between
-    the occupancy/movement patterns and the morphological properties of space. Several
-    mobility indexes and its mapping are obtained, such as the number of users, time
-    occupancy, average speed, and users'' encounters. The results show how space–use
-    data can be interfaced with spatial analysis tools to arrive at an understanding
-    of the relationship between space–use and building design.'
-  primary_category: Human-Computer Interaction and Human-Building Interaction
-  project_page: ''
-  paper: https://doi.org/10.1016/j.autcon.2015.04.013
-  code: ''
-  video: ''
-  tags:
-  - AI occupancy modeling
-  - Case Study
-  - Cross-Modal Intelligence and Multimodal Integration
-  - HCI-HBI
-  - Occupant Behavior Analysis and Spatial Optimization
-  - behavior modeling
-  - movement analysis
-  - occupant behavior
-  - sensor-driven design
-  - space utilization
-  - spatial analytics
-  publication_date: ''
-  date_source: manual
-  added_date: '2026-02-20T10:17:51.918435'
-- id: 01d58894
-  title: 'A Haptic-Audio Simulator Indoor Navigation: To Assist Visually Impaired
-    Environment Exploration'
-  authors: ''
-  year: '2016'
-  abstract: 'VirtuNav is a haptic-, audio- enabled Virtual Reality (VR) simulator
-    that facilitates persons with visual impairment to explore a 3D computerized model
-    of a real-life indoor location, such as a classroom or hospital. For administrative
-    purposes, the screen displays a 2D overhead view of the map to monitor user progress
-    and location relative to the reconstructed 3D environment. The system offers two
-    unique interfaces: a free-roam interface where a user can freely navigate and
-    interact with the model, and an edit mode where an administrator can manage test
-    users, manage maps and retrieve test data. VirtuNav is developed as a practical
-    application offering several unique features including map design, semi-automatic
-    3D map reconstruction and object classification from 2D map data. Visual and haptic
-    rendering of real-time 3D map navigation are provided, and automated administrative
-    functions including determination of shortest path taken, comparison with the
-    actual path taken, and assessment of performance indicators relating to time taken
-    for exploration and collision data. VirtuNav is a research tool for investigation
-    of user familiarity developed after repeated exposure to the indoor location,
-    to determine the extent to which haptic and/or sound cues improve a visually impaired
-    user’s ability to navigate a room or building with or without occlusion. System
-    testing reveals that spatial awareness and memory mapping improve with user iterations
-    within VirtuNav. The application is for greater real world engagement: to build
-    confidence in real world experiences, enabling persons with sight impairment to
-    more comfortably and readily explore and interact with environments formerly unfamiliar
-    or unattainable to them.'
-  primary_category: Human-Computer Interaction and Human-Building Interaction
-  project_page: ''
-  paper: https://www.ijiet.org/show-64-765-1.html
-  code: ''
-  video: ''
-  tags:
-  - Case Study
-  - Cross-Modal Intelligence and Multimodal Integration
-  - HCI-HBI
-  - XRAI automated accessibility
-  - XRAI for AEC
-  - XRAI inclusive design
-  publication_date: ''
-  date_source: manual
-  added_date: '2026-02-19T17:07:54.408138'
 - id: 5b3f01a3
   title: Energy-efficient personalized thermal comfort control in office buildings
     based on multi-agent deep reinforcement learning
@@ -2991,38 +2935,6 @@
   publication_date: ''
   date_source: manual
   added_date: '2025-09-23T19:40:56.293650'
-- id: d8d4a66c
-  title: Developing campus digital twin using interactive visual analytics approach
-  authors: Xinyue Ye, Suphanut Jamonnak, Shannon Van Zandt, Galen Newman, Patrick
-    Suermann
-  year: '2024'
-  abstract: Digital Twins (DTs) are increasingly recognized for their potential to
-    improve efficiency and decision-making in various domains of the built environment.
-    Despite their promise, challenges like cost, complexity, interoperability, and
-    data integration remain. This paper introduces a novel interactive visual analytics
-    system that tackles these issues, using a case study of simulating class distribution
-    and campus building capacity at a large public university. The system leverages
-    enrollment data, converting it into a spatial-temporal format for interactive
-    exploration and analysis of class distribution and resource utilization. Through
-    case studies, we demonstrate the system's effectiveness, adaptability, and real-world
-    applicability, highlighting its role in practical DT implementation for built
-    environments.
-  primary_category: Computational BIM and Intelligent Operations
-  project_page: ''
-  paper: https://link.springer.com/10.1007/s44243-024-00033-2
-  code: ''
-  video: ''
-  tags:
-  - BIM
-  - Case Study
-  - Predictive Analytics and Performance Optimization
-  - Quality Control and Validation
-  - data quality
-  - digital twins
-  - model checking
-  publication_date: ''
-  date_source: manual
-  added_date: '2026-02-13T18:23:56.063339'
 - id: 87d78b4a
   title: Developing campus digital twin using interactive visual analytics approach
   authors: Xinyue Ye, Suphanut Jamonnak, Shannon Van Zandt, Galen Newman, Patrick
@@ -3065,6 +2977,38 @@
   publication_date: ''
   date_source: manual
   added_date: '2025-09-18T21:33:49.968068'
+- id: d8d4a66c
+  title: Developing campus digital twin using interactive visual analytics approach
+  authors: Xinyue Ye, Suphanut Jamonnak, Shannon Van Zandt, Galen Newman, Patrick
+    Suermann
+  year: '2024'
+  abstract: Digital Twins (DTs) are increasingly recognized for their potential to
+    improve efficiency and decision-making in various domains of the built environment.
+    Despite their promise, challenges like cost, complexity, interoperability, and
+    data integration remain. This paper introduces a novel interactive visual analytics
+    system that tackles these issues, using a case study of simulating class distribution
+    and campus building capacity at a large public university. The system leverages
+    enrollment data, converting it into a spatial-temporal format for interactive
+    exploration and analysis of class distribution and resource utilization. Through
+    case studies, we demonstrate the system's effectiveness, adaptability, and real-world
+    applicability, highlighting its role in practical DT implementation for built
+    environments.
+  primary_category: Computational BIM and Intelligent Operations
+  project_page: ''
+  paper: https://link.springer.com/10.1007/s44243-024-00033-2
+  code: ''
+  video: ''
+  tags:
+  - BIM
+  - Case Study
+  - Predictive Analytics and Performance Optimization
+  - Quality Control and Validation
+  - data quality
+  - digital twins
+  - model checking
+  publication_date: ''
+  date_source: manual
+  added_date: '2026-02-13T18:23:56.063339'
 - id: 97fc48f3
   title: Documentation of cultural heritage using digital photogrammetry and laser
     scanning
@@ -3657,6 +3601,55 @@
   publication_date: ''
   date_source: manual
   added_date: '2026-02-20T10:36:30.567176'
+- id: 7c1cd7fc
+  title: Space–use analysis through computer vision
+  authors: Ana Tomé, Martijn Kuipers, Tiago Pinheiro, Mário Nunes, Teresa Heitor
+  year: '2015'
+  abstract: 'Buildings are complex dynamic systems composed of sub-systems and components
+    in continuous interaction with human behavior. Occupancy and movement data are
+    crucial to deepen the understanding of the built environment performance. Observation
+    data is paramount in space–use studies. However, there is a lack of automatic
+    observation techniques, which enable the continuous and systematic recording of
+    the mobility behavior, the producing of non-arbitrary registries, the gathering
+    of big data and the emergence of patterns. This study is divided into two companion,
+    although autonomous, papers. The first paper [M. Kuipers, A. Tomé, T. Pinheiro,
+    M. Nunes, T. Heitor, Building Space–Use Analysis System — a Multi Location/Multi
+    Sensor Platform, Automation in Construction 47 (2014) 10–23] describe the video-based
+    analysis system and give account of preliminary use patterns obtained by data
+    fusion of video plus RFID inputs; the present paper expand the obtained results
+    and focus on investigating analytical procedures aimed at the study of the functional
+    condition of architectural artifacts, and promotion of a better understanding
+    with the spatial conditions, based on computer vision based tracking. Computer
+    vision allows the simultaneous recording of the user and the spatial container
+    and a full description of the movement behavior. The proposed method for the analysis
+    of the space–use interactions is evaluated in two main atriums of a university
+    department building. It allows to: a) represent, describe and quantify occupancy/co-presence
+    patterns and movement/navigation patterns; and b) establish correlations between
+    the occupancy/movement patterns and the morphological properties of space. Several
+    mobility indexes and its mapping are obtained, such as the number of users, time
+    occupancy, average speed, and users'' encounters. The results show how space–use
+    data can be interfaced with spatial analysis tools to arrive at an understanding
+    of the relationship between space–use and building design.'
+  primary_category: Human-Computer Interaction and Human-Building Interaction
+  project_page: ''
+  paper: https://doi.org/10.1016/j.autcon.2015.04.013
+  code: ''
+  video: ''
+  tags:
+  - AI occupancy modeling
+  - Case Study
+  - Cross-Modal Intelligence and Multimodal Integration
+  - HCI-HBI
+  - Occupant Behavior Analysis and Spatial Optimization
+  - behavior modeling
+  - movement analysis
+  - occupant behavior
+  - sensor-driven design
+  - space utilization
+  - spatial analytics
+  publication_date: ''
+  date_source: manual
+  added_date: '2026-02-20T10:17:51.918435'
 - id: d40750a8
   title: 'Demand response optimization for smart grid integrated buildings: Review
     of technology enablers landscape and innovation challenges'
@@ -5488,6 +5481,48 @@
   publication_date: ''
   date_source: manual
   added_date: '2025-10-22T13:05:47.281660'
+- id: 01d58894
+  title: 'A Haptic-Audio Simulator Indoor Navigation: To Assist Visually Impaired
+    Environment Exploration'
+  authors: Catherine A. Todd and Katy Naylo
+  year: '2016'
+  abstract: 'VirtuNav is a haptic-, audio- enabled Virtual Reality (VR) simulator
+    that facilitates persons with visual impairment to explore a 3D computerized model
+    of a real-life indoor location, such as a classroom or hospital. For administrative
+    purposes, the screen displays a 2D overhead view of the map to monitor user progress
+    and location relative to the reconstructed 3D environment. The system offers two
+    unique interfaces: a free-roam interface where a user can freely navigate and
+    interact with the model, and an edit mode where an administrator can manage test
+    users, manage maps and retrieve test data. VirtuNav is developed as a practical
+    application offering several unique features including map design, semi-automatic
+    3D map reconstruction and object classification from 2D map data. Visual and haptic
+    rendering of real-time 3D map navigation are provided, and automated administrative
+    functions including determination of shortest path taken, comparison with the
+    actual path taken, and assessment of performance indicators relating to time taken
+    for exploration and collision data. VirtuNav is a research tool for investigation
+    of user familiarity developed after repeated exposure to the indoor location,
+    to determine the extent to which haptic and/or sound cues improve a visually impaired
+    user’s ability to navigate a room or building with or without occlusion. System
+    testing reveals that spatial awareness and memory mapping improve with user iterations
+    within VirtuNav. The application is for greater real world engagement: to build
+    confidence in real world experiences, enabling persons with sight impairment to
+    more comfortably and readily explore and interact with environments formerly unfamiliar
+    or unattainable to them.'
+  primary_category: Human-Computer Interaction and Human-Building Interaction
+  project_page: ''
+  paper: https://www.ijiet.org/show-64-765-1.html
+  code: ''
+  video: ''
+  tags:
+  - Case Study
+  - Cross-Modal Intelligence and Multimodal Integration
+  - HCI-HBI
+  - XRAI automated accessibility
+  - XRAI for AEC
+  - XRAI inclusive design
+  publication_date: ''
+  date_source: manual
+  added_date: '2026-02-19T17:07:54.408138'
 - id: 8563403f
   title: Presenting Architectural Research in VR
   authors: Taro Narahara
@@ -7667,6 +7702,40 @@
   publication_date: ''
   date_source: manual
   added_date: '2026-03-02T17:47:25.336501'
+- id: 5372e946
+  title: 'BlenderAlchemy: Editing 3D Graphics with Vision-Language Models'
+  authors: Ian Huang, Guandao Yang, Leonidas Guibas
+  year: '2024'
+  abstract: Graphics design is important for various applications, including movie
+    production and game design. To create a high-quality scene, designers usually
+    need to spend hours in software like Blender, in which they might need to interleave
+    and repeat operations, such as connecting material nodes, hundreds of times. Moreover,
+    slightly different design goals may require completely different sequences, making
+    automation difficult. In this paper, we propose a system that leverages Vision-Language
+    Models (VLMs), like GPT-4V, to intelligently search the design action space to
+    arrive at an answer that can satisfy a user's intent. Specifically, we design
+    a vision-based edit generator and state evaluator to work together to find the
+    correct sequence of actions to achieve the goal. Inspired by the role of visual
+    imagination in the human design process, we supplement the visual reasoning capabilities
+    of VLMs with "imagined" reference images from image-generation models, providing
+    visual grounding of abstract language descriptions. In this paper, we provide
+    empirical evidence suggesting our system can produce simple but tedious Blender
+    editing sequences for tasks such as editing procedural materials and geometry
+    from text and/or reference images, as well as adjusting lighting configurations
+    for product renderings in complex scenes.
+  primary_category: Reality Capture and Digital Twins
+  project_page: https://ianhuang0630.github.io/BlenderAlchemyWeb/
+  paper: https://arxiv.org/abs/2404.17672
+  code: https://github.com/ianhuang0630/BlenderAlchemyOfficial
+  video: https://www.youtube.com/watch?v=Uof4OkOX-wU
+  tags:
+  - 3D Reconstruction
+  - Dataset
+  - Floor Plan Reconstruction and Parametrization
+  - Tool/Library
+  publication_date: ''
+  date_source: manual
+  added_date: '2026-06-04T11:38:53.728999'
 - id: bf4557bf
   title: 'BIM, machine learning and computer vision techniques in underground construction:
     Current status and future perspectives'
@@ -8095,7 +8164,7 @@
     and bring the world’s art and culture online so it’s accessible to anyone, anywhere.
   primary_category: Heritage Conservation and Cultural Preservation
   project_page: https://artsandculture.google.com/
-  paper: ''
+  paper: https://artsandculture.google.com/
   code: ''
   video: ''
   tags:
@@ -8504,7 +8573,7 @@
 
     DeepMind'
   year: '2016'
-  abstract: ''
+  abstract: DeepMind AI Reduces Google Data Centre Cooling Bill by 40%.
   primary_category: Computational BIM and Intelligent Operations
   project_page: ''
   paper: https://deepmind.google/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/
@@ -8605,7 +8674,40 @@
     Designers, Engineers and Contractors'
   authors: Charles M. Eastman
   year: '2011'
-  abstract: ''
+  abstract: 'DISCOVER BIM: A BETTER WAY TO BUILD BETTER BUILDINGS
+
+
+    Building Information Modeling (BIM) offers a novel approach to design, construction,
+    and facility management in which a digital representation of the building process
+    is used to facilitate the exchange and interoperability of information in digital
+    format. BIM is beginning to change the way buildings look, the way they function,
+    and the ways in which they are designed and built.
+
+
+    The BIM Handbook, Second Edition provides an in-depth understanding of BIM technologies,
+    the business and organizational issues associated with its implementation, and
+    the profound advantages that effective use of BIM can provide to all members of
+    a project team. Updates to this edition include:
+
+
+    Completely updated material covering the current practice and technology in this
+    fast-moving field
+
+    Expanded coverage of lean construction and its use of BIM, with special focus
+    on Integrated Project Delivery throughout the book
+
+    New insight on the ways BIM facilitates sustainable building
+
+    New information on interoperability schemas and collaboration tools
+
+    Six new case studies
+
+
+    Painting a colorful and thorough picture of the state of the art in building information
+    modeling, the BIM Handbook, Second Edition guides readers to successful implementations,
+    helping them to avoid needless frustration and costs and take full advantage of
+    this paradigm-shifting approach to construct better buildings that consume fewer
+    materials and require less time, labor, and capital resources.'
   primary_category: Computational BIM and Intelligent Operations
   project_page: ''
   paper: https://books.google.dk/books?id=-GjrBgAAQBAJ
@@ -8910,7 +9012,7 @@
     heritage accessible to new audiences and future generations.
   primary_category: Heritage Conservation and Cultural Preservation
   project_page: https://www.cyark.org/projects/
-  paper: ''
+  paper: https://www.cyark.org/projects/
   code: ''
   video: ''
   tags:
@@ -8970,7 +9072,9 @@
     Directive 2009/125/EC
   authors: European Commission
   year: '2022'
-  abstract: ''
+  abstract: Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL
+    establishing a framework for setting ecodesign requirements for sustainable products
+    and repealing Directive 2009/125/EC
   primary_category: Sustainability and Environmental Performance
   project_page: ''
   paper: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=COM:2022:0142:FIN
@@ -9240,7 +9344,14 @@
   title: Dive into Heritage
   authors: UNESCO World Heritage Centre
   year: '2025'
-  abstract: ''
+  abstract: "Generously funded by the Ministry of Culture of the Kingdom of Saudi\
+    \ Arabia, Dive into Heritage is an online platform that uses cutting-the-edge\
+    \ digital technologies to offer a unique and immersive experience of World Heritage\
+    \ and its related intangible heritage. \n\nThe platform enables users to explore\
+    \ heritage sites through free, interactive and guided experiences using 3D models,\
+    \ geolocated narratives, and other media images and videos.\n\nIt also aims to\
+    \ serve as a useful tool for sites monitoring and conservation, offering added\
+    \ value to the existing monitoring mechanisms of the World Heritage Convention."
   primary_category: Heritage Conservation and Cultural Preservation
   project_page: ''
   paper: https://whc.unesco.org/en/dive-into-heritage/
@@ -9624,8 +9735,8 @@
     Our approach significantly outperforms state-of-the-art methods on both our new
     and existing datasets. Remarkably, it does not require any layout-specific training.
   primary_category: Reality Capture and Digital Twins
-  project_page: ''
-  paper: ''
+  project_page: https://houselayout3d.github.io/
+  paper: https://houselayout3d.github.io/assets/houselayout3d_paper.pdf
   code: https://github.com/valebi/house-layout-3d-eval
   video: ''
   tags:
@@ -10028,7 +10139,10 @@
   title: Autodesk customer stories
   authors: Autodesk
   year: '2024'
-  abstract: ''
+  abstract: 'Autodesk customer stories
+
+    Learn about the builders, engineers, manufacturers, designers, 3D artists, and
+    production teams who are reshaping the design and make industries—and the world.'
   primary_category: AI-Driven Design and Generative Architecture
   project_page: ''
   paper: https://www.autodesk.com/customer-stories
