@@ -37,7 +37,12 @@
     <div class="grid">
       <div class="card"><h3>Primary Category Share</h3><canvas id="cPie"></canvas></div>
       <div class="card"><h3>Year-wise (2020–2025)</h3><canvas id="cYearBar"></canvas></div>
-      <div class="card"><h3>Top Tags (Top 20)</h3><canvas id="cTagBar"></canvas></div>
+      <div class="card">
+        <h3>Top Tags (Top 20)</h3>
+        <div class="chart-container" style="position: relative; height: 500px;">
+          <canvas id="cTagBar"></canvas>
+        </div>
+      </div>
       <div class="card"><h3>All Years Trend</h3><canvas id="cYearLine"></canvas></div>
     </div>
   </div>
@@ -137,10 +142,11 @@
       });
       const tagBarBorder = tagE.map(() => 'rgba(22, 163, 74, 1)');
 
+      const tagLabels = tagE.map(x => x[0]);
       charts.push(new Chart(document.getElementById('cTagBar'), {
         type: 'bar',
         data: {
-          labels: tagE.map(x => x[0]),
+          labels: tagLabels,
           datasets: [{
             label: 'Count',
             data: tagE.map(x => x[1]),
@@ -151,12 +157,24 @@
         },
         options: {
           indexAxis: 'y',
+          maintainAspectRatio: false,
+          responsive: true,
           scales: {
             x: { beginAtZero: true, ticks: { precision: 0 } },
             y: {
               ticks: {
                 autoSkip: false,
-                maxTicksLimit: 20
+                maxTicksLimit: 20,
+                font: {
+                  size: 11
+                },
+                callback: function(value, index) {
+                  const label = tagLabels[index];
+                  if (window.innerWidth < 600 && label && label.length > 18) {
+                    return label.substring(0, 15) + '...';
+                  }
+                  return label;
+                }
               }
             }
           }

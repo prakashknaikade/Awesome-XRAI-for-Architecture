@@ -1,7 +1,7 @@
 .selected-only-mode-toggle {
     position: fixed;
     bottom: 6rem;
-    right: 2rem;
+    right: 0.75rem;
     background: var(--primary-color);
     color: white;
     padding: 1rem;
@@ -56,7 +56,7 @@
 .selection-mode-toggle {
     position: fixed;
     bottom: 2rem;
-    right: 2rem;
+    right: 0.75rem;
     background: var(--primary-color);
     color: white;
     padding: 1rem;

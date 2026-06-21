@@ -239,10 +239,8 @@
         /* THEME TOGGLE BUTTON  */
 
         .theme-toggle {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 1000;
+            display: inline-flex;
+            align-items: center;
         }
 
         .theme-toggle-btn {
@@ -270,9 +268,8 @@
 
         .theme-toggle-btn .tooltip {
             position: absolute;
-            top: 50%;
-            left: calc(100% + 8px);
-            transform: translateY(-50%);
+            top: calc(100% + 8px);
+            right: 0;
             background: rgba(0, 0, 0, 0.8);
             color: #ffffff;
             padding: 4px 8px;
@@ -508,10 +505,7 @@
         =================================== */
 
         @media (max-width: 768px) {
-            .theme-toggle {
-                top: 15px;
-                left: 15px;
-            }
+
             
             .theme-toggle-btn {
                 width: 36px;
@@ -703,15 +697,7 @@
             </a>
         </div>
 
-        <!-- Theme Toggle Button -->
-        <div class="theme-toggle">
-            <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme">
-                <i class="fas fa-sun theme-icon light-icon"></i>
-                <i class="fas fa-moon theme-icon dark-icon"></i>
-                <i class="fas fa-circle-half-stroke theme-icon auto-icon"></i>
-                <span class="tooltip">Toggle Theme</span>
-            </button>
-        </div>
+
 
         <!-- Selection Mode Toggle Button -->
         <div class="selection-buttons">
@@ -755,6 +741,15 @@
                     <span class="filter-counter">Showing <span id="visibleCount">0</span> of <span id="totalCount">0</span> papers</span>
                 </div>
                 <div class="preview-header-right">
+                    <!-- Theme Toggle Button -->
+                    <div class="theme-toggle">
+                        <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+                            <i class="fas fa-sun theme-icon light-icon"></i>
+                            <i class="fas fa-moon theme-icon dark-icon"></i>
+                            <i class="fas fa-circle-half-stroke theme-icon auto-icon"></i>
+                            <span class="tooltip">Toggle Theme</span>
+                        </button>
+                    </div>
                     <button class="control-button secondary" onclick="clearAllFilters()" data-action="clear-all">
                         <i class="fas fa-trash"></i> Clear All
                     </button>
@@ -765,9 +760,9 @@
             </div>
         </div>
 
-        <div>
+        <div style="text-align: center;">
             <h1>XRAI4AEC: Awesome-XRAI-for-AEC-Papers</h1>
-            <p>A curated collection of papers focused on XR+AI for AEC <i>(XRAI4AEC)</i> and related technologies 
+            <p style="text-align: center; max-width: 900px; margin: 0 auto 1.5rem auto;">A curated collection of papers focused on XR+AI for AEC <i>(XRAI4AEC)</i> and related technologies 
                 such as BIM, (2D/3D) computer vision, computer graphics, LLMs, VLMS, GenAI, deep/machine learning and data science.</p>
         </div>
 

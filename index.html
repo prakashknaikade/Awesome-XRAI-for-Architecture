@@ -7685,7 +7685,7 @@ h1 {
 .floating-nav {
     position: fixed;
     bottom: 180px;
-    right: 2rem;
+    right: 0.75rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -7980,7 +7980,7 @@ h1 {
 .selected-only-mode-toggle {
     position: fixed;
     bottom: 6rem;
-    right: 2rem;
+    right: 0.75rem;
     background: var(--primary-color);
     color: white;
     padding: 1rem;
@@ -8035,7 +8035,7 @@ h1 {
 .selection-mode-toggle {
     position: fixed;
     bottom: 2rem;
-    right: 2rem;
+    right: 0.75rem;
     background: var(--primary-color);
     color: white;
     padding: 1rem;
@@ -9497,10 +9497,8 @@ h1 {
         /* THEME TOGGLE BUTTON  */
 
         .theme-toggle {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 1000;
+            display: inline-flex;
+            align-items: center;
         }
 
         .theme-toggle-btn {
@@ -9528,9 +9526,8 @@ h1 {
 
         .theme-toggle-btn .tooltip {
             position: absolute;
-            top: 50%;
-            left: calc(100% + 8px);
-            transform: translateY(-50%);
+            top: calc(100% + 8px);
+            right: 0;
             background: rgba(0, 0, 0, 0.8);
             color: #ffffff;
             padding: 4px 8px;
@@ -9766,10 +9763,7 @@ h1 {
         =================================== */
 
         @media (max-width: 768px) {
-            .theme-toggle {
-                top: 15px;
-                left: 15px;
-            }
+
             
             .theme-toggle-btn {
                 width: 36px;
@@ -9922,7 +9916,7 @@ h1 {
     </style>
     <script>
         // Expose highlighted tags list for potential client-side use (optional)
-        window.HIGHLIGHTED_TAGS = new Set(["Parametric, Computational and Algorithmic Design", "3D Reconstruction", "AI for Energy Performance Optimization", "Virtual Property Tours and Marketing", "Digital Documentation and Archiving", "Quality Control and Validation", "Sustainable Buildings", "Cross-Modal Intelligence and Multimodal Integration", "Generative Design and Design Space Exploration", "Floor Plan Reconstruction and Parametrization", "XRAI for AEC", "Dataset", "Occupant Behavior Analysis and Spatial Optimization", "Virtual Reality Experiences and Education", "Smart Building Systems and IoT Integration", "Review Paper", "Predictive Conservation and Risk Assessment", "AI-Powered Real Estate Valuation", "Performance-Driven Design", "Case Study", "Predictive Analytics and Performance Optimization", "Tool/Library"]);
+        window.HIGHLIGHTED_TAGS = new Set(["3D Reconstruction", "Virtual Reality Experiences and Education", "Floor Plan Reconstruction and Parametrization", "Predictive Analytics and Performance Optimization", "Sustainable Buildings", "Cross-Modal Intelligence and Multimodal Integration", "Parametric, Computational and Algorithmic Design", "Dataset", "Review Paper", "Case Study", "XRAI for AEC", "Tool/Library", "AI for Energy Performance Optimization", "Quality Control and Validation", "Predictive Conservation and Risk Assessment", "Performance-Driven Design", "AI-Powered Real Estate Valuation", "Digital Documentation and Archiving", "Virtual Property Tours and Marketing", "Occupant Behavior Analysis and Spatial Optimization", "Generative Design and Design Space Exploration", "Smart Building Systems and IoT Integration"]);
         window.CATEGORY_TAGS = {"all": ["2D floor plan", "3D Reconstruction", "3D floor plan", "3D scanning", "3DGS", "AI HVAC optimization", "AI building automation", "AI for Energy Performance Optimization", "AI in asset management", "AI material selection", "AI occupancy modeling", "AI-Powered Real Estate Valuation", "AR cultural experiences", "AR/VR interfaces", "AR/VR/XR visualization", "Agent-based Modeling", "BIM", "BIM validation", "Case Study", "Context-Aware Spatial Intelligence", "Cross-Modal Intelligence and Multimodal Integration", "Dataset", "Digital Documentation and Archiving", "Floor Plan Reconstruction and Parametrization", "Form Finding", "GANs", "Generative Design and Design Space Exploration", "HCI-HBI", "Heritage BIM", "Interactive Visualization", "LLMs for AEC", "LiDAR", "ML for sustainable real estate", "Multimodal Design Assistance", "NeRF", "Occupant Behavior Analysis and Spatial Optimization", "Parametric, Computational and Algorithmic Design", "Performance-Driven Design", "Predictive Analytics and Performance Optimization", "Predictive Conservation and Risk Assessment", "QA/QC in BIM", "Quality Control and Validation", "RL", "Review Paper", "Revit automation", "SLAM", "SfM", "Smart Building Systems and IoT Integration", "Sustainable Buildings", "Tool/Library", "VAE", "VR dashboards", "Virtual Property Tours and Marketing", "Virtual Reality Experiences and Education", "Vision-Language Models for AEC", "XR design review", "XR immersive walkthroughs", "XR storytelling", "XRAI automated accessibility", "XRAI for AEC", "XRAI inclusive design", "adaptive control", "adaptive environments", "anomaly detection", "automated compliance checking", "behavior modeling", "big data in buildings", "blockchain for AEC", "building energy forecasting", "building energy simulation", "building performance dashboard", "circular economy", "clash detection", "collaborative VR co-design", "conditional generation", "conservation AI", "cultural heritage VR", "damage detection", "data quality", "data templates for circularity", "daylight optimization", "design automation", "design space optimization", "diffusion models", "digital archives", "digital twins", "documentation workflows", "embodied carbon", "energy modeling", "energy optimization", "energy-efficient design", "geometric validation", "geometry generation", "heritage XR visualization", "heritage digitization", "human-centric IoT", "image-to-3D", "image-to-plan", "immersive design", "immersive education", "indoor scene reconstruction", "intelligent environments", "layout recovery", "lifecycle assessment", "material degradation prediction", "material passports", "material simulation", "mesh-to-BIM", "metaverse for AEC", "model checking", "movement analysis", "multi-objective optimization", "museum VR", "object detection", "occupant behavior", "outdoor scene reconstruction", "parametric BIM", "photogrammetry", "point clouds", "point-cloud-to-plan", "predictive analytics", "predictive investment", "predictive maintenance", "predictive pricing", "procedural modeling", "real estate analytics", "real estate visualization", "real-time monitoring", "risk modeling", "room segmentation", "rule-based modeling", "scan-to-BIM", "scene editing", "scene interaction", "scene understanding", "semantic segmentation", "sensor data integration", "sensor-driven design", "smart grids", "space utilization", "spatial analytics", "structural efficiency", "structural element detection", "structural health monitoring", "structural optimization", "sustainable construction", "sustainable disassembly", "sustainable materials", "text-to-3D", "thermal simulation", "time-series analysis", "virtual staging"], "Human-Computer Interaction and Human-Building Interaction": ["AI HVAC optimization", "AI building automation", "AI for Energy Performance Optimization", "AI in asset management", "AI occupancy modeling", "AI-Powered Real Estate Valuation", "AR/VR interfaces", "AR/VR/XR visualization", "Agent-based Modeling", "BIM", "Case Study", "Context-Aware Spatial Intelligence", "Cross-Modal Intelligence and Multimodal Integration", "Dataset", "HCI-HBI", "Interactive Visualization", "LLMs for AEC", "ML for sustainable real estate", "Multimodal Design Assistance", "Occupant Behavior Analysis and Spatial Optimization", "Parametric, Computational and Algorithmic Design", "Review Paper", "Smart Building Systems and IoT Integration", "Sustainable Buildings", "VR dashboards", "Virtual Property Tours and Marketing", "Vision-Language Models for AEC", "XR design review", "XR immersive walkthroughs", "XRAI automated accessibility", "XRAI for AEC", "XRAI inclusive design", "behavior modeling", "building energy simulation", "building performance dashboard", "collaborative VR co-design", "heritage digitization", "human-centric IoT", "immersive design", "intelligent environments", "metaverse for AEC", "movement analysis", "occupant behavior", "predictive pricing", "real estate analytics", "real estate visualization", "sensor-driven design", "space utilization", "spatial analytics", "virtual staging"], "AI-Driven Design and Generative Architecture": ["2D floor plan", "3D Reconstruction", "3D floor plan", "AI building automation", "AR/VR interfaces", "AR/VR/XR visualization", "BIM", "BIM validation", "Case Study", "Context-Aware Spatial Intelligence", "Cross-Modal Intelligence and Multimodal Integration", "Floor Plan Reconstruction and Parametrization", "Form Finding", "GANs", "Generative Design and Design Space Exploration", "Interactive Visualization", "LLMs for AEC", "Multimodal Design Assistance", "NeRF", "Parametric, Computational and Algorithmic Design", "Performance-Driven Design", "QA/QC in BIM", "Quality Control and Validation", "RL", "Review Paper", "SLAM", "SfM", "Smart Building Systems and IoT Integration", "Sustainable Buildings", "VAE", "Vision-Language Models for AEC", "XR design review", "XRAI for AEC", "XRAI inclusive design", "automated compliance checking", "building energy simulation", "circular economy", "clash detection", "collaborative VR co-design", "conditional generation", "data quality", "daylight optimization", "design automation", "design space optimization", "diffusion models", "digital twins", "energy modeling", "energy optimization", "energy-efficient design", "geometric validation", "geometry generation", "image-to-3D", "image-to-plan", "immersive design", "immersive education", "indoor scene reconstruction", "metaverse for AEC", "model checking", "multi-objective optimization", "outdoor scene reconstruction", "photogrammetry", "point clouds", "point-cloud-to-plan", "procedural modeling", "rule-based modeling", "scene editing", "scene interaction", "structural efficiency", "structural optimization", "sustainable construction", "text-to-3D"], "Computational BIM and Intelligent Operations": ["3D Reconstruction", "3D floor plan", "AI HVAC optimization", "AI building automation", "AI for Energy Performance Optimization", "AI occupancy modeling", "BIM", "BIM validation", "Case Study", "Cross-Modal Intelligence and Multimodal Integration", "Dataset", "HCI-HBI", "LLMs for AEC", "Occupant Behavior Analysis and Spatial Optimization", "Predictive Analytics and Performance Optimization", "Predictive Conservation and Risk Assessment", "QA/QC in BIM", "Quality Control and Validation", "Review Paper", "Smart Building Systems and IoT Integration", "Sustainable Buildings", "XRAI for AEC", "adaptive control", "anomaly detection", "automated compliance checking", "behavior modeling", "big data in buildings", "building energy forecasting", "building energy simulation", "building performance dashboard", "circular economy", "clash detection", "damage detection", "data quality", "design automation", "digital twins", "embodied carbon", "energy-efficient design", "geometric validation", "human-centric IoT", "intelligent environments", "lifecycle assessment", "material degradation prediction", "model checking", "movement analysis", "occupant behavior", "parametric BIM", "predictive analytics", "predictive maintenance", "real-time monitoring", "scan-to-BIM", "sensor data integration", "sensor-driven design", "smart grids", "space utilization", "spatial analytics", "structural health monitoring", "sustainable construction", "sustainable disassembly", "thermal simulation", "time-series analysis"], "Reality Capture and Digital Twins": ["2D floor plan", "3D Reconstruction", "3D floor plan", "3DGS", "AI building automation", "BIM", "Case Study", "Context-Aware Spatial Intelligence", "Cross-Modal Intelligence and Multimodal Integration", "Dataset", "Floor Plan Reconstruction and Parametrization", "HCI-HBI", "Interactive Visualization", "LLMs for AEC", "LiDAR", "Multimodal Design Assistance", "NeRF", "Review Paper", "Revit automation", "SLAM", "SfM", "Sustainable Buildings", "Tool/Library", "Vision-Language Models for AEC", "XRAI for AEC", "big data in buildings", "blockchain for AEC", "diffusion models", "digital twins", "image-to-plan", "indoor scene reconstruction", "layout recovery", "mesh-to-BIM", "metaverse for AEC", "object detection", "outdoor scene reconstruction", "parametric BIM", "photogrammetry", "point clouds", "point-cloud-to-plan", "room segmentation", "scan-to-BIM", "scene editing", "scene interaction", "scene understanding", "semantic segmentation", "structural element detection"], "Sustainability and Environmental Performance": ["2D floor plan", "3D Reconstruction", "3D floor plan", "AI HVAC optimization", "AI building automation", "AI for Energy Performance Optimization", "AI material selection", "AI-Powered Real Estate Valuation", "AR/VR interfaces", "AR/VR/XR visualization", "BIM", "Case Study", "Context-Aware Spatial Intelligence", "Cross-Modal Intelligence and Multimodal Integration", "Dataset", "HCI-HBI", "Interactive Visualization", "ML for sustainable real estate", "Predictive Analytics and Performance Optimization", "Quality Control and Validation", "RL", "Review Paper", "Smart Building Systems and IoT Integration", "Sustainable Buildings", "VR dashboards", "Vision-Language Models for AEC", "XR design review", "XRAI automated accessibility", "XRAI for AEC", "XRAI inclusive design", "adaptive control", "adaptive environments", "big data in buildings", "blockchain for AEC", "building energy simulation", "building performance dashboard", "circular economy", "collaborative VR co-design", "data templates for circularity", "digital twins", "embodied carbon", "energy-efficient design", "human-centric IoT", "immersive design", "indoor scene reconstruction", "intelligent environments", "lifecycle assessment", "material passports", "material simulation", "metaverse for AEC", "object detection", "outdoor scene reconstruction", "point clouds", "real-time monitoring", "rule-based modeling", "semantic segmentation", "sensor data integration", "smart grids", "structural element detection", "sustainable construction", "sustainable disassembly", "sustainable materials"], "Heritage Conservation and Cultural Preservation": ["2D floor plan", "3D Reconstruction", "3D floor plan", "3D scanning", "AI for Energy Performance Optimization", "AR cultural experiences", "BIM", "Case Study", "Dataset", "Digital Documentation and Archiving", "Heritage BIM", "Predictive Conservation and Risk Assessment", "Review Paper", "SfM", "Tool/Library", "Virtual Reality Experiences and Education", "XR storytelling", "XRAI for AEC", "conservation AI", "cultural heritage VR", "damage detection", "digital archives", "digital twins", "documentation workflows", "heritage XR visualization", "heritage digitization", "human-centric IoT", "immersive education", "indoor scene reconstruction", "material degradation prediction", "museum VR", "outdoor scene reconstruction", "photogrammetry", "point clouds", "predictive maintenance", "risk modeling", "scene editing", "scene interaction", "scene understanding", "semantic segmentation", "sensor data integration", "structural health monitoring"], "Sustainable Real Estate Valuation and Economics": ["2D floor plan", "3D floor plan", "AI in asset management", "AI material selection", "AI-Powered Real Estate Valuation", "BIM", "Case Study", "ML for sustainable real estate", "Review Paper", "Sustainable Buildings", "big data in buildings", "circular economy", "digital twins", "predictive investment", "predictive pricing", "real estate analytics", "sustainable construction", "sustainable disassembly", "sustainable materials"]};
     </script>
 
@@ -9961,15 +9955,7 @@ h1 {
             </a>
         </div>
 
-        <!-- Theme Toggle Button -->
-        <div class="theme-toggle">
-            <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme">
-                <i class="fas fa-sun theme-icon light-icon"></i>
-                <i class="fas fa-moon theme-icon dark-icon"></i>
-                <i class="fas fa-circle-half-stroke theme-icon auto-icon"></i>
-                <span class="tooltip">Toggle Theme</span>
-            </button>
-        </div>
+
 
         <!-- Selection Mode Toggle Button -->
         <div class="selection-buttons">
@@ -10013,6 +9999,15 @@ h1 {
                     <span class="filter-counter">Showing <span id="visibleCount">0</span> of <span id="totalCount">0</span> papers</span>
                 </div>
                 <div class="preview-header-right">
+                    <!-- Theme Toggle Button -->
+                    <div class="theme-toggle">
+                        <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+                            <i class="fas fa-sun theme-icon light-icon"></i>
+                            <i class="fas fa-moon theme-icon dark-icon"></i>
+                            <i class="fas fa-circle-half-stroke theme-icon auto-icon"></i>
+                            <span class="tooltip">Toggle Theme</span>
+                        </button>
+                    </div>
                     <button class="control-button secondary" onclick="clearAllFilters()" data-action="clear-all">
                         <i class="fas fa-trash"></i> Clear All
                     </button>
@@ -10023,9 +10018,9 @@ h1 {
             </div>
         </div>
 
-        <div>
+        <div style="text-align: center;">
             <h1>XRAI4AEC: Awesome-XRAI-for-AEC-Papers</h1>
-            <p>A curated collection of papers focused on XR+AI for AEC <i>(XRAI4AEC)</i> and related technologies 
+            <p style="text-align: center; max-width: 900px; margin: 0 auto 1.5rem auto;">A curated collection of papers focused on XR+AI for AEC <i>(XRAI4AEC)</i> and related technologies 
                 such as BIM, (2D/3D) computer vision, computer graphics, LLMs, VLMS, GenAI, deep/machine learning and data science.</p>
         </div>
 
