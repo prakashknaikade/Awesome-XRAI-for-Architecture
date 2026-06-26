@@ -853,6 +853,18 @@
         let selectedTags = new Set();
         let isLocalMode = false; // Detected based on API availability
 
+        function normalizeTitle(title) {
+            if (!title) return "";
+            return title.toLowerCase().replace(/[^a-z0-9]/g, '');
+        }
+
+        function normalizeUrl(url) {
+            if (!url) return "";
+            let cleaned = url.toLowerCase().trim().replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/$/, '');
+            if (cleaned.endsWith('.pdf')) cleaned = cleaned.slice(0, -4);
+            return cleaned;
+        }
+
         // Initialize Page
         window.addEventListener('DOMContentLoaded', async () => {
             showLoading("Initializing editor...");
@@ -1253,6 +1265,34 @@
                 
                 const data = await res.json();
                 if (data && data.title) {
+                    // Check for duplicate
+                    const normFetchedTitle = normalizeTitle(data.title);
+                    const normFetchedUrl = normalizeUrl(data.paper);
+                    const dup = papersData.find(p => {
+                        if (activePaper && p.id === activePaper.id) return false;
+                        if (data.id && p.id === data.id) return true;
+                        if (data.title && normalizeTitle(p.title) === normFetchedTitle) return true;
+                        if (data.paper && normalizeUrl(p.paper) === normFetchedUrl) return true;
+                        return false;
+                    });
+
+                    if (dup) {
+                        showToast(`This paper already exists in the database (ID: ${dup.id})! Selecting it for you.`, "warning");
+                        
+                        // If current active paper was a temporary new paper, discard it
+                        if (activePaper && activePaper.id.startsWith('new_paper_')) {
+                            const idx = papersData.findIndex(p => p.id === activePaper.id);
+                            if (idx !== -1) {
+                                papersData.splice(idx, 1);
+                                populateSidebar();
+                                updatePaperCount();
+                            }
+                        }
+                        
+                        selectPaper(dup.id);
+                        return;
+                    }
+
                     // Update active paper fields
                     if (activePaper) {
                         // Keep ID if already defined or create one based on fetched data
@@ -1291,8 +1331,48 @@
 
         // Validate database: check if all required fields are filled for every paper
         function validateDatabase() {
+            const seenTitles = new Map();
+            const seenUrls = new Map();
+            const seenIds = new Map();
+
             for (let i = 0; i < papersData.length; i++) {
                 const paper = papersData[i];
+
+                // Check for duplicate ID
+                if (paper.id) {
+                    const idLower = paper.id.toLowerCase();
+                    if (seenIds.has(idLower)) {
+                        const originalIndex = seenIds.get(idLower);
+                        selectPaper(paper.id);
+                        showToast(`Validation Error: Duplicate ID "${paper.id}" found. (Matches entry "${papersData[originalIndex].title}")`, "error");
+                        return false;
+                    }
+                    seenIds.set(idLower, i);
+                }
+
+                // Check for duplicate Title
+                const normTitle = normalizeTitle(paper.title);
+                if (normTitle) {
+                    if (seenTitles.has(normTitle)) {
+                        const originalIndex = seenTitles.get(normTitle);
+                        selectPaper(paper.id);
+                        showToast(`Validation Error: Duplicate Title "${paper.title}" found. (Matches entry ID: ${papersData[originalIndex].id})`, "error");
+                        return false;
+                    }
+                    seenTitles.set(normTitle, i);
+                }
+
+                // Check for duplicate Paper URL
+                const normUrl = normalizeUrl(paper.paper);
+                if (normUrl) {
+                    if (seenUrls.has(normUrl)) {
+                        const originalIndex = seenUrls.get(normUrl);
+                        selectPaper(paper.id);
+                        showToast(`Validation Error: Duplicate Paper URL "${paper.paper}" found. (Matches entry: "${papersData[originalIndex].title}")`, "error");
+                        return false;
+                    }
+                    seenUrls.set(normUrl, i);
+                }
                 
                 // Validate Title
                 if (!paper.title || paper.title.trim() === '') {

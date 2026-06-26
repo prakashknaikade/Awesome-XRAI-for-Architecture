@@ -30,7 +30,7 @@ function updateURL() {
     window.history.replaceState(
         { filters: params.toString() },
         '',
-        `${window.location.pathname}${newSearch}`
+        `${window.location.pathname}${newSearch}${window.location.hash || ''}`
     );
 }
 

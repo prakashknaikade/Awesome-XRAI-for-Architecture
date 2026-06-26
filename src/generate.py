@@ -187,6 +187,28 @@ def generate_analytics_html(entries: list[dict], output_file: str) -> None:
     html = template.render(context)
     write_output(output_file, html)
 
+def generate_sitemap(output_file: str) -> None:
+    """Generate sitemap.xml dynamically with current date."""
+    today = date.today().isoformat()
+    content = f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://prakashknaikade.github.io/Awesome-XRAI-for-Architecture/</loc>
+    <lastmod>{today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://prakashknaikade.github.io/Awesome-XRAI-for-Architecture/analytics.html</loc>
+    <lastmod>{today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
+"""
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write(content.strip() + "\n")
+
 def main():
     if len(sys.argv) != 3:
         print("Usage: python generate.py <input_yaml> <output_html>")
@@ -209,6 +231,11 @@ def main():
         analytics_out = output_html.parent / "analytics.html"
         generate_analytics_html(entries, str(analytics_out))
         print(f"Generated: {analytics_out}")
+
+        # sitemap xml
+        sitemap_out = output_html.parent / "sitemap.xml"
+        generate_sitemap(str(sitemap_out))
+        print(f"Generated: {sitemap_out}")
 
     except Exception as e:
         print(f"Error: {str(e)}")

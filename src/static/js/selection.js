@@ -1,14 +1,25 @@
-function toggleSelectedOnly() {
-    state.onlyShowSelected = !state.onlyShowSelected;
-    const button = document.querySelector('.preview-header-right .control-button.show-selected');
-    
-    if (button) {
-        button.innerHTML = state.onlyShowSelected ? 
-            '<i class="fas fa-list"></i> Show All Papers' :
-            '<i class="fas fa-filter"></i> Show Selected Only';
+function toggleSelectedOnly(forceValue) {
+    if (typeof forceValue === 'boolean') {
+        state.onlyShowSelected = forceValue;
+    } else {
+        state.onlyShowSelected = !state.onlyShowSelected;
     }
-    
-    // Update the URL first
+
+    // Update button UI inside Selected Papers card
+    const btn = document.querySelector('.show-selected-toggle');
+    if (btn) {
+        btn.classList.toggle('active', !!state.onlyShowSelected);
+        btn.setAttribute('aria-pressed', state.onlyShowSelected ? 'true' : 'false');
+        if (state.onlyShowSelected) {
+            btn.innerHTML = '<i class="fas fa-eye"></i> Show All Papers';
+            btn.title = 'Show all papers';
+        } else {
+            btn.innerHTML = '<i class="fas fa-filter"></i> Show Selected Only';
+            btn.title = 'Showing selected papers only';
+        }
+    }
+
+    // Update the URL search parameter
     const url = new URL(window.location.href);
     if (state.onlyShowSelected) {
         url.searchParams.set('show_selected', 'true');
@@ -17,8 +28,10 @@ function toggleSelectedOnly() {
     }
     window.history.replaceState({}, '', url.toString());
     
-    // Then update the display
-    filterPapers();
+    // Then re-filter the visible cards
+    if (typeof filterPapers === 'function') {
+        filterPapers();
+    }
 }
 
 function toggleSelectionMode() {
@@ -165,3 +178,6 @@ function scrollToPaper(paperId) {
         }
     }
 }
+
+// Expose toggleSelectedOnly globally
+window.toggleSelectedOnly = toggleSelectedOnly;

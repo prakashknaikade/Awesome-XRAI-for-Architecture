@@ -12,3 +12,19 @@ yaml
 
 # Github agents
 .github/agents/*.agent.md
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# IDE configurations and swap files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Caches, logs and testing artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+*.log

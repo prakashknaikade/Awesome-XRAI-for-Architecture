@@ -15,6 +15,133 @@ from src.fix_date import YAMLUpdater
 
 YAML_FILE = "awesome_xrai_architecture_papers.yaml"
 
+def normalize_title(title):
+    if not title:
+        return ""
+    return re.sub(r'[^a-z0-9]', '', title.lower())
+
+def normalize_url(url):
+    if not url:
+        return ""
+    url = url.lower().strip()
+    url = re.sub(r'^https?://', '', url)
+    url = re.sub(r'^www\.', '', url)
+    url = url.rstrip('/')
+    if url.endswith('.pdf'):
+        url = url[:-4]
+    return url
+
+def is_hex_id(pid):
+    return bool(re.match(r'^[0-9a-f]{8}$', pid.lower())) if pid else False
+
+def parse_date(date_str):
+    if not date_str:
+        return None
+    try:
+        return datetime.fromisoformat(date_str.replace('Z', '+00:00'))
+    except Exception:
+        pass
+    try:
+        return datetime(int(date_str[:4]), 1, 1)
+    except Exception:
+        return None
+
+def merge_papers(papers):
+    if not papers:
+        return None
+    papers = sorted(papers, key=lambda p: (0 if not is_hex_id(p.get('id', '')) else 1, p.get('id', '')))
+    merged = dict(papers[0])
+    for other in papers[1:]:
+        if is_hex_id(merged.get('id', '')) and not is_hex_id(other.get('id', '')):
+            merged['id'] = other['id']
+        for field in ['title', 'authors', 'year', 'abstract', 'primary_category', 'project_page', 'paper', 'code', 'video', 'thumbnail', 'date_source']:
+            val_m = merged.get(field)
+            val_o = other.get(field)
+            str_m = str(val_m).strip() if val_m is not None else ""
+            str_o = str(val_o).strip() if val_o is not None else ""
+            if (not str_m or str_m == 'null' or str_m == 'None') and (str_o and str_o != 'null' and str_o != 'None'):
+                merged[field] = other[field]
+            elif str_o and len(str_o) > len(str_m) and str_m != 'null':
+                merged[field] = other[field]
+        
+        tags_m = set(merged.get('tags', []) or [])
+        tags_o = set(other.get('tags', []) or [])
+        merged['tags'] = sorted(list(tags_m.union(tags_o)))
+        
+        date_m = parse_date(merged.get('added_date'))
+        date_o = parse_date(other.get('added_date'))
+        if date_m and date_o:
+            if date_o < date_m:
+                merged['added_date'] = other['added_date']
+        elif date_o:
+            merged['added_date'] = other['added_date']
+            
+        pub_m = parse_date(merged.get('publication_date'))
+        pub_o = parse_date(other.get('publication_date'))
+        if pub_m and pub_o:
+            if pub_o < pub_m:
+                merged['publication_date'] = other['publication_date']
+        elif pub_o:
+            merged['publication_date'] = other['publication_date']
+    return merged
+
+def deduplicate_papers(papers_list):
+    if not papers_list:
+        return []
+    parent = list(range(len(papers_list)))
+    
+    def find(i):
+        if parent[i] == i:
+            return i
+        parent[i] = find(parent[i])
+        return parent[i]
+        
+    def union(i, j):
+        root_i = find(i)
+        root_j = find(j)
+        if root_i != root_j:
+            parent[root_i] = root_j
+
+    id_map = {}
+    title_map = {}
+    url_map = {}
+
+    for idx, entry in enumerate(papers_list):
+        pid = (entry.get('id') or "").strip().lower()
+        title = normalize_title(entry.get('title'))
+        paper_url = normalize_url(entry.get('paper'))
+
+        if pid:
+            if pid in id_map:
+                union(idx, id_map[pid])
+            else:
+                id_map[pid] = idx
+        if title:
+            if title in title_map:
+                union(idx, title_map[title])
+            else:
+                title_map[title] = idx
+        if paper_url:
+            if paper_url in url_map:
+                union(idx, url_map[paper_url])
+            else:
+                url_map[paper_url] = idx
+
+    from collections import defaultdict
+    groups = defaultdict(list)
+    for idx, entry in enumerate(papers_list):
+        root = find(idx)
+        groups[root].append(entry)
+
+    deduped_data = []
+    for root, group_entries in groups.items():
+        if len(group_entries) > 1:
+            merged = merge_papers(group_entries)
+            deduped_data.append(merged)
+        else:
+            deduped_data.append(group_entries[0])
+    return deduped_data
+
 class WebEditorHandler(http.server.BaseHTTPRequestHandler):
     def log_message(self, format, *args):
         # Silence default terminal logs to keep output clean, unless warning/error
@@ -134,6 +261,7 @@ class WebEditorHandler(http.server.BaseHTTPRequestHandler):
             
             try:
                 papers_list = json.loads(post_data.decode('utf-8'))
+                papers_list = deduplicate_papers(papers_list)
                 
                 # Format dates and validate each entry
                 updater = YAMLUpdater()

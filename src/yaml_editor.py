@@ -16,6 +16,7 @@ from PyQt6.QtWidgets import (
 from src.fix_date import YAMLUpdater
 from src.components.widgets import TagButton, URLWidget
 from src.components.dialogs import ArxivAddDialog
+from src.arxiv_integration import normalize_title, normalize_url
 
 
 YAML_FILE = "awesome_xrai_architecture_papers.yaml"
@@ -575,6 +576,26 @@ class YAMLEditor(QMainWindow):
             except StopIteration:
                 self.current_index = min(self.current_index, len(self.data) - 1)
 
+        # Check for duplicates (excluding the current index)
+        norm_title = normalize_title(entry.get("title"))
+        norm_url = normalize_url(entry.get("paper"))
+        
+        duplicate_warnings = []
+        for idx, other in enumerate(self.data):
+            if idx == self.current_index:
+                continue
+            if norm_title and normalize_title(other.get("title")) == norm_title:
+                duplicate_warnings.append(f"Duplicate title with ID: {other.get('id')}")
+            if norm_url and normalize_url(other.get("paper")) == norm_url:
+                duplicate_warnings.append(f"Duplicate URL with ID: {other.get('id')}")
+                
+        if duplicate_warnings:
+            self.statusBar().showMessage(" | ".join(duplicate_warnings))
+            self.statusBar().setStyleSheet("color: #ff3333; font-weight: bold;")
+        else:
+            self.statusBar().showMessage("")
+            self.statusBar().setStyleSheet("")
+
         ok = self.save_yaml()
         self.show_save_feedback(ok)
         self.update_entry_counter()
@@ -631,6 +652,26 @@ class YAMLEditor(QMainWindow):
         self.current_tags_list.clear()
         self.current_tags_list.addItems(sorted(selected))
         self.update_entry_counter()
+
+        # Check for duplicates on show
+        norm_title = normalize_title(entry.get("title"))
+        norm_url = normalize_url(entry.get("paper"))
+        
+        duplicate_warnings = []
+        for idx, other in enumerate(self.data):
+            if idx == self.current_index:
+                continue
+            if norm_title and normalize_title(other.get("title")) == norm_title:
+                duplicate_warnings.append(f"Duplicate title with ID: {other.get('id')}")
+            if norm_url and normalize_url(other.get("paper")) == norm_url:
+                duplicate_warnings.append(f"Duplicate URL with ID: {other.get('id')}")
+                
+        if duplicate_warnings:
+            self.statusBar().showMessage(" | ".join(duplicate_warnings))
+            self.statusBar().setStyleSheet("color: #ff3333; font-weight: bold;")
+        else:
+            self.statusBar().showMessage("")
+            self.statusBar().setStyleSheet("")
 
     def update_entry_counter(self):
         self.entry_counter.setText(f"Entry {self.current_index + 1} of {len(self.data)}")

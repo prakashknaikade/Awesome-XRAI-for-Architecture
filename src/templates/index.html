@@ -12,8 +12,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Awesome XRAI for Architecture Papers List (XRAI4AEC)</title>
     <meta name="description" content="Curated database of XR and AI research papers for architecture (XRAI4AEC)">
-    <meta name="keywords" content="XRAI, XR, AI, AEC, BIM, Floor plan reconstruction, Reality capture, Generative design, Digital Twins, Computational Architecture">
+    <meta name="keywords" content="XRAI, XR, AI, AEC, BIM, Floor plan reconstruction, Reality capture, Generative design, Digital Twins, Computational Architecture, CCS Concepts: • General and reference → Surveys and overviews; • Applied computing → Architecture (buildings); Engineering; Computer-aided design; Computers in other domains; • Human-centered computing → Extended reality; Visualization application domains; Human computer interaction (HCI); • Computing methodologies → Computer vision; Computer Graphics; Rendering; Shape modeling; Natural language processing; Machine learning; Artificial intelligence, Additional Key Words and Phrases: AEC, Construction, Spaces, BIM, Human Building Interaction, Virtual Reality, Augmented Reality, Mixed Reality, Generative AI, XRAI4AEC">
     
+    <!-- Search Engine Verification -->
+    <meta name="google-site-verification" content="google-site-verification-placeholder" />
+    <meta name="msvalidate.01" content="bing-site-verification-placeholder" />
+
     <!-- OpenGraph Metadata -->
     <meta property="og:title" content="Awesome XRAI for Architecture Papers List (XRAI4AEC)">
     <meta property="og:description" content="Curated database of XR and AI research papers for architecture, BIM, floor plan reconstruction, and generative design.">
@@ -663,7 +667,7 @@
     </script>
 
     <!-- Lazy load -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/17.8.3/lazyload.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/17.8.3/lazyload.min.js" defer></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T049G22NP9"></script>
@@ -695,17 +699,6 @@
             <a class="nav-link-btn" href="./analytics.html" aria-label="Open Analytics" title="Open Analytics" data-tooltip="Analytics">
                 <i class="fas fa-chart-column" aria-hidden="true"></i>
             </a>
-        </div>
-
-
-
-        <!-- Selection Mode Toggle Button -->
-        <div class="selection-buttons">
-            <!-- Show Selected Only -->
-            <button class="selected-only-mode-toggle" onclick="toggleSelectedOnly()">
-                <i class="fas fa-filter"></i>
-                <span class="tooltip">Show Selected Only</span>
-            </button>
 
             <!-- Enter Selection Mode -->
             <button class="selection-mode-toggle" onclick="toggleSelectionMode()">
@@ -714,54 +707,68 @@
             </button>
         </div>
 
-        <!-- Selection Preview Bar -->
-        <div class="selection-preview">
-            <div class="preview-header">
-                <div class="preview-header-left">
-                    <span>Selected Papers</span>
-                    <span class="selection-counter">0 papers selected</span>
-                </div>
-                <div class="preview-header-right">
-                    <button class="control-button secondary" onclick="clearSelection()">
-                        <i class="fas fa-trash"></i> Clear
-                    </button>
-                    <button class="control-button primary" onclick="showShareModal()">
-                        <i class="fas fa-share"></i> Share
-                    </button>
-                </div>
-            </div>
-            <div class="preview-container" id="selectionPreview"></div>
-        </div>
-
-        <!-- Filter Status Bar -->
-        <div class="filter-status">
-            <div class="preview-header">
-                <div class="preview-header-left">
-                    <span>Active Filters</span>
-                    <span class="filter-counter">Showing <span id="visibleCount">0</span> of <span id="totalCount">0</span> papers</span>
-                </div>
-                <div class="preview-header-right">
-                    <!-- Theme Toggle Button -->
-                    <div class="theme-toggle">
-                        <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme">
-                            <i class="fas fa-sun theme-icon light-icon"></i>
-                            <i class="fas fa-moon theme-icon dark-icon"></i>
-                            <i class="fas fa-circle-half-stroke theme-icon auto-icon"></i>
-                            <span class="tooltip">Toggle Theme</span>
+        <!-- Sticky Controls Wrapper -->
+        <div class="sticky-controls-wrapper">
+            <!-- Filter Status Bar -->
+            <div class="filter-status">
+                <div class="preview-header">
+                    <div class="preview-header-left"></div>
+                    <div class="preview-header-center">
+                        <h1 class="main-title">
+                            <span class="full-title">XRAI4AEC: Awesome-XRAI-for-AEC-Papers</span>
+                            <span class="short-title">XRAI4AEC</span>
+                        </h1>
+                    </div>
+                    <div class="preview-header-right">
+                        <!-- Theme Toggle Button -->
+                        <div class="theme-toggle">
+                            <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+                                <i class="fas fa-sun theme-icon light-icon"></i>
+                                <i class="fas fa-moon theme-icon dark-icon"></i>
+                                <i class="fas fa-circle-half-stroke theme-icon auto-icon"></i>
+                                <span class="tooltip">Toggle Theme</span>
+                            </button>
+                        </div>
+                        <button class="control-button secondary" onclick="clearAllFilters()" data-action="clear-all">
+                            <i class="fas fa-trash"></i> Clear All
                         </button>
                     </div>
-                    <button class="control-button secondary" onclick="clearAllFilters()" data-action="clear-all">
-                        <i class="fas fa-trash"></i> Clear All
-                    </button>
+                </div>
+                <div class="preview-container active-filters-box">
+                    <div class="active-filters-info">
+                        <span class="active-filters-title">Active Filters</span>
+                        <span class="filter-counter">Showing <span id="visibleCount">0</span> of <span id="totalCount">0</span> papers</span>
+                    </div>
+                    <div class="active-filters-chips" id="activeFilters">
+                        <!-- Active filters will be inserted here -->
+                    </div>
                 </div>
             </div>
-            <div class="preview-container" id="activeFilters">
-                <!-- Active filters will be inserted here -->
+
+            <!-- Selection Preview Bar -->
+            <div class="selection-preview">
+                <div class="preview-header">
+                    <div class="preview-header-left">
+                        <span>Selected Papers</span>
+                        <span class="selection-counter">0 papers selected</span>
+                    </div>
+                    <div class="preview-header-right">
+                        <button class="control-button secondary" onclick="clearSelection()">
+                            <i class="fas fa-trash"></i> Clear
+                        </button>
+                        <button class="control-button secondary show-selected-toggle" onclick="toggleSelectedOnly()">
+                            <i class="fas fa-filter"></i> Show Selected Only
+                        </button>
+                        <button class="control-button primary" onclick="showShareModal()">
+                            <i class="fas fa-share"></i> Share
+                        </button>
+                    </div>
+                </div>
+                <div class="preview-container" id="selectionPreview"></div>
             </div>
         </div>
 
-        <div style="text-align: center;">
-            <h1>XRAI4AEC: Awesome-XRAI-for-AEC-Papers</h1>
+        <div style="text-align: center; margin-top: 1.5rem;">
             <p style="text-align: center; max-width: 900px; margin: 0 auto 1.5rem auto;">A curated collection of papers focused on XR+AI for AEC <i>(XRAI4AEC)</i> and related technologies 
                 such as BIM, (2D/3D) computer vision, computer graphics, LLMs, VLMS, GenAI, deep/machine learning and data science.</p>
         </div>
@@ -795,21 +802,77 @@
         </div>
 
 
-        <!-- Filter Info -->
-        <div class="filter-info">
-            <h3>Filter Options</h3>
-            <p> <i class="fa-solid fa-circle-info"></i> <strong>Paper Card:</strong> Each paper belongs to only one primary category (green) as well as one or more sub-category (amber) tags and other additional theme tags</p>
-            <p><strong>Search:</strong> Enter paper title or author names, then click <i class="fas fa-times"></i> to clear</p>
-            <p><strong>Category:</strong> Filter by primary category (publication theme)</p>
-            <p><strong>Year:</strong> Filter by publication year</p>
-            <p><strong>Tags:</strong> Click once to include (blue), twice to exclude (red), third time to remove filter</p>
-            <p>Tags filter list is arranged to show each sub-category (amber) together with its associated tags, 
-                followed by additional sub-categories (amber) and their associated tags, 
-                all grouped under a primary category (green). The list then continues in the same way for the next primary category, 
-                and so on. You can also filter tags by selecting a specific primary category (green) from the dropdown list, which narrows the options to only that category,
-                and shows only associated sub-category tags, additional tags, and years for further filtering.</p>
-            <p><strong>Selection:</strong> Use selection mode to pick and share specific papers</p>
-            <p> <i class="fa-solid fa-circle-info"></i> <strong>Analytics:</strong> Use Analytics 📊 button to view statistics and insights about the papers in the collection.</p>
+        <!-- Filter Info Dashboard -->
+        <div class="filter-info-card">
+            <div class="filter-info-header">
+                <i class="fa-solid fa-compass filter-info-icon"></i>
+                <h2>How to Use Filters & Features</h2>
+            </div>
+            
+            <div class="filter-info-grid">
+                <!-- Search feature -->
+                <div class="filter-info-item">
+                    <div class="item-header">
+                        <i class="fas fa-magnifying-glass item-icon"></i>
+                        <h4>Search</h4>
+                    </div>
+                    <p>Type keywords, titles, or author names in the search box. Click <i class="fas fa-times"></i> to clear.</p>
+                </div>
+
+                <!-- Dropdowns -->
+                <div class="filter-info-item">
+                    <div class="item-header">
+                        <i class="fas fa-filter item-icon"></i>
+                        <h4>Category & Year</h4>
+                    </div>
+                    <p>Use the dropdowns to quickly narrow papers down by primary category (publication theme) or year.</p>
+                </div>
+
+                <!-- Tags Include/Exclude -->
+                <div class="filter-info-item tag-item">
+                    <div class="item-header">
+                        <i class="fas fa-tags item-icon"></i>
+                        <h4>Interactive Tags</h4>
+                    </div>
+                    <p>Click tags once to <span class="tag-status include">Include</span> (blue), twice to <span class="tag-status exclude">Exclude</span> (red), and a third time to clear the filter.</p>
+                </div>
+
+                <!-- Paper Card Badging -->
+                <div class="filter-info-item">
+                    <div class="item-header">
+                        <i class="fas fa-file-lines item-icon"></i>
+                        <h4>Paper Cards</h4>
+                    </div>
+                    <p>Each paper displays its primary category (<span class="badge primary-badge">green</span>) on the top right, followed by sub-categories (<span class="badge sub-badge">amber</span>) and additional theme tags.</p>
+                </div>
+
+                <!-- Selection Mode -->
+                <div class="filter-info-item">
+                    <div class="item-header">
+                        <i class="fas fa-list-check item-icon"></i>
+                        <h4>Selection Mode</h4>
+                    </div>
+                    <p>Toggle the list icon in the floating menu, check paper rows to add to your list, and click <strong>Share</strong> to generate custom links.</p>
+                </div>
+
+                <!-- Analytics -->
+                <div class="filter-info-item">
+                    <div class="item-header">
+                        <i class="fas fa-chart-column item-icon"></i>
+                        <h4>Analytics Dashboard</h4>
+                    </div>
+                    <p>Click the analytics link in the floating menu to view statistics, trends, and charts for the paper library.</p>
+                </div>
+
+                <!-- Tag Arrangement & Hierarchy -->
+                <div class="filter-info-item hierarchy-item">
+                    <div class="item-header">
+                        <i class="fas fa-sitemap item-icon"></i>
+                        <h4>Tag Hierarchy & Filtering</h4>
+                    </div>
+                    <p>Tags are grouped under primary categories (<span class="badge primary-badge">green</span>) and sub-categories (<span class="badge sub-badge">amber</span>). Selecting a category dropdown filters the available tags and years automatically to show only associated items.</p>
+                </div>
+            </div>
         </div>
 
         <!-- Share Modal -->

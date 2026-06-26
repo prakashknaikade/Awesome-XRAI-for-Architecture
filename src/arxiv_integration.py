@@ -5,6 +5,24 @@ from urllib.parse import urlparse
 from typing import Optional, Dict, Any
 
 
+def normalize_title(title: str) -> str:
+    if not title:
+        return ""
+    return re.sub(r'[^a-z0-9]', '', title.lower())
+
+
+def normalize_url(url: str) -> str:
+    if not url:
+        return ""
+    url = url.lower().strip()
+    url = re.sub(r'^https?://', '', url)
+    url = re.sub(r'^www\.', '', url)
+    url = url.rstrip('/')
+    if url.endswith('.pdf'):
+        url = url[:-4]
+    return url
+
+
 class ArxivIntegration:
     def __init__(self):
         self.client = arxiv.Client()
@@ -50,7 +68,7 @@ class ArxivIntegration:
                 "paper": f"https://arxiv.org/pdf/{arxiv_id}.pdf",
                 "code": None,
                 "video": None,
-                "tags": [f"Year {year}"],
+                "tags": [],
                 "thumbnail": f"assets/thumbnails/{paper_id}.jpg"
             }
             return entry
@@ -64,15 +82,26 @@ class ArxivIntegration:
             with open(filename, 'r', encoding='utf-8') as file:
                 content = file.read()
             data = yaml.safe_load(content) or []
-            if any(existing['id'] == entry['id'] for existing in data):
-                print(f"Paper with ID {entry['id']} already exists")
-                return False
+            
+            norm_title = normalize_title(entry.get('title'))
+            norm_url = normalize_url(entry.get('paper'))
+            
+            for existing in data:
+                if (existing.get('id') or '').strip().lower() == (entry.get('id') or '').strip().lower():
+                    raise ValueError(f"Paper with ID {entry['id']} already exists")
+                if norm_title and normalize_title(existing.get('title')) == norm_title:
+                    raise ValueError(f"Paper with title '{entry['title']}' already exists (ID: {existing.get('id')})")
+                if norm_url and normalize_url(existing.get('paper')) == norm_url:
+                    raise ValueError(f"Paper with URL '{entry['paper']}' already exists (ID: {existing.get('id')})")
+
             formatted_entry = self.format_yaml_entry(entry)
             with open(filename, 'a', encoding='utf-8') as file:
                 if not content.endswith('\n'):
                     file.write('\n')
                 file.write(formatted_entry)
             return True
+        except ValueError as e:
+            raise e
         except Exception as e:
             print(f"Error appending to YAML: {str(e)}")
             return False

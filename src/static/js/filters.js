@@ -14,11 +14,21 @@ const ST = window.state || (window.state = {
 
 /* ------------------ Selected-only helpers ------------------ */
 function setSelectedOnlyButtonUI() {
-  const btn = document.querySelector('.selected-only-mode-toggle');
+  const btn = document.querySelector('.show-selected-toggle') || document.querySelector('.selected-only-mode-toggle');
   if (!btn) return;
   btn.classList.toggle('active', !!ST.onlyShowSelected);
   btn.setAttribute('aria-pressed', ST.onlyShowSelected ? 'true' : 'false');
-  btn.title = ST.onlyShowSelected ? 'Showing selected papers only' : 'Show Selected Only';
+  if (btn.classList.contains('show-selected-toggle')) {
+    if (ST.onlyShowSelected) {
+      btn.innerHTML = '<i class="fas fa-eye"></i> Show All Papers';
+      btn.title = 'Show all papers';
+    } else {
+      btn.innerHTML = '<i class="fas fa-filter"></i> Show Selected Only';
+      btn.title = 'Showing selected papers only';
+    }
+  } else {
+    btn.title = ST.onlyShowSelected ? 'Showing selected papers only' : 'Show Selected Only';
+  }
 }
 
 function syncSelectedPapersFromDom() {
@@ -332,12 +342,7 @@ function buildActiveFilters(){
   [...ST.includeTags].sort().forEach(t=>chips.push(makeChip('Include', t, 'include-tag', t)));
   [...ST.excludeTags].sort().forEach(t=>chips.push(makeChip('Exclude', t, 'exclude-tag', t)));
 
-  if (!chips.length){
-    const span = document.createElement('span');
-    span.className = 'no-active-filters';
-    span.textContent = 'No active filters';
-    box.appendChild(span);
-  } else {
+  if (chips.length){
     chips.forEach(c=>box.appendChild(c));
   }
 }
@@ -513,7 +518,7 @@ function resetAllFilters(){
 
   // Clear URL (fallback)
   if (history.replaceState){
-    history.replaceState(null,'',location.pathname);
+    history.replaceState(null, '', location.pathname + (location.hash || ''));
   }
 }
 window.resetAllFilters = resetAllFilters;
@@ -764,6 +769,8 @@ function toggleTagsDrawer() {
 // Expose globally
 window.toggleTagsDrawer = toggleTagsDrawer;
 window.updateTagsDrawerToggleText = updateTagsDrawerToggleText;
+window.filterPapers = applyFilters;
+window.applyFilters = applyFilters;
 
 // Expose for debug
 window.__reorderAllPaperTags = reorderAllPaperTags;

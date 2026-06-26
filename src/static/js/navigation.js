@@ -122,7 +122,42 @@ document.addEventListener('DOMContentLoaded', function() {
     // Override the existing filterPapers function to update filter status
     const originalFilterPapers = window.filterPapers;
     window.filterPapers = function() {
-        originalFilterPapers();
+        if (typeof originalFilterPapers === 'function') {
+            originalFilterPapers();
+        }
         updateFilterStatus();
     };
+
+    // Handle direct paper link anchoring with smooth scroll and highlight pulse
+    window.addEventListener('hashchange', handleHashNavigation);
+    
+    // Check hash on initial load
+    setTimeout(handleHashNavigation, 250);
 });
+
+function handleHashNavigation() {
+    const hash = window.location.hash;
+    if (hash && hash.startsWith('#')) {
+        const id = hash.substring(1);
+        const row = document.querySelector(`.paper-row[data-id="${id}"]`);
+        if (row) {
+            // First reset all filters to ensure it's visible
+            if (typeof resetAllFilters === 'function') {
+                resetAllFilters();
+            }
+            
+            // Scroll to the card and flash it
+            setTimeout(() => {
+                row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                const card = row.querySelector('.paper-card');
+                if (card) {
+                    card.classList.add('highlight-pulse');
+                    setTimeout(() => {
+                        card.classList.remove('highlight-pulse');
+                    }, 2500);
+                }
+            }, 100);
+        }
+    }
+}
+window.handleHashNavigation = handleHashNavigation;

@@ -119,6 +119,10 @@ Here are some organizations we can collaborate within XRAI4AEC domain:
 
 *Recent additions (last 60 days):*
 
+**June 24, 2026**
+
+- Efficiently Reconstructing Dynamic Scenes One D4RT at a Time → *Reality Capture and Digital Twins*
+
 **June 04, 2026**
 
 - The Scene Language: Representing Scenes with Programs, Words, and Embeddings → *Reality Capture and Digital Twins*
@@ -601,7 +605,20 @@ Decompositional reconstruction of 3D scenes, with complete shapes and detailed t
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2503.14830.pdf)
 
-### 5. ExCap3D: Expressive 3D Scene Understanding via Object Captioning with Varying Detail
+### 5. Efficiently Reconstructing Dynamic Scenes One D4RT at a Time
+
+**Authors**: Chuhan Zhang, Guillaume Le Moing, Skanda Koppula, Ignacio Rocco, Liliane Momeni, Junyu Xie, Shuyang Sun, Rahul Sukthankar, Joëlle K. Barral, Raia Hadsell, Zoubin Ghahramani, Andrew Zisserman, Junlin Zhang, Mehdi S. M. Sajjadi
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Understanding and reconstructing the complex geometry and motion of dynamic scenes from video remains a formidable challenge in computer vision. This paper introduces D4RT, a simple yet powerful feedforward model designed to efficiently solve this task. D4RT utilizes a unified transformer architecture to jointly infer depth, spatio-temporal correspondence, and full camera parameters from a single video. Its core innovation is a novel querying mechanism that sidesteps the heavy computation of dense, per-frame decoding and the complexity of managing multiple, task-specific decoders. Our decoding interface allows the model to independently and flexibly probe the 3D position of any point in space and time. The result is a lightweight and highly scalable method that enables remarkably efficient training and inference. We demonstrate that our approach sets a new state of the art, outperforming previous methods across a wide spectrum of 4D reconstruction tasks. We refer to the project webpage for animated results: https://d4rt-paper.github.io/.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2512.08924.pdf) | [🌐 Project Page](https://d4rt-paper.github.io/)
+
+### 6. ExCap3D: Expressive 3D Scene Understanding via Object Captioning with Varying Detail
 
 **Authors**: Chandan Yeshwanth, David Rozenberszki, Angela Dai
 
@@ -614,7 +631,7 @@ Generating text descriptions of objects in 3D indoor scenes is an important buil
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2503.17044.pdf)
 
-### 6. Fast3R: Towards 3D Reconstruction of 1000+ Images in One Forward Pass
+### 7. Fast3R: Towards 3D Reconstruction of 1000+ Images in One Forward Pass
 
 **Authors**: Jianing Yang, Alexander Sax, Kevin J. Liang, Mikael Henaff, Hao Tang, Ang Cao, Joyce Chai, Franziska Meier, Matt Feiszli
 
@@ -627,7 +644,7 @@ Multi-view 3D reconstruction remains a core challenge in computer vision, partic
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2501.13928.pdf)
 
-### 7. Floorplan-SLAM: A Real-Time, High-Accuracy, and Long-Term Multi-Session Point-Plane SLAM for Efficient Floorplan Reconstruction
+### 8. Floorplan-SLAM: A Real-Time, High-Accuracy, and Long-Term Multi-Session Point-Plane SLAM for Efficient Floorplan Reconstruction
 
 **Authors**: Haolin Wang, Zeren Lv, Hao Wei, Haijiang Zhu, Yihong Wu
 
@@ -640,7 +657,7 @@ Floorplan reconstruction provides structural priors essential for reliable indoo
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2503.00397v2.pdf)
 
-### 8. FloorplanMAE:A self-supervised framework for complete floorplan generation from partial inputs
+### 9. FloorplanMAE:A self-supervised framework for complete floorplan generation from partial inputs
 
 **Authors**: Jun Yin, Jing Zhong, Pengyu Zeng, Peilin Li, Miao Zhang, Ran Luo, Shuai Lu
 
@@ -653,7 +670,7 @@ In the architectural design process, floorplan design is often a dynamic and ite
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2506.08363.pdf)
 
-### 9. HouseLayout3D: A Benchmark and Training-free Baseline for 3D Layout Estimation in the Wild
+### 10. HouseLayout3D: A Benchmark and Training-free Baseline for 3D Layout Estimation in the Wild
 
 **Authors**: Valentin Bieri, Marie-Julie Rakotosaona, Keisuke Tateno, Francis Engelmann, Leonidas Guibas
 
@@ -666,7 +683,7 @@ Current 3D layout estimation models are predominantly trained on synthetic datas
 
 **Links**: [📄 Paper](https://houselayout3d.github.io/assets/houselayout3d_paper.pdf) | [🌐 Project Page](https://houselayout3d.github.io/) | [💻 Code](https://github.com/valebi/house-layout-3d-eval)
 
-### 10. Human-in-the-Loop Local Corrections of 3D Scene Layouts via Infilling
+### 11. Human-in-the-Loop Local Corrections of 3D Scene Layouts via Infilling
 
 **Authors**: Christopher Xie, Armen Avetisyan, Henry Howard-Jenkins, Yawar Siddiqui, Julian Straub, Richard Newcombe, Vasileios Balntas, Jakob Engel
 
@@ -679,7 +696,7 @@ We present a novel human-in-the-loop approach to estimate 3D scene layout that u
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2503.11806.pdf)
 
-### 11. Leveraging AI to Enhance XR in the AEC Industry
+### 12. Leveraging AI to Enhance XR in the AEC Industry
 
 **Authors**: Sepehr Alizadehsalehi, Ahmad Hadavi
 
@@ -692,7 +709,7 @@ The Architecture, Engineering, and Construction (AEC) industry will benefit sign
 
 **Links**: [📄 Paper](https://link.springer.com/chapter/10.1007/978-981-96-4051-5_105)
 
-### 12. MUSt3R: Multi-view Network for Stereo 3D Reconstruction
+### 13. MUSt3R: Multi-view Network for Stereo 3D Reconstruction
 
 **Authors**: Yohann Cabon, Lucas Stoffl, Leonid Antsfeld, Gabriela Csurka, Boris Chidlovskii, Jerome Revaud, Vincent Leroy
 
@@ -705,7 +722,7 @@ DUSt3R introduced a novel paradigm in geometric computer vision by proposing a m
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2503.01661.pdf) | [🌐 Project Page](https://europe.naverlabs.com/research/publications/must3r-multi-view-network-for-stereo-3d-reconstruction/) | [💻 Code](https://github.com/naver/must3r)
 
-### 13. NeRFPrior: Learning Neural Radiance Field as a Prior for Indoor Scene Reconstruction
+### 14. NeRFPrior: Learning Neural Radiance Field as a Prior for Indoor Scene Reconstruction
 
 **Authors**: Wenyuan Zhang, Emily Yue-ting Jia, Junsheng Zhou, Baorui Ma, Kanle Shi, Yu-Shen Liu, Zhizhong Han
 
@@ -718,7 +735,7 @@ Recently, it has shown that priors are vital for neural implicit functions to re
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2503.18361.pdf)
 
-### 14. PolyGraph: A Graph-Based Method for Floorplan Reconstruction From 3D Scans
+### 15. PolyGraph: A Graph-Based Method for Floorplan Reconstruction From 3D Scans
 
 **Authors**: Q. Sun, C. Fang, S. Liu, Y. Sun, Y. Shang, Y. He
 
@@ -731,7 +748,7 @@ The task of reconstructing indoor floorplans has become an increasingly popular 
 
 **Links**: [📄 Paper](https://ieeexplore.ieee.org/document/10899892)
 
-### 15. QuickSplat: Fast 3D Surface Reconstruction via Learned Gaussian Initialization
+### 16. QuickSplat: Fast 3D Surface Reconstruction via Learned Gaussian Initialization
 
 **Authors**: Yueh-Cheng Liu, Lukas Höllein, Matthias Nießner, Angela Dai
 
@@ -744,7 +761,7 @@ Surface reconstruction is fundamental to computer vision and graphics, enabling 
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2505.05591.pdf) | [🌐 Project Page](https://liu115.github.io/quicksplat) | [💻 Code](https://github.com/liu115/QuickSplat) | [🎥 Video](https://youtu.be/2IA_gnFvFG8)
 
-### 16. Radiance Meshes for Volumetric Reconstruction
+### 17. Radiance Meshes for Volumetric Reconstruction
 
 **Authors**: Alexander Mai, Trevor Hedstrom, George Kopanas, Janne Kontkanen, Falko Kuester, Jonathan T. Barron
 
@@ -757,7 +774,7 @@ We introduce radiance meshes, a technique for representing radiance fields with 
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2512.04076.pdf)
 
-### 17. ResPlan: A Large-Scale Vector-Graph Dataset of 17,000 Residential Floor Plans
+### 18. ResPlan: A Large-Scale Vector-Graph Dataset of 17,000 Residential Floor Plans
 
 **Authors**: Mohamed Abouagour, Eleftherios Garyfallidis
 
@@ -770,7 +787,7 @@ We introduce ResPlan, a large-scale dataset of 17,000 detailed, structurally ric
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2508.14006v1.pdf)
 
-### 18. Scan-to-BIM-to-Sim: Automated reconstruction of digital and simulation models from point clouds with applications on bridges
+### 19. Scan-to-BIM-to-Sim: Automated reconstruction of digital and simulation models from point clouds with applications on bridges
 
 **Authors**: Yunping Fang
 , Stergios-Aristoteles Mitoulis, Daniel Boddice
@@ -787,7 +804,7 @@ The automation of 3D geometric model reconstruction from point clouds is essenti
 
 **Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S2590123025003743)
 
-### 19. ScanEdit: Hierarchically-Guided Functional 3D Scan Editing
+### 20. ScanEdit: Hierarchically-Guided Functional 3D Scan Editing
 
 **Authors**: Mohamed el amine Boudjoghra, Ivan Laptev, Angela Dai
 
@@ -800,7 +817,7 @@ With the fast pace of 3D capture technology and resulting abundance of 3D data, 
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2504.15049.pdf) | [🌐 Project Page](https://aminebdj.github.io/scanedit/) | [💻 Code](https://github.com/aminebdj/ScanEdit) | [🎥 Video](https://www.youtube.com/watch?v=Dfmu2g6pVlg)
 
-### 20. The Scene Language: Representing Scenes with Programs, Words, and Embeddings
+### 21. The Scene Language: Representing Scenes with Programs, Words, and Embeddings
 
 **Authors**: Yunzhi Zhang, Zizhang Li, Matt Zhou, Shangzhe Wu, Jiajun Wu
 
@@ -813,7 +830,7 @@ We introduce the Scene Language, a visual scene representation that concisely an
 
 **Links**: [📄 Paper](https://arxiv.org/abs/2410.16770) | [🌐 Project Page](https://ai.stanford.edu/~yzzhang/projects/scene-language/) | [💻 Code](https://github.com/zzyunzhi/scene-language) | [🎥 Video](https://ai.stanford.edu/~yzzhang/projects/scene-language/resources_compressed/teaser.mp4#t=0.001)
 
-### 21. WildGS-SLAM: Monocular Gaussian Splatting SLAM in Dynamic Environments
+### 22. WildGS-SLAM: Monocular Gaussian Splatting SLAM in Dynamic Environments
 
 **Authors**: Jianhao Zheng, Zihan Zhu, Valentin Bieri, Marc Pollefeys, Songyou Peng, Iro Armeni
 
@@ -1364,20 +1381,7 @@ The deterioration of civil infrastructure presents a critical economic and socie
 
 **Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S1226798825003186)
 
-### 2. Applications and Trends of Machine Learning in Building Energy Optimization: A Bibliometric Analysis
-
-**Authors**: Jingyi Liu, Jianfei Chen
-
-<details>
-<summary><b>Abstract</b></summary>
-
-With the rapid advancement of machine learning (ML) technologies, their innovative applications in enhancing building energy efficiency are increasingly prominent. Utilizing tools such as VOSviewer and Bibliometrix, this study systematically reviews the body of the related literature, focusing on the key applications and emerging trends of cutting-edge ML techniques, including deep learning, reinforcement learning, and unsupervised learning, in optimizing building energy performance and managing carbon emissions. First, this paper delves into the role of ML in building performance prediction, intelligent energy management, and sustainable design, with particular emphasis on how smart building systems leverage real-time data analysis and prediction to optimize energy usage and significantly reduce carbon emissions dynamically. Second, this study summarizes the technological evolution and future trends of ML in the building sector and identifies critical challenges faced by the field. The findings provide a technology-driven perspective for advancing sustainability in the construction industry and offer valuable insights for future research directions.
-
-</details>
-
-**Links**: [📄 Paper](https://www.mdpi.com/2075-5309/15/7/994)
-
-### 3. Approach Towards the Development of Digital Twin for Structural Health Monitoring of Civil Infrastructure: A Comprehensive Review
+### 2. Approach Towards the Development of Digital Twin for Structural Health Monitoring of Civil Infrastructure: A Comprehensive Review
 
 **Authors**: Zhiyan Sun,
 Sanduni Jayasinghe, Amir Sidiq, Farham Shahrivar,
@@ -1392,7 +1396,7 @@ Civil infrastructure assets’ contribution to countries’ economic growth is s
 
 **Links**: [📄 Paper](https://www.mdpi.com/1424-8220/25/1/59)
 
-### 4. Developing campus digital twin using interactive visual analytics approach
+### 3. Developing campus digital twin using interactive visual analytics approach
 
 **Authors**: Xinyue Ye, Suphanut Jamonnak, Shannon Van Zandt, Galen Newman, Patrick Suermann
 
@@ -1405,7 +1409,7 @@ Digital Twins (DTs) are increasingly recognized for their potential to improve e
 
 **Links**: [📄 Paper](https://link.springer.com/content/pdf/10.1007/s44243-024-00033-2.pdf)
 
-### 5. Development and demonstration of a digital twin platform leveraging ontologies and data-driven simulation models
+### 4. Development and demonstration of a digital twin platform leveraging ontologies and data-driven simulation models
 
 **Authors**: Jakob Bjørnskov, Avneet Badhwar, De Shikhar Singh, Mohit Sehgal, Rasmus Åkesson, Muhyiddine Jradi
 
@@ -1418,7 +1422,7 @@ The building sector is currently seeing rapid digitalization through IoT sensor 
 
 **Links**: [📄 Paper](https://www.tandfonline.com/doi/full/10.1080/19401493.2025.2504005)
 
-### 6. Digital twin based deep learning framework for personalized thermal comfort prediction and energy efficient operation in smart buildings
+### 5. Digital twin based deep learning framework for personalized thermal comfort prediction and energy efficient operation in smart buildings
 
 **Authors**: Ahmad Almadhor, Nejib Ghazouani, Belgacem Bouallegue, Natalia Kryvinska, Shtwai Alsubai, Moez Krichen, Abdullah Al Hejaili, Gabriel Avelino Sampedro
 
@@ -1433,7 +1437,7 @@ The regulation of indoor thermal comfort is a critical aspect of smart building 
 
 **Links**: [📄 Paper](https://www.nature.com/articles/s41598-025-10086-y)
 
-### 7. Integrating digital twin technologies for maintenance 4.0 in the building industry: A review and conceptual framework
+### 6. Integrating digital twin technologies for maintenance 4.0 in the building industry: A review and conceptual framework
 
 **Authors**: Wei Hu, Yifu Ou, Haiyi Liu, Peizhou Ni, Cheng Chang
 
@@ -1446,7 +1450,7 @@ The building industry is facing increasing demands for sustainable and efficient
 
 **Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S0360132325014672)
 
-### 8. Structural Health Monitoring of Engineering Structures Using Digital Twins: A Digital Twin Platform Approach
+### 7. Structural Health Monitoring of Engineering Structures Using Digital Twins: A Digital Twin Platform Approach
 
 **Authors**: P. Talasila, D. Tcherniak, A.M.D. Jensen, S. Mahato, A. Schörghofer-Queiroz, M.D. Ulriksen, G. Abbiati, P.G. Larsen, L. Damkilde
 
@@ -1459,7 +1463,7 @@ Engineering structures such as bridges and wind farms need to have a long useful
 
 **Links**: [📄 Paper](https://doi.org/10.1007/978-3-031-96110-6_98)
 
-### 9. Temporal-online hybrid machine learning for occupancy forecasting: Enhancing energy efficiency in smart building management systems
+### 8. Temporal-online hybrid machine learning for occupancy forecasting: Enhancing energy efficiency in smart building management systems
 
 **Authors**: Ruosi Zhang, Oleksiy V. Klymenko, Michael Short
 
@@ -1473,7 +1477,7 @@ Enhancing energy efficiency is critical for reducing the carbon footprint of the
 
 **Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S0378778825014665)
 
-### 10. The Role of Digital Twins in Predictive Building Maintenance → Scenario
+### 9. The Role of Digital Twins in Predictive Building Maintenance → Scenario
 
 **Authors**: Sustainability Directory
 
@@ -1527,20 +1531,7 @@ The majority of Europe’s building stock consists of facilities built before 20
 
 **Links**: [📄 Paper](https://energyinformatics.springeropen.com/counter/pdf/10.1186/s42162-024-00313-7.pdf)
 
-### 4. Developing campus digital twin using interactive visual analytics approach
-
-**Authors**: Xinyue Ye, Suphanut Jamonnak, Shannon Van Zandt, Galen Newman, Patrick Suermann
-
-<details>
-<summary><b>Abstract</b></summary>
-
-Digital Twins (DTs) are increasingly recognized for their potential to improve efficiency and decision-making in various domains of the built environment. Despite their promise, challenges like cost, complexity, interoperability, and data integration remain. This paper introduces a novel interactive visual analytics system that tackles these issues, using a case study of simulating class distribution and campus building capacity at a large public university. The system leverages enrollment data, converting it into a spatial-temporal format for interactive exploration and analysis of class distribution and resource utilization. Through case studies, we demonstrate the system's effectiveness, adaptability, and real-world applicability, highlighting its role in practical DT implementation for built environments.
-
-</details>
-
-**Links**: [📄 Paper](https://link.springer.com/10.1007/s44243-024-00033-2)
-
-### 5. Digital Twins in Construction: Architecture, Applications, Trends and Challenges
+### 4. Digital Twins in Construction: Architecture, Applications, Trends and Challenges
 
 **Authors**: Yang Zhou, Tang Chao, Zhang Tongrui, Zhang Zhongjian, Doan Dat
 
@@ -1553,7 +1544,7 @@ The construction field currently suffers from low productivity, a lack of expert
 
 **Links**: [📄 Paper](https://www.researchgate.net/publication/383371298_Digital_Twins_in_Construction_Architecture_Applications_Trends_and_Challenges)
 
-### 6. Digital twin-driven prognostics and health management for industrial assets
+### 5. Digital twin-driven prognostics and health management for industrial assets
 
 **Authors**: Bin Xiao, Jingshu Zhong, Xiangyu Bao, Liang Chen, Jinsong Bao, Yu Zheng
 
@@ -1566,7 +1557,7 @@ As a facilitator of smart upgrading, digital twin (DT) is emerging as a driving 
 
 **Links**: [📄 Paper](https://www.nature.com/articles/s41598-024-63990-0)
 
-### 7. Enhanced clash detection in building information modeling: Leveraging modified extreme gradient boosting for predictive analytics
+### 6. Enhanced clash detection in building information modeling: Leveraging modified extreme gradient boosting for predictive analytics
 
 **Authors**: Ali Shehadeh, Odey Alshboul,
 Madhar M. Taamneh,
@@ -1582,7 +1573,7 @@ This study introduces an intelligent system that involves the Modified Extreme G
 
 **Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S2590123024016918)
 
-### 8. Leveraging Digital Twin Technology to Optimize Operations and Sustainability: Insights from an Office Building Case Study
+### 7. Leveraging Digital Twin Technology to Optimize Operations and Sustainability: Insights from an Office Building Case Study
 
 **Authors**: dthub
 
@@ -1755,19 +1746,6 @@ District-scale energy demand models can be powerful tools for understanding inte
 **Authors**: Zhihan Lv,
 Dongliang Chen,
 Haibin Lv
-
-<details>
-<summary><b>Abstract</b></summary>
-
-With the rapid development of information technology and the spread of Corona Virus Disease 2019 (COVID-19), the government and urban managers are looking for ways to use technology to make the city smarter and safer. Intelligent transportation can play a very important role in the joint prevention. This work expects to explore the building information modeling (BIM) big data (BD) processing method of digital twins (DTs) of Smart City, thus speeding up the construction of Smart City and improve the accuracy of data processing. During construction, DTs build the same digital copy of the smart city. On this basis, BIM designs the building's keel and structure, optimizing various resources and configurations of the building. Regarding the fast data growth in smart cities, a complex data fusion and efficient learning algorithm, namely Multi-Graphics Processing Unit (GPU), is proposed to process the multi-dimensional and complex BD based on the compositive rough set model. The Bayesian network solves the multi-label classification. Each label is regarded as a Bayesian network node. Then, the structural learning approach is adopted to learn the label Bayesian network's structure from data. On the P53-old and the P53-new datasets, the running time of Multi-GPU decreases as the number of GPUs increases, approaching the ideal linear speedup ratio. With the continuous increase of K value, the deterministic information input into the tag BN will be reduced, thus reducing the classification accuracy. When K = 3, MLBN can provide the best data analysis performance. On genbase dataset, the accuracy of MLBN is 0.982 ± 0.013. Through experiments, the BIM BD processing algorithm based on Bayesian Network Structural Learning (BNSL) helps decision-makers use complex data in smart cities efficiently.
-
-</details>
-
-**Links**: [📄 Paper](https://dl.acm.org/doi/10.1145/3529395)
-
-### 7. Smart City Construction and Management by Digital Twins and BIM Big Data in COVID-19 Scenario
-
-**Authors**: Zhihan Lv, Dongliang Chen, Haibin Lv
 
 <details>
 <summary><b>Abstract</b></summary>
@@ -2161,20 +2139,6 @@ This article aims to summarize the application of artificial intelligence (AI) i
 **Links**: [📄 Paper](https://www.ewadirect.com/proceedings/ace/article/view/15373)
 
 ### 10. Viewpoints on AR and VR in heritage tourism
-
-**Authors**: Maysam Shafiee Roodposhti,
-Faezeh Esmaeelbeigi
-
-<details>
-<summary><b>Abstract</b></summary>
-
-In recent years, the emerging digital technologies of VR and AR have had practical applications for visitors in the tourism sector. The purpose of this study was to identify the usage of VR and AR in heritage tourism based on the experience of tourists. Twenty-two thousand user reviews about AR and VR from websites in the field of tourism were extracted by Python and analyzed with text mining techniques. The usages are classified into six main categories: Introducing the heritage, helping to recognize the heritage, encouraging the desire to visit and facilitating the possibility of visiting the heritage, the effectiveness of managing the costs of the visit, and the possibility of sensory experience. These six categories, in the form of “heritage identification” and “heritage experience,” enhance visitors' information about heritage destinations, increase the quality of the visit experience, and ultimately improve visitor satisfaction. The results of this study can inform tourism marketing and future technology integration. Therefore, this area should be paid attention to by tourism professionals, and the advantages can be harnessed to create sustainable virtual experiences.
-
-</details>
-
-**Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S2212054824000183)
-
-### 11. Viewpoints on AR and VR in heritage tourism
 
 **Authors**: Maysam Shafiee Roodposhti,
 Faezeh Esmaeelbeigi
@@ -3241,22 +3205,9 @@ This chapter examines the various methodologies used to study human–building i
 
 </details>
 
-**Links**: [📄 Paper](https://doi.org/10.1007/978-3-031-78357-9_9)
-
-### 9. Human–Building Interaction (HBI): An Investigation of Immersive Virtual Environment (IVE) as Intelligent Observation Methods
-
-**Authors**: Chanachok Chokwitthaya, Kailun Feng, Weizhuo Lu
-
-<details>
-<summary><b>Abstract</b></summary>
-
-This chapter examines the various methodologies used to study human–building interaction (HBI), ranging from traditional methods such as surveys, field monitoring, and laboratory experiments, to advanced techniques involving immersive virtual environments (IVEs). These methods provide essential insights into how occupants interact with building systems and how these interactions influence building performance in terms of energy efficiency and comfort. The chapter highlights the significance of integrating multiple observational methods, IVE-enhanced method, to achieve a comprehensive understanding of HBI. It explores case implementations that demonstrate the practical application of the method, showing how accurately simulated interactions align with real-world HBI. Furthermore, the discussion extends to the implications of HBI research for sustainable building practices and the enhancement of occupant well-being. Concluding, the chapter discusses the outlook for enhancing HBI research, emphasizing the contributions of this research and the potential advancements through the IVE-enhanced method. It underscores the importance of continuing to refine and expand the use of immersive technologies in understanding and improving the interactions between building occupants and their environments. This focus is expected to lead to more effective building designs that are not only energy-efficient but also aligned with the needs and preferences of occupants, ultimately enhancing both comfort and sustainability.
-
-</details>
-
 **Links**: [📄 Paper](https://link.springer.com/chapter/10.1007/978-3-031-78357-9_9#citeas)
 
-### 10. Integrating ESG with Digital Twins and the Metaverse: A Data-Driven Framework for Smart Building Sustainability
+### 9. Integrating ESG with Digital Twins and the Metaverse: A Data-Driven Framework for Smart Building Sustainability
 
 **Authors**: Magaletti Nicola, Chiara Tognon, Mauro Di Molfetta, Angelo Zerega, Valeria Notarnicola, Ettore Zini, Angelo Leogrande
 
@@ -3269,7 +3220,7 @@ This article proposes a complex solution to improve sustainable intelligent buil
 
 **Links**: [📄 Paper](https://www.mdpi.com/2079-8954/13/12/1083)
 
-### 11. Intuitive and Experiential Approaches to Enhance Conceptual Design in Architecture Using Building Information Modeling and Virtual Reality
+### 10. Intuitive and Experiential Approaches to Enhance Conceptual Design in Architecture Using Building Information Modeling and Virtual Reality
 
 **Authors**: Renganathan Balamaheshwaran, Radhakrishnan Shanthi Priya, Geetha Ramesh Kumar, Jayanthi Thiruvengadam, Ramalingam Senthil
 
@@ -3282,7 +3233,7 @@ The conceptual design phase in architecture requires both intuitive and iterativ
 
 **Links**: [📄 Paper](https://www.mdpi.com/2412-3811/10/6/127)
 
-### 12. MCP-Driven Parametric Modeling: Integrating LLM Agents into Architectural and Landscape Design Workflows
+### 11. MCP-Driven Parametric Modeling: Integrating LLM Agents into Architectural and Landscape Design Workflows
 
 **Authors**: Xun Liu, Runjia Tian
 
@@ -3303,7 +3254,7 @@ workshop deployments demonstrating how the approach addresses the theme ofHumani
 
 **Links**: [📄 Paper](https://neurips.cc/virtual/2025/loc/san-diego/129297)
 
-### 13. MCP4IFC: IFC-Based Building Design Using Large Language Models
+### 12. MCP4IFC: IFC-Based Building Design Using Large Language Models
 
 **Authors**: Bharathi Kannan Nithyanantham, Tobias Sesterhenn, Ashwin Nedungadi, Sergio Peral Garijo, Janis Zenkner, Christian Bartelt, Stefan Lüdtke
 
@@ -3316,7 +3267,7 @@ Bringing generative AI into the architecture, engineering and construction (AEC)
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2511.05533.pdf)
 
-### 14. Real-Time Assistive Navigation for the Visually Impaired: A Scalable Approach for Indoor and Outdoor Mobility
+### 13. Real-Time Assistive Navigation for the Visually Impaired: A Scalable Approach for Indoor and Outdoor Mobility
 
 **Authors**: Dabbrata Das, Argho Deb Das, Farhan Sadaf, Azhar Uddin, Tirtho Mondal
 
@@ -3329,7 +3280,7 @@ Navigating unfamiliar environments remains one of the most persistent and critic
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2504.20976.pdf)
 
-### 15. Space Use Efficiency through Occupancy Monitoring Technologies: A Case Study at KTH Royal Institute of Technology
+### 14. Space Use Efficiency through Occupancy Monitoring Technologies: A Case Study at KTH Royal Institute of Technology
 
 **Authors**: CHRISTOFFER FORSBERG
 
@@ -3342,7 +3293,7 @@ Buildings account for approximately 40% of global greenhouse gas emissions, with
 
 **Links**: [📄 Paper](https://www.diva-portal.org/smash/get/diva2:2004895/FULLTEXT01.pdf)
 
-### 16. Virtual Reality, Real Profits: How VR Reshapes Price, Bidding Competition, and Strategic Reactions in Online House Auctions
+### 15. Virtual Reality, Real Profits: How VR Reshapes Price, Bidding Competition, and Strategic Reactions in Online House Auctions
 
 **Authors**: Zhenbin Yan, Zibo Liu, Zhongyun Zhou, Yong Tan
 
@@ -3355,7 +3306,7 @@ Virtual reality (VR) is transforming online product presentation with its 3D and
 
 **Links**: [📄 Paper](https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5282993)
 
-### 17. What Do We Design for When We Design "Smart Buildings"? - A Scoping Review of Human Experience Design Research in Buildings
+### 16. What Do We Design for When We Design "Smart Buildings"? - A Scoping Review of Human Experience Design Research in Buildings
 
 **Authors**: Shruti Rao, Katja Rogers, Judith Good, Hamed Alavi
 

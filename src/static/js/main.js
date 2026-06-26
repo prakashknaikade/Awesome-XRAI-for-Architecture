@@ -30,9 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Initialize filters
-    initializeFilters();
-
     // Initialize paper card events
     document.querySelectorAll('.paper-card').forEach(card => {
         card.addEventListener('click', (ev) => {

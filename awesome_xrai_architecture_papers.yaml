@@ -1,3 +1,40 @@
+- id: zhang2025efficiently
+  title: Efficiently Reconstructing Dynamic Scenes One D4RT at a Time
+  authors: Chuhan Zhang, Guillaume Le Moing, Skanda Koppula, Ignacio Rocco, Liliane
+    Momeni, Junyu Xie, Shuyang Sun, Rahul Sukthankar, Joëlle K. Barral, Raia Hadsell,
+    Zoubin Ghahramani, Andrew Zisserman, Junlin Zhang, Mehdi S. M. Sajjadi
+  year: '2025'
+  primary_category: Reality Capture and Digital Twins
+  abstract: 'Understanding and reconstructing the complex geometry and motion of dynamic
+    scenes from video remains a formidable challenge in computer vision. This paper
+    introduces D4RT, a simple yet powerful feedforward model designed to efficiently
+    solve this task. D4RT utilizes a unified transformer architecture to jointly infer
+    depth, spatio-temporal correspondence, and full camera parameters from a single
+    video. Its core innovation is a novel querying mechanism that sidesteps the heavy
+    computation of dense, per-frame decoding and the complexity of managing multiple,
+    task-specific decoders. Our decoding interface allows the model to independently
+    and flexibly probe the 3D position of any point in space and time. The result
+    is a lightweight and highly scalable method that enables remarkably efficient
+    training and inference. We demonstrate that our approach sets a new state of the
+    art, outperforming previous methods across a wide spectrum of 4D reconstruction
+    tasks. We refer to the project webpage for animated results: https://d4rt-paper.github.io/.'
+  paper: https://arxiv.org/pdf/2512.08924.pdf
+  project_page: https://d4rt-paper.github.io/
+  code: ''
+  video: ''
+  tags:
+  - 3D Reconstruction
+  - digital twins
+  - indoor scene reconstruction
+  - outdoor scene reconstruction
+  - point clouds
+  - scene editing
+  - scene interaction
+  - scene understanding
+  thumbnail: assets/thumbnails/zhang2025efficiently.jpg
+  added_date: '2026-06-24T14:51:04.061694'
+  publication_date: '2025-12-09T18:57:21+00:00'
+  date_source: arxiv
 - id: mai2025radiance
   title: Radiance Meshes for Volumetric Reconstruction
   authors: Alexander Mai, Trevor Hedstrom, George Kopanas, Janne Kontkanen, Falko
@@ -1584,6 +1621,7 @@
   title: 3D Gaussian Splatting for Real-Time Radiance Field Rendering
   authors: Bernhard Kerbl, Georgios Kopanas, Thomas Leimkühler, George Drettakis
   year: '2023'
+  primary_category: Reality Capture and Digital Twins
   abstract: Radiance Field methods have recently revolutionized novel-view synthesis
     of scenes captured with multiple photos or videos. However, achieving high visual
     quality still requires neural networks that are costly to train and render, while
@@ -1602,8 +1640,8 @@
     anisotropic splatting and both accelerates training and allows realtime rendering.
     We demonstrate state-of-the-art visual quality and real-time rendering on several
     established datasets.
-  project_page: https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/
   paper: https://arxiv.org/pdf/2308.04079.pdf
+  project_page: https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/
   code: https://github.com/graphdeco-inria/gaussian-splatting
   video: https://youtu.be/T_kXY43VZnk
   tags:
@@ -1618,7 +1656,6 @@
   - point clouds
   - scene interaction
   thumbnail: assets/thumbnails/kerbl20233d.jpg
-  primary_category: Reality Capture and Digital Twins
   added_date: '2025-09-23T19:10:57.998538'
   publication_date: '2023-08-08T06:37:06+00:00'
   date_source: arxiv
@@ -2959,14 +2996,18 @@
   tags:
   - AI occupancy modeling
   - BIM
+  - Case Study
   - Occupant Behavior Analysis and Spatial Optimization
   - Predictive Analytics and Performance Optimization
+  - Quality Control and Validation
   - anomaly detection
   - behavior modeling
   - big data in buildings
   - building energy forecasting
+  - data quality
   - design automation
   - digital twins
+  - model checking
   - movement analysis
   - occupant behavior
   - predictive analytics
@@ -2977,38 +3018,6 @@
   publication_date: ''
   date_source: manual
   added_date: '2025-09-18T21:33:49.968068'
-- id: d8d4a66c
-  title: Developing campus digital twin using interactive visual analytics approach
-  authors: Xinyue Ye, Suphanut Jamonnak, Shannon Van Zandt, Galen Newman, Patrick
-    Suermann
-  year: '2024'
-  abstract: Digital Twins (DTs) are increasingly recognized for their potential to
-    improve efficiency and decision-making in various domains of the built environment.
-    Despite their promise, challenges like cost, complexity, interoperability, and
-    data integration remain. This paper introduces a novel interactive visual analytics
-    system that tackles these issues, using a case study of simulating class distribution
-    and campus building capacity at a large public university. The system leverages
-    enrollment data, converting it into a spatial-temporal format for interactive
-    exploration and analysis of class distribution and resource utilization. Through
-    case studies, we demonstrate the system's effectiveness, adaptability, and real-world
-    applicability, highlighting its role in practical DT implementation for built
-    environments.
-  primary_category: Computational BIM and Intelligent Operations
-  project_page: ''
-  paper: https://link.springer.com/10.1007/s44243-024-00033-2
-  code: ''
-  video: ''
-  tags:
-  - BIM
-  - Case Study
-  - Predictive Analytics and Performance Optimization
-  - Quality Control and Validation
-  - data quality
-  - digital twins
-  - model checking
-  publication_date: ''
-  date_source: manual
-  added_date: '2026-02-13T18:23:56.063339'
 - id: 97fc48f3
   title: Documentation of cultural heritage using digital photogrammetry and laser
     scanning
@@ -4544,7 +4553,7 @@
   publication_date: ''
   date_source: manual
   added_date: '2026-02-19T15:23:52.914053'
-- id: e4057074
+- id: 2ef4c1da
   title: Viewpoints on AR and VR in heritage tourism
   authors: 'Maysam Shafiee Roodposhti,
 
@@ -4582,43 +4591,6 @@
   publication_date: ''
   date_source: manual
   added_date: '2025-09-22T23:09:11.473301'
-- id: 2ef4c1da
-  title: Viewpoints on AR and VR in heritage tourism
-  authors: 'Maysam Shafiee Roodposhti,
-
-    Faezeh Esmaeelbeigi'
-  year: '2024'
-  abstract: 'In recent years, the emerging digital technologies of VR and AR have
-    had practical applications for visitors in the tourism sector. The purpose of
-    this study was to identify the usage of VR and AR in heritage tourism based on
-    the experience of tourists. Twenty-two thousand user reviews about AR and VR from
-    websites in the field of tourism were extracted by Python and analyzed with text
-    mining techniques. The usages are classified into six main categories: Introducing
-    the heritage, helping to recognize the heritage, encouraging the desire to visit
-    and facilitating the possibility of visiting the heritage, the effectiveness of
-    managing the costs of the visit, and the possibility of sensory experience. These
-    six categories, in the form of “heritage identification” and “heritage experience,”
-    enhance visitors'' information about heritage destinations, increase the quality
-    of the visit experience, and ultimately improve visitor satisfaction. The results
-    of this study can inform tourism marketing and future technology integration.
-    Therefore, this area should be paid attention to by tourism professionals, and
-    the advantages can be harnessed to create sustainable virtual experiences.'
-  primary_category: Heritage Conservation and Cultural Preservation
-  project_page: ''
-  paper: https://www.sciencedirect.com/science/article/pii/S2212054824000183
-  code: ''
-  video: ''
-  tags:
-  - AR cultural experiences
-  - Virtual Reality Experiences and Education
-  - XR storytelling
-  - cultural heritage VR
-  - heritage XR visualization
-  - immersive education
-  - museum VR
-  publication_date: ''
-  date_source: manual
-  added_date: '2026-02-15T19:21:16.507080'
 - id: 59dbbeab
   title: An assistive haptic interface for appearance-based indoor navigation
   authors: Jose Rivera-Rubio, Kai Arulkumaran, Hemang Rishi, Ioannis Alexiou, Anil
@@ -6499,60 +6471,18 @@
   - QA/QC in BIM
   - Quality Control and Validation
   - Smart Building Systems and IoT Integration
-  - building performance dashboard
-  - digital twins
-  - intelligent environments
-  - sensor data integration
-  publication_date: ''
-  date_source: manual
-  added_date: '2025-09-18T17:10:55.725483'
-- id: 30e63753
-  title: Smart City Construction and Management by Digital Twins and BIM Big Data
-    in COVID-19 Scenario
-  authors: Zhihan Lv, Dongliang Chen, Haibin Lv
-  year: '2022'
-  abstract: With the rapid development of information technology and the spread of
-    Corona Virus Disease 2019 (COVID-19), the government and urban managers are looking
-    for ways to use technology to make the city smarter and safer. Intelligent transportation
-    can play a very important role in the joint prevention. This work expects to explore
-    the building information modeling (BIM) big data (BD) processing method of digital
-    twins (DTs) of Smart City, thus speeding up the construction of Smart City and
-    improve the accuracy of data processing. During construction, DTs build the same
-    digital copy of the smart city. On this basis, BIM designs the building's keel
-    and structure, optimizing various resources and configurations of the building.
-    Regarding the fast data growth in smart cities, a complex data fusion and efficient
-    learning algorithm, namely Multi-Graphics Processing Unit (GPU), is proposed to
-    process the multi-dimensional and complex BD based on the compositive rough set
-    model. The Bayesian network solves the multi-label classification. Each label
-    is regarded as a Bayesian network node. Then, the structural learning approach
-    is adopted to learn the label Bayesian network's structure from data. On the P53-old
-    and the P53-new datasets, the running time of Multi-GPU decreases as the number
-    of GPUs increases, approaching the ideal linear speedup ratio. With the continuous
-    increase of K value, the deterministic information input into the tag BN will
-    be reduced, thus reducing the classification accuracy. When K = 3, MLBN can provide
-    the best data analysis performance. On genbase dataset, the accuracy of MLBN is
-    0.982 ± 0.013. Through experiments, the BIM BD processing algorithm based on Bayesian
-    Network Structural Learning (BNSL) helps decision-makers use complex data in smart
-    cities efficiently.
-  primary_category: Computational BIM and Intelligent Operations
-  project_page: ''
-  paper: https://dl.acm.org/doi/10.1145/3529395
-  code: ''
-  video: ''
-  tags:
-  - BIM
-  - BIM validation
-  - QA/QC in BIM
-  - Quality Control and Validation
   - automated compliance checking
+  - building performance dashboard
   - clash detection
   - data quality
   - digital twins
   - geometric validation
+  - intelligent environments
   - model checking
+  - sensor data integration
   publication_date: ''
   date_source: manual
-  added_date: '2026-02-13T17:22:09.646954'
+  added_date: '2025-09-18T17:10:55.725483'
 - id: d78d729a
   title: Residential floor plan recognition and reconstruction
   authors: Xiaolei Lv, Shengchu Zhao, Xinyang Yu, Binqiang Zhao
@@ -6833,52 +6763,20 @@
   - Smart Building Systems and IoT Integration
   - adaptive control
   - big data in buildings
+  - building energy forecasting
   - building energy simulation
   - building performance dashboard
   - circular economy
   - embodied carbon
   - energy-efficient design
   - human-centric IoT
+  - predictive analytics
   - real-time monitoring
   - smart grids
-  publication_date: ''
-  date_source: manual
-  added_date: '2025-09-23T11:26:21.553542'
-- id: b6b863a2
-  title: 'Applications and Trends of Machine Learning in Building Energy Optimization:
-    A Bibliometric Analysis'
-  authors: Jingyi Liu, Jianfei Chen
-  year: '2025'
-  abstract: With the rapid advancement of machine learning (ML) technologies, their
-    innovative applications in enhancing building energy efficiency are increasingly
-    prominent. Utilizing tools such as VOSviewer and Bibliometrix, this study systematically
-    reviews the body of the related literature, focusing on the key applications and
-    emerging trends of cutting-edge ML techniques, including deep learning, reinforcement
-    learning, and unsupervised learning, in optimizing building energy performance
-    and managing carbon emissions. First, this paper delves into the role of ML in
-    building performance prediction, intelligent energy management, and sustainable
-    design, with particular emphasis on how smart building systems leverage real-time
-    data analysis and prediction to optimize energy usage and significantly reduce
-    carbon emissions dynamically. Second, this study summarizes the technological
-    evolution and future trends of ML in the building sector and identifies critical
-    challenges faced by the field. The findings provide a technology-driven perspective
-    for advancing sustainability in the construction industry and offer valuable insights
-    for future research directions.
-  primary_category: Computational BIM and Intelligent Operations
-  project_page: ''
-  paper: https://www.mdpi.com/2075-5309/15/7/994
-  code: ''
-  video: ''
-  tags:
-  - Predictive Analytics and Performance Optimization
-  - Review Paper
-  - big data in buildings
-  - building energy forecasting
-  - predictive analytics
   - time-series analysis
   publication_date: ''
   date_source: manual
-  added_date: '2025-11-09T10:31:25.415407'
+  added_date: '2025-09-23T11:26:21.553542'
 - id: a5679725
   title: Hybrid Approach for Digital Twins in the Built Environment
   authors: Yu-Wen Lin, Tsz Ling Elaine Tang, Costas J. Spanos
@@ -9145,47 +9043,6 @@
   publication_date: ''
   date_source: manual
   added_date: '2026-02-20T10:32:56.825528'
-- id: 572f13ac
-  title: 'Human–Building Interaction (HBI): An Investigation of Immersive Virtual
-    Environment (IVE) as Intelligent Observation Methods'
-  authors: Chanachok Chokwitthaya, Kailun Feng, Weizhuo Lu
-  year: '2025'
-  abstract: This chapter examines the various methodologies used to study human–building
-    interaction (HBI), ranging from traditional methods such as surveys, field monitoring,
-    and laboratory experiments, to advanced techniques involving immersive virtual
-    environments (IVEs). These methods provide essential insights into how occupants
-    interact with building systems and how these interactions influence building performance
-    in terms of energy efficiency and comfort. The chapter highlights the significance
-    of integrating multiple observational methods, IVE-enhanced method, to achieve
-    a comprehensive understanding of HBI. It explores case implementations that demonstrate
-    the practical application of the method, showing how accurately simulated interactions
-    align with real-world HBI. Furthermore, the discussion extends to the implications
-    of HBI research for sustainable building practices and the enhancement of occupant
-    well-being. Concluding, the chapter discusses the outlook for enhancing HBI research,
-    emphasizing the contributions of this research and the potential advancements
-    through the IVE-enhanced method. It underscores the importance of continuing to
-    refine and expand the use of immersive technologies in understanding and improving
-    the interactions between building occupants and their environments. This focus
-    is expected to lead to more effective building designs that are not only energy-efficient
-    but also aligned with the needs and preferences of occupants, ultimately enhancing
-    both comfort and sustainability.
-  primary_category: Human-Computer Interaction and Human-Building Interaction
-  project_page: ''
-  paper: https://link.springer.com/chapter/10.1007/978-3-031-78357-9_9#citeas
-  code: ''
-  video: ''
-  tags:
-  - AR/VR interfaces
-  - Occupant Behavior Analysis and Spatial Optimization
-  - Review Paper
-  - VR dashboards
-  - XRAI for AEC
-  - metaverse for AEC
-  - occupant behavior
-  - spatial analytics
-  publication_date: ''
-  date_source: manual
-  added_date: '2025-10-22T13:08:59.847243'
 - id: 10f7d044
   title: 'Human-Building Interaction (HBI): An Investigation of Immersive Virtual
     Environment (IVE) as Intelligent Observation Methods'
@@ -9212,16 +9069,19 @@
     both comfort and sustainability.
   primary_category: Human-Computer Interaction and Human-Building Interaction
   project_page: ''
-  paper: https://doi.org/10.1007/978-3-031-78357-9_9
+  paper: https://link.springer.com/chapter/10.1007/978-3-031-78357-9_9#citeas
   code: ''
   video: ''
   tags:
   - AI occupancy modeling
+  - AR/VR interfaces
   - HCI-HBI
   - Occupant Behavior Analysis and Spatial Optimization
   - Review Paper
+  - VR dashboards
   - XRAI for AEC
   - behavior modeling
+  - metaverse for AEC
   - movement analysis
   - occupant behavior
   - sensor-driven design
@@ -9229,7 +9089,7 @@
   - spatial analytics
   publication_date: ''
   date_source: manual
-  added_date: '2026-02-19T15:52:51.465174'
+  added_date: '2025-10-22T13:08:59.847243'
 - id: 05e73b90
   title: Exploring Building Information Modeling (BIM) and Internet of Things (IoT)
     Integration for Sustainable Building

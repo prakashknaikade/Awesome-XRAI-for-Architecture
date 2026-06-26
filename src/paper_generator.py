@@ -34,6 +34,9 @@ class PaperCardGenerator:
             links.append(self._generate_link(paper.video, "video", "Video", "🎥"))
         if getattr(paper, "abstract", None) and paper.abstract and paper.abstract.lower() != 'none':
             links.append('<button class="abstract-toggle" onclick="toggleAbstract(this)">📖 Show Abstract</button>')
+        if getattr(paper, "id", None):
+            links.append(f'<button class="share-paper-btn" onclick="copyPaperLink(event, \'{paper.id}\')" title="Copy direct link to clipboard">🔗 Share</button>')
+        if getattr(paper, "abstract", None) and paper.abstract and paper.abstract.lower() != 'none':
             links.append(f'<div class="paper-abstract">{paper.abstract}</div>')
         return "\n".join(links)
 

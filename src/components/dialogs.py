@@ -84,21 +84,25 @@ class ArxivAddDialog(QDialog):
                 msg.setStandardButtons(QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
                 
                 if msg.exec() == QMessageBox.StandardButton.Yes:
-                    if self.arxiv.append_to_yaml(entry):
-                        thumbnail_success = self.generate_thumbnail(entry)
-                        
-                        if thumbnail_success:
-                            QMessageBox.information(self, "Success", 
-                                "Paper added successfully and thumbnail generated!")
+                    try:
+                        if self.arxiv.append_to_yaml(entry):
+                            thumbnail_success = self.generate_thumbnail(entry)
+                            
+                            if thumbnail_success:
+                                QMessageBox.information(self, "Success", 
+                                    "Paper added successfully and thumbnail generated!")
+                            else:
+                                QMessageBox.warning(self, "Partial Success", 
+                                    "Paper added but failed to generate thumbnail.")
+                            
+                            self.accept()  # Close dialog with accept status
+                            return True
                         else:
-                            QMessageBox.warning(self, "Partial Success", 
-                                "Paper added but failed to generate thumbnail.")
-                        
-                        self.accept()  # Close dialog with accept status
-                        return True
-                    else:
-                        QMessageBox.warning(self, "Error", 
-                            "Failed to add paper. It might already exist.")
+                            QMessageBox.warning(self, "Error", 
+                                "Failed to add paper. It might already exist.")
+                    except ValueError as ve:
+                        QMessageBox.warning(self, "Duplicate Paper", str(ve))
+                        self.status_label.setText(str(ve))
             else:
                 self.status_label.setText("Could not find paper with given ID")
                 
