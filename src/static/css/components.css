@@ -81,7 +81,7 @@
 }
 
 .selection-mode .selection-checkbox {
-    display: block !important;
+    display: flex !important;
     pointer-events: auto !important;
 }
 
@@ -121,21 +121,6 @@
 
 /* Ensure outer wrapper allows bubbles to bleed out */
 .paper-row { position: relative; overflow: visible; }
-
-.paper-card {
-    position: relative;
-    display: flex;
-    gap: 1.2rem;
-    padding: 1.15rem 1.4rem 1.25rem 1.4rem;
-    background: var(--card-bg,#161b22);
-    border: 1px solid var(--card-border,#2a3140);
-    border-radius: 12px;
-    overflow: visible;
-}
-
-.paper-card:hover {
-    border-color: var(--accent-color,#2366b3);
-}
 
 /* Number bubble (left) */
 .paper-number {
@@ -259,47 +244,59 @@
     margin: 0 0 .55rem;
     font-size: .82rem;
     line-height: 1.3;
-    opacity: .85;
+    color: var(--text-secondary);
 }
 
 .paper-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: .38rem;
-    margin: 0 0 .55rem;
+    gap: .40rem;
+    margin: 0 0 .60rem;
 }
 
 .paper-tag {
-    font-size: 0.78rem;
+    background: var(--bg-chip);
+    border: 1px solid var(--border-soft);
+    color: var(--text-primary);
     padding: 0.25rem 0.65rem;
     border-radius: 999px;
+    font-size: 0.78rem;
     font-weight: 500;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.paper-tag:hover {
+    background: var(--bg-chip-hover);
 }
 
 .paper-links {
     display: flex;
     flex-wrap: wrap;
     gap: .45rem;
+    align-items: center;
 }
 
 .paper-link, .abstract-toggle, .share-paper-btn {
-    font-size: .7rem;
-    padding: .40rem .7rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: .35rem 0.75rem;
+    background: var(--bg-chip);
+    border: 1px solid var(--border-soft);
     border-radius: 6px;
+    transition: all 0.2s;
+    font-size: .78rem;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
 }
 
-/* Selection checkbox positioning so it does not overlap the number bubble */
-.selection-checkbox {
-    position: absolute;
-    top: 6px;
-    right: 6px;
-    transform: scale(1.05);
-    z-index: 5;
-    display: none; /* shown when selection mode active */
-}
-
-.selection-mode .selection-checkbox {
-    display: block;
+.paper-link:hover, .abstract-toggle:hover, .share-paper-btn:hover {
+    background: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+    color: #fff !important;
 }
 
 /* Mobile adjustments */
@@ -377,61 +374,7 @@
     min-width: 0;
 }
 
-.paper-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin: 0 0 1rem 0;
-    color: var(--text-color);
-}
 
-.paper-authors {
-    color: #4b5563;
-    margin-bottom: 1rem;
-}
-
-.paper-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.paper-tag {
-    background: #f3f4f6;
-    padding: 0.25rem 0.75rem;
-    border-radius: 0.5rem;
-    font-size: 0.85rem;
-    color: #4b5563;
-}
-
-.paper-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1rem;
-    align-items: center;
-}
-
-.paper-link, .abstract-toggle, .share-paper-btn {
-    color: var(--primary-color);
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: #f3f4f6;
-    border: none;
-    border-radius: 0.5rem;
-    transition: all 0.2s;
-    font-size: 0.9rem;
-    cursor: pointer;
-    white-space: nowrap;
-}
-
-.paper-link:hover, .abstract-toggle:hover, .share-paper-btn:hover {
-    background: #e5e7eb;
-    color: var(--hover-color);
-}
 
 @keyframes highlightPulseAnimation {
     0% {
@@ -770,6 +713,12 @@
   border-top: 1px solid var(--border-soft) !important;
 }
 
+.selection-preview .preview-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
 .preview-header {
   background: var(--bg-panel-alt) !important;
   border-bottom: 1px solid var(--border-soft) !important;
@@ -959,10 +908,10 @@
 [data-theme="auto"] .scroll-progress,
 [data-theme="auto"] .scroll-progress-indicator,
 [data-theme="auto"] [data-role="scroll-progress"] {
-    background:#0b0f14;          /* near-black bubble */
-    color:#f0f4f9;
-    border:1px solid #2a3542;
-    box-shadow:0 4px 10px rgba(0,0,0,.55);
+    background: var(--bg-chip, #1f2a35);
+    color: var(--text-primary, #e2e9f2);
+    border: 1px solid var(--border-soft, #2a3542);
+    box-shadow: 0 4px 10px rgba(0,0,0,.55);
 }
 
 /* Hover / focus states */
@@ -1285,8 +1234,10 @@
 /* Dark/Auto Theme for Floating Nav Buttons */
 [data-theme="dark"] .floating-nav button:not(.selection-mode-toggle),
 [data-theme="dark"] .floating-nav .nav-link-btn,
+[data-theme="dark"] .scroll-progress,
 [data-theme="auto"] .floating-nav button:not(.selection-mode-toggle),
-[data-theme="auto"] .floating-nav .nav-link-btn {
+[data-theme="auto"] .floating-nav .nav-link-btn,
+[data-theme="auto"] .scroll-progress {
     background: var(--bg-chip, #1f2a35) !important;
     color: var(--text-primary, #e2e9f2) !important;
     border-color: var(--border-soft, #2a3542) !important;
@@ -1295,8 +1246,10 @@
 
 [data-theme="dark"] .floating-nav button:not(.selection-mode-toggle):hover,
 [data-theme="dark"] .floating-nav .nav-link-btn:hover,
+[data-theme="dark"] .scroll-progress:hover,
 [data-theme="auto"] .floating-nav button:not(.selection-mode-toggle):hover,
-[data-theme="auto"] .floating-nav .nav-link-btn:hover {
+[data-theme="auto"] .floating-nav .nav-link-btn:hover,
+[data-theme="auto"] .scroll-progress:hover {
     background: var(--bg-chip-hover, #243240) !important;
     color: var(--text-primary, #e2e9f2) !important;
 }
@@ -1474,5 +1427,16 @@
 @media (min-width: 900px) {
     .hierarchy-item {
         grid-column: span 2;
+    }
+}
+
+/* Custom chevron arrow for select elements in Dark and Auto-dark themes */
+[data-theme="dark"] .filter-select {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    [data-theme="auto"] .filter-select {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") !important;
     }
 }

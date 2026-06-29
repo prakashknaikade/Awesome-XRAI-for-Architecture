@@ -2,13 +2,14 @@
     display: none;
 }
 
+/* Force Selection Preview visibility in selection mode at all viewport widths */
+.selection-mode .selection-preview {
+    display: flex !important;
+}
+
 @media (max-width: 1024px) {
     .container {
         padding: 0 1rem;
-    }
-
-    .selection-preview {
-        display: none !important;
     }
 }
 
@@ -16,10 +17,16 @@
     .filters {
         flex-direction: column;
         align-items: stretch;
+        gap: 0.75rem;
     }
 
-    .search-wrapper {
-        width: 100%;
+    .search-wrapper,
+    .filter-select,
+    #yearFilter,
+    #categoryFilter {
+        width: 100% !important;
+        max-width: none !important;
+        flex: none !important;
     }
 
     .paper-card {
@@ -37,9 +44,57 @@
         flex-direction: column;
     }
 
-    .selection-controls {
+    .preview-header {
         flex-direction: column;
-        align-items: stretch;
+        align-items: stretch !important;
+        gap: 0.75rem;
+    }
+
+    .preview-header-left {
+        width: 100%;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 0.5rem !important;
+    }
+
+    .preview-header-right {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .preview-header-right button,
+    .preview-header-right a {
+        flex: 1 1 auto;
+        justify-content: center;
+    }
+
+    .selection-preview .preview-container {
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 0.75rem !important;
+        padding: 0.75rem !important;
+    }
+
+    .active-filters-info {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        flex-wrap: wrap !important;
+        gap: 0.5rem !important;
+    }
+
+    .preview-item {
+        flex: 0 0 220px !important;
+        width: 220px !important;
+        max-width: 220px !important;
+        align-self: center !important;
+        height: auto !important;
+        padding: 0.50rem 0.75rem !important;
+        margin-bottom: 0 !important;
     }
 
     .share-modal-content {

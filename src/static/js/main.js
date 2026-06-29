@@ -10,11 +10,12 @@ document.addEventListener('DOMContentLoaded', function() {
     window.tagFilters = document.querySelectorAll('.tag-filter');
     window.categoryFilter = document.getElementById('categoryFilter'); 
 
-    // Add toggleAbstract to window object so it's globally accessible
     window.toggleAbstract = function(button) {
-        const abstract = button.nextElementSibling;
-        const isShowing = abstract.classList.toggle('show');
-        button.innerHTML = isShowing ? '📖 Hide Abstract' : '📖 Show Abstract';
+        const abstract = button.parentElement.querySelector('.paper-abstract');
+        if (abstract) {
+            const isShowing = abstract.classList.toggle('show');
+            button.innerHTML = isShowing ? '📖 Hide Abstract' : '📖 Show Abstract';
+        }
     };
 
     // Initialize LazyLoad

@@ -35,6 +35,53 @@
   added_date: '2026-06-24T14:51:04.061694'
   publication_date: '2025-12-09T18:57:21+00:00'
   date_source: arxiv
+- id: yin2025fast
+  title: 'Fast SceneScript: Fast and Accurate Language-Based 3D Scene Understanding
+    via Multi-Token Prediction'
+  authors: Ruihong Yin, Xuepeng Shi, Oleksandr Bailo, Marco Manfredi, Theo Gevers
+  year: '2025'
+  primary_category: Reality Capture and Digital Twins
+  abstract: Recent perception-generalist approaches based on language models have
+    achieved state-of-the-art results across diverse tasks, including 3D scene layout
+    estimation and 3D object detection, via unified architecture and interface. However,
+    these approaches rely on autoregressive next-token prediction, which is inherently
+    slow. In this work, we introduce Fast SceneScript, a novel structured language
+    model for accurate and efficient 3D scene understanding. Our method employs multi-token
+    prediction (MTP) to reduce the number of autoregressive iterations and significantly
+    accelerate inference. While MTP improves speed, unreliable token predictions can
+    significantly reduce accuracy. To filter out unreliable tokens, we adapt self-speculative
+    decoding (SSD) for structured language models and introduce confidence-guided
+    decoding (CGD) with an improved scoring mechanism for token reliability. Furthermore,
+    we design a parameter-efficient mechanism that reduces the parameter overhead
+    of MTP. Extensive experiments on synthetic and real-world benchmarks demonstrate
+    that Fast SceneScript can generate up to 9 tokens per decoder inference step without
+    compromising accuracy, while adding only $\sim7.5\%$ additional parameters.
+  paper: https://arxiv.org/pdf/2512.05597v3.pdf
+  project_page: ''
+  code: ''
+  video: ''
+  tags:
+  - 3D Reconstruction
+  - 3D floor plan
+  - BIM
+  - Floor Plan Reconstruction and Parametrization
+  - digital twins
+  - image-to-plan
+  - indoor scene reconstruction
+  - layout recovery
+  - outdoor scene reconstruction
+  - parametric BIM
+  - photogrammetry
+  - point clouds
+  - point-cloud-to-plan
+  - scan-to-BIM
+  - scene editing
+  - scene understanding
+  - structural element detection
+  thumbnail: assets/thumbnails/yin2025fast.jpg
+  added_date: '2026-06-29T14:41:37.291507'
+  publication_date: '2025-12-05T10:35:43+00:00'
+  date_source: arxiv
 - id: mai2025radiance
   title: Radiance Meshes for Volumetric Reconstruction
   authors: Alexander Mai, Trevor Hedstrom, George Kopanas, Janne Kontkanen, Falko

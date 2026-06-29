@@ -91,6 +91,8 @@
             --danger-color: #f85149;
             --card-bg: #161b22;
             --card-shadow: rgba(0, 0, 0, 0.6);
+            --text-color: #f0f6fc;
+            --bg-color: #0d1117;
         }
 
         /* Auto Theme - System Preference */
@@ -117,6 +119,8 @@
                 --danger-color: #dc3545;
                 --card-bg: #ffffff;
                 --card-shadow: rgba(0, 0, 0, 0.1);
+                --text-color: #1f2937;
+                --bg-color: #ffffff;
             }
         }
 
@@ -139,6 +143,8 @@
                 --danger-color: #f85149;
                 --card-bg: #161b22;
                 --card-shadow: rgba(0, 0, 0, 0.6);
+                --text-color: #f0f6fc;
+                --bg-color: #0d1117;
             }
 
         /* ===================================
@@ -413,7 +419,7 @@
             align-items: center;
             justify-content: center;
             background: linear-gradient(to bottom, var(--success-color), var(--success-hover));
-            color: white;
+            color: white !important;
             border: none;
             border-radius: 4px;
             padding: 8px 16px;
@@ -431,6 +437,7 @@
         .sponsor-button:hover, 
         .website-button:hover {
             background: linear-gradient(to bottom, var(--success-hover), var(--success-color));
+            color: white !important;
             box-shadow: 0 4px 8px var(--shadow-color);
             transform: translateY(-1px);
         }
@@ -530,7 +537,7 @@
             /* Floating Navigation & Selection Buttons on Mobile */
             .floating-nav {
                 position: fixed !important;
-                bottom: 120px !important;
+                bottom: 16px !important;
                 right: 16px !important;
                 display: flex !important;
                 flex-direction: column !important;
@@ -558,40 +565,8 @@
                 font-size: 0.8rem !important;
             }
 
-            .selection-mode-toggle {
-                position: fixed !important;
-                bottom: 16px !important;
-                right: 16px !important;
-                width: 42px !important;
-                height: 42px !important;
-                padding: 0 !important;
-                margin: 0 !important;
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                border-radius: 50% !important;
-                box-shadow: 0 4px 12px var(--shadow-color) !important;
-                z-index: 1000 !important;
-            }
-
-            .selected-only-mode-toggle {
-                position: fixed !important;
-                bottom: 68px !important;
-                right: 16px !important;
-                width: 42px !important;
-                height: 42px !important;
-                padding: 0 !important;
-                margin: 0 !important;
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                border-radius: 50% !important;
-                box-shadow: 0 4px 12px var(--shadow-color) !important;
-                z-index: 1000 !important;
-            }
-
-            .selection-mode-toggle i,
-            .selected-only-mode-toggle i {
+            .floating-nav button i,
+            .floating-nav .nav-link-btn i {
                 font-size: 16px !important;
             }
 
@@ -834,7 +809,7 @@
                         <i class="fas fa-tags item-icon"></i>
                         <h4>Interactive Tags</h4>
                     </div>
-                    <p>Click tags once to <span class="tag-status include">Include</span> (blue), twice to <span class="tag-status exclude">Exclude</span> (red), and a third time to clear the filter.</p>
+                    <p>Click tags once to <span class="tag-status include">Include</span>, twice to <span class="tag-status exclude">Exclude</span>, and a third time to clear the filter.</p>
                 </div>
 
                 <!-- Paper Card Badging -->
@@ -843,7 +818,7 @@
                         <i class="fas fa-file-lines item-icon"></i>
                         <h4>Paper Cards</h4>
                     </div>
-                    <p>Each paper displays its primary category (<span class="badge primary-badge">green</span>) on the top right, followed by sub-categories (<span class="badge sub-badge">amber</span>) and additional theme tags.</p>
+                    <p>Each paper displays its <span class="badge primary-badge">primary category</span> on the top right, followed by <span class="badge sub-badge">sub-category</span> and additional theme tags.</p>
                 </div>
 
                 <!-- Selection Mode -->
@@ -870,7 +845,7 @@
                         <i class="fas fa-sitemap item-icon"></i>
                         <h4>Tag Hierarchy & Filtering</h4>
                     </div>
-                    <p>Tags are grouped under primary categories (<span class="badge primary-badge">green</span>) and sub-categories (<span class="badge sub-badge">amber</span>). Selecting a category dropdown filters the available tags and years automatically to show only associated items.</p>
+                    <p>Tags are grouped under <span class="badge primary-badge">primary category</span> and <span class="badge sub-badge">sub-category</span>. Selecting a category dropdown filters the available tags and years automatically to show only associated items.</p>
                 </div>
             </div>
         </div>

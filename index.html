@@ -1556,6 +1556,36 @@
     },
     {
       "@type": "ScholarlyArticle",
+      "headline": "Fast SceneScript: Fast and Accurate Language-Based 3D Scene Understanding via Multi-Token Prediction",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Ruihong Yin"
+        },
+        {
+          "@type": "Person",
+          "name": "Xuepeng Shi"
+        },
+        {
+          "@type": "Person",
+          "name": "Oleksandr Bailo"
+        },
+        {
+          "@type": "Person",
+          "name": "Marco Manfredi"
+        },
+        {
+          "@type": "Person",
+          "name": "Theo Gevers"
+        }
+      ],
+      "datePublished": "2025-12-05",
+      "description": "Recent perception-generalist approaches based on language models have achieved state-of-the-art results across diverse tasks, including 3D scene layout estimation and 3D object detection, via unified architecture and interface. However, these approaches rely on autoregressive next-token prediction, which is inherently slow. In this work, we introduce Fast SceneScript, a novel structured language model for accurate and efficient 3D scene understanding. Our method employs multi-token prediction (M...",
+      "url": "https://arxiv.org/pdf/2512.05597v3.pdf",
+      "keywords": "3D Reconstruction, 3D floor plan, BIM, Floor Plan Reconstruction and Parametrization, digital twins, image-to-plan, indoor scene reconstruction, layout recovery, outdoor scene reconstruction, parametric BIM, photogrammetry, point clouds, point-cloud-to-plan, scan-to-BIM, scene editing, scene understanding, structural element detection"
+    },
+    {
+      "@type": "ScholarlyArticle",
       "headline": "Temporal-online hybrid machine learning for occupancy forecasting: Enhancing energy efficiency in smart building management systems",
       "author": [
         {
@@ -7472,7 +7502,7 @@ h1 {
 
 /* Donation Box */
 .donate-box {
-    background-color: #f8fafc;
+    background-color: var(--bg-secondary);
     border: 1px solid var(--border-color);
     border-radius: 0.5rem;
     padding: 1.5rem;
@@ -7489,7 +7519,7 @@ h1 {
 
 .donate-box p {
     margin: 0.5rem 0 1rem;
-    color: #4b5563;
+    color: var(--text-secondary);
 }
 
 .bitcoin-info {
@@ -7555,29 +7585,30 @@ h1 {
 }
 
 /* Search and Filters */
+/* Search and Filters */
 .filters {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 2rem;
     align-items: center;
-    justify-content: space-between;
+    width: 100%;
 }
 
 .search-wrapper {
     position: relative;
-    flex: 1;
-    min-width: 200px;
-    max-width: calc(100% - 20px);
+    flex: 3 1 300px;
 }
 
 .search-box {
     width: 100%;
+    height: 46px;
     padding: 0.75rem 1rem;
     padding-right: 2.5rem;
     border: 1px solid var(--border-color);
     border-radius: 0.5rem;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
     box-sizing: border-box;
 }
 
@@ -7601,10 +7632,32 @@ h1 {
 }
 
 .filter-select {
-    padding: 0.75rem 1rem;
+    height: 46px;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
     border: 1px solid var(--border-color);
     border-radius: 0.5rem;
-    background-color: white;
+    background-color: var(--bg-secondary, white);
+    color: var(--text-primary, #212529);
+    font-size: 0.95rem;
+    font-weight: 500;
+    box-sizing: border-box;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.25rem;
+}
+
+#yearFilter {
+    flex: 1 1 140px;
+    max-width: 180px;
+}
+
+#categoryFilter {
+    flex: 2 1 260px;
 }
 
 /* Tag Filters */
@@ -7899,10 +7952,16 @@ h1 {
     .filters {
         flex-direction: column;
         align-items: stretch;
+        gap: 0.75rem;
     }
 
-    .search-wrapper {
-        width: 100%;
+    .search-wrapper,
+    .filter-select,
+    #yearFilter,
+    #categoryFilter {
+        width: 100% !important;
+        max-width: none !important;
+        flex: none !important;
     }
 
 
@@ -8021,7 +8080,7 @@ h1 {
 }
 
 .selection-mode .selection-checkbox {
-    display: block !important;
+    display: flex !important;
     pointer-events: auto !important;
 }
 
@@ -8061,21 +8120,6 @@ h1 {
 
 /* Ensure outer wrapper allows bubbles to bleed out */
 .paper-row { position: relative; overflow: visible; }
-
-.paper-card {
-    position: relative;
-    display: flex;
-    gap: 1.2rem;
-    padding: 1.15rem 1.4rem 1.25rem 1.4rem;
-    background: var(--card-bg,#161b22);
-    border: 1px solid var(--card-border,#2a3140);
-    border-radius: 12px;
-    overflow: visible;
-}
-
-.paper-card:hover {
-    border-color: var(--accent-color,#2366b3);
-}
 
 /* Number bubble (left) */
 .paper-number {
@@ -8199,47 +8243,59 @@ h1 {
     margin: 0 0 .55rem;
     font-size: .82rem;
     line-height: 1.3;
-    opacity: .85;
+    color: var(--text-secondary);
 }
 
 .paper-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: .38rem;
-    margin: 0 0 .55rem;
+    gap: .40rem;
+    margin: 0 0 .60rem;
 }
 
 .paper-tag {
-    font-size: 0.78rem;
+    background: var(--bg-chip);
+    border: 1px solid var(--border-soft);
+    color: var(--text-primary);
     padding: 0.25rem 0.65rem;
     border-radius: 999px;
+    font-size: 0.78rem;
     font-weight: 500;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.paper-tag:hover {
+    background: var(--bg-chip-hover);
 }
 
 .paper-links {
     display: flex;
     flex-wrap: wrap;
     gap: .45rem;
+    align-items: center;
 }
 
 .paper-link, .abstract-toggle, .share-paper-btn {
-    font-size: .7rem;
-    padding: .40rem .7rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: .35rem 0.75rem;
+    background: var(--bg-chip);
+    border: 1px solid var(--border-soft);
     border-radius: 6px;
+    transition: all 0.2s;
+    font-size: .78rem;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
 }
 
-/* Selection checkbox positioning so it does not overlap the number bubble */
-.selection-checkbox {
-    position: absolute;
-    top: 6px;
-    right: 6px;
-    transform: scale(1.05);
-    z-index: 5;
-    display: none; /* shown when selection mode active */
-}
-
-.selection-mode .selection-checkbox {
-    display: block;
+.paper-link:hover, .abstract-toggle:hover, .share-paper-btn:hover {
+    background: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+    color: #fff !important;
 }
 
 /* Mobile adjustments */
@@ -8317,61 +8373,7 @@ h1 {
     min-width: 0;
 }
 
-.paper-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin: 0 0 1rem 0;
-    color: var(--text-color);
-}
 
-.paper-authors {
-    color: #4b5563;
-    margin-bottom: 1rem;
-}
-
-.paper-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.paper-tag {
-    background: #f3f4f6;
-    padding: 0.25rem 0.75rem;
-    border-radius: 0.5rem;
-    font-size: 0.85rem;
-    color: #4b5563;
-}
-
-.paper-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1rem;
-    align-items: center;
-}
-
-.paper-link, .abstract-toggle, .share-paper-btn {
-    color: var(--primary-color);
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: #f3f4f6;
-    border: none;
-    border-radius: 0.5rem;
-    transition: all 0.2s;
-    font-size: 0.9rem;
-    cursor: pointer;
-    white-space: nowrap;
-}
-
-.paper-link:hover, .abstract-toggle:hover, .share-paper-btn:hover {
-    background: #e5e7eb;
-    color: var(--hover-color);
-}
 
 @keyframes highlightPulseAnimation {
     0% {
@@ -8710,6 +8712,12 @@ h1 {
   border-top: 1px solid var(--border-soft) !important;
 }
 
+.selection-preview .preview-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
 .preview-header {
   background: var(--bg-panel-alt) !important;
   border-bottom: 1px solid var(--border-soft) !important;
@@ -8899,10 +8907,10 @@ h1 {
 [data-theme="auto"] .scroll-progress,
 [data-theme="auto"] .scroll-progress-indicator,
 [data-theme="auto"] [data-role="scroll-progress"] {
-    background:#0b0f14;          /* near-black bubble */
-    color:#f0f4f9;
-    border:1px solid #2a3542;
-    box-shadow:0 4px 10px rgba(0,0,0,.55);
+    background: var(--bg-chip, #1f2a35);
+    color: var(--text-primary, #e2e9f2);
+    border: 1px solid var(--border-soft, #2a3542);
+    box-shadow: 0 4px 10px rgba(0,0,0,.55);
 }
 
 /* Hover / focus states */
@@ -9225,8 +9233,10 @@ h1 {
 /* Dark/Auto Theme for Floating Nav Buttons */
 [data-theme="dark"] .floating-nav button:not(.selection-mode-toggle),
 [data-theme="dark"] .floating-nav .nav-link-btn,
+[data-theme="dark"] .scroll-progress,
 [data-theme="auto"] .floating-nav button:not(.selection-mode-toggle),
-[data-theme="auto"] .floating-nav .nav-link-btn {
+[data-theme="auto"] .floating-nav .nav-link-btn,
+[data-theme="auto"] .scroll-progress {
     background: var(--bg-chip, #1f2a35) !important;
     color: var(--text-primary, #e2e9f2) !important;
     border-color: var(--border-soft, #2a3542) !important;
@@ -9235,8 +9245,10 @@ h1 {
 
 [data-theme="dark"] .floating-nav button:not(.selection-mode-toggle):hover,
 [data-theme="dark"] .floating-nav .nav-link-btn:hover,
+[data-theme="dark"] .scroll-progress:hover,
 [data-theme="auto"] .floating-nav button:not(.selection-mode-toggle):hover,
-[data-theme="auto"] .floating-nav .nav-link-btn:hover {
+[data-theme="auto"] .floating-nav .nav-link-btn:hover,
+[data-theme="auto"] .scroll-progress:hover {
     background: var(--bg-chip-hover, #243240) !important;
     color: var(--text-primary, #e2e9f2) !important;
 }
@@ -9416,17 +9428,29 @@ h1 {
         grid-column: span 2;
     }
 }
+
+/* Custom chevron arrow for select elements in Dark and Auto-dark themes */
+[data-theme="dark"] .filter-select {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    [data-theme="auto"] .filter-select {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") !important;
+    }
+}
 .tags-drawer-toggle {
     display: none;
+}
+
+/* Force Selection Preview visibility in selection mode at all viewport widths */
+.selection-mode .selection-preview {
+    display: flex !important;
 }
 
 @media (max-width: 1024px) {
     .container {
         padding: 0 1rem;
-    }
-
-    .selection-preview {
-        display: none !important;
     }
 }
 
@@ -9434,10 +9458,16 @@ h1 {
     .filters {
         flex-direction: column;
         align-items: stretch;
+        gap: 0.75rem;
     }
 
-    .search-wrapper {
-        width: 100%;
+    .search-wrapper,
+    .filter-select,
+    #yearFilter,
+    #categoryFilter {
+        width: 100% !important;
+        max-width: none !important;
+        flex: none !important;
     }
 
     .paper-card {
@@ -9455,9 +9485,57 @@ h1 {
         flex-direction: column;
     }
 
-    .selection-controls {
+    .preview-header {
         flex-direction: column;
-        align-items: stretch;
+        align-items: stretch !important;
+        gap: 0.75rem;
+    }
+
+    .preview-header-left {
+        width: 100%;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 0.5rem !important;
+    }
+
+    .preview-header-right {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .preview-header-right button,
+    .preview-header-right a {
+        flex: 1 1 auto;
+        justify-content: center;
+    }
+
+    .selection-preview .preview-container {
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 0.75rem !important;
+        padding: 0.75rem !important;
+    }
+
+    .active-filters-info {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        flex-wrap: wrap !important;
+        gap: 0.5rem !important;
+    }
+
+    .preview-item {
+        flex: 0 0 220px !important;
+        width: 220px !important;
+        max-width: 220px !important;
+        align-self: center !important;
+        height: auto !important;
+        padding: 0.50rem 0.75rem !important;
+        margin-bottom: 0 !important;
     }
 
     .share-modal-content {
@@ -9588,6 +9666,8 @@ h1 {
             --danger-color: #f85149;
             --card-bg: #161b22;
             --card-shadow: rgba(0, 0, 0, 0.6);
+            --text-color: #f0f6fc;
+            --bg-color: #0d1117;
         }
 
         /* Auto Theme - System Preference */
@@ -9614,6 +9694,8 @@ h1 {
                 --danger-color: #dc3545;
                 --card-bg: #ffffff;
                 --card-shadow: rgba(0, 0, 0, 0.1);
+                --text-color: #1f2937;
+                --bg-color: #ffffff;
             }
         }
 
@@ -9636,6 +9718,8 @@ h1 {
                 --danger-color: #f85149;
                 --card-bg: #161b22;
                 --card-shadow: rgba(0, 0, 0, 0.6);
+                --text-color: #f0f6fc;
+                --bg-color: #0d1117;
             }
 
         /* ===================================
@@ -9910,7 +9994,7 @@ h1 {
             align-items: center;
             justify-content: center;
             background: linear-gradient(to bottom, var(--success-color), var(--success-hover));
-            color: white;
+            color: white !important;
             border: none;
             border-radius: 4px;
             padding: 8px 16px;
@@ -9928,6 +10012,7 @@ h1 {
         .sponsor-button:hover, 
         .website-button:hover {
             background: linear-gradient(to bottom, var(--success-hover), var(--success-color));
+            color: white !important;
             box-shadow: 0 4px 8px var(--shadow-color);
             transform: translateY(-1px);
         }
@@ -10027,7 +10112,7 @@ h1 {
             /* Floating Navigation & Selection Buttons on Mobile */
             .floating-nav {
                 position: fixed !important;
-                bottom: 120px !important;
+                bottom: 16px !important;
                 right: 16px !important;
                 display: flex !important;
                 flex-direction: column !important;
@@ -10055,40 +10140,8 @@ h1 {
                 font-size: 0.8rem !important;
             }
 
-            .selection-mode-toggle {
-                position: fixed !important;
-                bottom: 16px !important;
-                right: 16px !important;
-                width: 42px !important;
-                height: 42px !important;
-                padding: 0 !important;
-                margin: 0 !important;
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                border-radius: 50% !important;
-                box-shadow: 0 4px 12px var(--shadow-color) !important;
-                z-index: 1000 !important;
-            }
-
-            .selected-only-mode-toggle {
-                position: fixed !important;
-                bottom: 68px !important;
-                right: 16px !important;
-                width: 42px !important;
-                height: 42px !important;
-                padding: 0 !important;
-                margin: 0 !important;
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                border-radius: 50% !important;
-                box-shadow: 0 4px 12px var(--shadow-color) !important;
-                z-index: 1000 !important;
-            }
-
-            .selection-mode-toggle i,
-            .selected-only-mode-toggle i {
+            .floating-nav button i,
+            .floating-nav .nav-link-btn i {
                 font-size: 16px !important;
             }
 
@@ -10159,7 +10212,7 @@ h1 {
     </style>
     <script>
         // Expose highlighted tags list for potential client-side use (optional)
-        window.HIGHLIGHTED_TAGS = new Set(["Tool/Library", "Dataset", "Parametric, Computational and Algorithmic Design", "Digital Documentation and Archiving", "Case Study", "Occupant Behavior Analysis and Spatial Optimization", "Virtual Property Tours and Marketing", "Smart Building Systems and IoT Integration", "XRAI for AEC", "Performance-Driven Design", "Generative Design and Design Space Exploration", "Review Paper", "Quality Control and Validation", "Predictive Conservation and Risk Assessment", "Sustainable Buildings", "Predictive Analytics and Performance Optimization", "Virtual Reality Experiences and Education", "AI for Energy Performance Optimization", "3D Reconstruction", "Cross-Modal Intelligence and Multimodal Integration", "Floor Plan Reconstruction and Parametrization", "AI-Powered Real Estate Valuation"]);
+        window.HIGHLIGHTED_TAGS = new Set(["Parametric, Computational and Algorithmic Design", "Quality Control and Validation", "Tool/Library", "Predictive Conservation and Risk Assessment", "Smart Building Systems and IoT Integration", "Occupant Behavior Analysis and Spatial Optimization", "AI-Powered Real Estate Valuation", "Case Study", "Digital Documentation and Archiving", "Cross-Modal Intelligence and Multimodal Integration", "Virtual Property Tours and Marketing", "Floor Plan Reconstruction and Parametrization", "3D Reconstruction", "Review Paper", "Dataset", "AI for Energy Performance Optimization", "Performance-Driven Design", "Sustainable Buildings", "XRAI for AEC", "Predictive Analytics and Performance Optimization", "Virtual Reality Experiences and Education", "Generative Design and Design Space Exploration"]);
         window.CATEGORY_TAGS = {"all": ["2D floor plan", "3D Reconstruction", "3D floor plan", "3D scanning", "3DGS", "AI HVAC optimization", "AI building automation", "AI for Energy Performance Optimization", "AI in asset management", "AI material selection", "AI occupancy modeling", "AI-Powered Real Estate Valuation", "AR cultural experiences", "AR/VR interfaces", "AR/VR/XR visualization", "Agent-based Modeling", "BIM", "BIM validation", "Case Study", "Context-Aware Spatial Intelligence", "Cross-Modal Intelligence and Multimodal Integration", "Dataset", "Digital Documentation and Archiving", "Floor Plan Reconstruction and Parametrization", "Form Finding", "GANs", "Generative Design and Design Space Exploration", "HCI-HBI", "Heritage BIM", "Interactive Visualization", "LLMs for AEC", "LiDAR", "ML for sustainable real estate", "Multimodal Design Assistance", "NeRF", "Occupant Behavior Analysis and Spatial Optimization", "Parametric, Computational and Algorithmic Design", "Performance-Driven Design", "Predictive Analytics and Performance Optimization", "Predictive Conservation and Risk Assessment", "QA/QC in BIM", "Quality Control and Validation", "RL", "Review Paper", "Revit automation", "SLAM", "SfM", "Smart Building Systems and IoT Integration", "Sustainable Buildings", "Tool/Library", "VAE", "VR dashboards", "Virtual Property Tours and Marketing", "Virtual Reality Experiences and Education", "Vision-Language Models for AEC", "XR design review", "XR immersive walkthroughs", "XR storytelling", "XRAI automated accessibility", "XRAI for AEC", "XRAI inclusive design", "adaptive control", "adaptive environments", "anomaly detection", "automated compliance checking", "behavior modeling", "big data in buildings", "blockchain for AEC", "building energy forecasting", "building energy simulation", "building performance dashboard", "circular economy", "clash detection", "collaborative VR co-design", "conditional generation", "conservation AI", "cultural heritage VR", "damage detection", "data quality", "data templates for circularity", "daylight optimization", "design automation", "design space optimization", "diffusion models", "digital archives", "digital twins", "documentation workflows", "embodied carbon", "energy modeling", "energy optimization", "energy-efficient design", "geometric validation", "geometry generation", "heritage XR visualization", "heritage digitization", "human-centric IoT", "image-to-3D", "image-to-plan", "immersive design", "immersive education", "indoor scene reconstruction", "intelligent environments", "layout recovery", "lifecycle assessment", "material degradation prediction", "material passports", "material simulation", "mesh-to-BIM", "metaverse for AEC", "model checking", "movement analysis", "multi-objective optimization", "museum VR", "object detection", "occupant behavior", "outdoor scene reconstruction", "parametric BIM", "photogrammetry", "point clouds", "point-cloud-to-plan", "predictive analytics", "predictive investment", "predictive maintenance", "predictive pricing", "procedural modeling", "real estate analytics", "real estate visualization", "real-time monitoring", "risk modeling", "room segmentation", "rule-based modeling", "scan-to-BIM", "scene editing", "scene interaction", "scene understanding", "semantic segmentation", "sensor data integration", "sensor-driven design", "smart grids", "space utilization", "spatial analytics", "structural efficiency", "structural element detection", "structural health monitoring", "structural optimization", "sustainable construction", "sustainable disassembly", "sustainable materials", "text-to-3D", "thermal simulation", "time-series analysis", "virtual staging"], "Human-Computer Interaction and Human-Building Interaction": ["AI HVAC optimization", "AI building automation", "AI for Energy Performance Optimization", "AI in asset management", "AI occupancy modeling", "AI-Powered Real Estate Valuation", "AR/VR interfaces", "AR/VR/XR visualization", "Agent-based Modeling", "BIM", "Case Study", "Context-Aware Spatial Intelligence", "Cross-Modal Intelligence and Multimodal Integration", "Dataset", "HCI-HBI", "Interactive Visualization", "LLMs for AEC", "ML for sustainable real estate", "Multimodal Design Assistance", "Occupant Behavior Analysis and Spatial Optimization", "Parametric, Computational and Algorithmic Design", "Review Paper", "Smart Building Systems and IoT Integration", "Sustainable Buildings", "VR dashboards", "Virtual Property Tours and Marketing", "Vision-Language Models for AEC", "XR design review", "XR immersive walkthroughs", "XRAI automated accessibility", "XRAI for AEC", "XRAI inclusive design", "behavior modeling", "building energy simulation", "building performance dashboard", "collaborative VR co-design", "heritage digitization", "human-centric IoT", "immersive design", "intelligent environments", "metaverse for AEC", "movement analysis", "occupant behavior", "predictive pricing", "real estate analytics", "real estate visualization", "sensor-driven design", "space utilization", "spatial analytics", "virtual staging"], "AI-Driven Design and Generative Architecture": ["2D floor plan", "3D Reconstruction", "3D floor plan", "AI building automation", "AR/VR interfaces", "AR/VR/XR visualization", "BIM", "BIM validation", "Case Study", "Context-Aware Spatial Intelligence", "Cross-Modal Intelligence and Multimodal Integration", "Floor Plan Reconstruction and Parametrization", "Form Finding", "GANs", "Generative Design and Design Space Exploration", "Interactive Visualization", "LLMs for AEC", "Multimodal Design Assistance", "NeRF", "Parametric, Computational and Algorithmic Design", "Performance-Driven Design", "QA/QC in BIM", "Quality Control and Validation", "RL", "Review Paper", "SLAM", "SfM", "Smart Building Systems and IoT Integration", "Sustainable Buildings", "VAE", "Vision-Language Models for AEC", "XR design review", "XRAI for AEC", "XRAI inclusive design", "automated compliance checking", "building energy simulation", "circular economy", "clash detection", "collaborative VR co-design", "conditional generation", "data quality", "daylight optimization", "design automation", "design space optimization", "diffusion models", "digital twins", "energy modeling", "energy optimization", "energy-efficient design", "geometric validation", "geometry generation", "image-to-3D", "image-to-plan", "immersive design", "immersive education", "indoor scene reconstruction", "metaverse for AEC", "model checking", "multi-objective optimization", "outdoor scene reconstruction", "photogrammetry", "point clouds", "point-cloud-to-plan", "procedural modeling", "rule-based modeling", "scene editing", "scene interaction", "structural efficiency", "structural optimization", "sustainable construction", "text-to-3D"], "Computational BIM and Intelligent Operations": ["3D Reconstruction", "3D floor plan", "AI HVAC optimization", "AI building automation", "AI for Energy Performance Optimization", "AI occupancy modeling", "BIM", "BIM validation", "Case Study", "Cross-Modal Intelligence and Multimodal Integration", "Dataset", "HCI-HBI", "LLMs for AEC", "Occupant Behavior Analysis and Spatial Optimization", "Predictive Analytics and Performance Optimization", "Predictive Conservation and Risk Assessment", "QA/QC in BIM", "Quality Control and Validation", "Review Paper", "Smart Building Systems and IoT Integration", "Sustainable Buildings", "XRAI for AEC", "adaptive control", "anomaly detection", "automated compliance checking", "behavior modeling", "big data in buildings", "building energy forecasting", "building energy simulation", "building performance dashboard", "circular economy", "clash detection", "damage detection", "data quality", "design automation", "digital twins", "embodied carbon", "energy-efficient design", "geometric validation", "human-centric IoT", "intelligent environments", "lifecycle assessment", "material degradation prediction", "model checking", "movement analysis", "occupant behavior", "parametric BIM", "predictive analytics", "predictive maintenance", "real-time monitoring", "scan-to-BIM", "sensor data integration", "sensor-driven design", "smart grids", "space utilization", "spatial analytics", "structural health monitoring", "sustainable construction", "sustainable disassembly", "thermal simulation", "time-series analysis"], "Reality Capture and Digital Twins": ["2D floor plan", "3D Reconstruction", "3D floor plan", "3DGS", "AI building automation", "BIM", "Case Study", "Context-Aware Spatial Intelligence", "Cross-Modal Intelligence and Multimodal Integration", "Dataset", "Floor Plan Reconstruction and Parametrization", "HCI-HBI", "Interactive Visualization", "LLMs for AEC", "LiDAR", "Multimodal Design Assistance", "NeRF", "Review Paper", "Revit automation", "SLAM", "SfM", "Sustainable Buildings", "Tool/Library", "Vision-Language Models for AEC", "XRAI for AEC", "big data in buildings", "blockchain for AEC", "diffusion models", "digital twins", "image-to-plan", "indoor scene reconstruction", "layout recovery", "mesh-to-BIM", "metaverse for AEC", "object detection", "outdoor scene reconstruction", "parametric BIM", "photogrammetry", "point clouds", "point-cloud-to-plan", "room segmentation", "scan-to-BIM", "scene editing", "scene interaction", "scene understanding", "semantic segmentation", "structural element detection"], "Sustainability and Environmental Performance": ["2D floor plan", "3D Reconstruction", "3D floor plan", "AI HVAC optimization", "AI building automation", "AI for Energy Performance Optimization", "AI material selection", "AI-Powered Real Estate Valuation", "AR/VR interfaces", "AR/VR/XR visualization", "BIM", "Case Study", "Context-Aware Spatial Intelligence", "Cross-Modal Intelligence and Multimodal Integration", "Dataset", "HCI-HBI", "Interactive Visualization", "ML for sustainable real estate", "Predictive Analytics and Performance Optimization", "Quality Control and Validation", "RL", "Review Paper", "Smart Building Systems and IoT Integration", "Sustainable Buildings", "VR dashboards", "Vision-Language Models for AEC", "XR design review", "XRAI automated accessibility", "XRAI for AEC", "XRAI inclusive design", "adaptive control", "adaptive environments", "big data in buildings", "blockchain for AEC", "building energy forecasting", "building energy simulation", "building performance dashboard", "circular economy", "collaborative VR co-design", "data templates for circularity", "digital twins", "embodied carbon", "energy-efficient design", "human-centric IoT", "immersive design", "indoor scene reconstruction", "intelligent environments", "lifecycle assessment", "material passports", "material simulation", "metaverse for AEC", "object detection", "outdoor scene reconstruction", "point clouds", "predictive analytics", "real-time monitoring", "rule-based modeling", "semantic segmentation", "sensor data integration", "smart grids", "structural element detection", "sustainable construction", "sustainable disassembly", "sustainable materials", "time-series analysis"], "Heritage Conservation and Cultural Preservation": ["2D floor plan", "3D Reconstruction", "3D floor plan", "3D scanning", "AI for Energy Performance Optimization", "AR cultural experiences", "BIM", "Case Study", "Dataset", "Digital Documentation and Archiving", "Heritage BIM", "Predictive Conservation and Risk Assessment", "Review Paper", "SfM", "Tool/Library", "Virtual Reality Experiences and Education", "XR storytelling", "XRAI for AEC", "conservation AI", "cultural heritage VR", "damage detection", "digital archives", "digital twins", "documentation workflows", "heritage XR visualization", "heritage digitization", "human-centric IoT", "immersive education", "indoor scene reconstruction", "material degradation prediction", "museum VR", "outdoor scene reconstruction", "photogrammetry", "point clouds", "predictive maintenance", "risk modeling", "scene editing", "scene interaction", "scene understanding", "semantic segmentation", "sensor data integration", "structural health monitoring"], "Sustainable Real Estate Valuation and Economics": ["2D floor plan", "3D floor plan", "AI in asset management", "AI material selection", "AI-Powered Real Estate Valuation", "BIM", "Case Study", "ML for sustainable real estate", "Review Paper", "Sustainable Buildings", "big data in buildings", "circular economy", "digital twins", "predictive investment", "predictive pricing", "real estate analytics", "sustainable construction", "sustainable disassembly", "sustainable materials"]};
     </script>
 
@@ -10331,7 +10384,7 @@ h1 {
                         <i class="fas fa-tags item-icon"></i>
                         <h4>Interactive Tags</h4>
                     </div>
-                    <p>Click tags once to <span class="tag-status include">Include</span> (blue), twice to <span class="tag-status exclude">Exclude</span> (red), and a third time to clear the filter.</p>
+                    <p>Click tags once to <span class="tag-status include">Include</span>, twice to <span class="tag-status exclude">Exclude</span>, and a third time to clear the filter.</p>
                 </div>
 
                 <!-- Paper Card Badging -->
@@ -10340,7 +10393,7 @@ h1 {
                         <i class="fas fa-file-lines item-icon"></i>
                         <h4>Paper Cards</h4>
                     </div>
-                    <p>Each paper displays its primary category (<span class="badge primary-badge">green</span>) on the top right, followed by sub-categories (<span class="badge sub-badge">amber</span>) and additional theme tags.</p>
+                    <p>Each paper displays its <span class="badge primary-badge">primary category</span> on the top right, followed by <span class="badge sub-badge">sub-category</span> and additional theme tags.</p>
                 </div>
 
                 <!-- Selection Mode -->
@@ -10367,7 +10420,7 @@ h1 {
                         <i class="fas fa-sitemap item-icon"></i>
                         <h4>Tag Hierarchy & Filtering</h4>
                     </div>
-                    <p>Tags are grouped under primary categories (<span class="badge primary-badge">green</span>) and sub-categories (<span class="badge sub-badge">amber</span>). Selecting a category dropdown filters the available tags and years automatically to show only associated items.</p>
+                    <p>Tags are grouped under <span class="badge primary-badge">primary category</span> and <span class="badge sub-badge">sub-category</span>. Selecting a category dropdown filters the available tags and years automatically to show only associated items.</p>
                 </div>
             </div>
         </div>
@@ -12473,6 +12526,44 @@ Thanks to advancements in Agentic AI, it’s now becoming easier than ever to au
 <button class="abstract-toggle" onclick="toggleAbstract(this)">📖 Show Abstract</button>
 <button class="share-paper-btn" onclick="copyPaperLink(event, 'e29b6bfa')" title="Copy direct link to clipboard">🔗 Share</button>
 <div class="paper-abstract">Augmented reality (AR) has been increasingly adopted in different fields of science, engineering and medicine as a tool to empower human interaction with visual data and guide precise interactions with the real world. This paper presents a pioneering use of augmented reality to inspect historic monuments. These form an important part of the world’s cultural heritage and require continuous inspection and maintenance, often executed by interdisciplinary teams and throughout extended time frames. A digital model of 13th-century Lausanne Cathedral is developed to guide and improve inspection activities, focusing on determining its structural behaviour and highlighting related vulnerabilities. Thereby, augmented reality enables a global, interactive visualization of the building information, guiding expert work in the monument and easing collaboration among different disciplines. Future applications and extensions to other historic monuments and disciplines have broad potential to upscale inspections of cultural heritage buildings.</div></div>
+    </div>
+  </div>
+</div>
+<div class="paper-row"
+     data-id="yin2025fast"
+     data-title="Fast SceneScript: Fast and Accurate Language-Based 3D Scene Understanding via Multi-Token Prediction"
+     data-authors="Ruihong Yin, Xuepeng Shi, Oleksandr Bailo, Marco Manfredi, Theo Gevers"
+     data-year="2025"
+     data-primary-category="Reality Capture and Digital Twins"
+     data-tags='["3D Reconstruction", "3D floor plan", "BIM", "Floor Plan Reconstruction and Parametrization", "digital twins", "image-to-plan", "indoor scene reconstruction", "layout recovery", "outdoor scene reconstruction", "parametric BIM", "photogrammetry", "point clouds", "point-cloud-to-plan", "scan-to-BIM", "scene editing", "scene understanding", "structural element detection"]'>
+  <div class="paper-card">
+    <!-- Corner number bubble (left) -->
+    <div class="paper-number" aria-label="Paper index"></div>
+
+    <!-- Corner selection checkbox (right, floats outside, no reflow) -->
+    <div class="corner-select">
+      <input type="checkbox"
+             aria-label="Select paper"
+             class="selection-checkbox"
+             onclick="handleCheckboxClick(event, 'yin2025fast', this)">
+    </div>
+
+    <div class="paper-thumbnail">
+      <img data-src="assets/thumbnails/yin2025fast.jpg"
+           data-fallback="None"
+           alt="Paper thumbnail for Fast SceneScript: Fast and Accurate Language-Based 3D Scene Understanding via Multi-Token Prediction"
+           class="lazy"
+           loading="lazy"/>
+    </div>
+
+    <div class="paper-content">
+      <h2 class="paper-title">Fast SceneScript: Fast and Accurate Language-Based 3D Scene Understanding via Multi-Token Prediction <span class="paper-year">(2025)</span></h2>
+      <p class="paper-authors">Ruihong Yin, Xuepeng Shi, Oleksandr Bailo, Marco Manfredi, Theo Gevers</p>
+      <div class="paper-tags"><span class="paper-tag highlighted">3D Reconstruction</span><span class="paper-tag">3D floor plan</span><span class="paper-tag">BIM</span><span class="paper-tag highlighted">Floor Plan Reconstruction and Parametrization</span><span class="paper-tag">digital twins</span><span class="paper-tag">image-to-plan</span><span class="paper-tag">indoor scene reconstruction</span><span class="paper-tag">layout recovery</span><span class="paper-tag">outdoor scene reconstruction</span><span class="paper-tag">parametric BIM</span><span class="paper-tag">photogrammetry</span><span class="paper-tag">point clouds</span><span class="paper-tag">point-cloud-to-plan</span><span class="paper-tag">scan-to-BIM</span><span class="paper-tag">scene editing</span><span class="paper-tag">scene understanding</span><span class="paper-tag">structural element detection</span></div>
+      <div class="paper-links"><a href="https://arxiv.org/pdf/2512.05597v3.pdf" class="paper-link" target="_blank" rel="noopener">📄 Paper</a>
+<button class="abstract-toggle" onclick="toggleAbstract(this)">📖 Show Abstract</button>
+<button class="share-paper-btn" onclick="copyPaperLink(event, 'yin2025fast')" title="Copy direct link to clipboard">🔗 Share</button>
+<div class="paper-abstract">Recent perception-generalist approaches based on language models have achieved state-of-the-art results across diverse tasks, including 3D scene layout estimation and 3D object detection, via unified architecture and interface. However, these approaches rely on autoregressive next-token prediction, which is inherently slow. In this work, we introduce Fast SceneScript, a novel structured language model for accurate and efficient 3D scene understanding. Our method employs multi-token prediction (MTP) to reduce the number of autoregressive iterations and significantly accelerate inference. While MTP improves speed, unreliable token predictions can significantly reduce accuracy. To filter out unreliable tokens, we adapt self-speculative decoding (SSD) for structured language models and introduce confidence-guided decoding (CGD) with an improved scoring mechanism for token reliability. Furthermore, we design a parameter-efficient mechanism that reduces the parameter overhead of MTP. Extensive experiments on synthetic and real-world benchmarks demonstrate that Fast SceneScript can generate up to 9 tokens per decoder inference step without compromising accuracy, while adding only $\sim7.5\%$ additional parameters.</div></div>
     </div>
   </div>
 </div>
@@ -22006,11 +22097,12 @@ document.addEventListener('DOMContentLoaded', function() {
     window.tagFilters = document.querySelectorAll('.tag-filter');
     window.categoryFilter = document.getElementById('categoryFilter'); 
 
-    // Add toggleAbstract to window object so it's globally accessible
     window.toggleAbstract = function(button) {
-        const abstract = button.nextElementSibling;
-        const isShowing = abstract.classList.toggle('show');
-        button.innerHTML = isShowing ? '📖 Hide Abstract' : '📖 Show Abstract';
+        const abstract = button.parentElement.querySelector('.paper-abstract');
+        if (abstract) {
+            const isShowing = abstract.classList.toggle('show');
+            button.innerHTML = isShowing ? '📖 Hide Abstract' : '📖 Show Abstract';
+        }
     };
 
     // Initialize LazyLoad

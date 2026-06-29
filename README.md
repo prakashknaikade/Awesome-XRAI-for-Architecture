@@ -119,6 +119,10 @@ Here are some organizations we can collaborate within XRAI4AEC domain:
 
 *Recent additions (last 60 days):*
 
+**June 29, 2026**
+
+- Fast SceneScript: Fast and Accurate Language-Based 3D Scene Understanding via Multi-Token Prediction → *Reality Capture and Digital Twins*
+
 **June 24, 2026**
 
 - Efficiently Reconstructing Dynamic Scenes One D4RT at a Time → *Reality Capture and Digital Twins*
@@ -631,7 +635,20 @@ Generating text descriptions of objects in 3D indoor scenes is an important buil
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2503.17044.pdf)
 
-### 7. Fast3R: Towards 3D Reconstruction of 1000+ Images in One Forward Pass
+### 7. Fast SceneScript: Fast and Accurate Language-Based 3D Scene Understanding via Multi-Token Prediction
+
+**Authors**: Ruihong Yin, Xuepeng Shi, Oleksandr Bailo, Marco Manfredi, Theo Gevers
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Recent perception-generalist approaches based on language models have achieved state-of-the-art results across diverse tasks, including 3D scene layout estimation and 3D object detection, via unified architecture and interface. However, these approaches rely on autoregressive next-token prediction, which is inherently slow. In this work, we introduce Fast SceneScript, a novel structured language model for accurate and efficient 3D scene understanding. Our method employs multi-token prediction (MTP) to reduce the number of autoregressive iterations and significantly accelerate inference. While MTP improves speed, unreliable token predictions can significantly reduce accuracy. To filter out unreliable tokens, we adapt self-speculative decoding (SSD) for structured language models and introduce confidence-guided decoding (CGD) with an improved scoring mechanism for token reliability. Furthermore, we design a parameter-efficient mechanism that reduces the parameter overhead of MTP. Extensive experiments on synthetic and real-world benchmarks demonstrate that Fast SceneScript can generate up to 9 tokens per decoder inference step without compromising accuracy, while adding only $\sim7.5\%$ additional parameters.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2512.05597v3.pdf)
+
+### 8. Fast3R: Towards 3D Reconstruction of 1000+ Images in One Forward Pass
 
 **Authors**: Jianing Yang, Alexander Sax, Kevin J. Liang, Mikael Henaff, Hao Tang, Ang Cao, Joyce Chai, Franziska Meier, Matt Feiszli
 
@@ -644,7 +661,7 @@ Multi-view 3D reconstruction remains a core challenge in computer vision, partic
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2501.13928.pdf)
 
-### 8. Floorplan-SLAM: A Real-Time, High-Accuracy, and Long-Term Multi-Session Point-Plane SLAM for Efficient Floorplan Reconstruction
+### 9. Floorplan-SLAM: A Real-Time, High-Accuracy, and Long-Term Multi-Session Point-Plane SLAM for Efficient Floorplan Reconstruction
 
 **Authors**: Haolin Wang, Zeren Lv, Hao Wei, Haijiang Zhu, Yihong Wu
 
@@ -657,7 +674,7 @@ Floorplan reconstruction provides structural priors essential for reliable indoo
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2503.00397v2.pdf)
 
-### 9. FloorplanMAE:A self-supervised framework for complete floorplan generation from partial inputs
+### 10. FloorplanMAE:A self-supervised framework for complete floorplan generation from partial inputs
 
 **Authors**: Jun Yin, Jing Zhong, Pengyu Zeng, Peilin Li, Miao Zhang, Ran Luo, Shuai Lu
 
@@ -670,7 +687,7 @@ In the architectural design process, floorplan design is often a dynamic and ite
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2506.08363.pdf)
 
-### 10. HouseLayout3D: A Benchmark and Training-free Baseline for 3D Layout Estimation in the Wild
+### 11. HouseLayout3D: A Benchmark and Training-free Baseline for 3D Layout Estimation in the Wild
 
 **Authors**: Valentin Bieri, Marie-Julie Rakotosaona, Keisuke Tateno, Francis Engelmann, Leonidas Guibas
 
@@ -683,7 +700,7 @@ Current 3D layout estimation models are predominantly trained on synthetic datas
 
 **Links**: [📄 Paper](https://houselayout3d.github.io/assets/houselayout3d_paper.pdf) | [🌐 Project Page](https://houselayout3d.github.io/) | [💻 Code](https://github.com/valebi/house-layout-3d-eval)
 
-### 11. Human-in-the-Loop Local Corrections of 3D Scene Layouts via Infilling
+### 12. Human-in-the-Loop Local Corrections of 3D Scene Layouts via Infilling
 
 **Authors**: Christopher Xie, Armen Avetisyan, Henry Howard-Jenkins, Yawar Siddiqui, Julian Straub, Richard Newcombe, Vasileios Balntas, Jakob Engel
 
@@ -696,7 +713,7 @@ We present a novel human-in-the-loop approach to estimate 3D scene layout that u
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2503.11806.pdf)
 
-### 12. Leveraging AI to Enhance XR in the AEC Industry
+### 13. Leveraging AI to Enhance XR in the AEC Industry
 
 **Authors**: Sepehr Alizadehsalehi, Ahmad Hadavi
 
@@ -709,7 +726,7 @@ The Architecture, Engineering, and Construction (AEC) industry will benefit sign
 
 **Links**: [📄 Paper](https://link.springer.com/chapter/10.1007/978-981-96-4051-5_105)
 
-### 13. MUSt3R: Multi-view Network for Stereo 3D Reconstruction
+### 14. MUSt3R: Multi-view Network for Stereo 3D Reconstruction
 
 **Authors**: Yohann Cabon, Lucas Stoffl, Leonid Antsfeld, Gabriela Csurka, Boris Chidlovskii, Jerome Revaud, Vincent Leroy
 
@@ -722,7 +739,7 @@ DUSt3R introduced a novel paradigm in geometric computer vision by proposing a m
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2503.01661.pdf) | [🌐 Project Page](https://europe.naverlabs.com/research/publications/must3r-multi-view-network-for-stereo-3d-reconstruction/) | [💻 Code](https://github.com/naver/must3r)
 
-### 14. NeRFPrior: Learning Neural Radiance Field as a Prior for Indoor Scene Reconstruction
+### 15. NeRFPrior: Learning Neural Radiance Field as a Prior for Indoor Scene Reconstruction
 
 **Authors**: Wenyuan Zhang, Emily Yue-ting Jia, Junsheng Zhou, Baorui Ma, Kanle Shi, Yu-Shen Liu, Zhizhong Han
 
@@ -735,7 +752,7 @@ Recently, it has shown that priors are vital for neural implicit functions to re
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2503.18361.pdf)
 
-### 15. PolyGraph: A Graph-Based Method for Floorplan Reconstruction From 3D Scans
+### 16. PolyGraph: A Graph-Based Method for Floorplan Reconstruction From 3D Scans
 
 **Authors**: Q. Sun, C. Fang, S. Liu, Y. Sun, Y. Shang, Y. He
 
@@ -748,7 +765,7 @@ The task of reconstructing indoor floorplans has become an increasingly popular 
 
 **Links**: [📄 Paper](https://ieeexplore.ieee.org/document/10899892)
 
-### 16. QuickSplat: Fast 3D Surface Reconstruction via Learned Gaussian Initialization
+### 17. QuickSplat: Fast 3D Surface Reconstruction via Learned Gaussian Initialization
 
 **Authors**: Yueh-Cheng Liu, Lukas Höllein, Matthias Nießner, Angela Dai
 
@@ -761,7 +778,7 @@ Surface reconstruction is fundamental to computer vision and graphics, enabling 
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2505.05591.pdf) | [🌐 Project Page](https://liu115.github.io/quicksplat) | [💻 Code](https://github.com/liu115/QuickSplat) | [🎥 Video](https://youtu.be/2IA_gnFvFG8)
 
-### 17. Radiance Meshes for Volumetric Reconstruction
+### 18. Radiance Meshes for Volumetric Reconstruction
 
 **Authors**: Alexander Mai, Trevor Hedstrom, George Kopanas, Janne Kontkanen, Falko Kuester, Jonathan T. Barron
 
@@ -774,7 +791,7 @@ We introduce radiance meshes, a technique for representing radiance fields with 
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2512.04076.pdf)
 
-### 18. ResPlan: A Large-Scale Vector-Graph Dataset of 17,000 Residential Floor Plans
+### 19. ResPlan: A Large-Scale Vector-Graph Dataset of 17,000 Residential Floor Plans
 
 **Authors**: Mohamed Abouagour, Eleftherios Garyfallidis
 
@@ -787,7 +804,7 @@ We introduce ResPlan, a large-scale dataset of 17,000 detailed, structurally ric
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2508.14006v1.pdf)
 
-### 19. Scan-to-BIM-to-Sim: Automated reconstruction of digital and simulation models from point clouds with applications on bridges
+### 20. Scan-to-BIM-to-Sim: Automated reconstruction of digital and simulation models from point clouds with applications on bridges
 
 **Authors**: Yunping Fang
 , Stergios-Aristoteles Mitoulis, Daniel Boddice
@@ -804,7 +821,7 @@ The automation of 3D geometric model reconstruction from point clouds is essenti
 
 **Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S2590123025003743)
 
-### 20. ScanEdit: Hierarchically-Guided Functional 3D Scan Editing
+### 21. ScanEdit: Hierarchically-Guided Functional 3D Scan Editing
 
 **Authors**: Mohamed el amine Boudjoghra, Ivan Laptev, Angela Dai
 
@@ -817,7 +834,7 @@ With the fast pace of 3D capture technology and resulting abundance of 3D data, 
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2504.15049.pdf) | [🌐 Project Page](https://aminebdj.github.io/scanedit/) | [💻 Code](https://github.com/aminebdj/ScanEdit) | [🎥 Video](https://www.youtube.com/watch?v=Dfmu2g6pVlg)
 
-### 21. The Scene Language: Representing Scenes with Programs, Words, and Embeddings
+### 22. The Scene Language: Representing Scenes with Programs, Words, and Embeddings
 
 **Authors**: Yunzhi Zhang, Zizhang Li, Matt Zhou, Shangzhe Wu, Jiajun Wu
 
@@ -830,7 +847,7 @@ We introduce the Scene Language, a visual scene representation that concisely an
 
 **Links**: [📄 Paper](https://arxiv.org/abs/2410.16770) | [🌐 Project Page](https://ai.stanford.edu/~yzzhang/projects/scene-language/) | [💻 Code](https://github.com/zzyunzhi/scene-language) | [🎥 Video](https://ai.stanford.edu/~yzzhang/projects/scene-language/resources_compressed/teaser.mp4#t=0.001)
 
-### 22. WildGS-SLAM: Monocular Gaussian Splatting SLAM in Dynamic Environments
+### 23. WildGS-SLAM: Monocular Gaussian Splatting SLAM in Dynamic Environments
 
 **Authors**: Jianhao Zheng, Zihan Zhu, Valentin Bieri, Marc Pollefeys, Songyou Peng, Iro Armeni
 
