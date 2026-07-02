@@ -1,3 +1,45 @@
+- id: yue2025litept
+  title: 'LitePT: Lighter Yet Stronger Point Transformer'
+  authors: Yuanwen Yue, Damien Robert, Jianyuan Wang, Sunghwan Hong, Jan Dirk Wegner,
+    Christian Rupprecht, Konrad Schindler
+  year: '2025'
+  primary_category: Reality Capture and Digital Twins
+  abstract: 'Modern neural architectures for 3D point cloud processing contain both
+    convolutional layers and attention blocks, but the best way to assemble them remains
+    unclear. We analyse the role of different computational blocks in 3D point cloud
+    networks and find an intuitive behaviour: convolution is adequate to extract low-level
+    geometry at high-resolution in early layers, where attention is expensive without
+    bringing any benefits; attention captures high-level semantics and context in
+    low-resolution, deep layers more efficiently, where convolution inflates the parameter
+    count. Guided by this design principle, we propose a new, improved 3D point cloud
+    backbone that employs convolutions in early stages and switches to attention for
+    deeper layers. To avoid the loss of spatial layout information when discarding
+    redundant convolution layers, we introduce a novel, parameter-free 3D positional
+    encoding, PointROPE. The resulting LitePT model has $3.6\times$ fewer parameters,
+    runs $2\times$ faster, and uses $2\times$ less memory than the state-of-the-art
+    Point Transformer V3, but nonetheless matches or outperforms it on a range of
+    tasks and datasets. Code and models are available at: https://github.com/prs-eth/LitePT.'
+  paper: https://arxiv.org/pdf/2512.13689.pdf
+  project_page: ''
+  code: ''
+  video: ''
+  tags:
+  - 3D Reconstruction
+  - LiDAR
+  - SLAM
+  - SfM
+  - digital twins
+  - indoor scene reconstruction
+  - outdoor scene reconstruction
+  - photogrammetry
+  - point clouds
+  - scene editing
+  - scene interaction
+  - scene understanding
+  thumbnail: assets/thumbnails/yue2025litept.jpg
+  added_date: '2026-07-02T14:33:51.051695'
+  publication_date: '2025-12-15T18:59:57+00:00'
+  date_source: arxiv
 - id: zhang2025efficiently
   title: Efficiently Reconstructing Dynamic Scenes One D4RT at a Time
   authors: Chuhan Zhang, Guillaume Le Moing, Skanda Koppula, Ignacio Rocco, Liliane

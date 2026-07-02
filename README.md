@@ -1,3 +1,18 @@
+<p align="center">
+  <a href="https://doi.org/10.5281/zenodo.20283895">
+    <img src="https://img.shields.io/badge/Paper-Zenodo--PDF-red?logo=academia" alt="Paper">
+  </a>
+  <a href="https://prakashknaikade.github.io/Awesome-XRAI-for-Architecture/">
+    <img src="https://img.shields.io/badge/Project_Page-XRAI4AEC-purple?logo=githubpages&logoColor=white" alt="Project Page">
+  </a>
+  <a href="https://github.com/prakashknaikade/Awesome-XRAI-for-Architecture">
+    <img src="https://komarev.com/ghpvc/?username=prakashknaikade&repo=Awesome-XRAI-for-Architecture&color=green&label=views" alt="Views">
+  </a>
+  <a href="https://github.com/prakashknaikade/Awesome-XRAI-for-Architecture/stargazers">
+    <img src="https://img.shields.io/github/stars/prakashknaikade/Awesome-XRAI-for-Architecture?style=flat-square&color=yellow" alt="GitHub Stars">
+  </a>
+</p>
+
 # Awesome XRAI for AEC - Buildings and Spaces
 
 <img src="readme_assets/XRAI4AEC_naming_context.png" width="1249">
@@ -118,6 +133,10 @@ Here are some organizations we can collaborate within XRAI4AEC domain:
 ## Changelog
 
 *Recent additions (last 60 days):*
+
+**July 02, 2026**
+
+- LitePT: Lighter Yet Stronger Point Transformer → *Reality Capture and Digital Twins*
 
 **June 29, 2026**
 
@@ -726,7 +745,20 @@ The Architecture, Engineering, and Construction (AEC) industry will benefit sign
 
 **Links**: [📄 Paper](https://link.springer.com/chapter/10.1007/978-981-96-4051-5_105)
 
-### 14. MUSt3R: Multi-view Network for Stereo 3D Reconstruction
+### 14. LitePT: Lighter Yet Stronger Point Transformer
+
+**Authors**: Yuanwen Yue, Damien Robert, Jianyuan Wang, Sunghwan Hong, Jan Dirk Wegner, Christian Rupprecht, Konrad Schindler
+
+<details>
+<summary><b>Abstract</b></summary>
+
+Modern neural architectures for 3D point cloud processing contain both convolutional layers and attention blocks, but the best way to assemble them remains unclear. We analyse the role of different computational blocks in 3D point cloud networks and find an intuitive behaviour: convolution is adequate to extract low-level geometry at high-resolution in early layers, where attention is expensive without bringing any benefits; attention captures high-level semantics and context in low-resolution, deep layers more efficiently, where convolution inflates the parameter count. Guided by this design principle, we propose a new, improved 3D point cloud backbone that employs convolutions in early stages and switches to attention for deeper layers. To avoid the loss of spatial layout information when discarding redundant convolution layers, we introduce a novel, parameter-free 3D positional encoding, PointROPE. The resulting LitePT model has $3.6\times$ fewer parameters, runs $2\times$ faster, and uses $2\times$ less memory than the state-of-the-art Point Transformer V3, but nonetheless matches or outperforms it on a range of tasks and datasets. Code and models are available at: https://github.com/prs-eth/LitePT.
+
+</details>
+
+**Links**: [📄 Paper](https://arxiv.org/pdf/2512.13689.pdf)
+
+### 15. MUSt3R: Multi-view Network for Stereo 3D Reconstruction
 
 **Authors**: Yohann Cabon, Lucas Stoffl, Leonid Antsfeld, Gabriela Csurka, Boris Chidlovskii, Jerome Revaud, Vincent Leroy
 
@@ -739,7 +771,7 @@ DUSt3R introduced a novel paradigm in geometric computer vision by proposing a m
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2503.01661.pdf) | [🌐 Project Page](https://europe.naverlabs.com/research/publications/must3r-multi-view-network-for-stereo-3d-reconstruction/) | [💻 Code](https://github.com/naver/must3r)
 
-### 15. NeRFPrior: Learning Neural Radiance Field as a Prior for Indoor Scene Reconstruction
+### 16. NeRFPrior: Learning Neural Radiance Field as a Prior for Indoor Scene Reconstruction
 
 **Authors**: Wenyuan Zhang, Emily Yue-ting Jia, Junsheng Zhou, Baorui Ma, Kanle Shi, Yu-Shen Liu, Zhizhong Han
 
@@ -752,7 +784,7 @@ Recently, it has shown that priors are vital for neural implicit functions to re
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2503.18361.pdf)
 
-### 16. PolyGraph: A Graph-Based Method for Floorplan Reconstruction From 3D Scans
+### 17. PolyGraph: A Graph-Based Method for Floorplan Reconstruction From 3D Scans
 
 **Authors**: Q. Sun, C. Fang, S. Liu, Y. Sun, Y. Shang, Y. He
 
@@ -765,7 +797,7 @@ The task of reconstructing indoor floorplans has become an increasingly popular 
 
 **Links**: [📄 Paper](https://ieeexplore.ieee.org/document/10899892)
 
-### 17. QuickSplat: Fast 3D Surface Reconstruction via Learned Gaussian Initialization
+### 18. QuickSplat: Fast 3D Surface Reconstruction via Learned Gaussian Initialization
 
 **Authors**: Yueh-Cheng Liu, Lukas Höllein, Matthias Nießner, Angela Dai
 
@@ -778,7 +810,7 @@ Surface reconstruction is fundamental to computer vision and graphics, enabling 
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2505.05591.pdf) | [🌐 Project Page](https://liu115.github.io/quicksplat) | [💻 Code](https://github.com/liu115/QuickSplat) | [🎥 Video](https://youtu.be/2IA_gnFvFG8)
 
-### 18. Radiance Meshes for Volumetric Reconstruction
+### 19. Radiance Meshes for Volumetric Reconstruction
 
 **Authors**: Alexander Mai, Trevor Hedstrom, George Kopanas, Janne Kontkanen, Falko Kuester, Jonathan T. Barron
 
@@ -791,7 +823,7 @@ We introduce radiance meshes, a technique for representing radiance fields with 
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2512.04076.pdf)
 
-### 19. ResPlan: A Large-Scale Vector-Graph Dataset of 17,000 Residential Floor Plans
+### 20. ResPlan: A Large-Scale Vector-Graph Dataset of 17,000 Residential Floor Plans
 
 **Authors**: Mohamed Abouagour, Eleftherios Garyfallidis
 
@@ -804,7 +836,7 @@ We introduce ResPlan, a large-scale dataset of 17,000 detailed, structurally ric
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2508.14006v1.pdf)
 
-### 20. Scan-to-BIM-to-Sim: Automated reconstruction of digital and simulation models from point clouds with applications on bridges
+### 21. Scan-to-BIM-to-Sim: Automated reconstruction of digital and simulation models from point clouds with applications on bridges
 
 **Authors**: Yunping Fang
 , Stergios-Aristoteles Mitoulis, Daniel Boddice
@@ -821,7 +853,7 @@ The automation of 3D geometric model reconstruction from point clouds is essenti
 
 **Links**: [📄 Paper](https://www.sciencedirect.com/science/article/pii/S2590123025003743)
 
-### 21. ScanEdit: Hierarchically-Guided Functional 3D Scan Editing
+### 22. ScanEdit: Hierarchically-Guided Functional 3D Scan Editing
 
 **Authors**: Mohamed el amine Boudjoghra, Ivan Laptev, Angela Dai
 
@@ -834,7 +866,7 @@ With the fast pace of 3D capture technology and resulting abundance of 3D data, 
 
 **Links**: [📄 Paper](https://arxiv.org/pdf/2504.15049.pdf) | [🌐 Project Page](https://aminebdj.github.io/scanedit/) | [💻 Code](https://github.com/aminebdj/ScanEdit) | [🎥 Video](https://www.youtube.com/watch?v=Dfmu2g6pVlg)
 
-### 22. The Scene Language: Representing Scenes with Programs, Words, and Embeddings
+### 23. The Scene Language: Representing Scenes with Programs, Words, and Embeddings
 
 **Authors**: Yunzhi Zhang, Zizhang Li, Matt Zhou, Shangzhe Wu, Jiajun Wu
 
@@ -847,7 +879,7 @@ We introduce the Scene Language, a visual scene representation that concisely an
 
 **Links**: [📄 Paper](https://arxiv.org/abs/2410.16770) | [🌐 Project Page](https://ai.stanford.edu/~yzzhang/projects/scene-language/) | [💻 Code](https://github.com/zzyunzhi/scene-language) | [🎥 Video](https://ai.stanford.edu/~yzzhang/projects/scene-language/resources_compressed/teaser.mp4#t=0.001)
 
-### 23. WildGS-SLAM: Monocular Gaussian Splatting SLAM in Dynamic Environments
+### 24. WildGS-SLAM: Monocular Gaussian Splatting SLAM in Dynamic Environments
 
 **Authors**: Jianhao Zheng, Zihan Zhu, Valentin Bieri, Marc Pollefeys, Songyou Peng, Iro Armeni
 
